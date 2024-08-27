@@ -40,7 +40,7 @@ abstract class BaseModel extends Model
     // use Searchable;
     // use Cachable;
 
-    /** @var array<int, string> */
+    /** @var list<string> */
     protected $fillable = ['id'];
 
     /** @var array<string, string> */
@@ -49,7 +49,7 @@ abstract class BaseModel extends Model
     /** @var string */
     protected $primaryKey = 'id';
 
-    /** @var array<int, string> */
+    /** @var list<string> */
     protected $hidden = [
         // 'password'
     ];
