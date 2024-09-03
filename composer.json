@@ -24,7 +24,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Geo\\": ""
+            "Modules\\Geo\\": "",
+            "Modules\\Geo\\Database\\Factories\\": "database/factories/",
+            "Modules\\Geo\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "require": {
