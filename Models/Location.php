@@ -53,10 +53,15 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Location whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Location whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Location whereZip($value)
+<<<<<<< HEAD
  *
  * @property \Modules\Fixcity\Models\Profile|null $creator
  * @property \Modules\Fixcity\Models\Profile|null $updater
  *
+=======
+ * @property-read \Modules\Fixcity\Models\Profile|null $creator
+ * @property-read \Modules\Fixcity\Models\Profile|null $updater
+>>>>>>> 2355ed2 (📝 (PlaceFactory.php): Update user_id factory call to use a dynamic method to get the user class)
  * @mixin \Eloquent
  */
 class Location extends BaseModel
