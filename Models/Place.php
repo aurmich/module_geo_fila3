@@ -18,101 +18,106 @@ use Modules\Geo\Database\Factories\PlaceFactory;
 /**
  * Modules\Geo\Models\Place.
  *
- * @property int $id
- * @property string|null $post_type
- * @property int|null $post_id
- * @property string|null $formatted_address
- * @property string|null $latitude
- * @property string|null $longitude
- * @property string|null $premise
- * @property string|null $premise_short
- * @property string|null $locality
- * @property string|null $locality_short
- * @property string|null $postal_town
- * @property string|null $postal_town_short
- * @property string|null $administrative_area_level_3
- * @property string|null $administrative_area_level_3_short
- * @property string|null $administrative_area_level_2
- * @property string|null $administrative_area_level_2_short
- * @property string|null $administrative_area_level_1
- * @property string|null $administrative_area_level_1_short
- * @property string|null $country
- * @property string|null $country_short
- * @property string|null $street_number
- * @property string|null $street_number_short
- * @property string|null $route
- * @property string|null $route_short
- * @property string|null $postal_code
- * @property string|null $postal_code_short
- * @property string|null $googleplace_url
- * @property string|null $googleplace_url_short
- * @property string|null $point_of_interest
- * @property string|null $point_of_interest_short
- * @property string|null $political
- * @property string|null $political_short
- * @property string|null $campground
- * @property string|null $campground_short
- * @property string|null $nearest_street
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string $value
+ * @property int             $id
+ * @property string|null     $post_type
+ * @property int|null        $post_id
+ * @property string|null     $formatted_address
+ * @property string|null     $latitude
+ * @property string|null     $longitude
+ * @property string|null     $premise
+ * @property string|null     $premise_short
+ * @property string|null     $locality
+ * @property string|null     $locality_short
+ * @property string|null     $postal_town
+ * @property string|null     $postal_town_short
+ * @property string|null     $administrative_area_level_3
+ * @property string|null     $administrative_area_level_3_short
+ * @property string|null     $administrative_area_level_2
+ * @property string|null     $administrative_area_level_2_short
+ * @property string|null     $administrative_area_level_1
+ * @property string|null     $administrative_area_level_1_short
+ * @property string|null     $country
+ * @property string|null     $country_short
+ * @property string|null     $street_number
+ * @property string|null     $street_number_short
+ * @property string|null     $route
+ * @property string|null     $route_short
+ * @property string|null     $postal_code
+ * @property string|null     $postal_code_short
+ * @property string|null     $googleplace_url
+ * @property string|null     $googleplace_url_short
+ * @property string|null     $point_of_interest
+ * @property string|null     $point_of_interest_short
+ * @property string|null     $political
+ * @property string|null     $political_short
+ * @property string|null     $campground
+ * @property string|null     $campground_short
+ * @property string|null     $nearest_street
+ * @property string|null     $created_by
+ * @property string|null     $updated_by
+ * @property string|null     $deleted_by
+ * @property Carbon|null     $created_at
+ * @property Carbon|null     $updated_at
+ * @property string          $value
  * @property Model|\Eloquent $linked
- * @property mixed $address
- * @property mixed $latlng
+ * @property mixed           $address
+ * @property mixed           $latlng
+ *
  * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
- * @method static Builder|Place newModelQuery()
- * @method static Builder|Place newQuery()
- * @method static Builder|Place query()
- * @method static Builder|Place whereAdministrativeAreaLevel1($value)
- * @method static Builder|Place whereAdministrativeAreaLevel1Short($value)
- * @method static Builder|Place whereAdministrativeAreaLevel2($value)
- * @method static Builder|Place whereAdministrativeAreaLevel2Short($value)
- * @method static Builder|Place whereAdministrativeAreaLevel3($value)
- * @method static Builder|Place whereAdministrativeAreaLevel3Short($value)
- * @method static Builder|Place whereCampground($value)
- * @method static Builder|Place whereCampgroundShort($value)
- * @method static Builder|Place whereCountry($value)
- * @method static Builder|Place whereCountryShort($value)
- * @method static Builder|Place whereCreatedAt($value)
- * @method static Builder|Place whereCreatedBy($value)
- * @method static Builder|Place whereDeletedBy($value)
- * @method static Builder|Place whereFormattedAddress($value)
- * @method static Builder|Place whereGoogleplaceUrl($value)
- * @method static Builder|Place whereGoogleplaceUrlShort($value)
- * @method static Builder|Place whereId($value)
- * @method static Builder|Place whereLatitude($value)
- * @method static Builder|Place whereLocality($value)
- * @method static Builder|Place whereLocalityShort($value)
- * @method static Builder|Place whereLongitude($value)
- * @method static Builder|Place whereNearestStreet($value)
- * @method static Builder|Place wherePointOfInterest($value)
- * @method static Builder|Place wherePointOfInterestShort($value)
- * @method static Builder|Place wherePolitical($value)
- * @method static Builder|Place wherePoliticalShort($value)
- * @method static Builder|Place wherePostId($value)
- * @method static Builder|Place wherePostType($value)
- * @method static Builder|Place wherePostalCode($value)
- * @method static Builder|Place wherePostalCodeShort($value)
- * @method static Builder|Place wherePostalTown($value)
- * @method static Builder|Place wherePostalTownShort($value)
- * @method static Builder|Place wherePremise($value)
- * @method static Builder|Place wherePremiseShort($value)
- * @method static Builder|Place whereRoute($value)
- * @method static Builder|Place whereRouteShort($value)
- * @method static Builder|Place whereStreetNumber($value)
- * @method static Builder|Place whereStreetNumberShort($value)
- * @method static Builder|Place whereUpdatedAt($value)
- * @method static Builder|Place whereUpdatedBy($value)
+ * @method static Builder|Place                                newModelQuery()
+ * @method static Builder|Place                                newQuery()
+ * @method static Builder|Place                                query()
+ * @method static Builder|Place                                whereAdministrativeAreaLevel1($value)
+ * @method static Builder|Place                                whereAdministrativeAreaLevel1Short($value)
+ * @method static Builder|Place                                whereAdministrativeAreaLevel2($value)
+ * @method static Builder|Place                                whereAdministrativeAreaLevel2Short($value)
+ * @method static Builder|Place                                whereAdministrativeAreaLevel3($value)
+ * @method static Builder|Place                                whereAdministrativeAreaLevel3Short($value)
+ * @method static Builder|Place                                whereCampground($value)
+ * @method static Builder|Place                                whereCampgroundShort($value)
+ * @method static Builder|Place                                whereCountry($value)
+ * @method static Builder|Place                                whereCountryShort($value)
+ * @method static Builder|Place                                whereCreatedAt($value)
+ * @method static Builder|Place                                whereCreatedBy($value)
+ * @method static Builder|Place                                whereDeletedBy($value)
+ * @method static Builder|Place                                whereFormattedAddress($value)
+ * @method static Builder|Place                                whereGoogleplaceUrl($value)
+ * @method static Builder|Place                                whereGoogleplaceUrlShort($value)
+ * @method static Builder|Place                                whereId($value)
+ * @method static Builder|Place                                whereLatitude($value)
+ * @method static Builder|Place                                whereLocality($value)
+ * @method static Builder|Place                                whereLocalityShort($value)
+ * @method static Builder|Place                                whereLongitude($value)
+ * @method static Builder|Place                                whereNearestStreet($value)
+ * @method static Builder|Place                                wherePointOfInterest($value)
+ * @method static Builder|Place                                wherePointOfInterestShort($value)
+ * @method static Builder|Place                                wherePolitical($value)
+ * @method static Builder|Place                                wherePoliticalShort($value)
+ * @method static Builder|Place                                wherePostId($value)
+ * @method static Builder|Place                                wherePostType($value)
+ * @method static Builder|Place                                wherePostalCode($value)
+ * @method static Builder|Place                                wherePostalCodeShort($value)
+ * @method static Builder|Place                                wherePostalTown($value)
+ * @method static Builder|Place                                wherePostalTownShort($value)
+ * @method static Builder|Place                                wherePremise($value)
+ * @method static Builder|Place                                wherePremiseShort($value)
+ * @method static Builder|Place                                whereRoute($value)
+ * @method static Builder|Place                                whereRouteShort($value)
+ * @method static Builder|Place                                whereStreetNumber($value)
+ * @method static Builder|Place                                whereStreetNumberShort($value)
+ * @method static Builder|Place                                whereUpdatedAt($value)
+ * @method static Builder|Place                                whereUpdatedBy($value)
+ *
  * @property string|null $model_type
- * @property int|null $model_id
+ * @property int|null    $model_id
+ *
  * @method static Builder|Place whereAddress($value)
  * @method static Builder|Place whereModelId($value)
  * @method static Builder|Place whereModelType($value)
- * @property-read \Modules\Fixcity\Models\Profile|null $creator
- * @property-read \Modules\Fixcity\Models\Profile|null $updater
+ *
+ * @property \Modules\Fixcity\Models\Profile|null $creator
+ * @property \Modules\Fixcity\Models\Profile|null $updater
+ *
  * @mixin \Eloquent
  */
 class Place extends BaseModel
