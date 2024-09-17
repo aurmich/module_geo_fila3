@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Services;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 use Modules\Tenant\Services\TenantService;
 
@@ -37,21 +38,6 @@ class HereService
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-        if (! isset($json['routes'])) {
-            dddx($json);
-
-            return null;
-        }
-
-        if (! isset($json['routes'][0])) {
-            return null;
-        }
-
-        // dddx(['A' => $lat1.','.$lon1, 'B' => $lat2.','.$lon2, 'summary' => $summary]);
-        /*
-         "duration" => 0
-        "length" => 0
-      */
-        return $json['routes'][0]['sections']['0']['summary'];
+        return Arr::get($json, 'routes.0.sections.0.summary');
     }
 }
