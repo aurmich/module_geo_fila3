@@ -7,6 +7,7 @@ namespace Modules\Geo\Services;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 use Modules\Tenant\Services\TenantService;
+use Webmozart\Assert\Assert;
 
 class HereService
 {
@@ -38,6 +39,8 @@ class HereService
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-        return Arr::get($json, 'routes.0.sections.0.summary');
+        Assert::isArray($res = Arr::get($json, 'routes.0.sections.0.summary'));
+
+        return $res;
     }
 }
