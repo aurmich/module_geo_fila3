@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Actions;
 
-use Modules\Geo\Actions\CalcolaDistanzaGeografica;
-
 class FilterCoordinatesInRadius
 {
     // filtra Coordinate In Raggio
@@ -22,6 +20,7 @@ class FilterCoordinatesInRadius
                 $coordinateInRaggio[] = $coordinate;
             }
         }
+
         return $coordinateInRaggio;
     }
 
