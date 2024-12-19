@@ -6,6 +6,7 @@ namespace Modules\Geo\Services;
 
 use Illuminate\Support\Facades\Http;
 use Modules\Tenant\Services\TenantService;
+use Webmozart\Assert\Assert;
 
 class HereService
 {
@@ -42,16 +43,16 @@ class HereService
 
             return null;
         }
-
+        if (! is_array($json['routes'])) {
+            return null;
+        }
         if (! isset($json['routes'][0])) {
             return null;
         }
 
-        // dddx(['A' => $lat1.','.$lon1, 'B' => $lat2.','.$lon2, 'summary' => $summary]);
-        /*
-         "duration" => 0
-        "length" => 0
-      */
-        return $json['routes'][0]['sections']['0']['summary'];
+        // @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible
+        Assert::isArray($res = $json['routes'][0]['sections']['0']['summary']);
+
+        return $res;
     }
 }

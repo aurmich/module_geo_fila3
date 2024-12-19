@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Models;
 
-// ------services---------
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,53 +12,38 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 use Modules\Geo\Database\Factories\PlaceFactory;
 
-// use Modules\Geo\Database\Factories\PlaceFactory;
-// use Modules\Xot\Services\ImportService;
 /**
- * Modules\Geo\Models\Place.
+ * Class Place.
  *
- * @property int $id
- * @property string|null $post_type
- * @property int|null $post_id
- * @property string|null $formatted_address
- * @property string|null $latitude
- * @property string|null $longitude
- * @property string|null $premise
- * @property string|null $premise_short
- * @property string|null $locality
- * @property string|null $locality_short
- * @property string|null $postal_town
- * @property string|null $postal_town_short
- * @property string|null $administrative_area_level_3
- * @property string|null $administrative_area_level_3_short
- * @property string|null $administrative_area_level_2
- * @property string|null $administrative_area_level_2_short
- * @property string|null $administrative_area_level_1
- * @property string|null $administrative_area_level_1_short
- * @property string|null $country
- * @property string|null $country_short
- * @property string|null $street_number
- * @property string|null $street_number_short
- * @property string|null $route
- * @property string|null $route_short
- * @property string|null $postal_code
- * @property string|null $postal_code_short
- * @property string|null $googleplace_url
- * @property string|null $googleplace_url_short
- * @property string|null $point_of_interest
- * @property string|null $point_of_interest_short
- * @property string|null $political
- * @property string|null $political_short
- * @property string|null $campground
- * @property string|null $campground_short
- * @property string|null $nearest_street
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string $value
+ * @property int             $id
+ * @property string|null     $post_type
+ * @property int|null        $post_id
+ * @property string|null     $formatted_address
+ * @property string|null     $latitude
+ * @property string|null     $longitude
+ * @property string|null     $premise
+ * @property string|null     $locality
+ * @property string|null     $postal_town
+ * @property string|null     $administrative_area_level_3
+ * @property string|null     $administrative_area_level_2
+ * @property string|null     $administrative_area_level_1
+ * @property string|null     $country
+ * @property string|null     $street_number
+ * @property string|null     $route
+ * @property string|null     $postal_code
+ * @property string|null     $googleplace_url
+ * @property string|null     $point_of_interest
+ * @property string|null     $political
+ * @property string|null     $campground
+ * @property string|null     $nearest_street
+ * @property string|null     $created_by
+ * @property string|null     $updated_by
+ * @property string|null     $deleted_by
+ * @property Carbon|null     $created_at
+ * @property Carbon|null     $updated_at
+ * @property string          $value
  * @property Model|\Eloquent $linked
+<<<<<<< HEAD
  * @property mixed $address
  * @property mixed $latlng
  *
@@ -119,6 +103,13 @@ use Modules\Geo\Database\Factories\PlaceFactory;
  * @property \Modules\Fixcity\Models\Profile|null $updater
  *
  * @mixin \Eloquent
+=======
+ *
+ * @method static PlaceFactory                                factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Place query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Place whereLatitude($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Place whereLongitude($value)
+>>>>>>> origin/dev
  */
 class Place extends BaseModel
 {
@@ -127,94 +118,118 @@ class Place extends BaseModel
     /** @var array<string> */
     public static array $address_components = [
         'premise', 'locality', 'postal_town',
-        'administrative_area_level_3', 'administrative_area_level_2',  'administrative_area_level_1',
-        'country',
-        'street_number', 'route', 'postal_code',
-        'googleplace_url',
-        'point_of_interest', 'political', 'campground',
+        'administrative_area_level_3', 'administrative_area_level_2', 'administrative_area_level_1',
+        'country', 'street_number', 'route', 'postal_code',
+        'googleplace_url', 'point_of_interest', 'political', 'campground',
     ];
 
     /** @var list<string> */
     protected $fillable = [
-        'id',
-        'post_id', 'post_type',
-        'model_id', 'model_type',
-        // ---- address_components----
-        'premise', 'locality', 'postal_town',
-        'administrative_area_level_3', 'administrative_area_level_2',  'administrative_area_level_1',
-        'country',
-        'street_number', 'route', 'postal_code',
-        'googleplace_url',
-        'point_of_interest', 'political', 'campground',
-        // -------------
-        'locality_short', 'administrative_area_level_2_short', 'administrative_area_level_1_short', 'country_short', 'latlng',
-
-        // -----
-        'latitude', 'longitude', 'formatted_address', 'nearest_street', 'address',
+        'id', 'post_id', 'post_type', 'model_id', 'model_type',
+        'premise', 'locality', 'postal_town', 'administrative_area_level_3',
+        'administrative_area_level_2', 'administrative_area_level_1', 'country',
+        'street_number', 'route', 'postal_code', 'googleplace_url',
+        'point_of_interest', 'political', 'campground', 'locality_short',
+        'administrative_area_level_2_short', 'administrative_area_level_1_short',
+        'country_short', 'latlng', 'latitude', 'longitude', 'formatted_address',
+        'nearest_street', 'address',
     ];
 
     /** @var list<string> */
     protected $appends = ['value'];
 
-    // ----- mutators -----
-    /*
-    public function setFormattedAddressAttribute(string $value): void {
-        if (isset($this->attributes['formatted_address'])) {
-            $address = $this->attributes['formatted_address'];
-        } else {
-            $address = $value;
-            $this->attributes['formatted_address'] = $value;
-        }
-        if ('' != $address) {
-            $tmp = ImportService::getAddressFields(['address' => $address]);
-            if (! is_array($tmp)) {
-                throw new Exception('tmp is not an array');
-            }
-            $this->attributes = array_merge($this->attributes, $tmp);
-            //dddx($this->attributes);
-        }
-    }
-    */
+    /**
+     * Accessor for the "value" attribute.
+     */
     public function getValueAttribute(): string
     {
-        return $this->route.', '.$this->street_number.', '.$this->locality.', '.$this->administrative_area_level_2.', '.$this->country;
+        return implode(', ', array_filter([
+            $this->route,
+            $this->street_number,
+            $this->locality,
+            $this->administrative_area_level_2,
+            $this->country,
+        ]));
     }
 
+    /**
+     * Morph relationship to the linked model.
+     */
     public function linked(): MorphTo
     {
         return $this->morphTo('post');
     }
 
+    // Add type declaration for $value parameter
     public function setLatlngAttribute(array $value): void
     {
-        $this->attributes['latitude'] = $value['lat'];
-        $this->attributes['longitude'] = $value['lng'];
-        unset($this->attributes['latlng']);
+        if (isset($value['lat'], $value['lng'])) {
+            $this->attributes['latitude'] = (string) $value['lat'];
+            $this->attributes['longitude'] = (string) $value['lng'];
+        }
+    }
+
+    public function setAddressAttribute(string|array $value): void
+    {
+        if (is_string($value) && isJson($value)) {
+            try {
+                $json = json_decode($value, true, 512, JSON_THROW_ON_ERROR);
+
+                if (is_array($json)) {
+                    if (isset($json['latlng']) && is_array($json['latlng'])) {
+                        if (isset($json['latlng']['lat'], $json['latlng']['lng'])) {
+                            $json['latitude'] = $json['latlng']['lat'];
+                            $json['longitude'] = $json['latlng']['lng'];
+                            unset($json['latlng'], $json['value']);
+                        }
+                    }
+
+                    // Ensure we're merging arrays
+                    $this->attributes = array_merge(
+                        is_array($this->attributes) ? $this->attributes : [],
+                        $json
+                    );
+                }
+            } catch (\JsonException $e) {
+                // Handle JSON decode error if needed
+            }
+        } elseif (is_array($value)) {
+            $this->attributes['address'] = json_encode($value, JSON_THROW_ON_ERROR);
+        } else {
+            $this->attributes['address'] = $value;
+        }
     }
 
     /**
-     * Undocumented function.
+     * Scope a query to filter by country.
      */
-    public function setAddressAttribute(string|array $value): void
+    public function scopeWhereCountry(Builder $query, string $country): Builder
     {
-        if (\is_string($value) && isJson($value)) {
-            $json = (array) json_decode($value, null, 512, JSON_THROW_ON_ERROR);
-            $latlng = $json['latlng'];
-            if (! \is_object($latlng) || ! isset($latlng->lat) || ! isset($latlng->lng)) {
-                throw new \Exception('['.__LINE__.']['.__FILE__.']');
-            }
-            $json['latitude'] = $latlng->lat;
-            $json['longitude'] = $latlng->lng;
-            unset($json['latlng'], $json['value']);
+        return $query->where('country', $country);
+    }
 
-            $this->attributes = array_merge($this->attributes, $json);
-            // dddx($this->attributes);
-        }
-        if (\is_array($value)) {
-            $value = json_encode($value, JSON_THROW_ON_ERROR);
-        }
-        $this->attributes['address'] = $value;
-        // dddx(['isJson'=>\isJson($value),'value'=>$value]);
+    /**
+     * Scope a query to filter by locality.
+     */
+    public function scopeWhereLocality(Builder $query, string $locality): Builder
+    {
+        return $query->where('locality', $locality);
+    }
+
+    /**
+     * Accessor for the "formatted_address" attribute.
+     */
+    public function getFormattedAddressAttribute(): string
+    {
+        return $this->attributes['formatted_address'] ?? $this->getValueAttribute();
+    }
+
+    /**
+     * Mutator for the "formatted_address" attribute.
+     */
+    public function setFormattedAddressAttribute(string $value): void
+    {
+        $this->attributes['formatted_address'] = $value;
     }
 
     /**
@@ -223,5 +238,29 @@ class Place extends BaseModel
     protected static function newFactory(): Factory
     {
         return PlaceFactory::new();
+    }
+
+    /**
+     * Check if the given coordinates match the Place.
+     */
+    public function matchesCoordinates(string $latitude, string $longitude): bool
+    {
+        return $this->latitude === $latitude && $this->longitude === $longitude;
+    }
+
+    /**
+     * Determine if the Place is located within a specific country.
+     */
+    public function isInCountry(string $country): bool
+    {
+        return $this->country === $country;
+    }
+
+    /**
+     * Determine if the Place has complete address information.
+     */
+    public function hasCompleteAddress(): bool
+    {
+        return ! empty($this->route) && ! empty($this->street_number) && ! empty($this->locality);
     }
 }

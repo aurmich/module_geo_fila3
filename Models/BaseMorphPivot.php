@@ -34,6 +34,7 @@ abstract class BaseMorphPivot extends MorphPivot
      */
     protected $perPage = 30;
 
+    /** @var list<string> */
     protected $appends = [];
 
     /** @var string */
