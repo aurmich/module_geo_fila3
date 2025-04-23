@@ -1,9 +1,5 @@
 <!-- COMPILARE TEMA CON NPM RUN WATCH COSI' OGNI VOLTA CHE SALVI RICOMPILA IL TEMA DA SOLO -->
-<<<<<<< HEAD
-<!-- NEL TEMA CHE STAI USANDO (IN QUESTO CASO ITALIA10) IN resources/js bisogna importare in myvue3.js i file che servono di vue -->
-=======
 <!-- NEL TEMA CHE STAI USANDO (IN QUESTO CASO ITALIA10) IN Resources/js bisogna importare in myvue3.js i file che servono di vue -->
->>>>>>> aurmich/dev
 <!-- con la parola chiave "import", e poi bisogna anche aggiungere il componente al progetto con app.component('v-nomeComponente',Componente); -->
 <template>
   <section>
@@ -123,8 +119,4 @@ export default {
 
 <style scoped  lang="scss">
 /*@import "~leaflet.extra-markers.min.css";*/
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> aurmich/dev

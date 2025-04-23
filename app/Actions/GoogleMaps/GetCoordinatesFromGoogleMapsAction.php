@@ -8,18 +8,11 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-
-use function Safe\json_decode;
-
-=======
 
 use function Safe\json_decode;
 
 use Webmozart\Assert\Assert;
 
->>>>>>> aurmich/dev
 /**
  * Action per ottenere le coordinate da un indirizzo tramite Google Maps.
  *
@@ -32,12 +25,8 @@ class GetCoordinatesFromGoogleMapsAction
 
     public function __construct(
         private readonly Client $client,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> aurmich/dev
 
     /**
      * Ottiene le coordinate da un indirizzo.
@@ -112,11 +101,7 @@ class GetCoordinatesFromGoogleMapsAction
          * } $data */
         $data = json_decode($response, true);
 
-<<<<<<< HEAD
-        if ($data['status'] !== 'OK' || empty($data['results'][0]['geometry']['location'])) {
-=======
         if ('OK' !== $data['status'] || empty($data['results'][0]['geometry']['location'])) {
->>>>>>> aurmich/dev
             throw new \RuntimeException('No coordinates found for address');
         }
 

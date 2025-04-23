@@ -27,15 +27,9 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Esegue una richiesta di geocodifica inversa.
      *
-<<<<<<< HEAD
-     * @return array<string, mixed>
-     *
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-=======
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
->>>>>>> aurmich/dev
      */
     public function reverseGeocode(float $latitude, float $longitude): array
     {
@@ -53,20 +47,12 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Calcola la matrice delle distanze.
      *
-<<<<<<< HEAD
-     * @param  array<string>  $origins  Punti di origine (formato: "lat,lng|lat,lng|...")
-     * @param  array<string>  $destinations  Punti di destinazione (formato: "lat,lng|lat,lng|...")
-     * @return array<string, mixed>
-     *
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-=======
      * @param array<string> $origins      Punti di origine (formato: "lat,lng|lat,lng|...")
      * @param array<string> $destinations Punti di destinazione (formato: "lat,lng|lat,lng|...")
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
->>>>>>> aurmich/dev
      */
     public function getDistanceMatrix(array $origins, array $destinations): array
     {
@@ -86,15 +72,9 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Ottiene l'elevazione per un punto.
      *
-<<<<<<< HEAD
-     * @return array<string, mixed>
-     *
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-=======
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
->>>>>>> aurmich/dev
      */
     public function getElevation(float $latitude, float $longitude): array
     {
@@ -128,11 +108,7 @@ class GoogleMapsService extends BaseGeoService
                 'key' => $this->apiKey,
             ]);
 
-<<<<<<< HEAD
-            if (! $response->successful() || $response->json('status') !== 'OK') {
-=======
             if (! $response->successful() || 'OK' !== $response->json('status')) {
->>>>>>> aurmich/dev
                 throw new \RuntimeException('Failed to get elevation data');
             }
 
@@ -166,13 +142,8 @@ class GoogleMapsService extends BaseGeoService
                 'key' => $this->apiKey,
             ]);
 
-<<<<<<< HEAD
-            if (! $response->successful() || $response->json('status') !== 'OK') {
-                return;
-=======
             if (! $response->successful() || 'OK' !== $response->json('status')) {
                 return null;
->>>>>>> aurmich/dev
             }
 
             /** @var array{
@@ -210,26 +181,16 @@ class GoogleMapsService extends BaseGeoService
             ]);
 
             if (! $response->successful()
-<<<<<<< HEAD
-                || $response->json('status') !== 'OK'
-                || empty($response->json('results'))) {
-                return;
-=======
                 || 'OK' !== $response->json('status')
                 || empty($response->json('results'))) {
                 return null;
->>>>>>> aurmich/dev
             }
 
             /** @var array{results: array<array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
             $data = $response->json();
 
             if (empty($data['results'][0]['geometry']['location'])) {
-<<<<<<< HEAD
-                return;
-=======
                 return null;
->>>>>>> aurmich/dev
             }
 
             return $data['results'][0]['geometry']['location'];

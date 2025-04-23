@@ -20,12 +20,8 @@ class PhotonAddressData extends Data
         public ?string $street,
         public ?string $housenumber,
         public array $coordinates,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> aurmich/dev
 
     public static function fromPhotonFeature(array $feature): self
     {

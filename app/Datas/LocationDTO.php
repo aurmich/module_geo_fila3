@@ -12,12 +12,8 @@ class LocationDTO
         public readonly ?string $address = null,
         public readonly ?string $city = null,
         public readonly ?string $country = null,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> aurmich/dev
 
     public function toArray(): array
     {

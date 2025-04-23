@@ -11,10 +11,6 @@ class GoogleMapBoundsData extends Data
     public function __construct(
         public GoogleMapLocationData $northeast,
         public GoogleMapLocationData $southwest,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> aurmich/dev
 }

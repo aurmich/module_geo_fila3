@@ -13,12 +13,8 @@ class UpdateCoordinatesAction
 {
     public function __construct(
         private readonly GetCoordinatesAction $getCoordinates,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> aurmich/dev
 
     /**
      * Aggiorna le coordinate di un luogo usando il suo indirizzo.

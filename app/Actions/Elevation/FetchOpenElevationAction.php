@@ -19,12 +19,8 @@ class FetchOpenElevationAction
 
     public function __construct(
         private readonly Client $client,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> aurmich/dev
 
     /**
      * Ottiene l'elevazione per un punto.

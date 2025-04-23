@@ -22,17 +22,10 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
  * fornendo funzionalità per la creazione, modifica e visualizzazione dei luoghi
  * sulla mappa.
  *
-<<<<<<< HEAD
- * @property string|null $model La classe del modello associato (Location)
- * @property string|null $navigationIcon L'icona da mostrare nel menu di navigazione
- * @property string|null $navigationGroup Il gruppo di navigazione a cui appartiene
- * @property int|null $navigationSort L'ordine di visualizzazione nel menu
-=======
  * @property string|null $model           La classe del modello associato (Location)
  * @property string|null $navigationIcon  L'icona da mostrare nel menu di navigazione
  * @property string|null $navigationGroup Il gruppo di navigazione a cui appartiene
  * @property int|null    $navigationSort  L'ordine di visualizzazione nel menu
->>>>>>> aurmich/dev
  */
 class LocationResource extends XotBaseResource
 {
@@ -47,12 +40,8 @@ class LocationResource extends XotBaseResource
     /**
      * Converte le coordinate in formato float.
      *
-<<<<<<< HEAD
-     * @param  array{lat?: string|float|null, lng?: string|float|null}  $coordinates  Le coordinate da convertire
-=======
      * @param array{lat?: string|float|null, lng?: string|float|null} $coordinates Le coordinate da convertire
      *
->>>>>>> aurmich/dev
      * @return array{lat: float, lng: float} Le coordinate convertite in float
      */
     private static function formatCoordinates(array $coordinates): array
@@ -123,12 +112,8 @@ class LocationResource extends XotBaseResource
      * - CAP
      * Con funzionalità di ricerca e ordinamento per ogni colonna
      *
-<<<<<<< HEAD
-     * @param  Table  $table  La tabella da configurare
-=======
      * @param Table $table La tabella da configurare
      *
->>>>>>> aurmich/dev
      * @return Table La tabella configurata
      */
     public static function table(Table $table): Table
