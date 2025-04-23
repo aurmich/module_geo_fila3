@@ -19,15 +19,26 @@ class CalculateDistanceMatrixAction
     /**
      * Calcola la matrice delle distanze tra origini e destinazioni.
      *
+<<<<<<< HEAD
      * @param  Collection<LocationData>  $origins  Punti di origine
      * @param  Collection<LocationData>  $destinations  Punti di destinazione
+=======
+     * @param Collection<LocationData> $origins      Punti di origine
+     * @param Collection<LocationData> $destinations Punti di destinazione
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce o i dati non sono validi
+     *
+>>>>>>> aurmich/dev
      * @return array<array<array{
      *     distance: array{text: string, value: int},
      *     duration: array{text: string, value: int},
      *     status: string
      * }>>
+<<<<<<< HEAD
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce o i dati non sono validi
+=======
+>>>>>>> aurmich/dev
      */
     public function execute(Collection $origins, Collection $destinations): array
     {
@@ -68,7 +79,11 @@ class CalculateDistanceMatrixAction
 
     private function getApiKey(): string
     {
+<<<<<<< HEAD
         $apiKey = config('geo.php.config.api_keys.google_maps');
+=======
+        $apiKey = config('services.google.maps_api_key');
+>>>>>>> aurmich/dev
 
         if (empty($apiKey)) {
             throw GoogleMapsApiException::missingApiKey();

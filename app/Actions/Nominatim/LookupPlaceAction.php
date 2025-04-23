@@ -21,13 +21,21 @@ class LookupPlaceAction
 
     public function __construct()
     {
+<<<<<<< HEAD
         $this->client = new Client;
+=======
+        $this->client = new Client();
+>>>>>>> aurmich/dev
     }
 
     /**
      * Cerca un luogo usando il suo OSM ID.
      *
+<<<<<<< HEAD
      * @param  string  $osmId  ID OpenStreetMap del luogo
+=======
+     * @param string $osmId ID OpenStreetMap del luogo
+>>>>>>> aurmich/dev
      *
      * @throws GuzzleException
      * @throws \RuntimeException

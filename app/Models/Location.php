@@ -12,6 +12,7 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Class Location.
  *
+<<<<<<< HEAD
  * @property int $id
  * @property string|null $model_type
  * @property string|null $model_id
@@ -32,6 +33,28 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $deleted_at
  * @property string|null $deleted_by
  * @property array $location
+=======
+ * @property int                  $id
+ * @property string|null          $model_type
+ * @property string|null          $model_id
+ * @property string|null          $name
+ * @property float|null           $lat
+ * @property float|null           $lng
+ * @property string|null          $street
+ * @property string|null          $city
+ * @property string|null          $state
+ * @property string|null          $zip
+ * @property string|null          $formatted_address
+ * @property string|null          $description
+ * @property bool|null            $processed
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property string|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property array                $location
+>>>>>>> aurmich/dev
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *

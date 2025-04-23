@@ -21,11 +21,20 @@ class OptimizeRouteAction
     /**
      * Ottimizza il percorso tra i punti specificati.
      *
+<<<<<<< HEAD
      * @param  LocationData[]  $locations  Lista di punti da visitare
      * @param  LocationData  $origin  Punto di partenza
      * @param  LocationData  $destination  Punto di arrivo
      * @param  string  $mode  Modalità di trasporto (driving, walking, bicycling, transit)
      * @param  string  $optimize  Criterio di ottimizzazione (distance, time)
+=======
+     * @param LocationData[] $locations   Lista di punti da visitare
+     * @param LocationData   $origin      Punto di partenza
+     * @param LocationData   $destination Punto di arrivo
+     * @param string         $mode        Modalità di trasporto (driving, walking, bicycling, transit)
+     * @param string         $optimize    Criterio di ottimizzazione (distance, time)
+     *
+>>>>>>> aurmich/dev
      * @return RouteData[] Lista di percorsi ottimizzati
      */
     public function execute(
@@ -70,7 +79,12 @@ class OptimizeRouteAction
     /**
      * Formatta una lista di punti nel formato richiesto dall'API.
      *
+<<<<<<< HEAD
      * @param  LocationData[]  $locations
+=======
+     * @param LocationData[] $locations
+     *
+>>>>>>> aurmich/dev
      * @return string[]
      */
     private function formatWaypoints(array $locations): array
@@ -115,7 +129,12 @@ class OptimizeRouteAction
      *     warnings: array<int, string>,
      *     waypoint_order: array<int, int>
      * }> $routes
+<<<<<<< HEAD
      * @param  Collection<int, LocationData>  $originalLocations
+=======
+     * @param Collection<int, LocationData> $originalLocations
+     *
+>>>>>>> aurmich/dev
      * @return RouteData[]
      */
     private function parseRoutes(array $routes, Collection $originalLocations): array

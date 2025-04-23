@@ -21,14 +21,23 @@ class ReverseGeocodeAction
 
     public function __construct()
     {
+<<<<<<< HEAD
         $this->client = new Client;
+=======
+        $this->client = new Client();
+>>>>>>> aurmich/dev
     }
 
     /**
      * Ottiene l'indirizzo da coordinate geografiche.
      *
+<<<<<<< HEAD
      * @param  float  $latitude  Latitudine
      * @param  float  $longitude  Longitudine
+=======
+     * @param float $latitude  Latitudine
+     * @param float $longitude Longitudine
+>>>>>>> aurmich/dev
      *
      * @throws GuzzleException
      * @throws \RuntimeException

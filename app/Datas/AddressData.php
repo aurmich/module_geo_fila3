@@ -24,7 +24,12 @@ class AddressData extends Data
         public readonly ?string $street_number = null,
         public readonly ?string $district = null,
         public readonly ?string $state = null,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> aurmich/dev
 
     /**
      * Restituisce l'indirizzo formattato.

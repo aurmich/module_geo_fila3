@@ -9,10 +9,18 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\TravelTimeData;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
 
+=======
+
+use function Safe\json_decode;
+
+use Webmozart\Assert\Assert;
+
+>>>>>>> aurmich/dev
 /**
  * Action per calcolare il tempo di percorrenza tra due punti tramite Google Maps.
  *
@@ -25,7 +33,12 @@ class CalculateTravelTimeAction
 
     public function __construct(
         private readonly Client $client,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> aurmich/dev
 
     /**
      * Calcola il tempo di percorrenza tra due punti.

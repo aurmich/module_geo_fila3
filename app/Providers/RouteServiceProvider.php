@@ -16,10 +16,15 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
      * The module namespace to assume when generating URLs to actions.
      */
     protected string $moduleNamespace = 'Modules\Geo\Http\Controllers';
+<<<<<<< HEAD
 
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
 
+=======
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+>>>>>>> aurmich/dev
     public string $name = 'Geo';
 }

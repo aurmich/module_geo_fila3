@@ -8,10 +8,18 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\AddressData;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
 
+=======
+
+use function Safe\json_decode;
+
+use Webmozart\Assert\Assert;
+
+>>>>>>> aurmich/dev
 /**
  * Action per ottenere l'indirizzo e le coordinate tramite Mapbox.
  *
@@ -24,7 +32,12 @@ class GetAddressFromMapboxAction
 
     public function __construct(
         private readonly Client $client,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> aurmich/dev
 
     /**
      * Ottiene i dettagli dell'indirizzo utilizzando Mapbox.

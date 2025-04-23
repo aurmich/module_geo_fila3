@@ -10,5 +10,10 @@ class ElevationResultDTO
         public readonly float $elevation,
         public readonly float $latitude,
         public readonly float $longitude,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> aurmich/dev
 }

@@ -14,8 +14,13 @@ use Modules\Geo\Services\GeoService;
 /**
  * Modules\Geo\Models\Traits\GeoTrait.
  *
+<<<<<<< HEAD
  * @property float $latitude
  * @property float $longitude
+=======
+ * @property float  $latitude
+ * @property float  $longitude
+>>>>>>> aurmich/dev
  * @property string $country.
  * @property string $country.
  * @property string $administrative_area_level_2.
@@ -149,7 +154,11 @@ where zone_polygon IS NOT NULL
 
     public function getAddress(): string
     {
+<<<<<<< HEAD
         if ($this->country === '') {
+=======
+        if ('' === $this->country) {
+>>>>>>> aurmich/dev
             $this->country = 'Italia';
         }
 
@@ -158,11 +167,19 @@ where zone_polygon IS NOT NULL
 
     public function getLatitudeAttribute(?float $value): ?float
     {
+<<<<<<< HEAD
         if ($value !== null) {
             return $value;
         }
         $address = $this->address;
         if ($address === null) {
+=======
+        if (null !== $value) {
+            return $value;
+        }
+        $address = $this->address;
+        if (null === $address) {
+>>>>>>> aurmich/dev
             return null;
         }
         if (isJson($address)) {
@@ -255,7 +272,12 @@ where zone_polygon IS NOT NULL
     }
 
     /**
+<<<<<<< HEAD
      * @param  mixed  $value
+=======
+     * @param mixed $value
+     *
+>>>>>>> aurmich/dev
      * @return bool|mixed|string
      */
     /*
@@ -289,7 +311,11 @@ where zone_polygon IS NOT NULL
      */
     public function getFullAddressAttribute(?string $value): ?string
     {
+<<<<<<< HEAD
         if ($this->address === null) {
+=======
+        if (null === $this->address) {
+>>>>>>> aurmich/dev
             return null;
         }
         if (isJson($this->address)) {
