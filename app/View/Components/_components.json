@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [{"name":"dashboard.item","class":"Dashboard\\Item","module":null,"path":null,"ns":"Modules\\Geo\\View\\Components\\Dashboard\\Item"},{"name":"form-search-address-categories","class":"FormSearchAddressCategories","module":null,"path":null,"ns":"Modules\\Geo\\View\\Components\\FormSearchAddressCategories"}]
 =======
 >>>>>>> 3404601 (.)
+=======
+>>>>>>> b9a3a92 (.)
 [
     {
         "name": "dashboard.item",
@@ -19,6 +22,7 @@
         "path": null,
         "ns": "Modules\\Geo\\View\\Components\\FormSearchAddressCategories"
     }
+<<<<<<< HEAD
 ]
 <<<<<<< HEAD
 =======
@@ -27,3 +31,6 @@
 =======
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+]
+>>>>>>> b9a3a92 (.)
