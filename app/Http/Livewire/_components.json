@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-[{"name":"form-search-address-categories","class":"FormSearchAddressCategories","module":null,"path":null,"ns":"Modules\\Geo\\Http\\Livewire\\FormSearchAddressCategories"},{"name":"test","class":"Test","module":null,"path":null,"ns":"Modules\\Geo\\Http\\Livewire\\Test"}]
-=======
->>>>>>> 3404601 (.)
-=======
->>>>>>> b9a3a92 (.)
 [
     {
         "name": "form-search-address-categories",
@@ -23,13 +14,3 @@
         "ns": "Modules\\Geo\\Http\\Livewire\\Test"
     }
 ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-[{"name":"form-search-address-categories","class":"FormSearchAddressCategories","module":null,"path":null,"ns":"Modules\\Geo\\Http\\Livewire\\FormSearchAddressCategories"},{"name":"test","class":"Test","module":null,"path":null,"ns":"Modules\\Geo\\Http\\Livewire\\Test"}]
->>>>>>> aurmich/dev
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
->>>>>>> b9a3a92 (.)

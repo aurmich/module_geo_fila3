@@ -8,30 +8,11 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-
-use function Safe\json_decode;
-
-=======
->>>>>>> 3404601 (.)
 
 use function Safe\json_decode;
 
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-use Webmozart\Assert\Assert;
-
-use function Safe\json_decode;
->>>>>>> 6b459b7 (.)
 /**
  * Action per ottenere l'indirizzo da coordinate tramite Google Maps.
  *
@@ -44,21 +25,8 @@ class GetAddressByLatLngFromGoogleMapsAction
 
     public function __construct(
         private readonly Client $client,
-<<<<<<< HEAD
-<<<<<<< HEAD
     ) {
     }
-=======
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-    ) {}
->>>>>>> 6b459b7 (.)
 
     /**
      * Ottiene l'indirizzo dalle coordinate.
@@ -134,15 +102,7 @@ class GetAddressByLatLngFromGoogleMapsAction
          * } $data */
         $data = json_decode($response, true);
 
-<<<<<<< HEAD
         if ('OK' !== $data['status'] || empty($data['results'][0])) {
-=======
-<<<<<<< HEAD
-        if ($data['status'] !== 'OK' || empty($data['results'][0])) {
-=======
-        if ('OK' !== $data['status'] || empty($data['results'][0])) {
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
             throw new \RuntimeException('No address found for coordinates');
         }
 

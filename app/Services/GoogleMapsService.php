@@ -27,21 +27,9 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Esegue una richiesta di geocodifica inversa.
      *
-<<<<<<< HEAD
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
-=======
-<<<<<<< HEAD
-     * @return array<string, mixed>
-     *
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-=======
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-     *
-     * @return array<string, mixed>
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      */
     public function reverseGeocode(float $latitude, float $longitude): array
     {
@@ -59,66 +47,23 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Calcola la matrice delle distanze.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-     * @param  array<string>  $origins  Punti di origine (formato: "lat,lng|lat,lng|...")
-     * @param  array<string>  $destinations  Punti di destinazione (formato: "lat,lng|lat,lng|...")
-     * @return array<string, mixed>
-     *
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-=======
->>>>>>> 3404601 (.)
      * @param array<string> $origins      Punti di origine (formato: "lat,lng|lat,lng|...")
      * @param array<string> $destinations Punti di destinazione (formato: "lat,lng|lat,lng|...")
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-     * @param array<string>|string $origins      Punti di origine (array o stringa nel formato "lat,lng|lat,lng|...")
-     * @param array<string>|string $destinations Punti di destinazione (array o stringa nel formato "lat,lng|lat,lng|...")
-     *
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-     *
-     * @return array{
-     *     destination_addresses: array<string>,
-     *     origin_addresses: array<string>,
-     *     rows: array<array{
-     *         elements: array<array{
-     *             distance?: array{text: string, value: int},
-     *             duration?: array{text: string, value: int},
-     *             status: string
-     *         }>
-     *     }>,
-     *     status: string
-     * }|null
->>>>>>> 6b459b7 (.)
      */
-    public function getDistanceMatrix(array|string $origins, array|string $destinations): ?array
+    public function getDistanceMatrix(array $origins, array $destinations): array
     {
         try {
-            $originsParam = is_array($origins) ? implode('|', $origins) : $origins;
-            $destinationsParam = is_array($destinations) ? implode('|', $destinations) : $destinations;
-
-            $result = $this->makeRequest('GET', self::DISTANCE_MATRIX_URL, [
-                'origins' => $originsParam,
-                'destinations' => $destinationsParam,
+            return $this->makeRequest('GET', self::DISTANCE_MATRIX_URL, [
+                'origins' => implode('|', $origins),
+                'destinations' => implode('|', $destinations),
                 'key' => $this->getApiKey(),
                 'language' => 'it',
                 'units' => 'metric',
             ]);
-
-            if ('OK' !== $result['status']) {
-                return null;
-            }
-
-            return $result;
         } catch (\Throwable $e) {
             throw GoogleMapsApiException::requestFailed($e->getMessage());
         }
@@ -127,21 +72,9 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Ottiene l'elevazione per un punto.
      *
-<<<<<<< HEAD
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
-=======
-<<<<<<< HEAD
-     * @return array<string, mixed>
-     *
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-=======
-     * @throws GoogleMapsApiException Se la richiesta fallisce
-     *
-     * @return array<string, mixed>
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      */
     public function getElevation(float $latitude, float $longitude): array
     {
@@ -156,7 +89,6 @@ class GoogleMapsService extends BaseGeoService
     }
 
     /**
-<<<<<<< HEAD
      * @return array{
      *     results: array<array{
      *         elevation: float,
@@ -176,15 +108,7 @@ class GoogleMapsService extends BaseGeoService
                 'key' => $this->apiKey,
             ]);
 
-<<<<<<< HEAD
             if (! $response->successful() || 'OK' !== $response->json('status')) {
-=======
-<<<<<<< HEAD
-            if (! $response->successful() || $response->json('status') !== 'OK') {
-=======
-            if (! $response->successful() || 'OK' !== $response->json('status')) {
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
                 throw new \RuntimeException('Failed to get elevation data');
             }
 
@@ -218,18 +142,8 @@ class GoogleMapsService extends BaseGeoService
                 'key' => $this->apiKey,
             ]);
 
-<<<<<<< HEAD
             if (! $response->successful() || 'OK' !== $response->json('status')) {
                 return null;
-=======
-<<<<<<< HEAD
-            if (! $response->successful() || $response->json('status') !== 'OK') {
-                return;
-=======
-            if (! $response->successful() || 'OK' !== $response->json('status')) {
-                return null;
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
             }
 
             /** @var array{
@@ -253,67 +167,35 @@ class GoogleMapsService extends BaseGeoService
     }
 
     /**
-=======
->>>>>>> 6b459b7 (.)
      * @return array{lat: float, lng: float}|null
      */
     public function getCoordinatesByAddress(string $address): ?array
     {
-        try {
-            $result = $this->makeRequest('GET', self::GEOCODING_URL, [
+        $cacheKey = 'geocode:'.md5($address);
+
+        /** @var array{lat: float, lng: float}|null $result */
+        $result = Cache::remember($cacheKey, now()->addWeek(), function () use ($address) {
+            $response = Http::get("{$this->baseUrl}/geocode/json", [
                 'address' => $address,
-                'key' => $this->getApiKey(),
-                'language' => 'it',
+                'key' => $this->apiKey,
             ]);
 
-<<<<<<< HEAD
             if (! $response->successful()
-<<<<<<< HEAD
-                || 'OK' !== $response->json('status')
-                || empty($response->json('results'))) {
-=======
-            if ('OK' !== $result['status'] || empty($result['results'])) {
->>>>>>> 6b459b7 (.)
-                return null;
-=======
-<<<<<<< HEAD
-                || $response->json('status') !== 'OK'
-                || empty($response->json('results'))) {
-                return;
-=======
                 || 'OK' !== $response->json('status')
                 || empty($response->json('results'))) {
                 return null;
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
             }
 
-<<<<<<< HEAD
             /** @var array{results: array<array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
             $data = $response->json();
 
             if (empty($data['results'][0]['geometry']['location'])) {
-<<<<<<< HEAD
-=======
-            $location = $result['results'][0]['geometry']['location'] ?? null;
-            if (empty($location)) {
->>>>>>> 6b459b7 (.)
                 return null;
-=======
-<<<<<<< HEAD
-                return;
-=======
-                return null;
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
             }
 
-            return [
-                'lat' => (float) $location['lat'],
-                'lng' => (float) $location['lng'],
-            ];
-        } catch (\Throwable $e) {
-            throw GoogleMapsApiException::requestFailed($e->getMessage());
-        }
+            return $data['results'][0]['geometry']['location'];
+        });
+
+        return $result;
     }
 }

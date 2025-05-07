@@ -9,13 +9,6 @@ use Modules\Xot\Providers\XotBaseEventServiceProvider;
 class EventServiceProvider extends XotBaseEventServiceProvider
 {
     public string $name = 'Geo';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
     /**
      * The event handler mappings for the application.
      *
@@ -33,17 +26,7 @@ class EventServiceProvider extends XotBaseEventServiceProvider
     /**
      * Configure the proper event listeners for email verification.
      */
-<<<<<<< HEAD
     protected function configureEmailVerification(): void
     {
     }
-=======
-<<<<<<< HEAD
-    protected function configureEmailVerification(): void {}
-=======
-    protected function configureEmailVerification(): void
-    {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
 }

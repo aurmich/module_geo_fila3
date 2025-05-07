@@ -13,35 +13,12 @@ use Spatie\LaravelData\DataCollection;
 class GoogleMapResponseData extends Data
 {
     /**
-<<<<<<< HEAD
      * @param DataCollection<GoogleMapResultData> $results Risultati della geocodifica
      * @param string                              $status  Stato della risposta
-=======
-<<<<<<< HEAD
-     * @param  DataCollection<GoogleMapResultData>  $results  Risultati della geocodifica
-     * @param  string  $status  Stato della risposta
-=======
-     * @param DataCollection<GoogleMapResultData> $results Risultati della geocodifica
-     * @param string                              $status  Stato della risposta
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      */
     public function __construct(
         public readonly DataCollection $results,
         public readonly string $status,
-<<<<<<< HEAD
-<<<<<<< HEAD
     ) {
     }
-=======
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-    ) {}
->>>>>>> 6b459b7 (.)
 }

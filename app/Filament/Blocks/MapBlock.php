@@ -37,14 +37,6 @@ class MapBlock
                     ->required(),
             ])
             ->label('Map')
-<<<<<<< HEAD
             ->columns('form' === $context ? 2 : 1);
-=======
-<<<<<<< HEAD
-            ->columns($context === 'form' ? 2 : 1);
-=======
-            ->columns('form' === $context ? 2 : 1);
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
     }
 }

@@ -12,15 +12,6 @@ class MarkerData extends Data
         public PositionData $position,
         public ?string $title = null,
         public ?IconData $icon = null,
-<<<<<<< HEAD
     ) {
     }
-=======
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
 }

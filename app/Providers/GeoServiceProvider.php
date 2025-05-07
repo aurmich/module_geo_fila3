@@ -13,16 +13,6 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 class GeoServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'Geo';
-<<<<<<< HEAD
     protected string $module_dir = __DIR__;
-=======
-<<<<<<< HEAD
-
-    protected string $module_dir = __DIR__;
-
-=======
-    protected string $module_dir = __DIR__;
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
     protected string $module_ns = __NAMESPACE__;
 }

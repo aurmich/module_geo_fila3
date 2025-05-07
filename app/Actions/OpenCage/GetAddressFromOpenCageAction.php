@@ -17,24 +17,11 @@ class GetAddressFromOpenCageAction
     /**
      * Esegue la ricerca dell'indirizzo su OpenCage.
      *
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-     * @param  string  $address  L'indirizzo da cercare
-     * @return AddressData|null I dati dell'indirizzo trovato o null se non trovato
-     *
-     * @throws \Exception Se la chiave API non è configurata
-=======
->>>>>>> 3404601 (.)
      * @param string $address L'indirizzo da cercare
      *
      * @throws \Exception Se la chiave API non è configurata
      *
      * @return AddressData|null I dati dell'indirizzo trovato o null se non trovato
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      */
     public function execute(string $address): ?AddressData
     {

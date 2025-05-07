@@ -14,39 +14,14 @@ class OptimizeRouteAction
 {
     public function __construct(
         private readonly CalculateDistanceAction $calculateDistance,
-<<<<<<< HEAD
-<<<<<<< HEAD
     ) {
     }
-=======
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-    ) {}
->>>>>>> 6b459b7 (.)
 
     /**
      * Ottimizza l'ordine dei punti minimizzando la distanza totale.
      *
-<<<<<<< HEAD
-     * @param Collection<int, LocationData> $locations
-<<<<<<< HEAD
-     *
-=======
-<<<<<<< HEAD
-     * @param  Collection<int, LocationData>  $locations
-=======
      * @param Collection<int, LocationData> $locations
      *
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
->>>>>>> 6b459b7 (.)
      * @return Collection<int, LocationData>
      */
     public function execute(Collection $locations): Collection
@@ -65,19 +40,7 @@ class OptimizeRouteAction
             $currentLocation = $optimizedLocations->last();
             $nearestLocation = $this->findNearestLocation($currentLocation, $remainingLocations);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (null === $nearestLocation) {
-=======
-<<<<<<< HEAD
-            if ($nearestLocation === null) {
-=======
-            if (null === $nearestLocation) {
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-            if ($nearestLocation === null) {
->>>>>>> 6b459b7 (.)
                 break;
             }
 
@@ -91,15 +54,7 @@ class OptimizeRouteAction
     /**
      * Trova il punto più vicino a quello corrente.
      *
-<<<<<<< HEAD
      * @param Collection<int, LocationData> $locations
-=======
-<<<<<<< HEAD
-     * @param  Collection<int, LocationData>  $locations
-=======
-     * @param Collection<int, LocationData> $locations
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      */
     private function findNearestLocation(LocationData $currentLocation, Collection $locations): ?LocationData
     {

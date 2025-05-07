@@ -9,31 +9,11 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\TravelTimeData;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-
-use function Safe\json_decode;
-
-=======
->>>>>>> 3404601 (.)
 
 use function Safe\json_decode;
 
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-use Webmozart\Assert\Assert;
-
-use function Safe\json_decode;
-
->>>>>>> 6b459b7 (.)
 /**
  * Action per calcolare il tempo di percorrenza tra due punti tramite Google Maps.
  *
@@ -46,21 +26,8 @@ class CalculateTravelTimeAction
 
     public function __construct(
         private readonly Client $client,
-<<<<<<< HEAD
-<<<<<<< HEAD
     ) {
     }
-=======
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
-=======
-    ) {}
->>>>>>> 6b459b7 (.)
 
     /**
      * Calcola il tempo di percorrenza tra due punti.
@@ -93,7 +60,7 @@ class CalculateTravelTimeAction
      */
     private function validateInput(LocationData $origin, LocationData $destination): void
     {
-        $apiKey = config('services.google.maps.key');
+        $apiKey = config('services.google.maps_api_key');
         Assert::notEmpty($apiKey, 'Google Maps API key not configured');
         Assert::notSame(
             [$origin->latitude, $origin->longitude],
@@ -116,7 +83,7 @@ class CalculateTravelTimeAction
                 'mode' => 'driving',
                 'departure_time' => 'now',
                 'traffic_model' => 'best_guess',
-                'key' => config('services.google.maps.key'),
+                'key' => config('services.google.maps_api_key'),
             ],
         ]);
 
@@ -162,8 +129,7 @@ class CalculateTravelTimeAction
             distance_meters: $element['distance']['value'],
             formatted_duration: $element['duration']['text'],
             formatted_distance: $element['distance']['text'],
-            status: $data['status'],
-            error: false
+            status: $data['status']
         );
     }
 }

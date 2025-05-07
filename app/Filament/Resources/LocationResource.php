@@ -22,23 +22,10 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
  * fornendo funzionalità per la creazione, modifica e visualizzazione dei luoghi
  * sulla mappa.
  *
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- * @property string|null $model La classe del modello associato (Location)
- * @property string|null $navigationIcon L'icona da mostrare nel menu di navigazione
- * @property string|null $navigationGroup Il gruppo di navigazione a cui appartiene
- * @property int|null $navigationSort L'ordine di visualizzazione nel menu
-=======
->>>>>>> 3404601 (.)
  * @property string|null $model           La classe del modello associato (Location)
  * @property string|null $navigationIcon  L'icona da mostrare nel menu di navigazione
  * @property string|null $navigationGroup Il gruppo di navigazione a cui appartiene
  * @property int|null    $navigationSort  L'ordine di visualizzazione nel menu
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
  */
 class LocationResource extends XotBaseResource
 {
@@ -53,17 +40,8 @@ class LocationResource extends XotBaseResource
     /**
      * Converte le coordinate in formato float.
      *
-<<<<<<< HEAD
      * @param array{lat?: string|float|null, lng?: string|float|null} $coordinates Le coordinate da convertire
      *
-=======
-<<<<<<< HEAD
-     * @param  array{lat?: string|float|null, lng?: string|float|null}  $coordinates  Le coordinate da convertire
-=======
-     * @param array{lat?: string|float|null, lng?: string|float|null} $coordinates Le coordinate da convertire
-     *
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      * @return array{lat: float, lng: float} Le coordinate convertite in float
      */
     private static function formatCoordinates(array $coordinates): array
@@ -134,17 +112,8 @@ class LocationResource extends XotBaseResource
      * - CAP
      * Con funzionalità di ricerca e ordinamento per ogni colonna
      *
-<<<<<<< HEAD
      * @param Table $table La tabella da configurare
      *
-=======
-<<<<<<< HEAD
-     * @param  Table  $table  La tabella da configurare
-=======
-     * @param Table $table La tabella da configurare
-     *
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      * @return Table La tabella configurata
      */
     public static function table(Table $table): Table
@@ -167,7 +136,8 @@ class LocationResource extends XotBaseResource
                     ->longitude('lng')
                     ->selectUnit()
                     ->section('Radius Search'),
-            ])
+            ]
+            )
             ->filtersLayout(FiltersLayout::Dropdown)
             ->actions([
                 Tables\Actions\ViewAction::make(),

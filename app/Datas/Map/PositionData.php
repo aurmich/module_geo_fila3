@@ -11,15 +11,6 @@ class PositionData extends Data
     public function __construct(
         public float $lat,
         public float $lng,
-<<<<<<< HEAD
     ) {
     }
-=======
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
 }

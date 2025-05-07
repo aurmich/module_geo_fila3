@@ -9,19 +9,6 @@ use Spatie\LaravelData\Data;
 /**
  * Data object per la gestione delle informazioni sui luoghi.
  *
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- * @property int $placeId ID univoco del luogo
- * @property string $displayName Nome visualizzato del luogo
- * @property float $latitude Latitudine
- * @property float $longitude Longitudine
- * @property string $type Tipo di luogo (es. città, via, ecc.)
- * @property string|null $address Indirizzo completo
- * @property array<string, string> $addressComponents Componenti dell'indirizzo
- * @property array<string, mixed> $extraData Dati aggiuntivi specifici del provider
-=======
->>>>>>> 3404601 (.)
  * @property int                   $placeId           ID univoco del luogo
  * @property string                $displayName       Nome visualizzato del luogo
  * @property float                 $latitude          Latitudine
@@ -30,10 +17,6 @@ use Spatie\LaravelData\Data;
  * @property string|null           $address           Indirizzo completo
  * @property array<string, string> $addressComponents Componenti dell'indirizzo
  * @property array<string, mixed>  $extraData         Dati aggiuntivi specifici del provider
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
  */
 class PlaceData extends Data
 {
@@ -46,30 +29,13 @@ class PlaceData extends Data
         public readonly ?string $address = null,
         public readonly array $addressComponents = [],
         public readonly array $extraData = [],
-<<<<<<< HEAD
     ) {
     }
-=======
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
 
     /**
      * Crea un'istanza da un array di dati Nominatim.
      *
-<<<<<<< HEAD
      * @param array{place_id: int, display_name: string, lat: string, lon: string, type: string, address?: array<string, string>} $data
-=======
-<<<<<<< HEAD
-     * @param  array{place_id: int, display_name: string, lat: string, lon: string, type: string, address?: array<string, string>}  $data
-=======
-     * @param array{place_id: int, display_name: string, lat: string, lon: string, type: string, address?: array<string, string>} $data
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
      */
     public static function fromNominatim(array $data): self
     {

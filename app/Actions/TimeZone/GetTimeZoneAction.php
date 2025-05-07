@@ -23,15 +23,7 @@ class GetTimeZoneAction
 
     public function __construct(?string $apiKey = null)
     {
-<<<<<<< HEAD
         $this->client = new Client();
-=======
-<<<<<<< HEAD
-        $this->client = new Client;
-=======
-        $this->client = new Client();
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
         $this->apiKey = $apiKey;
     }
 
@@ -51,15 +43,7 @@ class GetTimeZoneAction
         /** @var array{status: string, timeZoneId: string, timeZoneName: string, rawOffset: int, dstOffset: int, countryCode?: string} $data */
         $data = json_decode($response->getBody()->getContents(), true);
 
-<<<<<<< HEAD
         if ('OK' !== $data['status']) {
-=======
-<<<<<<< HEAD
-        if ($data['status'] !== 'OK') {
-=======
-        if ('OK' !== $data['status']) {
->>>>>>> origin/dev
->>>>>>> 3404601 (.)
             throw new \RuntimeException('Failed to get timezone: '.($data['errorMessage'] ?? $data['status']));
         }
 
