@@ -1,3 +1,6 @@
 /dist
 /fonts
 /webfonts
+-e 
+# PHPStan documentation
+docs/phpstan/
