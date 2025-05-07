@@ -75,7 +75,15 @@ final class GetAddressFromGoogleMapsAction
         /** @var GoogleMapResponseData $responseData */
         $responseData = GoogleMapResponseData::from($response->json());
 
+<<<<<<< HEAD
         if (0 === $responseData->results->count()) {
+=======
+<<<<<<< HEAD
+        if ($responseData->results->count() === 0) {
+=======
+        if (0 === $responseData->results->count()) {
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             throw GoogleMapsApiException::noResultsFound();
         }
 
@@ -86,7 +94,15 @@ final class GetAddressFromGoogleMapsAction
     {
         $firstResult = $responseData->results->first();
 
+<<<<<<< HEAD
         if (null === $firstResult->geometry?->location) {
+=======
+<<<<<<< HEAD
+        if ($firstResult->geometry?->location === null) {
+=======
+        if (null === $firstResult->geometry?->location) {
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             throw GoogleMapsApiException::invalidLocationData();
         }
 
@@ -114,9 +130,21 @@ final class GetAddressFromGoogleMapsAction
     /**
      * Ottiene un componente dell'indirizzo dal risultato di Google Maps.
      *
+<<<<<<< HEAD
      * @param DataCollection $components Componenti dell'indirizzo
      * @param array<string>  $types      Tipi di componente da cercare
      * @param bool           $short      Se true, restituisce il nome breve invece di quello lungo
+=======
+<<<<<<< HEAD
+     * @param  DataCollection  $components  Componenti dell'indirizzo
+     * @param  array<string>  $types  Tipi di componente da cercare
+     * @param  bool  $short  Se true, restituisce il nome breve invece di quello lungo
+=======
+     * @param DataCollection $components Componenti dell'indirizzo
+     * @param array<string>  $types      Tipi di componente da cercare
+     * @param bool           $short      Se true, restituisce il nome breve invece di quello lungo
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      */
     private function getComponent(DataCollection $components, array $types, bool $short = false): ?string
     {

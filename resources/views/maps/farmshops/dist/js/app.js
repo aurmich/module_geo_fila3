@@ -25084,7 +25084,15 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         /* Copyright (c) 2012 the authors listed at the following URL, and/or
         the authors of referenced articles or incorporated external code:
         http://en.literateprograms.org/Quickhull_(Javascript)?action=history&offset=20120410175256
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        
+=======
+
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
         Permission is hereby granted, free of charge, to any person obtaining
         a copy of this software and associated documentation files (the
         "Software"), to deal in the Software without restriction, including
@@ -25092,10 +25100,23 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         distribute, sublicense, and/or sell copies of the Software, and to
         permit persons to whom the Software is furnished to do so, subject to
         the following conditions:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+        
+=======
+>>>>>>> 3404601 (.)
 
         The above copyright notice and this permission notice shall be
         included in all copies or substantial portions of the Software.
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
         EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
         MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -25103,7 +25124,15 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
         TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
         SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        
+=======
+
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
         Retrieved from: http://en.literateprograms.org/Quickhull_(Javascript)?oldid=18434
         */
 
@@ -32258,6 +32287,30 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 
         /*
          * @class Projection
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+         * An object with methods for projecting geographical coordinates of the world onto
+         * a flat surface (and back). See [Map projection](http://en.wikipedia.org/wiki/Map_projection).
+        
+         * @property bounds: Bounds
+         * The bounds (specified in CRS units) where the projection is valid
+        
+         * @method project(latlng: LatLng): Point
+         * Projects geographical coordinates into a 2D point.
+         * Only accepts actual `L.LatLng` instances, not arrays.
+        
+         * @method unproject(point: Point): LatLng
+         * The inverse of `project`. Projects a 2D point into a geographical location.
+         * Only accepts actual `L.Point` instances, not arrays.
+        
+         * Note that the projection instances do not inherit from Leafet's `Class` object,
+         * and can't be instantiated. Also, new classes can't inherit from them,
+         * and methods can't be added to them with the `include` function.
+        
+=======
+>>>>>>> 3404601 (.)
 
          * An object with methods for projecting geographical coordinates of the world onto
          * a flat surface (and back). See [Map projection](http://en.wikipedia.org/wiki/Map_projection).
@@ -32277,6 +32330,10 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          * and can't be instantiated. Also, new classes can't inherit from them,
          * and methods can't be added to them with the `include` function.
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
          */
 
 
@@ -80412,7 +80469,15 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
                       if (typeof tokens[at][3] === 'string'
                               || tokens[at][1] === 'comment'
                               || tokens[at][1] === 'state'){
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  
+=======
+
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
                               return at - 1;
                       }
                   }

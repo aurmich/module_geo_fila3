@@ -19,8 +19,17 @@ class FetchOpenElevationAction
 
     public function __construct(
         private readonly Client $client,
+<<<<<<< HEAD
     ) {
     }
+=======
+<<<<<<< HEAD
+    ) {}
+=======
+    ) {
+    }
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
 
     /**
      * Ottiene l'elevazione per un punto.

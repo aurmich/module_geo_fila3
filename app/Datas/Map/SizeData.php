@@ -11,6 +11,15 @@ class SizeData extends Data
     public function __construct(
         public int $width,
         public int $height,
+<<<<<<< HEAD
     ) {
     }
+=======
+<<<<<<< HEAD
+    ) {}
+=======
+    ) {
+    }
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
 }

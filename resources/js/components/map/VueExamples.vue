@@ -119,4 +119,12 @@ export default {
 
 <style scoped  lang="scss">
 /*@import "~leaflet.extra-markers.min.css";*/
+<<<<<<< HEAD
 </style>
+=======
+<<<<<<< HEAD
+</style>
+=======
+</style>
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)

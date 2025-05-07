@@ -14,8 +14,18 @@ use Modules\Geo\Services\GeoService;
 /**
  * Modules\Geo\Models\Traits\GeoTrait.
  *
+<<<<<<< HEAD
  * @property float  $latitude
  * @property float  $longitude
+=======
+<<<<<<< HEAD
+ * @property float $latitude
+ * @property float $longitude
+=======
+ * @property float  $latitude
+ * @property float  $longitude
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
  * @property string $country.
  * @property string $country.
  * @property string $administrative_area_level_2.
@@ -149,7 +159,15 @@ where zone_polygon IS NOT NULL
 
     public function getAddress(): string
     {
+<<<<<<< HEAD
         if ('' === $this->country) {
+=======
+<<<<<<< HEAD
+        if ($this->country === '') {
+=======
+        if ('' === $this->country) {
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             $this->country = 'Italia';
         }
 
@@ -158,11 +176,25 @@ where zone_polygon IS NOT NULL
 
     public function getLatitudeAttribute(?float $value): ?float
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if ($value !== null) {
+            return $value;
+        }
+        $address = $this->address;
+        if ($address === null) {
+=======
+>>>>>>> 3404601 (.)
         if (null !== $value) {
             return $value;
         }
         $address = $this->address;
         if (null === $address) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             return null;
         }
         if (isJson($address)) {
@@ -255,8 +287,17 @@ where zone_polygon IS NOT NULL
     }
 
     /**
+<<<<<<< HEAD
      * @param mixed $value
      *
+=======
+<<<<<<< HEAD
+     * @param  mixed  $value
+=======
+     * @param mixed $value
+     *
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      * @return bool|mixed|string
      */
     /*
@@ -290,7 +331,15 @@ where zone_polygon IS NOT NULL
      */
     public function getFullAddressAttribute(?string $value): ?string
     {
+<<<<<<< HEAD
         if (null === $this->address) {
+=======
+<<<<<<< HEAD
+        if ($this->address === null) {
+=======
+        if (null === $this->address) {
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             return null;
         }
         if (isJson($this->address)) {

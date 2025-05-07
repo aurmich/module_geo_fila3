@@ -17,8 +17,17 @@ class GetAddressFromNominatimAction
     /**
      * Esegue la ricerca dell'indirizzo su Nominatim.
      *
+<<<<<<< HEAD
      * @param string $address L'indirizzo da cercare
      *
+=======
+<<<<<<< HEAD
+     * @param  string  $address  L'indirizzo da cercare
+=======
+     * @param string $address L'indirizzo da cercare
+     *
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      * @return AddressData|null I dati dell'indirizzo trovato o null se non trovato
      */
     public function execute(string $address): ?AddressData

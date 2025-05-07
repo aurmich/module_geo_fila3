@@ -12,10 +12,24 @@ use Spatie\LaravelData\Data;
 class GoogleMapGeometryData extends Data
 {
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  GoogleMapLocationData  $location  Posizione geografica
+     */
+    public function __construct(
+        public readonly GoogleMapLocationData $location,
+    ) {}
+=======
+>>>>>>> 3404601 (.)
      * @param GoogleMapLocationData $location Posizione geografica
      */
     public function __construct(
         public readonly GoogleMapLocationData $location,
     ) {
     }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
 }

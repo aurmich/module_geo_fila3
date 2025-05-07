@@ -18,6 +18,23 @@ use Illuminate\Http\Resources\Json\JsonResource as ResCollection;
 /**
  * Class GeoJsonResource.
  *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ * @property int $id
+ * @property string|null $post_type
+ * @property int|null $post_id
+ * @property int|null $url
+ * @property int|null $title
+ * @property int|null $subtitle
+ * @property float|null $ratings_avg
+ * @property string|null $phone
+ * @property string|null $full_address
+ * @property string|null $email
+ * @property float $latitude
+ * @property float $longitude
+=======
+>>>>>>> 3404601 (.)
  * @property int         $id
  * @property string|null $post_type
  * @property int|null    $post_id
@@ -30,6 +47,10 @@ use Illuminate\Http\Resources\Json\JsonResource as ResCollection;
  * @property string|null $email
  * @property float       $latitude
  * @property float       $longitude
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
  */
 class GeoJsonResource extends ResCollection
 {

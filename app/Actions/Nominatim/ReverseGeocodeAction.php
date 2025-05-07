@@ -21,14 +21,32 @@ class ReverseGeocodeAction
 
     public function __construct()
     {
+<<<<<<< HEAD
         $this->client = new Client();
+=======
+<<<<<<< HEAD
+        $this->client = new Client;
+=======
+        $this->client = new Client();
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
     }
 
     /**
      * Ottiene l'indirizzo da coordinate geografiche.
      *
+<<<<<<< HEAD
      * @param float $latitude  Latitudine
      * @param float $longitude Longitudine
+=======
+<<<<<<< HEAD
+     * @param  float  $latitude  Latitudine
+     * @param  float  $longitude  Longitudine
+=======
+     * @param float $latitude  Latitudine
+     * @param float $longitude Longitudine
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      *
      * @throws GuzzleException
      * @throws \RuntimeException

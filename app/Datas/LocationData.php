@@ -12,18 +12,40 @@ use Spatie\LaravelData\Data;
 class LocationData extends Data
 {
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  float  $latitude  Latitudine in gradi decimali
+     * @param  float  $longitude  Longitudine in gradi decimali
+     * @param  string|null  $name  Nome opzionale della posizione
+     * @param  string|null  $address  Indirizzo opzionale della posizione
+=======
+>>>>>>> 3404601 (.)
      * @param float       $latitude  Latitudine in gradi decimali
      * @param float       $longitude Longitudine in gradi decimali
      * @param string|null $name      Nome opzionale della posizione
      * @param string|null $address   Indirizzo opzionale della posizione
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      */
     public function __construct(
         public readonly float $latitude,
         public readonly float $longitude,
         public readonly ?string $name = null,
         public readonly ?string $address = null,
+<<<<<<< HEAD
     ) {
     }
+=======
+<<<<<<< HEAD
+    ) {}
+=======
+    ) {
+    }
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
 
     /**
      * Converte i dati in un array.

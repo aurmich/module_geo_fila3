@@ -38,7 +38,15 @@ class GetCoordinatesAction
         /** @var array{status: string, results: array<int, array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
         $data = json_decode($response->body(), true);
 
+<<<<<<< HEAD
         if ('OK' !== $data['status'] || empty($data['results'])) {
+=======
+<<<<<<< HEAD
+        if ($data['status'] !== 'OK' || empty($data['results'])) {
+=======
+        if ('OK' !== $data['status'] || empty($data['results'])) {
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             return null;
         }
 

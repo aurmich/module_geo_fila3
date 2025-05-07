@@ -9,11 +9,25 @@ use Spatie\LaravelData\Data;
 /**
  * Data object per la gestione delle informazioni sul fuso orario.
  *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ * @property string $timeZoneId ID del fuso orario (es. 'Europe/Rome')
+ * @property string $timeZoneName Nome del fuso orario
+ * @property int $rawOffset Offset grezzo in secondi
+ * @property int $dstOffset Offset per l'ora legale in secondi
+ * @property string $countryCode Codice del paese
+=======
+>>>>>>> 3404601 (.)
  * @property string $timeZoneId   ID del fuso orario (es. 'Europe/Rome')
  * @property string $timeZoneName Nome del fuso orario
  * @property int    $rawOffset    Offset grezzo in secondi
  * @property int    $dstOffset    Offset per l'ora legale in secondi
  * @property string $countryCode  Codice del paese
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
  */
 class TimeZoneData extends Data
 {
@@ -23,8 +37,17 @@ class TimeZoneData extends Data
         public readonly int $rawOffset,
         public readonly int $dstOffset,
         public readonly string $countryCode,
+<<<<<<< HEAD
     ) {
     }
+=======
+<<<<<<< HEAD
+    ) {}
+=======
+    ) {
+    }
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
 
     /**
      * Crea un'istanza da un array di dati Google Maps Time Zone API.

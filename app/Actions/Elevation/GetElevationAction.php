@@ -20,22 +20,50 @@ use Modules\Geo\Services\GoogleMapsService;
 class GetElevationAction
 {
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  GoogleMapsService  $googleMapsService  Servizio per le richieste a Google Maps
+     */
+    public function __construct(
+        private readonly GoogleMapsService $googleMapsService,
+    ) {}
+=======
+>>>>>>> 3404601 (.)
      * @param GoogleMapsService $googleMapsService Servizio per le richieste a Google Maps
      */
     public function __construct(
         private readonly GoogleMapsService $googleMapsService,
     ) {
     }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
 
     /**
      * Ottiene l'elevazione per una posizione geografica.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  LocationData  $location  La posizione di cui ottenere l'elevazione
+     * @return float L'elevazione in metri sul livello del mare
+     *
+     * @throws ElevationException Se il recupero dell'elevazione fallisce
+     * @throws \InvalidArgumentException Se le coordinate non sono valide
+=======
+>>>>>>> 3404601 (.)
      * @param LocationData $location La posizione di cui ottenere l'elevazione
      *
      * @throws ElevationException        Se il recupero dell'elevazione fallisce
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      *
      * @return float L'elevazione in metri sul livello del mare
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      */
     public function execute(LocationData $location): float
     {
@@ -64,8 +92,17 @@ class GetElevationAction
     /**
      * Formatta l'elevazione in una stringa leggibile.
      *
+<<<<<<< HEAD
      * @param float $meters Elevazione in metri
      *
+=======
+<<<<<<< HEAD
+     * @param  float  $meters  Elevazione in metri
+=======
+     * @param float $meters Elevazione in metri
+     *
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      * @return string Elevazione formattata con unità di misura
      */
     public function formatElevation(float $meters): string
@@ -76,7 +113,15 @@ class GetElevationAction
     /**
      * Valida le coordinate di una posizione.
      *
+<<<<<<< HEAD
      * @param LocationData $location Posizione da validare
+=======
+<<<<<<< HEAD
+     * @param  LocationData  $location  Posizione da validare
+=======
+     * @param LocationData $location Posizione da validare
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      */

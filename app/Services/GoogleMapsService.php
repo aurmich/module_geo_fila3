@@ -27,9 +27,21 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Esegue una richiesta di geocodifica inversa.
      *
+<<<<<<< HEAD
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+=======
+<<<<<<< HEAD
+     * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+=======
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+     *
+     * @return array<string, mixed>
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      */
     public function reverseGeocode(float $latitude, float $longitude): array
     {
@@ -47,12 +59,26 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Calcola la matrice delle distanze.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  array<string>  $origins  Punti di origine (formato: "lat,lng|lat,lng|...")
+     * @param  array<string>  $destinations  Punti di destinazione (formato: "lat,lng|lat,lng|...")
+     * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+=======
+>>>>>>> 3404601 (.)
      * @param array<string> $origins      Punti di origine (formato: "lat,lng|lat,lng|...")
      * @param array<string> $destinations Punti di destinazione (formato: "lat,lng|lat,lng|...")
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      */
     public function getDistanceMatrix(array $origins, array $destinations): array
     {
@@ -72,9 +98,21 @@ class GoogleMapsService extends BaseGeoService
     /**
      * Ottiene l'elevazione per un punto.
      *
+<<<<<<< HEAD
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+=======
+<<<<<<< HEAD
+     * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+=======
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+     *
+     * @return array<string, mixed>
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
      */
     public function getElevation(float $latitude, float $longitude): array
     {
@@ -108,7 +146,15 @@ class GoogleMapsService extends BaseGeoService
                 'key' => $this->apiKey,
             ]);
 
+<<<<<<< HEAD
             if (! $response->successful() || 'OK' !== $response->json('status')) {
+=======
+<<<<<<< HEAD
+            if (! $response->successful() || $response->json('status') !== 'OK') {
+=======
+            if (! $response->successful() || 'OK' !== $response->json('status')) {
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
                 throw new \RuntimeException('Failed to get elevation data');
             }
 
@@ -142,8 +188,18 @@ class GoogleMapsService extends BaseGeoService
                 'key' => $this->apiKey,
             ]);
 
+<<<<<<< HEAD
             if (! $response->successful() || 'OK' !== $response->json('status')) {
                 return null;
+=======
+<<<<<<< HEAD
+            if (! $response->successful() || $response->json('status') !== 'OK') {
+                return;
+=======
+            if (! $response->successful() || 'OK' !== $response->json('status')) {
+                return null;
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             }
 
             /** @var array{
@@ -181,16 +237,36 @@ class GoogleMapsService extends BaseGeoService
             ]);
 
             if (! $response->successful()
+<<<<<<< HEAD
                 || 'OK' !== $response->json('status')
                 || empty($response->json('results'))) {
                 return null;
+=======
+<<<<<<< HEAD
+                || $response->json('status') !== 'OK'
+                || empty($response->json('results'))) {
+                return;
+=======
+                || 'OK' !== $response->json('status')
+                || empty($response->json('results'))) {
+                return null;
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             }
 
             /** @var array{results: array<array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
             $data = $response->json();
 
             if (empty($data['results'][0]['geometry']['location'])) {
+<<<<<<< HEAD
                 return null;
+=======
+<<<<<<< HEAD
+                return;
+=======
+                return null;
+>>>>>>> origin/dev
+>>>>>>> 3404601 (.)
             }
 
             return $data['results'][0]['geometry']['location'];
