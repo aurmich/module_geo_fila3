@@ -50,6 +50,7 @@ class IPLocationData extends Data
         public readonly ?string $timezone = null,
         public readonly ?string $isp = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -60,4 +61,7 @@ class IPLocationData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 }

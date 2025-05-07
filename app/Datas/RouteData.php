@@ -38,6 +38,7 @@ class RouteData extends Data
         public readonly int $totalDuration,
         public readonly array $steps,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -48,6 +49,10 @@ class RouteData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+        public readonly string $polyline = '',
+    ) {}
+>>>>>>> 6b459b7 (.)
 
     /**
      * Formatta la distanza totale in un formato leggibile.

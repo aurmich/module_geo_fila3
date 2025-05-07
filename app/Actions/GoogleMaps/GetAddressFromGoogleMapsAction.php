@@ -47,7 +47,7 @@ final class GetAddressFromGoogleMapsAction
 
     private function getApiKey(): string
     {
-        $apiKey = config('services.google.maps_api_key');
+        $apiKey = config('services.google.maps.key');
 
         if (empty($apiKey)) {
             throw GoogleMapsApiException::missingApiKey();

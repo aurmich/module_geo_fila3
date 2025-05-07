@@ -9,6 +9,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\GeocodingData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Webmozart\Assert\Assert;
@@ -26,6 +27,11 @@ use Webmozart\Assert\Assert;
 =======
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+use Webmozart\Assert\Assert;
+
+use function Safe\json_decode;
+>>>>>>> 6b459b7 (.)
 /**
  * Action per ottenere i dati di geocodifica da Google Maps.
  */
@@ -35,6 +41,7 @@ class GetGeocodingDataAction
 
     public function __construct(
         private readonly Client $client,
+<<<<<<< HEAD
 <<<<<<< HEAD
     ) {
     }
@@ -46,6 +53,9 @@ class GetGeocodingDataAction
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 
     /**
      * Ottiene i dati di geocodifica per un indirizzo.

@@ -167,8 +167,7 @@ class LocationResource extends XotBaseResource
                     ->longitude('lng')
                     ->selectUnit()
                     ->section('Radius Search'),
-            ]
-            )
+            ])
             ->filtersLayout(FiltersLayout::Dropdown)
             ->actions([
                 Tables\Actions\ViewAction::make(),

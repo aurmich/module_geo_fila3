@@ -29,6 +29,7 @@ class GoogleMapLocationData extends Data
         public readonly float $lat,
         public readonly float $lng,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -39,4 +40,7 @@ class GoogleMapLocationData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 }

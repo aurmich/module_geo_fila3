@@ -210,50 +210,23 @@ where zone_polygon IS NOT NULL
 
             return $lat;
         }
-        // call to function is_object() with string will always evaluate to false
-        // if (\is_object($address)) {
-        //    dddx($address);
-        // }
-        // Call to function is_array() with string will always evaluate to false
-        /*
-        if (\is_array($address)) {
-            $lat = $address['latlng']['lat'];
-            $lng = $address['latlng']['lng'];
-            $this->update([
-                'latitude' => $lat,
-                'longitude' => $lng,
-            ]);
-            $this->save();
-
-            return $lat;
-        }
-        */
 
         return null;
     }
 
     /**
-     * Undocumented function.
+     * Imposta l'attributo address e aggiorna le coordinate geografiche.
+     *
+     * @param mixed $value Il valore dell'indirizzo da impostare
      */
     public function setAddressAttribute($value): void
     {
-        // *
-
         if (is_string($value) && isJson($value)) {
-            /*
-             * @var array<string, mixed>
-             */
-            // $json = json_decode($value, true);
-            // $json['latitude'] = $json['latlng']['lat'];
-            // $json['longitude'] = $json['latlng']['lng'];
-
             $geo = GeoData::from(json_decode($value, true, 512, JSON_THROW_ON_ERROR));
             $latlng = $geo->latlng;
             $lat = $latlng['lat'];
             $lng = $latlng['lng'];
 
-            // unset($json['latlng'], $json['value']);
-            // $this->attributes = array_merge($this->attributes, $json);
             $this->attributes['latitude'] = $lat;
             $this->attributes['longitude'] = $lng;
             if (! isset($this->attributes['full_address'])) {
@@ -261,14 +234,6 @@ where zone_polygon IS NOT NULL
             }
 
             if (\strlen($this->attributes['full_address']) < 10) {
-                /*$address = collect($json);
-                $tmp = [];
-                $tmp[] = $address->get('route');
-                $tmp[] = $address->get('street_number');
-                $tmp[] = $address->get('postal_code');
-                $tmp[] = $address->get('administrative_area_level_3');
-                $tmp[] = $address->get('administrative_area_level_2_short');
-                */
                 $tmp = [];
                 $tmp[] = $geo->route;
                 $tmp[] = $geo->street_number;
@@ -280,13 +245,19 @@ where zone_polygon IS NOT NULL
         }
 
         if (\is_array($value)) {
-            $value = json_encode($value, JSON_THROW_ON_ERROR);
+            if (isset($value['latlng'])) {
+                $this->attributes['latitude'] = $value['latlng']['lat'];
+                $this->attributes['longitude'] = $value['latlng']['lng'];
+            }
+            if (isset($value['latitude'], $value['longitude'])) {
+                $this->attributes['latitude'] = $value['latitude'];
+                $this->attributes['longitude'] = $value['longitude'];
+            }
         }
-        $this->attributes['address'] = $value;
-        // dddx(['isJson'=>\isJson($value),'value'=>$value]);
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param mixed $value
      *
@@ -388,24 +359,23 @@ where zone_polygon IS NOT NULL
                 $this->update($address->all());
             }
 
+=======
+     * Ottiene l'indirizzo completo formattato.
+     */
+    public function getFullAddressAttribute(?string $value): ?string
+    {
+        if (null === $value || \strlen($value) < 10) {
+>>>>>>> 6b459b7 (.)
             $tmp = [];
-            $tmp[] = $address->get('route');
-            $tmp[] = $address->get('street_number');
-            $tmp[] = $address->get('postal_code');
-            $tmp[] = $address->get('administrative_area_level_3');
-            $tmp[] = $address->get('administrative_area_level_2_short');
-            $value = implode(', ', $tmp);
+            $tmp[] = $this->route;
+            $tmp[] = $this->street_number;
+            $tmp[] = $this->postal_code;
+            $tmp[] = $this->administrative_area_level_3;
+            $tmp[] = $this->administrative_area_level_2_short;
 
-            return $value;
+            return implode(', ', array_filter($tmp));
         }
-        */
-        $tmp = [];
-        $tmp[] = $this->route;
-        $tmp[] = $this->street_number;
-        $tmp[] = $this->postal_code;
-        $tmp[] = $this->administrative_area_level_3;
-        $tmp[] = $this->administrative_area_level_2_short;
 
-        return implode(', ', $tmp);
+        return $value;
     }
 }

@@ -14,6 +14,7 @@ class UpdateCoordinatesAction
     public function __construct(
         private readonly GetCoordinatesAction $getCoordinates,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -24,10 +25,12 @@ class UpdateCoordinatesAction
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 
     /**
      * Aggiorna le coordinate di un luogo usando il suo indirizzo.
-     *
      * @throws \RuntimeException Se non è possibile ottenere le coordinate
      */
     public function execute(Place $place): void

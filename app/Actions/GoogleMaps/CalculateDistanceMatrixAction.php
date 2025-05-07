@@ -89,6 +89,7 @@ class CalculateDistanceMatrixAction
     private function getApiKey(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $apiKey = config('services.google.maps_api_key');
 =======
 <<<<<<< HEAD
@@ -97,6 +98,9 @@ class CalculateDistanceMatrixAction
         $apiKey = config('services.google.maps_api_key');
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+        $apiKey = config('services.google.maps.key');
+>>>>>>> 6b459b7 (.)
 
         if (empty($apiKey)) {
             throw GoogleMapsApiException::missingApiKey();

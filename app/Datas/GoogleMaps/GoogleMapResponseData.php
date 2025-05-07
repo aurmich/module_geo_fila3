@@ -30,6 +30,7 @@ class GoogleMapResponseData extends Data
         public readonly DataCollection $results,
         public readonly string $status,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -40,4 +41,7 @@ class GoogleMapResponseData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 }

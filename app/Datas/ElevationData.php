@@ -34,6 +34,7 @@ class ElevationData extends Data
         public readonly float $longitude,
         public readonly ?float $resolution = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -44,4 +45,7 @@ class ElevationData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 }

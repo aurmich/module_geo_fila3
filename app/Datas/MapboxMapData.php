@@ -30,6 +30,7 @@ class MapboxMapData extends Data
     public function __construct(
         private readonly array $data,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -40,6 +41,9 @@ class MapboxMapData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 
     /**
      * Converte i dati in un array.

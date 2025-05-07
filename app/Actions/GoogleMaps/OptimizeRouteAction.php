@@ -36,11 +36,14 @@ class OptimizeRouteAction
      * @param LocationData   $destination Punto di arrivo
      * @param string         $mode        Modalità di trasporto (driving, walking, bicycling, transit)
      * @param string         $optimize    Criterio di ottimizzazione (distance, time)
+<<<<<<< HEAD
      *
 <<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+>>>>>>> 6b459b7 (.)
      * @return RouteData[] Lista di percorsi ottimizzati
      */
     public function execute(
@@ -166,6 +169,7 @@ class OptimizeRouteAction
                     $waypoints->push(new LocationData(
                         latitude: $leg['start_location']['lat'],
                         longitude: $leg['start_location']['lng'],
+                        name: null,
                         address: null
                     ));
 
@@ -193,6 +197,7 @@ class OptimizeRouteAction
                     $waypoints->push(new LocationData(
                         latitude: $lastLeg['end_location']['lat'],
                         longitude: $lastLeg['end_location']['lng'],
+                        name: null,
                         address: null
                     ));
                 }
@@ -202,7 +207,8 @@ class OptimizeRouteAction
                     originalWaypoints: $originalLocations,
                     totalDistance: $totalDistance,
                     totalDuration: $totalDuration,
-                    steps: $steps
+                    steps: $steps,
+                    polyline: $route['overview_polyline']['points'] ?? ''
                 );
             },
             $routes

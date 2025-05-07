@@ -13,6 +13,7 @@ class GoogleMapComponentData extends Data
         public string $short_name,
         public array $types,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -23,4 +24,7 @@ class GoogleMapComponentData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 }

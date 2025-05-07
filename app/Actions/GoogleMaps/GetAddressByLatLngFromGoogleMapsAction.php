@@ -9,6 +9,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Webmozart\Assert\Assert;
@@ -26,6 +27,11 @@ use Webmozart\Assert\Assert;
 =======
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+use Webmozart\Assert\Assert;
+
+use function Safe\json_decode;
+>>>>>>> 6b459b7 (.)
 /**
  * Action per ottenere l'indirizzo da coordinate tramite Google Maps.
  *
@@ -39,6 +45,7 @@ class GetAddressByLatLngFromGoogleMapsAction
     public function __construct(
         private readonly Client $client,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -49,6 +56,9 @@ class GetAddressByLatLngFromGoogleMapsAction
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 
     /**
      * Ottiene l'indirizzo dalle coordinate.

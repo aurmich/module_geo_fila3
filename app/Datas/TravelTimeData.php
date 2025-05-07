@@ -22,6 +22,7 @@ class TravelTimeData extends Data
         public readonly string $formatted_distance,
         public readonly string $status = 'OK',
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -32,6 +33,10 @@ class TravelTimeData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+        public readonly bool $error = false,
+    ) {}
+>>>>>>> 6b459b7 (.)
 
     /**
      * Crea un'istanza di errore.
@@ -44,7 +49,8 @@ class TravelTimeData extends Data
             distance_meters: 0,
             formatted_duration: 'N/D',
             formatted_distance: 'N/D',
-            status: $status
+            status: $status,
+            error: true
         );
     }
 
@@ -94,7 +100,8 @@ class TravelTimeData extends Data
             distance_meters: (int) $element['distance']['value'],
             formatted_duration: $element['duration']['text'],
             formatted_distance: $element['distance']['text'],
-            status: $response['status']
+            status: $response['status'],
+            error: false
         );
     }
 }

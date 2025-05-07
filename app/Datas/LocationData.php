@@ -36,6 +36,7 @@ class LocationData extends Data
         public readonly ?string $name = null,
         public readonly ?string $address = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {
     }
 =======
@@ -46,6 +47,9 @@ class LocationData extends Data
     }
 >>>>>>> origin/dev
 >>>>>>> 3404601 (.)
+=======
+    ) {}
+>>>>>>> 6b459b7 (.)
 
     /**
      * Converte i dati in un array.
