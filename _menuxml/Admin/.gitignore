@@ -1,29 +1,4 @@
 /_menufull.xml
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 -e 
 # PHPStan documentation
 docs/phpstan/
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
--e 
-# PHPStan documentation
-docs/phpstan/
-=======
->>>>>>> 294f04a (.)
->>>>>>> aurmich/dev
-=======
->>>>>>> 294f04a (.)
->>>>>>> a3e28eb (.)
-=======
--e 
-# PHPStan documentation
-docs/phpstan/
->>>>>>> ac8dd0e (.)
-=======
--e 
-# PHPStan documentation
-docs/phpstan/
->>>>>>> 71d610a (.)

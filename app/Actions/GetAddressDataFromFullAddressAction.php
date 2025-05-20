@@ -26,45 +26,10 @@ class GetAddressDataFromFullAddressAction
     /**
      * Ottiene i dati dell'indirizzo da un indirizzo completo.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> a3e28eb (.)
-=======
->>>>>>> ac8dd0e (.)
-=======
->>>>>>> 71d610a (.)
      * @param  string  $fullAddress  L'indirizzo da cercare
      * @return AddressData I dati dell'indirizzo trovato
      *
      * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a3e28eb (.)
-=======
-     * @param string $fullAddress L'indirizzo da cercare
-     *
-     * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
-     *
-     * @return AddressData I dati dell'indirizzo trovato
->>>>>>> 294f04a (.)
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> a3e28eb (.)
-=======
->>>>>>> ac8dd0e (.)
-=======
->>>>>>> 71d610a (.)
      */
     public function execute(string $fullAddress): ?AddressData
     {
