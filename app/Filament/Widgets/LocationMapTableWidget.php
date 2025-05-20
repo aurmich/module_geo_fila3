@@ -136,7 +136,15 @@ class LocationMapTableWidget extends MapTableWidget
         ];
     }
 
+<<<<<<< HEAD
     public function getTableActions(): array
+=======
+<<<<<<< HEAD
+    public function getTableActions(): array
+=======
+    protected function getTableActions(): array
+>>>>>>> 294f04a (.)
+>>>>>>> aurmich/dev
     {
         return [
             Tables\Actions\ViewAction::make()

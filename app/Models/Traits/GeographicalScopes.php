@@ -34,7 +34,15 @@ trait GeographicalScopes
                 cos(radians(longitude) - radians($longitude)) +
                 sin(radians($latitude)) *
                 sin(radians(latitude))
+<<<<<<< HEAD
             ))
+=======
+<<<<<<< HEAD
+            ))
+=======
+            )) 
+>>>>>>> 294f04a (.)
+>>>>>>> aurmich/dev
         ";
         if (null !== $alias) {
             $sql .= " AS $alias";
