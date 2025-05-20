@@ -16,6 +16,7 @@ use function Safe\json_encode;
 class Place extends BaseModel implements HasGeolocation
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +47,8 @@ class Place extends BaseModel implements HasGeolocation
 >>>>>>> aurmich/dev
 =======
 >>>>>>> a3e28eb (.)
+=======
+>>>>>>> ac8dd0e (.)
     use HasFactory;
 
     protected $fillable = [

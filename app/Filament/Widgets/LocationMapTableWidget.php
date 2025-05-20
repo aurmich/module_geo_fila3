@@ -96,7 +96,11 @@ class LocationMapTableWidget extends MapTableWidget
         return Location::query()->latest();
     }
 
+<<<<<<< HEAD
     protected function getTableColumns(): array
+=======
+    public function getTableColumns(): array
+>>>>>>> ac8dd0e (.)
     {
         return [
             TextColumn::make('name')
@@ -137,6 +141,7 @@ class LocationMapTableWidget extends MapTableWidget
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTableActions(): array
 =======
 <<<<<<< HEAD
@@ -150,6 +155,9 @@ class LocationMapTableWidget extends MapTableWidget
     protected function getTableActions(): array
 >>>>>>> 294f04a (.)
 >>>>>>> a3e28eb (.)
+=======
+    public function getTableActions(): array
+>>>>>>> ac8dd0e (.)
     {
         return [
             Tables\Actions\ViewAction::make()

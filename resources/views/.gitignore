@@ -1,6 +1,7 @@
 /node_modules
 CNAME
 <<<<<<< HEAD
+<<<<<<< HEAD
 -e 
 # PHPStan documentation
 docs/phpstan/
@@ -16,3 +17,8 @@ docs/phpstan/
 =======
 >>>>>>> 294f04a (.)
 >>>>>>> a3e28eb (.)
+=======
+-e 
+# PHPStan documentation
+docs/phpstan/
+>>>>>>> ac8dd0e (.)
