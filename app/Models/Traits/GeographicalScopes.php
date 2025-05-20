@@ -38,11 +38,16 @@ trait GeographicalScopes
             ))
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
             ))
 =======
             )) 
 >>>>>>> 294f04a (.)
 >>>>>>> aurmich/dev
+=======
+            )) 
+>>>>>>> 294f04a (.)
+>>>>>>> a3e28eb (.)
         ";
         if (null !== $alias) {
             $sql .= " AS $alias";

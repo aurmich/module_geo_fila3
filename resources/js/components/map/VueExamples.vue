@@ -123,8 +123,13 @@ export default {
 </style>
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 </style>
 =======
 </style>
 >>>>>>> 294f04a (.)
 >>>>>>> aurmich/dev
+=======
+</style>
+>>>>>>> 294f04a (.)
+>>>>>>> a3e28eb (.)

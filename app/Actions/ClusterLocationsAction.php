@@ -15,27 +15,39 @@ class ClusterLocationsAction
     ) {}
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 294f04a (.)
 >>>>>>> aurmich/dev
+=======
+    ) {
+    }
+>>>>>>> 294f04a (.)
+>>>>>>> a3e28eb (.)
 
     /**
      * Raggruppa le posizioni in cluster basati sulla distanza.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
      * @param  array<LocationData>  $locations  Lista delle posizioni da raggruppare
      * @param  float  $maxDistance  Distanza massima in km tra i punti di un cluster
      * @return array<array{center: LocationData, points: array<LocationData>}>
      *
      * @throws InvalidLocationException Se i dati della posizione non sono validi
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a3e28eb (.)
 =======
      * @param array<LocationData> $locations   Lista delle posizioni da raggruppare
      * @param float               $maxDistance Distanza massima in km tra i punti di un cluster
@@ -44,7 +56,10 @@ class ClusterLocationsAction
      *
      * @return array<array{center: LocationData, points: array<LocationData>}>
 >>>>>>> 294f04a (.)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
      */
     public function execute(array $locations, float $maxDistance = 1.0): array
     {
@@ -87,11 +102,16 @@ class ClusterLocationsAction
      * @param  array{center: LocationData, points: array<LocationData>}  $cluster
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array{center: LocationData, points: array<LocationData>}  $cluster
 =======
      * @param array{center: LocationData, points: array<LocationData>} $cluster
 >>>>>>> 294f04a (.)
 >>>>>>> aurmich/dev
+=======
+     * @param array{center: LocationData, points: array<LocationData>} $cluster
+>>>>>>> 294f04a (.)
+>>>>>>> a3e28eb (.)
      */
     private function updateClusterCenter(array &$cluster): void
     {

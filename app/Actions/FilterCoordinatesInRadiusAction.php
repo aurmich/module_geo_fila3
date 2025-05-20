@@ -13,15 +13,21 @@ use Modules\Geo\Datas\LocationData;
  * e restituisce solo le coordinate che si trovano entro il raggio specificato dal punto centrale.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
  * @param  float  $centerLatitude  La latitudine del punto centrale
  * @param  float  $centerLongitude  La longitudine del punto centrale
  * @param  array<array{latitude: string, longitude: string}>  $coordinates  Array di coordinate da filtrare
  * @param  int  $radius  Raggio in metri entro cui filtrare le coordinate
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a3e28eb (.)
 =======
  * @param float                                             $centerLatitude  La latitudine del punto centrale
  * @param float                                             $centerLongitude La longitudine del punto centrale
@@ -29,7 +35,10 @@ use Modules\Geo\Datas\LocationData;
  * @param int                                               $radius          Raggio in metri entro cui filtrare le coordinate
  *
 >>>>>>> 294f04a (.)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
  * @return array<array{latitude: string, longitude: string}> Le coordinate filtrate
  */
 class FilterCoordinatesInRadiusAction
@@ -37,15 +46,21 @@ class FilterCoordinatesInRadiusAction
     public function __construct(
         private readonly CalculateDistanceAction $calculateDistanceAction,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
     ) {}
 
     /**
      * @param  array<array{latitude: string, longitude: string}>  $coordinates
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a3e28eb (.)
 =======
     ) {
     }
@@ -54,7 +69,10 @@ class FilterCoordinatesInRadiusAction
      * @param array<array{latitude: string, longitude: string}> $coordinates
      *
 >>>>>>> 294f04a (.)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
      * @return array<array{latitude: string, longitude: string}>
      */
     public function execute(

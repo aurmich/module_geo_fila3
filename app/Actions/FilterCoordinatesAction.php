@@ -18,9 +18,12 @@ class FilterCoordinatesAction
      * Filtra le coordinate che si trovano entro un certo raggio da un punto.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
      * @param  array<array{latitude: float|string, longitude: float|string}>  $coordinates  Lista delle coordinate da filtrare
      * @param  float  $centerLat  Latitudine del punto centrale
      * @param  float  $centerLng  Longitudine del punto centrale
@@ -29,7 +32,10 @@ class FilterCoordinatesAction
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a3e28eb (.)
 =======
      * @param array<array{latitude: float|string, longitude: float|string}> $coordinates Lista delle coordinate da filtrare
      * @param float                                                         $centerLat   Latitudine del punto centrale
@@ -40,7 +46,10 @@ class FilterCoordinatesAction
      *
      * @return array<array{latitude: float, longitude: float, distance: float}> Coordinate filtrate con distanza
 >>>>>>> 294f04a (.)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
      */
     public function execute(array $coordinates, float $centerLat, float $centerLng, float $radiusKm): array
     {

@@ -18,7 +18,10 @@ class Place extends BaseModel implements HasGeolocation
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a3e28eb (.)
     /**
      * List of address components used in the application.
      *
@@ -39,7 +42,10 @@ class Place extends BaseModel implements HasGeolocation
         'political'
     ];
 >>>>>>> 294f04a (.)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
     use HasFactory;
 
     protected $fillable = [

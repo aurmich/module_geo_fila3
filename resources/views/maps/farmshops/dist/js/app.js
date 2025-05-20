@@ -25088,11 +25088,16 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 294f04a (.)
 >>>>>>> aurmich/dev
+=======
+        
+>>>>>>> 294f04a (.)
+>>>>>>> a3e28eb (.)
         Permission is hereby granted, free of charge, to any person obtaining
         a copy of this software and associated documentation files (the
         "Software"), to deal in the Software without restriction, including
@@ -25101,22 +25106,31 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         permit persons to whom the Software is furnished to do so, subject to
         the following conditions:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
 
         The above copyright notice and this permission notice shall be
         included in all copies or substantial portions of the Software.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a3e28eb (.)
 =======
         
         The above copyright notice and this permission notice shall be
         included in all copies or substantial portions of the Software.
         
 >>>>>>> 294f04a (.)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
         EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
         MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -25128,11 +25142,16 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 294f04a (.)
 >>>>>>> aurmich/dev
+=======
+        
+>>>>>>> 294f04a (.)
+>>>>>>> a3e28eb (.)
         Retrieved from: http://en.literateprograms.org/Quickhull_(Javascript)?oldid=18434
         */
 
@@ -32288,9 +32307,12 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         /*
          * @class Projection
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
 
          * An object with methods for projecting geographical coordinates of the world onto
          * a flat surface (and back). See [Map projection](http://en.wikipedia.org/wiki/Map_projection).
@@ -32311,7 +32333,10 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          * and methods can't be added to them with the `include` function.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a3e28eb (.)
 =======
         
          * An object with methods for projecting geographical coordinates of the world onto
@@ -32333,7 +32358,10 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          * and methods can't be added to them with the `include` function.
         
 >>>>>>> 294f04a (.)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3e28eb (.)
          */
 
 
@@ -80473,11 +80501,16 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   
 >>>>>>> 294f04a (.)
 >>>>>>> aurmich/dev
+=======
+  
+>>>>>>> 294f04a (.)
+>>>>>>> a3e28eb (.)
                               return at - 1;
                       }
                   }
