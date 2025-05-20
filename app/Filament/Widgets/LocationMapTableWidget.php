@@ -142,6 +142,7 @@ class LocationMapTableWidget extends MapTableWidget
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTableActions(): array
 =======
 <<<<<<< HEAD
@@ -158,6 +159,9 @@ class LocationMapTableWidget extends MapTableWidget
 =======
     public function getTableActions(): array
 >>>>>>> ac8dd0e (.)
+=======
+    public function getTableActions(): array
+>>>>>>> 71d610a (.)
     {
         return [
             Tables\Actions\ViewAction::make()

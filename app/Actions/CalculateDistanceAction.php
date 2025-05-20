@@ -25,6 +25,7 @@ class CalculateDistanceAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
@@ -32,11 +33,14 @@ class CalculateDistanceAction
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
      * @param  CalculateDistanceMatrixAction  $distanceMatrixAction  Servizio per il calcolo delle distanze
      */
     public function __construct(
         private readonly CalculateDistanceMatrixAction $distanceMatrixAction,
     ) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,10 +61,13 @@ class CalculateDistanceAction
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
 
     /**
      * Calcola la distanza e il tempo di percorrenza tra due punti.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @param  LocationData  $origin  Punto di origine con coordinate valide
@@ -88,11 +95,16 @@ class CalculateDistanceAction
      * @param  LocationData  $origin  Punto di origine con coordinate valide
      * @param  LocationData  $destination  Punto di destinazione con coordinate valide
 >>>>>>> ac8dd0e (.)
+=======
+     * @param  LocationData  $origin  Punto di origine con coordinate valide
+     * @param  LocationData  $destination  Punto di destinazione con coordinate valide
+>>>>>>> 71d610a (.)
      * @return array{
      *     distance: array{text: string, value: int},
      *     duration: array{text: string, value: int},
      *     status: string
      * } Array con distanza, durata e stato
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      *
@@ -115,6 +127,11 @@ class CalculateDistanceAction
      * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
      * @throws \InvalidArgumentException Se le coordinate non sono valide
 >>>>>>> ac8dd0e (.)
+=======
+     *
+     * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
+     * @throws \InvalidArgumentException Se le coordinate non sono valide
+>>>>>>> 71d610a (.)
      */
     public function execute(LocationData $origin, LocationData $destination): array
     {
@@ -142,6 +159,7 @@ class CalculateDistanceAction
      *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  int  $meters  Distanza in metri
 =======
 <<<<<<< HEAD
@@ -158,6 +176,9 @@ class CalculateDistanceAction
 =======
      * @param  int  $meters  Distanza in metri
 >>>>>>> ac8dd0e (.)
+=======
+     * @param  int  $meters  Distanza in metri
+>>>>>>> 71d610a (.)
      *
      * @throws \InvalidArgumentException Se il valore in metri è negativo
      */
@@ -181,6 +202,7 @@ class CalculateDistanceAction
      *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  LocationData  $location  Posizione da validare
 =======
 <<<<<<< HEAD
@@ -197,6 +219,9 @@ class CalculateDistanceAction
 =======
      * @param  LocationData  $location  Posizione da validare
 >>>>>>> ac8dd0e (.)
+=======
+     * @param  LocationData  $location  Posizione da validare
+>>>>>>> 71d610a (.)
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      */

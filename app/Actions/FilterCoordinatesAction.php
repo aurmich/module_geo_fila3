@@ -20,6 +20,7 @@ class FilterCoordinatesAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
@@ -27,6 +28,8 @@ class FilterCoordinatesAction
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
      * @param  array<array{latitude: float|string, longitude: float|string}>  $coordinates  Lista delle coordinate da filtrare
      * @param  float  $centerLat  Latitudine del punto centrale
      * @param  float  $centerLng  Longitudine del punto centrale
@@ -34,6 +37,7 @@ class FilterCoordinatesAction
      * @return array<array{latitude: float, longitude: float, distance: float}> Coordinate filtrate con distanza
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +60,8 @@ class FilterCoordinatesAction
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
      */
     public function execute(array $coordinates, float $centerLat, float $centerLng, float $radiusKm): array
     {

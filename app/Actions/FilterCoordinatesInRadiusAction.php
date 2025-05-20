@@ -15,6 +15,7 @@ use Modules\Geo\Datas\LocationData;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
@@ -22,10 +23,13 @@ use Modules\Geo\Datas\LocationData;
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
  * @param  float  $centerLatitude  La latitudine del punto centrale
  * @param  float  $centerLongitude  La longitudine del punto centrale
  * @param  array<array{latitude: string, longitude: string}>  $coordinates  Array di coordinate da filtrare
  * @param  int  $radius  Raggio in metri entro cui filtrare le coordinate
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,12 +49,15 @@ use Modules\Geo\Datas\LocationData;
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
  * @return array<array{latitude: string, longitude: string}> Le coordinate filtrate
  */
 class FilterCoordinatesInRadiusAction
 {
     public function __construct(
         private readonly CalculateDistanceAction $calculateDistanceAction,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,10 +68,13 @@ class FilterCoordinatesInRadiusAction
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
     ) {}
 
     /**
      * @param  array<array{latitude: string, longitude: string}>  $coordinates
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +95,8 @@ class FilterCoordinatesInRadiusAction
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
      * @return array<array{latitude: string, longitude: string}>
      */
     public function execute(

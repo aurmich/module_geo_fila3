@@ -17,6 +17,7 @@ class Place extends BaseModel implements HasGeolocation
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +50,8 @@ class Place extends BaseModel implements HasGeolocation
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
     use HasFactory;
 
     protected $fillable = [

@@ -25086,6 +25086,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         http://en.literateprograms.org/Quickhull_(Javascript)?action=history&offset=20120410175256
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -25102,6 +25103,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 =======
 
 >>>>>>> ac8dd0e (.)
+=======
+
+>>>>>>> 71d610a (.)
         Permission is hereby granted, free of charge, to any person obtaining
         a copy of this software and associated documentation files (the
         "Software"), to deal in the Software without restriction, including
@@ -25112,6 +25116,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
@@ -25119,10 +25124,13 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
 
         The above copyright notice and this permission notice shall be
         included in all copies or substantial portions of the Software.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25141,6 +25149,8 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
         EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
         MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -25150,6 +25160,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -25166,6 +25177,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 =======
 
 >>>>>>> ac8dd0e (.)
+=======
+
+>>>>>>> 71d610a (.)
         Retrieved from: http://en.literateprograms.org/Quickhull_(Javascript)?oldid=18434
         */
 
@@ -32323,6 +32337,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
@@ -32330,6 +32345,8 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
 
          * An object with methods for projecting geographical coordinates of the world onto
          * a flat surface (and back). See [Map projection](http://en.wikipedia.org/wiki/Map_projection).
@@ -32349,6 +32366,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          * and can't be instantiated. Also, new classes can't inherit from them,
          * and methods can't be added to them with the `include` function.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32382,6 +32400,8 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 >>>>>>> a3e28eb (.)
 =======
 >>>>>>> ac8dd0e (.)
+=======
+>>>>>>> 71d610a (.)
          */
 
 
@@ -80519,6 +80539,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
                               || tokens[at][1] === 'state'){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -80535,6 +80556,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 =======
 
 >>>>>>> ac8dd0e (.)
+=======
+
+>>>>>>> 71d610a (.)
                               return at - 1;
                       }
                   }

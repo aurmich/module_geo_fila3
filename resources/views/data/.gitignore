@@ -3,6 +3,7 @@
 /relation
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 -e 
 # PHPStan documentation
 docs/phpstan/
@@ -23,3 +24,8 @@ docs/phpstan/
 # PHPStan documentation
 docs/phpstan/
 >>>>>>> ac8dd0e (.)
+=======
+-e 
+# PHPStan documentation
+docs/phpstan/
+>>>>>>> 71d610a (.)
