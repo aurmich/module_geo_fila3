@@ -1,30 +1,65 @@
+# Modello Address Riveduto
+
+## Panoramica
+Il modello `Address` è stato riveduto seguendo i principi di design ottimali e le convenzioni del progetto SaluteOra. Questo documento descrive l'implementazione aggiornata che:
+
+1. Evita prefissi ridondanti nei nomi dei campi
+2. Separa correttamente il numero civico dalla strada
+3. Utilizza relazioni polimorfiche standardizzate
+4. Segue la struttura dei dati compatibile con Google Maps API
+5. Supporta la formattazione specifica italiana con provincia e regione
+
+## Schema del Database
+
+```php
+Schema::create('addresses', function (Blueprint $table) {
+    $table->id();
+    $table->nullableMorphs('model'); // Relazione polimorfica standardizzata
+    
+    // Campi informativi
+    $table->string('name')->nullable()->comment('Nome identificativo dell\'indirizzo');
+    $table->text('description')->nullable()->comment('Descrizione opzionale');
+    
+    // Campi indirizzo (evitando prefissi ridondanti)
+    $table->string('route')->nullable()->comment('Via/Piazza');
+    $table->string('street_number')->nullable()->comment('Numero civico');
+    $table->string('locality')->nullable()->comment('Comune/Città');
+    $table->string('administrative_area_level_3')->nullable()->comment('Provincia');
+    $table->string('administrative_area_level_2')->nullable()->comment('Regione');
+    $table->string('administrative_area_level_1')->nullable()->comment('Stato/Paese');
+    $table->string('country', 2)->nullable()->comment('Codice paese ISO');
+    $table->string('postal_code', 20)->nullable()->comment('CAP');
+    
+    // Dati di geocoding
+    $table->text('formatted_address')->nullable();
+    $table->string('place_id')->nullable()->comment('ID Google Places');
+    $table->decimal('latitude', 15, 10)->nullable();
+    $table->decimal('longitude', 15, 10)->nullable();
+    
+    // Campi tipo indirizzo
+    $table->string('type', 50)->nullable()->index()->comment('Tipo indirizzo (home, work, etc.)');
+    $table->boolean('is_primary')->default(false)->index();
+    
+    // Dati aggiuntivi
+    $table->json('extra_data')->nullable();
+    
+    // Timestamps e soft delete
+    $table->timestamps();
+    $table->softDeletes();
+});
+```
+
+## Implementazione del Modello
+
+```php
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Geo\Models;
 
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Model;
-
-class Address extends Model
-{
-    protected $fillable = [
-        'formatted_address',
-        'latitude',
-        'longitude',
-        'street_number',
-        'route',
-        'locality',
-        'postal_code',
-        'country',
-    ];
-
-    // Definisci le relazioni e i metodi necessari per la classe Address
-}
-=======
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Geo\Contracts\HasGeolocation;
@@ -59,29 +94,27 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
- * // implements HasGeolocation
  */
-class Address extends BaseModel 
+class Address extends Model implements HasGeolocation
 {
     use HasFactory;
-        
+    use SoftDeletes;
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array<string>
      */
     protected $fillable = [
-        'model_type',
-        'model_id',
         'name',
         'description',
         'route',
         'street_number',
         'locality',
-        'administrative_area_level_3', // comune
-        'administrative_area_level_2', // provincia
-        'administrative_area_level_1', // regione
-        'country',// Stato/Paese
+        'administrative_area_level_3', // Provincia
+        'administrative_area_level_2', // Regione
+        'administrative_area_level_1', // Stato/Paese
+        'country',
         'postal_code',
         'formatted_address',
         'place_id',
@@ -140,7 +173,7 @@ class Address extends BaseModel
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function city(): BelongsTo
+    public function city()
     {
         return $this->belongsTo(City::class, 'locality', 'name');
     }
@@ -150,7 +183,7 @@ class Address extends BaseModel
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function provincia(): BelongsTo
+    public function provincia()
     {
         return $this->belongsTo(Provincia::class, 'administrative_area_level_3', 'name');
     }
@@ -160,7 +193,7 @@ class Address extends BaseModel
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function regione(): BelongsTo
+    public function regione()
     {
         return $this->belongsTo(Regione::class, 'administrative_area_level_2', 'name');
     }
@@ -199,10 +232,10 @@ class Address extends BaseModel
      *
      * @return string
      */
-    public function getFormattedAddressAttribute(?string $value): ?string
+    public function getFormattedAddressAttribute(): string
     {
-        if ($value) {
-            return $value;
+        if ($this->formatted_address) {
+            return $this->formatted_address;
         }
         
         $parts = [];
@@ -270,16 +303,6 @@ class Address extends BaseModel
     }
     
     /**
-     * Get the formatted address required by HasGeolocation interface.
-     *
-     * @return string
-     */
-    public function getFormattedAddress(): string
-    {
-        return $this->formatted_address ?? '';
-    }
-    
-    /**
      * Restituisce i dati in formato Schema.org PostalAddress
      *
      * @return array<string, mixed>
@@ -291,7 +314,7 @@ class Address extends BaseModel
             '@type' => 'PostalAddress',
             'name' => $this->name,
             'description' => $this->description,
-            'streetAddress' => $this->getStreetAddressAttribute(),
+            'streetAddress' => $this->street_address,
             'addressLocality' => $this->locality,
             'addressSubregion' => $this->administrative_area_level_3, // Provincia
             'addressRegion' => $this->administrative_area_level_2, // Regione
@@ -374,4 +397,121 @@ class Address extends BaseModel
         return $query->where('type', $type instanceof AddressTypeEnum ? $type->value : $type);
     }
 }
->>>>>>> adbb812 (.)
+```
+
+## Migrazione Rivista
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Schema\Blueprint;
+use Modules\Geo\Models\Address;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+return new class extends XotBaseMigration {
+    protected ?string $model_class = Address::class;
+
+    public function up(): void
+    {
+        // -- CREATE --
+        $this->tableCreate(
+            function (Blueprint $table): void {
+                $table->id();
+                $table->nullableMorphs('model'); // Relazione polimorfica standardizzata
+                
+                // Campi informativi
+                $table->string('name')->nullable()->comment('Nome identificativo dell\'indirizzo');
+                $table->text('description')->nullable()->comment('Descrizione opzionale');
+                
+                // Campi indirizzo (evitando prefissi ridondanti)
+                $table->string('route')->nullable()->comment('Via/Piazza');
+                $table->string('street_number')->nullable()->comment('Numero civico');
+                $table->string('locality')->nullable()->comment('Comune/Città');
+                $table->string('administrative_area_level_3')->nullable()->comment('Provincia');
+                $table->string('administrative_area_level_2')->nullable()->comment('Regione');
+                $table->string('administrative_area_level_1')->nullable()->comment('Stato/Paese');
+                $table->string('country', 2)->nullable()->comment('Codice paese ISO');
+                $table->string('postal_code', 20)->nullable()->comment('CAP');
+                
+                // Dati di geocoding
+                $table->text('formatted_address')->nullable();
+                $table->string('place_id')->nullable()->comment('ID Google Places');
+                $table->decimal('latitude', 15, 10)->nullable();
+                $table->decimal('longitude', 15, 10)->nullable();
+                
+                // Campi tipo indirizzo
+                $table->string('type', 50)->nullable()->index()->comment('Tipo indirizzo (home, work, etc.)');
+                $table->boolean('is_primary')->default(false)->index();
+                
+                // Dati aggiuntivi
+                $table->json('extra_data')->nullable();
+            }
+        );
+        
+        // -- UPDATE --
+        $this->tableUpdate(
+            function (Blueprint $table): void {
+                $this->updateTimestamps($table, true); // Aggiunge timestamps e soft deletes
+            }
+        );
+    }
+};
+```
+
+## Nomenclatura dei Campi
+
+### Perché evitare prefissi ridondanti
+
+La convenzione di non ripetere il nome della tabella come prefisso nei nomi dei campi segue il principio DRY (Don't Repeat Yourself) ed è una pratica comune nel design di database. Considerazioni:
+
+1. **Ridondanza**: Il prefisso "address_" nei campi della tabella "addresses" è ridondante perché:
+   - Il contesto è già fornito dal nome della tabella
+   - Aumenta la lunghezza dei nomi dei campi senza aggiungere informazioni
+   - Rende le query SQL più verbose
+
+2. **Coerenza con API**: Adottare la nomenclatura delle API di Google Maps (locality, route, etc.) facilita:
+   - L'integrazione diretta con i dati di Google
+   - La comprensione universale dei campi
+   - La compatibilità con sistemi di geocoding
+
+3. **Mappatura Schema.org**: I campi senza prefisso mappano direttamente a Schema.org:
+   - `locality` → `addressLocality`
+   - `administrative_area_level_2` → `addressRegion`
+   - `country` → `addressCountry`
+
+4. **Leggibilità del codice**: L'accesso ai campi diventa più leggibile:
+   ```php
+   // Con prefisso (ridondante)
+   $address->address_locality
+   
+   // Senza prefisso (pulito)
+   $address->locality
+   ```
+
+## Struttura Italiana per Province e Regioni
+
+Per gestire correttamente gli indirizzi italiani, utilizziamo:
+
+- `administrative_area_level_3`: Provincia (es. Milano, Roma)
+- `administrative_area_level_2`: Regione (es. Lombardia, Lazio)
+- `administrative_area_level_1`: Paese/Stato (es. Italia)
+
+Questa struttura è allineata con:
+1. Le divisioni amministrative italiane
+2. Il formato di dati di Google Maps API
+3. I requisiti per la geocodifica accurata degli indirizzi italiani
+
+## Implementazioni Alternative
+
+Se necessario, è possibile estendere il modello con campi aggiuntivi:
+
+```php
+// Per supportare sigle province italiane
+$table->string('provincia_sigla', 2)->nullable()->comment('Sigla provincia (es. MI, RM)');
+
+// Per casi d'uso specifici
+$table->boolean('verificato')->default(false)->comment('Indirizzo verificato');
+$table->timestamp('ultima_verifica')->nullable();
+```
