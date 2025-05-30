@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> adbb812 (.)
 -----------------------------------------------------------------------------------
 https://github.com/cheesegrits/filament-google-maps
 star:204
@@ -69,8 +66,6 @@ https://polodev.github.io/tuts/2018/11/05/nearby-location-using-latitude-and-lon
 
 https://github.com/geocoder-php/GeocoderLaravel
 
-<<<<<<< HEAD
-=======
 # Integrazione Filament nel Modulo Geo
 
 ## AddressResource: regole, filosofia e best practice
@@ -161,4 +156,3 @@ Modules/Geo/app/Filament/Resources/
 - **Religione**: "Non avrai altro path all'infuori del relativo".
 - **Zen**: Serenità nella navigazione, nessun errore di path, nessun link rotto dopo un refactor.
 
->>>>>>> adbb812 (.)
