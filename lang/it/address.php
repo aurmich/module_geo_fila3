@@ -3,7 +3,11 @@
 return array (
   'singular' => 'Indirizzo',
   'plural' => 'Indirizzi',
-  'navigation' => 'Gestione Indirizzi',
+  'navigation' => 
+  array (
+    'sort' => 96,
+    'icon' => 'address.navigation',
+  ),
   'actions' => 
   array (
     'create' => 'Crea indirizzo',
@@ -31,7 +35,7 @@ return array (
       'label' => 'Nome',
       'placeholder' => 'Inserisci un nome per l\'indirizzo',
       'helper' => 'Un nome identificativo per questo indirizzo, es. "Casa" o "Ufficio"',
-      'helper_text' => 'name',
+      'helper_text' => '',
       'description' => 'name',
     ),
     'description' => 
@@ -46,21 +50,21 @@ return array (
       'placeholder' => 'Inserisci la via',
       'helper' => 'Nome della via o strada',
       'description' => 'route',
-      'helper_text' => 'route',
+      'helper_text' => '',
     ),
     'street_number' => 
     array (
       'label' => 'Numero civico',
       'placeholder' => 'Inserisci il numero civico',
       'description' => 'street_number',
-      'helper_text' => 'street_number',
+      'helper_text' => '',
     ),
     'locality' => 
     array (
       'label' => 'Città',
       'placeholder' => 'Inserisci la città',
       'description' => 'locality',
-      'helper_text' => 'locality',
+      'helper_text' => '',
     ),
     'administrative_area_level_3' => 
     array (
@@ -72,35 +76,35 @@ return array (
       'label' => 'Provincia',
       'placeholder' => 'Inserisci la provincia',
       'description' => 'administrative_area_level_2',
-      'helper_text' => 'administrative_area_level_2',
+      'helper_text' => '',
     ),
     'administrative_area_level_1' => 
     array (
       'label' => 'Regione',
       'placeholder' => 'Inserisci la regione',
       'description' => 'administrative_area_level_1',
-      'helper_text' => 'administrative_area_level_1',
+      'helper_text' => '',
     ),
     'country' => 
     array (
       'label' => 'Paese',
       'placeholder' => 'Inserisci il paese',
       'description' => 'country',
-      'helper_text' => 'country',
+      'helper_text' => '',
     ),
     'postal_code' => 
     array (
       'label' => 'CAP',
       'placeholder' => 'Inserisci il CAP',
       'description' => 'postal_code',
-      'helper_text' => 'postal_code',
+      'helper_text' => '',
     ),
     'formatted_address' => 
     array (
       'label' => 'Indirizzo formattato',
       'placeholder' => 'Indirizzo formattato completo',
       'description' => 'formatted_address',
-      'helper_text' => 'formatted_address',
+      'helper_text' => '',
     ),
     'place_id' => 
     array (
@@ -117,7 +121,7 @@ return array (
       'label' => 'Longitudine',
       'placeholder' => 'Inserisci la longitudine',
       'description' => 'longitude',
-      'helper_text' => 'longitude',
+      'helper_text' => '',
     ),
     'type' => 
     array (
@@ -137,7 +141,7 @@ return array (
       'label' => 'Principale',
       'helper' => 'Imposta questo indirizzo come indirizzo principale',
       'description' => 'is_primary',
-      'helper_text' => 'is_primary',
+      'helper_text' => '',
       'placeholder' => 'is_primary',
     ),
     'extra_data' => 
@@ -156,7 +160,7 @@ return array (
     'map' => 
     array (
       'description' => 'map',
-      'helper_text' => 'map',
+      'helper_text' => '',
     ),
   ),
   'columns' => 
