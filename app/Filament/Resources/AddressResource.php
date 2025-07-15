@@ -60,10 +60,7 @@ class AddressResource extends XotBaseResource
                     ->columnSpan(2),
                 
                 "administrative_area_level_1" => Select::make('administrative_area_level_1')
-<<<<<<< HEAD
-=======
                 /*
->>>>>>> 450f7c3 (.)
                     ->options(function () {
                         return Comune::select("regione")
                             ->distinct()
@@ -73,11 +70,8 @@ class AddressResource extends XotBaseResource
 
                             ->toArray();
                     })
-<<<<<<< HEAD
-=======
                             */
                             ->options(Region::orderBy('name')->get()->pluck("name", "id"))
->>>>>>> 450f7c3 (.)
                     ->searchable()
                     ->required()
                     ->live()
