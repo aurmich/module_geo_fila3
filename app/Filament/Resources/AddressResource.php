@@ -60,6 +60,7 @@ class AddressResource extends XotBaseResource
                     ->columnSpan(2),
                 
                 "administrative_area_level_1" => Select::make('administrative_area_level_1')
+<<<<<<< HEAD
                 /*
                     ->options(function () {
                         return Comune::select("regione")
@@ -72,16 +73,22 @@ class AddressResource extends XotBaseResource
                     })
                             */
                             ->options(Region::orderBy('name')->get()->pluck("name", "id"))
+=======
+                    ->options(Region::orderBy('name')->get()->pluck("name", "id"))
+>>>>>>> 0d1465e6e (.)
                     ->searchable()
                     ->required()
                     ->live()
                     ->afterStateUpdated(function (Set $set) {
                         $set("administrative_area_level_2", null);
+                        $set("locality", null);
+                        $set("postal_code", null);
                         $set("cap", null);
                     }),
                 
                 
                 'administrative_area_level_2' => Select::make('administrative_area_level_2')
+<<<<<<< HEAD
                 /*
                 ->options(function (Get $get) {
                     $region = $get('administrative_area_level_1');
@@ -99,6 +106,9 @@ class AddressResource extends XotBaseResource
                     return $res;
                 })
                     */
+=======
+                
+>>>>>>> 0d1465e6e (.)
                     ->options(fn(Get $get)=>Province::where('region_id',$get('administrative_area_level_1'))
                     ->orderBy('name')
                     ->get()->pluck("name", "id"))
@@ -124,6 +134,7 @@ class AddressResource extends XotBaseResource
                         if (!$province) {
                             return [];
                         }
+<<<<<<< HEAD
 /*
                         $res=Comune::query()
                             ->where('regione->codice', $region)
@@ -131,8 +142,14 @@ class AddressResource extends XotBaseResource
                             ->select('nome','codice')
                             ->distinct()
                             ->orderBy('nome')
+=======
+
+                            $res=Locality::where('region_id',$region)
+                            ->where('province_id',$province)
+                            ->orderBy('name')
+>>>>>>> 0d1465e6e (.)
                             ->get()
-                            ->pluck('nome', 'codice')
+                            ->pluck("name", "id")
                             ->toArray();
                             */
                             $res=Locality::where('region_id',$region)
@@ -161,6 +178,7 @@ class AddressResource extends XotBaseResource
                             return [];
                         }
                         $city = $get('locality');
+<<<<<<< HEAD
                         /*
                         $res=Comune::query()
                             ->where('regione->codice', $region)
@@ -174,6 +192,8 @@ class AddressResource extends XotBaseResource
                             ->toArray();
                         */
 
+=======
+>>>>>>> 0d1465e6e (.)
                         $res=Locality::query()
                         ->where('region_id', $region)
                         ->where('province_id', $province)
@@ -184,6 +204,11 @@ class AddressResource extends XotBaseResource
                         ->get()
                         ->pluck('postal_code', 'postal_code')
                         ->toArray();
+<<<<<<< HEAD
+=======
+
+                        
+>>>>>>> 0d1465e6e (.)
                         
                         return $res ?? [];
                     })
@@ -218,13 +243,8 @@ class AddressResource extends XotBaseResource
         return [
             "region" => Select::make("region")
                 ->options(function () {
-                    return Comune::select("regione")
-                        ->distinct()
-                        ->orderBy("regione->nome")
-                        ->get()
-                        ->pluck("regione.nome", "regione.codice")
-
-                        ->toArray();
+                   
+                    return Region::orderBy('name')->get()->pluck("name", "id");
                 })
                 ->searchable()
                 ->required()
@@ -239,14 +259,12 @@ class AddressResource extends XotBaseResource
                     if (!$region) {
                         return [];
                     }
-                    $res = Comune::query()
-                        ->where("regione->codice", $region)
-                        ->select("provincia")
-                        ->distinct()
-                        ->orderBy("provincia->nome")
-                        ->get()
-                        ->pluck("provincia.nome", "provincia.codice")
-                        ->toArray();
+                   
+                    $res=Province::where('region_id',$region)
+                    ->orderBy('name')
+                    ->get()
+                    ->pluck("name", "id")
+                    ->toArray();
                     return $res;
                 })
                 ->searchable()
@@ -263,16 +281,17 @@ class AddressResource extends XotBaseResource
                     if (!$province) {
                         return [];
                     }
-                    $res = Comune::query()
-                        ->where("regione->codice", $region)
-                        ->where("provincia->codice", $province)
-                        ->select("cap")
+                    
+                    $res=Locality::query()
+                        ->where('region_id', $region)
+                        ->where('province_id', $province)
+                        //->when($city, fn($query) => $query->where('id', $city))
+                        ->select('postal_code')
                         ->distinct()
-                        ->orderBy("cap")
+                        ->orderBy('postal_code')
                         ->get()
-                        ->pluck("cap.0", "cap.0")
+                        ->pluck('postal_code', 'postal_code')
                         ->toArray();
-
                     return $res;
                 })
                 ->searchable()
