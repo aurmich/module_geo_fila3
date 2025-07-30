@@ -138,10 +138,14 @@ return [
             ],
             'fields' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'name' => 'Nome',
 =======
                 'name' => 'Name',
 >>>>>>> 0d1465e6e (.)
+=======
+                'name' => 'Name',
+>>>>>>> fc4bfbb (.)
                 'address' => 'Indirizzo',
                 'latitude' => 'Latitudine',
                 'longitude' => 'Longitudine',
@@ -153,26 +157,36 @@ return [
                 'residence' => 'Residenza',
                 'point_of_interest' => 'Punto di Interesse',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'public_service' => 'Servizio Pubblico',
 =======
                 'public_service' => 'Servizio Public',
 >>>>>>> 0d1465e6e (.)
+=======
+                'public_service' => 'Servizio Public',
+>>>>>>> fc4bfbb (.)
             ],
         ],
     ],
     'common' => [
         'status' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'active' => 'Attivo',
             'inactive' => 'Inattivo',
             'pending' => 'In Attesa',
             'verified' => 'Verificato',
 =======
+=======
+>>>>>>> fc4bfbb (.)
             'active' => 'Active',
             'inactive' => 'Inactive',
             'pending' => 'In Attesa',
             'verified' => 'Verified',
+<<<<<<< HEAD
 >>>>>>> 0d1465e6e (.)
+=======
+>>>>>>> fc4bfbb (.)
         ],
         'actions' => [
             'locate' => 'Localizza',
@@ -184,6 +198,7 @@ return [
         ],
         'messages' => [
             'success' => [
+<<<<<<< HEAD
                 'located' => 'Posizione trovata',
                 'saved' => 'Posizione salvata',
                 'updated' => 'Posizione aggiornata',
@@ -198,6 +213,18 @@ return [
 =======
                 'network_error' => 'Error di rete',
 >>>>>>> 0d1465e6e (.)
+=======
+                'located' => 'Location found',
+                'saved' => 'Location saved',
+                'updated' => 'Location updated',
+                'deleted' => 'Location deleted',
+            ],
+            'error' => [
+                'not_found' => 'Location not found',
+                'invalid_coords' => 'Invalid coordinates',
+                'geocoding_failed' => 'Geocoding failed',
+                'network_error' => 'Network error',
+>>>>>>> fc4bfbb (.)
             ],
         ],
         'filters' => [

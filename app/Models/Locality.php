@@ -6,9 +6,13 @@ namespace Modules\Geo\Models;
 
 use Illuminate\Database\Eloquent\Model;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use function Safe\json_decode;
 >>>>>>> 0d1465e6e (.)
+=======
+use function Safe\json_decode;
+>>>>>>> fc4bfbb (.)
 
 class Locality extends BaseModel
 {
@@ -30,8 +34,11 @@ class Locality extends BaseModel
             ->distinct()
             ->orderBy("nome")
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->get();
 =======
+=======
+>>>>>>> fc4bfbb (.)
             ->get()
             ->map(function($row){
                 /** @phpstan-ignore offsetAccess.nonOffsetAccessible, property.notFound */
@@ -41,7 +48,10 @@ class Locality extends BaseModel
                 return $row;
             });
             
+<<<<<<< HEAD
 >>>>>>> 0d1465e6e (.)
+=======
+>>>>>>> fc4bfbb (.)
        
         return $rows->toArray();
     }
