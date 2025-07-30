@@ -13,8 +13,73 @@ use Modules\Geo\Database\Factories\PlaceFactory;
 
 use function Safe\json_encode;
 
+<<<<<<< HEAD
 class Place extends BaseModel implements HasGeolocation
 {
+=======
+/**
+ * 
+ *
+ * @property-read \Modules\Geo\Models\Address|null $address
+ * @property-read \Modules\SaluteOra\Models\Profile|null $creator
+ * @property-read string $formatted_address
+ * @property-read float|null $latitude
+ * @property-read float|null $longitude
+ * @property-read \Illuminate\Database\Eloquent\Model $linked
+ * @property-read \Modules\Geo\Models\PlaceType|null $placeType
+ * @property-read \Modules\SaluteOra\Models\Profile|null $updater
+ * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place query()
+ * @property int $id
+ * @property string|null $model_type
+ * @property int|null $model_id
+ * @property string|null $nearest_street
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $post_type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereDeletedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereFormattedAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereLatitude($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereLongitude($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereModelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereModelType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereNearestStreet($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place wherePostType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedBy($value)
+ * @mixin \Eloquent
+ */
+class Place extends BaseModel implements HasGeolocation
+{
+    /**
+     * List of address components used in the application.
+     *
+     * @var array<string>
+     */
+    public static array $address_components = [
+        'premise',
+        'locality',
+        'postal_town',
+        'administrative_area_level_3',
+        'administrative_area_level_2',
+        'administrative_area_level_1',
+        'country',
+        'street_number',
+        'route',
+        'postal_code',
+        'point_of_interest',
+        'political'
+    ];
+>>>>>>> 3c5e1ea (.)
     use HasFactory;
 
     protected $fillable = [

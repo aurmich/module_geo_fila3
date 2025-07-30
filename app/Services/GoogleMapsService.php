@@ -88,6 +88,7 @@ class GoogleMapsService extends BaseGeoService
         }
     }
 
+<<<<<<< HEAD
     /**
      * @return array{
      *     results: array<array{
@@ -198,4 +199,11 @@ class GoogleMapsService extends BaseGeoService
 
         return $result;
     }
+=======
+
+
+
+
+
+>>>>>>> 3c5e1ea (.)
 }
