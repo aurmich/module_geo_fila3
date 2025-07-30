@@ -60,26 +60,7 @@ class AddressResource extends XotBaseResource
                     ->columnSpan(2),
                 
                 "administrative_area_level_1" => Select::make('administrative_area_level_1')
-<<<<<<< HEAD
-<<<<<<< HEAD
-                /*
-                    ->options(function () {
-                        return Comune::select("regione")
-                            ->distinct()
-                            ->orderBy("regione->nome")
-                            ->get()
-                            ->pluck("regione.nome", "regione.codice")
-
-                            ->toArray();
-                    })
-                            */
-                            ->options(Region::orderBy('name')->get()->pluck("name", "id"))
-=======
                     ->options(Region::orderBy('name')->get()->pluck("name", "id"))
->>>>>>> 0d1465e6e (.)
-=======
-                    ->options(Region::orderBy('name')->get()->pluck("name", "id"))
->>>>>>> fc4bfbb (.)
                     ->searchable()
                     ->required()
                     ->live()
@@ -92,44 +73,28 @@ class AddressResource extends XotBaseResource
                 
                 
                 'administrative_area_level_2' => Select::make('administrative_area_level_2')
-<<<<<<< HEAD
-<<<<<<< HEAD
-                /*
-                ->options(function (Get $get) {
-                    $region = $get('administrative_area_level_1');
-                    if (!$region) {
-                        return [];
-                    }
-                    $res= Comune::query()
-                        ->where('regione->codice', $region)
-                        ->select('provincia')
-                        ->distinct()
-                        ->orderBy('provincia->nome')
-                        ->get()
-                        ->pluck('provincia.nome', 'provincia.codice')
-                        ->toArray();
-                    return $res;
-                })
-                    */
-=======
-                
->>>>>>> 0d1465e6e (.)
-=======
-                
->>>>>>> fc4bfbb (.)
-                    ->options(fn(Get $get)=>Province::where('region_id',$get('administrative_area_level_1'))
-                    ->orderBy('name')
-                    ->get()->pluck("name", "id"))
-                ->searchable()
-                ->required()
-                ->live()
-                ->afterStateUpdated(function (Set $set){
-                    $set('cap', null);
-                    $set('postal_code', null);
-                    $set('locality', null);
-                })
-                ->disabled(fn (Get $get) => !$get('administrative_area_level_1') )
-                ,
+                    ->options(function (Get $get) {
+                        $region = $get('administrative_area_level_1');
+                        if (!$region) {
+                            return [];
+                        }
+                        $res=Province::where('region_id',$region)
+                            ->orderBy('name')
+                            ->get()
+                            ->pluck("name", "id")
+                            ->toArray();
+                        return $res;
+                    })
+                    ->searchable()
+                    ->required()
+                    ->live()
+                    ->afterStateUpdated(function (Set $set){
+                        $set('cap', null);
+                        $set('postal_code', null);
+                        $set('locality', null);
+                    })
+                    ->disabled(fn (Get $get) => !$get('administrative_area_level_1') )
+                    ,
                
 
                     'locality' => Select::make('locality')
@@ -142,30 +107,7 @@ class AddressResource extends XotBaseResource
                         if (!$province) {
                             return [];
                         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-/*
-                        $res=Comune::query()
-                            ->where('regione->codice', $region)
-                            ->where('provincia->codice', $province)
-                            ->select('nome','codice')
-                            ->distinct()
-                            ->orderBy('nome')
-=======
-
-                            $res=Locality::where('region_id',$region)
-                            ->where('province_id',$province)
-                            ->orderBy('name')
->>>>>>> 0d1465e6e (.)
-                            ->get()
-                            ->pluck("name", "id")
-                            ->toArray();
-                            */
-=======
-
-                         
->>>>>>> fc4bfbb (.)
-                            $res=Locality::where('region_id',$region)
+                        $res=Locality::where('region_id',$region)
                             ->where('province_id',$province)
                             ->orderBy('name')
                             ->get()
@@ -191,26 +133,7 @@ class AddressResource extends XotBaseResource
                             return [];
                         }
                         $city = $get('locality');
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        /*
-                        $res=Comune::query()
-                            ->where('regione->codice', $region)
-                            ->where('provincia->codice', $province)
-                            ->when($city, fn($query) => $query->where('codice', $city))
-                            ->select('cap')
-                            ->distinct()
-                            ->orderBy('cap')
-                            ->get()
-                            ->pluck('cap.0', 'cap.0')
-                            ->toArray();
-                        */
 
-=======
->>>>>>> 0d1465e6e (.)
-=======
-
->>>>>>> fc4bfbb (.)
                         $res=Locality::query()
                         ->where('region_id', $region)
                         ->where('province_id', $province)
@@ -221,16 +144,6 @@ class AddressResource extends XotBaseResource
                         ->get()
                         ->pluck('postal_code', 'postal_code')
                         ->toArray();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                        
->>>>>>> 0d1465e6e (.)
-=======
-
-                        
->>>>>>> fc4bfbb (.)
                         
                         return $res ?? [];
                     })

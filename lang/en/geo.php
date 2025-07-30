@@ -137,83 +137,38 @@ return [
                 ],
             ],
             'fields' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-                'name' => 'Nome',
-=======
                 'name' => 'Name',
->>>>>>> 0d1465e6e (.)
-=======
-                'name' => 'Name',
->>>>>>> fc4bfbb (.)
-                'address' => 'Indirizzo',
-                'latitude' => 'Latitudine',
-                'longitude' => 'Longitudine',
-                'category' => 'Categoria',
-                'status' => 'Stato',
+                'address' => 'Address',
+                'latitude' => 'Latitude',
+                'longitude' => 'Longitude',
+                'category' => 'Category',
+                'status' => 'Status',
             ],
             'categories' => [
-                'business' => 'Attività',
-                'residence' => 'Residenza',
-                'point_of_interest' => 'Punto di Interesse',
-<<<<<<< HEAD
-<<<<<<< HEAD
-                'public_service' => 'Servizio Pubblico',
-=======
-                'public_service' => 'Servizio Public',
->>>>>>> 0d1465e6e (.)
-=======
-                'public_service' => 'Servizio Public',
->>>>>>> fc4bfbb (.)
+                'business' => 'Business',
+                'residence' => 'Residence',
+                'point_of_interest' => 'Point of Interest',
+                'public_service' => 'Public Service',
             ],
         ],
     ],
     'common' => [
         'status' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'active' => 'Attivo',
-            'inactive' => 'Inattivo',
-            'pending' => 'In Attesa',
-            'verified' => 'Verificato',
-=======
-=======
->>>>>>> fc4bfbb (.)
             'active' => 'Active',
             'inactive' => 'Inactive',
-            'pending' => 'In Attesa',
+            'pending' => 'Pending',
             'verified' => 'Verified',
-<<<<<<< HEAD
->>>>>>> 0d1465e6e (.)
-=======
->>>>>>> fc4bfbb (.)
         ],
         'actions' => [
-            'locate' => 'Localizza',
-            'center' => 'Centra Mappa',
+            'locate' => 'Locate',
+            'center' => 'Center Map',
             'zoom' => 'Zoom',
-            'pan' => 'Sposta',
-            'measure' => 'Misura',
-            'directions' => 'Indicazioni',
+            'pan' => 'Pan',
+            'measure' => 'Measure',
+            'directions' => 'Directions',
         ],
         'messages' => [
             'success' => [
-<<<<<<< HEAD
-                'located' => 'Posizione trovata',
-                'saved' => 'Posizione salvata',
-                'updated' => 'Posizione aggiornata',
-                'deleted' => 'Posizione eliminata',
-            ],
-            'error' => [
-                'not_found' => 'Posizione non trovata',
-                'invalid_coords' => 'Coordinate non valide',
-                'geocoding_failed' => 'Geocodifica fallita',
-<<<<<<< HEAD
-                'network_error' => 'Errore di rete',
-=======
-                'network_error' => 'Error di rete',
->>>>>>> 0d1465e6e (.)
-=======
                 'located' => 'Location found',
                 'saved' => 'Location saved',
                 'updated' => 'Location updated',
@@ -224,7 +179,6 @@ return [
                 'invalid_coords' => 'Invalid coordinates',
                 'geocoding_failed' => 'Geocoding failed',
                 'network_error' => 'Network error',
->>>>>>> fc4bfbb (.)
             ],
         ],
         'filters' => [
