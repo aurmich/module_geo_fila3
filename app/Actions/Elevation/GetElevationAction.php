@@ -67,8 +67,13 @@ class GetElevationAction
                 throw ElevationException::invalidResponse();
             }
 
+<<<<<<< HEAD
             return (float) $firstResult['elevation'];
 >>>>>>> 3c5e1ea (.)
+=======
+            $elevation = $firstResult['elevation'];
+            return is_numeric($elevation) ? (float) $elevation : 0.0;
+>>>>>>> 0119f2f (.)
         } catch (\Throwable $e) {
             if ($e instanceof ElevationException) {
                 throw $e;
