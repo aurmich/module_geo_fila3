@@ -42,12 +42,16 @@ class GetElevationAction
         $this->validateCoordinates($location);
 
         try {
+<<<<<<< HEAD
             /** @var array<string, mixed> $response */
+=======
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
             $response = $this->googleMapsService->getElevation(
                 $location->latitude,
                 $location->longitude
             );
 
+<<<<<<< HEAD
             if (!isset($response['results']) || !is_array($response['results']) || empty($response['results'])) {
                 throw ElevationException::invalidResponse();
             }
@@ -58,6 +62,13 @@ class GetElevationAction
             }
 
             return (float) $firstResult['elevation'];
+=======
+            if (empty($response['results']) || ! isset($response['results'][0]['elevation'])) {
+                throw ElevationException::invalidResponse();
+            }
+
+            return (float) $response['results'][0]['elevation'];
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
         } catch (\Throwable $e) {
             if ($e instanceof ElevationException) {
                 throw $e;

@@ -57,9 +57,15 @@ class RouteData extends Data
         return sprintf('%d min', $minutes);
     }
 
+<<<<<<< HEAD
     /*
      * Verifica se il percorso è stato ottimizzato.
      
+=======
+    /**
+     * Verifica se il percorso è stato ottimizzato.
+     */
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     public function isOptimized(): bool
     {
         return ! $this->waypoints->isEmpty() && ! $this->originalWaypoints->isEmpty()
@@ -68,7 +74,11 @@ class RouteData extends Data
                 fn (array $pair): bool => $pair[0]->equals($pair[1])
             );
     }
+<<<<<<< HEAD
     */
+=======
+
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     /**
      * Ottiene un riepilogo del percorso.
      *
@@ -76,7 +86,12 @@ class RouteData extends Data
      *     distance: string,
      *     duration: string,
      *     steps: int,
+<<<<<<< HEAD
      *     waypoints: int
+=======
+     *     waypoints: int,
+     *     optimized: bool
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
      * }
      */
     public function getSummary(): array
@@ -86,7 +101,11 @@ class RouteData extends Data
             'duration' => $this->getFormattedDuration(),
             'steps' => count($this->steps),
             'waypoints' => $this->waypoints->count(),
+<<<<<<< HEAD
             //'optimized' => $this->isOptimized(),
+=======
+            'optimized' => $this->isOptimized(),
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
         ];
     }
 

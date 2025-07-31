@@ -136,7 +136,11 @@ class LocationMapTableWidget extends MapTableWidget
         ];
     }
 
+<<<<<<< HEAD
     public function getTableActions(): array
+=======
+    protected function getTableActions(): array
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     {
         return [
             Tables\Actions\ViewAction::make()
@@ -164,17 +168,27 @@ class LocationMapTableWidget extends MapTableWidget
 
         foreach ($locations as $location) {
             if ($location->latitude && $location->longitude) {
+<<<<<<< HEAD
                 $iconUrl = $this->getMarkerIcon($location);
                 
+=======
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
                 $data[] = [
                     'location' => [
                         'lat' => (float) $location->latitude,
                         'lng' => (float) $location->longitude,
                     ],
+<<<<<<< HEAD
                     'label' => (string) $location->name,
                     'id' => (int) $location->id,
                     'icon' => [
                         'url' => is_string($iconUrl) ? $iconUrl : '',
+=======
+                    'label' => $location->name,
+                    'id' => $location->id,
+                    'icon' => [
+                        'url' => $this->getMarkerIcon($location),
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
                         'type' => 'url',
                         'scale' => [32, 32],
                     ],
@@ -206,6 +220,7 @@ class LocationMapTableWidget extends MapTableWidget
             ->modalSubmitAction(false);
     }
 
+<<<<<<< HEAD
     /**
      * @return string|null
      */
@@ -237,5 +252,21 @@ class LocationMapTableWidget extends MapTableWidget
         $iconUrl = $iconConfig['url'] ?? null;
         
         return is_string($iconUrl) ? $iconUrl : null;
+=======
+    public function getMarkerIcon(Place $place): ?array
+    {
+        $type = $place->placeType->slug ?? 'default';
+        $markerConfig = config("geo.markers.types.{$type}");
+
+        if (! is_array($markerConfig)) {
+            $markerConfig = config('geo.markers.types.default');
+        }
+
+        if (! is_array($markerConfig)) {
+            return null;
+        }
+
+        return $markerConfig['icon'] ?? null;
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     }
 }

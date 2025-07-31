@@ -62,15 +62,23 @@ class OptimizeRouteAction
         $shortestDistance = PHP_FLOAT_MAX;
 
         foreach ($locations as $location) {
+<<<<<<< HEAD
             $distanceResult = $this->calculateDistance->execute(
+=======
+            $distance = $this->calculateDistance->execute(
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
                 origin: $currentLocation,
                 destination: $location
             );
 
+<<<<<<< HEAD
             // Estrai il valore numerico della distanza
             $distance = (float) ($distanceResult['distance']['value'] ?? PHP_FLOAT_MAX);
 
             if ($distance < $shortestDistance) {
+=======
+            if (is_numeric($distance) && $distance < $shortestDistance) {
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
                 $shortestDistance = $distance;
                 $nearestLocation = $location;
             }

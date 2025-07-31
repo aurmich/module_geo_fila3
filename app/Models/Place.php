@@ -13,6 +13,7 @@ use Modules\Geo\Database\Factories\PlaceFactory;
 
 use function Safe\json_encode;
 
+<<<<<<< HEAD
 /**
  * 
  *
@@ -75,6 +76,10 @@ class Place extends BaseModel implements HasGeolocation
         'point_of_interest',
         'political'
     ];
+=======
+class Place extends BaseModel implements HasGeolocation
+{
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     use HasFactory;
 
     protected $fillable = [

@@ -6,6 +6,7 @@ namespace Modules\Geo\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
 /**
  * 
  *
@@ -14,6 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PlaceType query()
  * @mixin \Eloquent
  */
+=======
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 class PlaceType extends Model
 {
     protected $fillable = [

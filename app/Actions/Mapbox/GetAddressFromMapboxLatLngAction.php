@@ -46,7 +46,11 @@ class GetAddressFromMapboxLatLngAction
     {
         $apiKey = config('services.mapbox.api_key');
 
+<<<<<<< HEAD
         if (empty($apiKey) || !is_string($apiKey)) {
+=======
+        if (empty($apiKey)) {
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
             throw InvalidLocationException::invalidData('API key di Mapbox non configurata');
         }
 
@@ -66,6 +70,7 @@ class GetAddressFromMapboxLatLngAction
             throw InvalidLocationException::invalidData('Richiesta a Mapbox fallita');
         }
 
+<<<<<<< HEAD
         $data = $response->json();
         
         if (!is_array($data)) {
@@ -73,24 +78,36 @@ class GetAddressFromMapboxLatLngAction
         }
 
         return $data;
+=======
+        return $response->json();
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     }
 
     private function parseResponse(array $response): MapboxMapData
     {
+<<<<<<< HEAD
         /** @var array<int, array{center?: array{float, float}, text?: string, address?: string, context?: array<int, array{id?: string, text?: string, short_code?: string}>}> $features */
         $features = $response['features'] ?? [];
         $location = $features[0] ?? [];
+=======
+        $features = collect($response['features'] ?? []);
+        $location = $features->first();
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 
         if (empty($location)) {
             throw InvalidLocationException::invalidData('Nessun risultato trovato');
         }
 
         // Estrai il contesto dal risultato
+<<<<<<< HEAD
         /** @var array<int, array{id?: string, text?: string, short_code?: string}> $contextItems */
         $contextItems = $location['context'] ?? [];
         
         $context = [];
         foreach ($contextItems as $item) {
+=======
+        $context = collect($location['context'] ?? [])->mapWithKeys(function (array $item) {
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
             $id = $item['id'] ?? '';
             $text = $item['text'] ?? '';
             $shortCode = $item['short_code'] ?? '';
@@ -98,6 +115,7 @@ class GetAddressFromMapboxLatLngAction
             // Determina il tipo di contesto dal prefisso dell'ID
             $type = explode('.', $id)[0] ?? '';
 
+<<<<<<< HEAD
             if (!empty($type)) {
                 $context[$type] = [
                     'text' => $text,
@@ -134,6 +152,25 @@ class GetAddressFromMapboxLatLngAction
         ];
 
         return new MapboxMapData($mappedData);
+=======
+            return [$type => [
+                'text' => $text,
+                'short_code' => $shortCode,
+            ]];
+        })->toArray();
+
+        $location['context'] = [
+            'country' => $context['country']['text'] ?? null,
+            'country_code' => $context['country']['short_code'] ?? 'it',
+            'place' => $context['place']['text'] ?? null,
+            'postcode' => $context['postcode']['text'] ?? null,
+            'locality' => $context['locality']['text'] ?? null,
+            'region' => $context['region']['text'] ?? null,
+            'neighborhood' => $context['neighborhood']['text'] ?? null,
+        ];
+
+        return new MapboxMapData($location);
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     }
 
     private function mapResponseToAddressData(MapboxMapData $data): AddressData

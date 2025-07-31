@@ -24,6 +24,16 @@ use Webbingbrasil\FilamentMaps\Widgets\MapWidget;
  */
 class LocationMapWidget extends MapWidget
 {
+<<<<<<< HEAD
+=======
+    protected static string $view = 'geo::filament.widgets.location-map-widget';
+
+    protected function getView(): string
+    {
+        return static::$view;
+    }
+
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     protected int|string|array $columnSpan = 'full';
 
     public Htmlable|string|null $heading = 'Mappa';
@@ -55,6 +65,7 @@ class LocationMapWidget extends MapWidget
      */
     protected function getOptions(): array
     {
+<<<<<<< HEAD
         /** @var array<string, mixed> $config */
         $config = Config::get('maps', []);
 
@@ -62,6 +73,14 @@ class LocationMapWidget extends MapWidget
             'zoom' => is_numeric($config['zoom'] ?? null) ? (int) $config['zoom'] : 12,
             'center' => $this->getMapCenter(),
             'mapTypeId' => is_string($config['type'] ?? null) ? $config['type'] : 'roadmap',
+=======
+        $config = Config::get('maps', []);
+
+        return [
+            'zoom' => (int) ($config['zoom'] ?? 12),
+            'center' => $this->getMapCenter(),
+            'mapTypeId' => (string) ($config['type'] ?? 'roadmap'),
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
             'mapTypeControl' => true,
             'streetViewControl' => true,
             'fullscreenControl' => true,
@@ -82,7 +101,11 @@ class LocationMapWidget extends MapWidget
     public function getPlaces(): Collection
     {
         /* @var Collection<int, Place> */
+<<<<<<< HEAD
         return Place::with(['placeType'])->get();
+=======
+        return Place::with(['placeType', 'type'])->get();
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     }
 
     /**
@@ -90,12 +113,26 @@ class LocationMapWidget extends MapWidget
      *
      * @return array<int, array{
      *     position: array{lat: float, lng: float},
+<<<<<<< HEAD
+=======
+     *     title?: string,
+     *     icon?: array{
+     *         url: string,
+     *         scaledSize: array{width: int, height: int}
+     *     }
+     * }>
+     */
+    /**
+     * @return array<int, array{
+     *     position: array{lat: float, lng: float},
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
      *     title: string,
      *     icon?: array{url: string, scaledSize: array{width: int, height: int}}
      * }>
      */
     public function getMarkers(): array
     {
+<<<<<<< HEAD
         return $this->getPlaces()
             ->filter(fn(Place $place) => $place->latitude !== null && $place->longitude !== null)
             ->map(function (Place $place): array {
@@ -114,6 +151,23 @@ class LocationMapWidget extends MapWidget
 
                 return $marker;
             })->all();
+=======
+        /* @var array<int, array{
+         *     position: array{lat: float, lng: float},
+         *     title: string,
+         *     icon?: array{url: string, scaledSize: array{width: int, height: int}}
+         * }> */
+        return $this->getPlaces()->map(function (Place $place): array {
+            return [
+                'position' => [
+                    'lat' => (float) $place->latitude,
+                    'lng' => (float) $place->longitude,
+                ],
+                'title' => (string) ($place->name ?? 'Unnamed Place'),
+                'icon' => $this->getMarkerIcon($place),
+            ];
+        })->all();
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     }
 
     /**
@@ -123,11 +177,15 @@ class LocationMapWidget extends MapWidget
      */
     protected function getMapCenter(): array
     {
+<<<<<<< HEAD
         /** @var array<string, mixed> $config */
+=======
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
         $config = Config::get('maps', []);
         $defaultLat = 45.4642;
         $defaultLng = 9.1900;
 
+<<<<<<< HEAD
         /** @var array<string, mixed>|null $centerConfig */
         $centerConfig = $config['center'] ?? null;
 
@@ -138,6 +196,11 @@ class LocationMapWidget extends MapWidget
             'lng' => is_array($centerConfig) && is_numeric($centerConfig['lng'] ?? null) 
                 ? (float) $centerConfig['lng'] 
                 : $defaultLng,
+=======
+        return [
+            'lat' => (float) ($config['center']['lat'] ?? $defaultLat),
+            'lng' => (float) ($config['center']['lng'] ?? $defaultLng),
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
         ];
     }
 
@@ -146,6 +209,12 @@ class LocationMapWidget extends MapWidget
      *
      * @return array{url: string, scaledSize: array{width: int, height: int}}|null
      */
+<<<<<<< HEAD
+=======
+    /**
+     * @return array{url: string, scaledSize: array{width: int, height: int}}|null
+     */
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     protected function getMarkerIcon(Place $place): ?array
     {
         /** @var array{
@@ -157,6 +226,7 @@ class LocationMapWidget extends MapWidget
         $config = Config::get('maps.markers', []);
 
         $placeType = $place->placeType;
+<<<<<<< HEAD
         if (!$placeType) {
             return null;
         }
@@ -170,13 +240,27 @@ class LocationMapWidget extends MapWidget
         $slug = $placeType->slug;
 
         if (!is_string($slug) || !isset($config['icons'][$slug])) {
+=======
+        if (! $placeType) {
+            return null;
+        }
+
+        /** @var string $slug */
+        $slug = $placeType->slug;
+
+        if (! isset($config['icons'][$slug])) {
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
             return null;
         }
 
         /** @var array{url: string, size: array{int, int}} $icon */
         $icon = $config['icons'][$slug];
 
+<<<<<<< HEAD
         if (!isset($icon['url']) || !is_string($icon['url'])) {
+=======
+        if (! isset($icon['url']) || ! is_string($icon['url'])) {
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
             return null;
         }
 
@@ -191,9 +275,13 @@ class LocationMapWidget extends MapWidget
 
     public function render(): View
     {
+<<<<<<< HEAD
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.location-map-widget';
         
         return ViewFacade::make($viewName, $this->getViewData());
+=======
+        return ViewFacade::make($this->getView(), $this->getViewData());
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     }
 }

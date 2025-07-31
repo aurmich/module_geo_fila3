@@ -30,6 +30,7 @@ class GetAddressFromBingMapsAction
         return $this->mapResponseToAddressData($data);
     }
 
+<<<<<<< HEAD
     /**
      * Get the Bing Maps API key from configuration.
      *
@@ -39,12 +40,17 @@ class GetAddressFromBingMapsAction
     private function getApiKey(): string
     {
         /** @var string|null $apiKey */
+=======
+    private function getApiKey(): string
+    {
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
         $apiKey = config('services.bing.maps_api_key');
 
         if (empty($apiKey)) {
             throw InvalidLocationException::invalidData('API key di Bing Maps non configurata');
         }
 
+<<<<<<< HEAD
         // We've already checked that $apiKey is not empty
         /** @var non-empty-string $apiKey */
         return $apiKey;
@@ -59,6 +65,11 @@ class GetAddressFromBingMapsAction
      * @return array<string, mixed>
      * @throws InvalidLocationException
      */
+=======
+        return $apiKey;
+    }
+
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     private function makeApiRequest(float $latitude, float $longitude, string $apiKey): array
     {
         $response = Http::get(self::BASE_URL, [
@@ -72,9 +83,13 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Richiesta a Bing Maps fallita');
         }
 
+<<<<<<< HEAD
         /** @var array<string, mixed> $jsonResponse */
         $jsonResponse = $response->json();
         return $jsonResponse;
+=======
+        return $response->json();
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
     }
 
     private function parseResponse(array $response): BingMapData

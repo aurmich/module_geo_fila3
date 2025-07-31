@@ -11,16 +11,30 @@ class ClusterLocationsAction
 {
     public function __construct(
         private readonly CalculateDistanceAction $distanceCalculator,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 
     /**
      * Raggruppa le posizioni in cluster basati sulla distanza.
      *
+<<<<<<< HEAD
      * @param  array<LocationData>  $locations  Lista delle posizioni da raggruppare
      * @param  float  $maxDistance  Distanza massima in km tra i punti di un cluster
      * @return array<array{center: LocationData, points: array<LocationData>}>
      *
      * @throws InvalidLocationException Se i dati della posizione non sono validi
+=======
+     * @param array<LocationData> $locations   Lista delle posizioni da raggruppare
+     * @param float               $maxDistance Distanza massima in km tra i punti di un cluster
+     *
+     * @throws InvalidLocationException Se i dati della posizione non sono validi
+     *
+     * @return array<array{center: LocationData, points: array<LocationData>}>
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
      */
     public function execute(array $locations, float $maxDistance = 1.0): array
     {
@@ -59,7 +73,11 @@ class ClusterLocationsAction
     /**
      * Aggiorna il centro del cluster calcolando la media delle coordinate.
      *
+<<<<<<< HEAD
      * @param  array{center: LocationData, points: array<LocationData>}  $cluster
+=======
+     * @param array{center: LocationData, points: array<LocationData>} $cluster
+>>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
      */
     private function updateClusterCenter(array &$cluster): void
     {
