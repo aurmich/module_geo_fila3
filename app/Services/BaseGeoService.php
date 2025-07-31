@@ -28,6 +28,7 @@ abstract class BaseGeoService
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var string|null $apiKey */
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
@@ -36,6 +37,9 @@ abstract class BaseGeoService
         /** @var string|null $apiKey */
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        /** @var string|null $apiKey */
+>>>>>>> 6f0eea5 (.)
         $apiKey = config("geo.api_keys.{$this->getServiceName()}");
 
         if (empty($apiKey)) {
@@ -64,6 +68,7 @@ abstract class BaseGeoService
         if ($useCache && config('geo.cache.enabled')) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             /** @var array<string, mixed>|null $cached */
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
@@ -72,6 +77,9 @@ abstract class BaseGeoService
             /** @var array<string, mixed>|null $cached */
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+            /** @var array<string, mixed>|null $cached */
+>>>>>>> 6f0eea5 (.)
             $cached = Cache::get($cacheKey);
             if (null !== $cached) {
                 return $cached;
@@ -81,6 +89,7 @@ abstract class BaseGeoService
         // Rate limiting
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var int $maxAttempts */
         $maxAttempts = config("geo.rate_limits.{$this->getServiceName()}.requests_per_second", 50);
         RateLimiter::attempt(
@@ -96,13 +105,18 @@ abstract class BaseGeoService
             $this->getServiceName(),
             config("geo.rate_limits.{$this->getServiceName()}.requests_per_second", 50),
 =======
+=======
+>>>>>>> 6f0eea5 (.)
         /** @var int $maxAttempts */
         $maxAttempts = config("geo.rate_limits.{$this->getServiceName()}.requests_per_second", 50);
         RateLimiter::attempt(
             $this->getServiceName(),
             $maxAttempts,
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
             function () {
                 return true;
             }
@@ -117,6 +131,7 @@ abstract class BaseGeoService
             }
 
             $data = $response->json();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             
@@ -149,6 +164,8 @@ abstract class BaseGeoService
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
             
             // Validazione tipo di ritorno per PHPStan level 9 compliance
             if (!is_array($data)) {
@@ -166,8 +183,11 @@ abstract class BaseGeoService
             }
 
             return $validatedData;
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
         } catch (\Throwable $e) {
             throw new \RuntimeException("Errore durante la richiesta a {$this->getServiceName()}: ".$e->getMessage(), 0, $e);
         }
@@ -178,6 +198,7 @@ abstract class BaseGeoService
      */
     protected function buildHttpClient(): PendingRequest
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         /** @var float $timeout */
@@ -208,6 +229,8 @@ abstract class BaseGeoService
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
         /** @var float $timeout */
         $timeout = config('geo.http_client.timeout', 5.0);
         /** @var int $retryTimes */
@@ -222,8 +245,11 @@ abstract class BaseGeoService
                 $retryTimes,
                 $retrySleep,
                 function ($exception) use ($whenTypes) {
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
                     foreach ($whenTypes as $type) {
                         if (is_a($exception, "\\GuzzleHttp\\Exception\\{$type}")) {
                             return true;
@@ -246,6 +272,7 @@ abstract class BaseGeoService
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var string $prefix */
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
@@ -254,6 +281,9 @@ abstract class BaseGeoService
         /** @var string $prefix */
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        /** @var string $prefix */
+>>>>>>> 6f0eea5 (.)
         $prefix = config('geo.cache.prefix', 'geo_');
         $hash = md5($method.$url.serialize($params));
 

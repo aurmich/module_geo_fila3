@@ -6,6 +6,7 @@ namespace Modules\Geo\Models;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -444,6 +445,8 @@ class Address extends Model
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -862,6 +865,9 @@ class Address extends BaseModel
     {
         return $query->where('type', $type instanceof AddressTypeEnum ? $type->value : $type);
     }
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
 }

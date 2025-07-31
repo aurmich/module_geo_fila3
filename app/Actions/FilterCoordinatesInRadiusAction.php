@@ -14,6 +14,7 @@ use Modules\Geo\Datas\LocationData;
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @param  float  $centerLatitude  La latitudine del punto centrale
  * @param  float  $centerLongitude  La longitudine del punto centrale
  * @param  array<array{latitude: string, longitude: string}>  $coordinates  Array di coordinate da filtrare
@@ -30,18 +31,24 @@ use Modules\Geo\Datas\LocationData;
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
  * @param  float  $centerLatitude  La latitudine del punto centrale
  * @param  float  $centerLongitude  La longitudine del punto centrale
  * @param  array<array{latitude: string, longitude: string}>  $coordinates  Array di coordinate da filtrare
  * @param  int  $radius  Raggio in metri entro cui filtrare le coordinate
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
  * @return array<array{latitude: string, longitude: string}> Le coordinate filtrate
  */
 class FilterCoordinatesInRadiusAction
 {
     public function __construct(
         private readonly CalculateDistanceAction $calculateDistanceAction,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ) {}
@@ -61,12 +68,17 @@ class FilterCoordinatesInRadiusAction
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
     ) {}
 
     /**
      * @param  array<array{latitude: string, longitude: string}>  $coordinates
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
      * @return array<array{latitude: string, longitude: string}>
      */
     public function execute(

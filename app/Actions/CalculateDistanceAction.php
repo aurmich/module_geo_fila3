@@ -24,6 +24,7 @@ class CalculateDistanceAction
     /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  CalculateDistanceMatrixAction  $distanceMatrixAction  Servizio per il calcolo delle distanze
      */
     public function __construct(
@@ -42,17 +43,23 @@ class CalculateDistanceAction
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
      * @param  CalculateDistanceMatrixAction  $distanceMatrixAction  Servizio per il calcolo delle distanze
      */
     public function __construct(
         private readonly CalculateDistanceMatrixAction $distanceMatrixAction,
     ) {}
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
 
     /**
      * Calcola la distanza e il tempo di percorrenza tra due punti.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @param  LocationData  $origin  Punto di origine con coordinate valide
@@ -74,11 +81,16 @@ class CalculateDistanceAction
      * @param  LocationData  $destination  Punto di destinazione con coordinate valide
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+     * @param  LocationData  $origin  Punto di origine con coordinate valide
+     * @param  LocationData  $destination  Punto di destinazione con coordinate valide
+>>>>>>> 6f0eea5 (.)
      * @return array{
      *     distance: array{text: string, value: int},
      *     duration: array{text: string, value: int},
      *     status: string
      * } Array con distanza, durata e stato
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      *
@@ -93,6 +105,11 @@ class CalculateDistanceAction
      * @throws \InvalidArgumentException Se le coordinate non sono valide
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+     *
+     * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
+     * @throws \InvalidArgumentException Se le coordinate non sono valide
+>>>>>>> 6f0eea5 (.)
      */
     public function execute(LocationData $origin, LocationData $destination): array
     {
@@ -120,6 +137,7 @@ class CalculateDistanceAction
      *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  int  $meters  Distanza in metri
 =======
      * @param int $meters Distanza in metri
@@ -130,6 +148,9 @@ class CalculateDistanceAction
      * @param  int  $meters  Distanza in metri
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+     * @param  int  $meters  Distanza in metri
+>>>>>>> 6f0eea5 (.)
      *
      * @throws \InvalidArgumentException Se il valore in metri è negativo
      */
@@ -153,6 +174,7 @@ class CalculateDistanceAction
      *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  LocationData  $location  Posizione da validare
 =======
      * @param LocationData $location Posizione da validare
@@ -163,6 +185,9 @@ class CalculateDistanceAction
      * @param  LocationData  $location  Posizione da validare
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+     * @param  LocationData  $location  Posizione da validare
+>>>>>>> 6f0eea5 (.)
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      */

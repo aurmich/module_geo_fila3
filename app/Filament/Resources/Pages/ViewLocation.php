@@ -12,9 +12,12 @@ class ViewLocation extends XotBaseViewRecord
     protected static string $resource = LocationResource::class;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
 
     protected function getInfolistSchema(): array
     {
@@ -36,9 +39,12 @@ class ViewLocation extends XotBaseViewRecord
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
 }

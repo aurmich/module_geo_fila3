@@ -15,6 +15,7 @@ use function Safe\json_encode;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * 
  *
@@ -62,6 +63,8 @@ class Place extends BaseModel implements HasGeolocation
 class Place extends BaseModel implements HasGeolocation
 {
 =======
+=======
+>>>>>>> 6f0eea5 (.)
 /**
  * 
  *
@@ -126,6 +129,7 @@ class Place extends BaseModel implements HasGeolocation
         'political'
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class Place extends BaseModel implements HasGeolocation
 {
@@ -133,6 +137,8 @@ class Place extends BaseModel implements HasGeolocation
 =======
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     use HasFactory;
 
     protected $fillable = [

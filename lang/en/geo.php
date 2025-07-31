@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
@@ -12,6 +13,8 @@ declare(strict_types=1);
 =======
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
 return [
     'navigation' => [
         'icons' => [
@@ -58,6 +61,7 @@ return [
                 'description' => 'View and manage locations on the map',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '1',
 =======
                 'sort' => 1,
@@ -68,12 +72,16 @@ return [
                 'sort' => '1',
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+                'sort' => '1',
+>>>>>>> 6f0eea5 (.)
             ],
             'lat-lng' => [
                 'label' => 'Coordinates',
                 'description' => 'Geographic coordinates management',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '2',
 =======
                 'sort' => 2,
@@ -84,12 +92,16 @@ return [
                 'sort' => '2',
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+                'sort' => '2',
+>>>>>>> 6f0eea5 (.)
             ],
             'webbingbrasil-map' => [
                 'label' => 'Webbingbrasil Map',
                 'description' => 'Map view with Webbingbrasil',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '3',
 =======
                 'sort' => 3,
@@ -100,12 +112,16 @@ return [
                 'sort' => '3',
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+                'sort' => '3',
+>>>>>>> 6f0eea5 (.)
             ],
             'osm-map' => [
                 'label' => 'OSM Map',
                 'description' => 'OpenStreetMap view',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '4',
 =======
                 'sort' => 4,
@@ -116,12 +132,16 @@ return [
                 'sort' => '4',
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+                'sort' => '4',
+>>>>>>> 6f0eea5 (.)
             ],
             'dotswan-map' => [
                 'label' => 'Dotswan Map',
                 'description' => 'Map view with Dotswan',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '5',
 =======
                 'sort' => 5,
@@ -132,12 +152,16 @@ return [
                 'sort' => '5',
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+                'sort' => '5',
+>>>>>>> 6f0eea5 (.)
             ],
             'setting-page' => [
                 'label' => 'Settings',
                 'description' => 'Geo module configuration',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '6',
             ],
         ],
@@ -159,6 +183,8 @@ return [
             ],
         ],
 =======
+=======
+>>>>>>> 6f0eea5 (.)
                 'sort' => '6',
             ],
         ],
@@ -170,8 +196,11 @@ return [
             'color' => 'success',
             'label' => 'Online',
         ],
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     ],
     'status' => [
         'waiting' => 'Waiting...',
@@ -193,9 +222,12 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     'sections' => [
         'map' => [
             'navigation' => [
@@ -286,9 +318,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
 ];

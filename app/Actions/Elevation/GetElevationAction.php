@@ -44,6 +44,7 @@ class GetElevationAction
         try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             /** @var array<string, mixed> $response */
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
@@ -52,11 +53,15 @@ class GetElevationAction
             /** @var array<string, mixed> $response */
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+            /** @var array<string, mixed> $response */
+>>>>>>> 6f0eea5 (.)
             $response = $this->googleMapsService->getElevation(
                 $location->latitude,
                 $location->longitude
             );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             if (!isset($response['results']) || !is_array($response['results']) || empty($response['results'])) {
@@ -81,6 +86,8 @@ class GetElevationAction
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
             if (!isset($response['results']) || !is_array($response['results']) || empty($response['results'])) {
                 throw ElevationException::invalidResponse();
             }
@@ -90,6 +97,7 @@ class GetElevationAction
                 throw ElevationException::invalidResponse();
             }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             return (float) $firstResult['elevation'];
 >>>>>>> 3c5e1ea (.)
@@ -101,6 +109,10 @@ class GetElevationAction
             return is_numeric($elevation) ? (float) $elevation : 0.0;
 >>>>>>> 0119f2f (.)
 >>>>>>> c14279a (.)
+=======
+            $elevation = $firstResult['elevation'];
+            return is_numeric($elevation) ? (float) $elevation : 0.0;
+>>>>>>> 6f0eea5 (.)
         } catch (\Throwable $e) {
             if ($e instanceof ElevationException) {
                 throw $e;

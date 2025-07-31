@@ -16,6 +16,7 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|GeoNamesCap query()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 =======
@@ -33,6 +34,10 @@ use Modules\Xot\Traits\Updater;
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+>>>>>>> 6f0eea5 (.)
  * @mixin \Eloquent
  */
 class GeoNamesCap extends Model
@@ -52,6 +57,7 @@ class GeoNamesCap extends Model
     function __construct(){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->setConnection('user');
 =======
         $this->setConnection('liveuser_general');
@@ -62,6 +68,9 @@ class GeoNamesCap extends Model
         $this->setConnection('user');
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        $this->setConnection('user');
+>>>>>>> 6f0eea5 (.)
         parent::__construct();
     }//end construct
     */

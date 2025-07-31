@@ -12,6 +12,7 @@ use Modules\Geo\Datas\AddressData;
 use function Safe\json_decode;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Safe\preg_match;
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
@@ -20,6 +21,9 @@ use function Safe\preg_match;
 use function Safe\preg_match;
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+use function Safe\preg_match;
+>>>>>>> 6f0eea5 (.)
 
 use Webmozart\Assert\Assert;
 

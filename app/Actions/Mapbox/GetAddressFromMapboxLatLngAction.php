@@ -48,6 +48,7 @@ class GetAddressFromMapboxLatLngAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (empty($apiKey) || !is_string($apiKey)) {
 =======
         if (empty($apiKey)) {
@@ -58,6 +59,9 @@ class GetAddressFromMapboxLatLngAction
         if (empty($apiKey) || !is_string($apiKey)) {
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        if (empty($apiKey) || !is_string($apiKey)) {
+>>>>>>> 6f0eea5 (.)
             throw InvalidLocationException::invalidData('API key di Mapbox non configurata');
         }
 
@@ -79,6 +83,7 @@ class GetAddressFromMapboxLatLngAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $data = $response->json();
         
         if (!is_array($data)) {
@@ -92,6 +97,8 @@ class GetAddressFromMapboxLatLngAction
 =======
         return $response->json();
 =======
+=======
+>>>>>>> 6f0eea5 (.)
         $data = $response->json();
         
         if (!is_array($data)) {
@@ -99,14 +106,18 @@ class GetAddressFromMapboxLatLngAction
         }
 
         return $data;
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     }
 
     private function parseResponse(array $response): MapboxMapData
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var array<int, array{center?: array{float, float}, text?: string, address?: string, context?: array<int, array{id?: string, text?: string, short_code?: string}>}> $features */
         $features = $response['features'] ?? [];
         $location = $features[0] ?? [];
@@ -123,6 +134,11 @@ class GetAddressFromMapboxLatLngAction
         $location = $features[0] ?? [];
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        /** @var array<int, array{center?: array{float, float}, text?: string, address?: string, context?: array<int, array{id?: string, text?: string, short_code?: string}>}> $features */
+        $features = $response['features'] ?? [];
+        $location = $features[0] ?? [];
+>>>>>>> 6f0eea5 (.)
 
         if (empty($location)) {
             throw InvalidLocationException::invalidData('Nessun risultato trovato');
@@ -131,6 +147,7 @@ class GetAddressFromMapboxLatLngAction
         // Estrai il contesto dal risultato
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var array<int, array{id?: string, text?: string, short_code?: string}> $contextItems */
         $contextItems = $location['context'] ?? [];
         
@@ -142,13 +159,18 @@ class GetAddressFromMapboxLatLngAction
 =======
         $context = collect($location['context'] ?? [])->mapWithKeys(function (array $item) {
 =======
+=======
+>>>>>>> 6f0eea5 (.)
         /** @var array<int, array{id?: string, text?: string, short_code?: string}> $contextItems */
         $contextItems = $location['context'] ?? [];
         
         $context = [];
         foreach ($contextItems as $item) {
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
             $id = $item['id'] ?? '';
             $text = $item['text'] ?? '';
             $shortCode = $item['short_code'] ?? '';
@@ -156,6 +178,7 @@ class GetAddressFromMapboxLatLngAction
             // Determina il tipo di contesto dal prefisso dell'ID
             $type = explode('.', $id)[0] ?? '';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             if (!empty($type)) {
@@ -218,6 +241,8 @@ class GetAddressFromMapboxLatLngAction
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
             if (!empty($type)) {
                 $context[$type] = [
                     'text' => $text,
@@ -254,8 +279,11 @@ class GetAddressFromMapboxLatLngAction
         ];
 
         return new MapboxMapData($mappedData);
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     }
 
     private function mapResponseToAddressData(MapboxMapData $data): AddressData

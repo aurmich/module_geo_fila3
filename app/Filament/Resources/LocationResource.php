@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Tables\Enums\FiltersLayout;
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
@@ -20,6 +21,9 @@ use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Enums\FiltersLayout;
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+use Filament\Tables\Enums\FiltersLayout;
+>>>>>>> 6f0eea5 (.)
 use Filament\Tables\Table;
 use Modules\Geo\Filament\Resources\LocationResource\Pages;
 use Modules\Geo\Models\Location;
@@ -31,6 +35,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
  * Questa classe gestisce l'interfaccia amministrativa per i luoghi,
  * fornendo funzionalità per la creazione, modifica e visualizzazione dei luoghi
  * sulla mappa.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,6 +52,8 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 =======
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
  */
 class LocationResource extends XotBaseResource
 {

@@ -14,6 +14,7 @@ class ListLocations extends XotBaseListRecords
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTableComumns(): array
 =======
     public function getListTableColumns(): array
@@ -24,6 +25,9 @@ class ListLocations extends XotBaseListRecords
     public function getTableComumns(): array
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+    public function getTableComumns(): array
+>>>>>>> 6f0eea5 (.)
     {
         return [
             Tables\Columns\TextColumn::make('name')

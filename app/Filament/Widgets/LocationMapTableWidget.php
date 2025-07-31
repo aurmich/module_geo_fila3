@@ -138,6 +138,7 @@ class LocationMapTableWidget extends MapTableWidget
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTableActions(): array
 =======
     protected function getTableActions(): array
@@ -148,6 +149,9 @@ class LocationMapTableWidget extends MapTableWidget
     public function getTableActions(): array
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+    public function getTableActions(): array
+>>>>>>> 6f0eea5 (.)
     {
         return [
             Tables\Actions\ViewAction::make()
@@ -177,6 +181,7 @@ class LocationMapTableWidget extends MapTableWidget
             if ($location->latitude && $location->longitude) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $iconUrl = $this->getMarkerIcon($location);
                 
 =======
@@ -187,11 +192,16 @@ class LocationMapTableWidget extends MapTableWidget
                 
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+                $iconUrl = $this->getMarkerIcon($location);
+                
+>>>>>>> 6f0eea5 (.)
                 $data[] = [
                     'location' => [
                         'lat' => (float) $location->latitude,
                         'lng' => (float) $location->longitude,
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     'label' => (string) $location->name,
@@ -209,12 +219,17 @@ class LocationMapTableWidget extends MapTableWidget
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
                     'label' => (string) $location->name,
                     'id' => (int) $location->id,
                     'icon' => [
                         'url' => is_string($iconUrl) ? $iconUrl : '',
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
                         'type' => 'url',
                         'scale' => [32, 32],
                     ],
@@ -246,6 +261,7 @@ class LocationMapTableWidget extends MapTableWidget
             ->modalSubmitAction(false);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     /**
@@ -300,6 +316,8 @@ class LocationMapTableWidget extends MapTableWidget
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
     /**
      * @return string|null
      */
@@ -331,7 +349,10 @@ class LocationMapTableWidget extends MapTableWidget
         $iconUrl = $iconConfig['url'] ?? null;
         
         return is_string($iconUrl) ? $iconUrl : null;
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     }
 }

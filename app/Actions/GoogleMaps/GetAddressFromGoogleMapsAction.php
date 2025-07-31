@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Http;
 use Modules\Geo\Datas\AddressData;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
@@ -17,6 +18,9 @@ use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
+>>>>>>> 6f0eea5 (.)
 use Modules\Geo\Datas\GoogleMaps\GoogleMapResponseData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapResultData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
@@ -29,6 +33,7 @@ final class GetAddressFromGoogleMapsAction
 {
     private const BASE_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -52,6 +57,8 @@ final class GetAddressFromGoogleMapsAction
 =======
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     /**
      * @throws GoogleMapsApiException Se la richiesta fallisce o i dati non sono validi
      */
@@ -72,6 +79,7 @@ final class GetAddressFromGoogleMapsAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (empty($apiKey) || !is_string($apiKey)) {
 =======
         if (empty($apiKey)) {
@@ -82,6 +90,9 @@ final class GetAddressFromGoogleMapsAction
         if (empty($apiKey) || !is_string($apiKey)) {
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        if (empty($apiKey) || !is_string($apiKey)) {
+>>>>>>> 6f0eea5 (.)
             throw GoogleMapsApiException::missingApiKey();
         }
 
@@ -116,6 +127,7 @@ final class GetAddressFromGoogleMapsAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @throws GoogleMapsApiException
      */
@@ -128,12 +140,18 @@ final class GetAddressFromGoogleMapsAction
      */
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+    /**
+     * @throws GoogleMapsApiException
+     */
+>>>>>>> 6f0eea5 (.)
     private function getFirstResult(GoogleMapResponseData $responseData): GoogleMapResultData
     {
         $firstResult = $responseData->results->first();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$firstResult instanceof GoogleMapResultData) {
             throw GoogleMapsApiException::noResultsFound();
 =======
@@ -148,6 +166,10 @@ final class GetAddressFromGoogleMapsAction
             throw GoogleMapsApiException::noResultsFound();
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        if (!$firstResult instanceof GoogleMapResultData) {
+            throw GoogleMapsApiException::noResultsFound();
+>>>>>>> 6f0eea5 (.)
         }
 
         return $firstResult;
@@ -172,6 +194,7 @@ final class GetAddressFromGoogleMapsAction
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @param DataCollection<GoogleMapAddressComponentData> $components
@@ -215,6 +238,8 @@ final class GetAddressFromGoogleMapsAction
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
 =======
 =======
+=======
+>>>>>>> 6f0eea5 (.)
      * @param DataCollection<GoogleMapAddressComponentData> $components
      * @param array<string> $types
      */
@@ -235,7 +260,10 @@ final class GetAddressFromGoogleMapsAction
 
         // Le proprietà short_name e long_name sono sempre string nei Data Objects
         return $short ? $component->short_name : $component->long_name;
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     }
 }

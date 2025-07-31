@@ -32,6 +32,7 @@ class GetAddressFromBingMapsAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Get the Bing Maps API key from configuration.
      *
@@ -49,6 +50,8 @@ class GetAddressFromBingMapsAction
     private function getApiKey(): string
     {
 =======
+=======
+>>>>>>> 6f0eea5 (.)
     /**
      * Get the Bing Maps API key from configuration.
      *
@@ -58,14 +61,18 @@ class GetAddressFromBingMapsAction
     private function getApiKey(): string
     {
         /** @var string|null $apiKey */
+<<<<<<< HEAD
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
         $apiKey = config('services.bing.maps_api_key');
 
         if (empty($apiKey)) {
             throw InvalidLocationException::invalidData('API key di Bing Maps non configurata');
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // We've already checked that $apiKey is not empty
@@ -78,6 +85,8 @@ class GetAddressFromBingMapsAction
     }
 
 =======
+=======
+>>>>>>> 6f0eea5 (.)
         // We've already checked that $apiKey is not empty
         /** @var non-empty-string $apiKey */
         return $apiKey;
@@ -94,6 +103,7 @@ class GetAddressFromBingMapsAction
      * @throws InvalidLocationException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         return $apiKey;
     }
@@ -102,6 +112,8 @@ class GetAddressFromBingMapsAction
 =======
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+>>>>>>> 6f0eea5 (.)
     private function makeApiRequest(float $latitude, float $longitude, string $apiKey): array
     {
         $response = Http::get(self::BASE_URL, [
@@ -117,6 +129,7 @@ class GetAddressFromBingMapsAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var array<string, mixed> $jsonResponse */
         $jsonResponse = $response->json();
         return $jsonResponse;
@@ -131,6 +144,11 @@ class GetAddressFromBingMapsAction
         return $jsonResponse;
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+        /** @var array<string, mixed> $jsonResponse */
+        $jsonResponse = $response->json();
+        return $jsonResponse;
+>>>>>>> 6f0eea5 (.)
     }
 
     private function parseResponse(array $response): BingMapData

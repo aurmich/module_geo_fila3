@@ -1,6 +1,7 @@
 /directorybs4
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 -e 
 # PHPStan documentation
 docs/phpstan/
@@ -13,3 +14,8 @@ docs/phpstan/
 docs/phpstan/
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+-e 
+# PHPStan documentation
+docs/phpstan/
+>>>>>>> 6f0eea5 (.)

@@ -59,6 +59,7 @@ class RouteData extends Data
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
      * Verifica se il percorso è stato ottimizzato.
      
@@ -77,6 +78,11 @@ class RouteData extends Data
      
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+    /*
+     * Verifica se il percorso è stato ottimizzato.
+     
+>>>>>>> 6f0eea5 (.)
     public function isOptimized(): bool
     {
         return ! $this->waypoints->isEmpty() && ! $this->originalWaypoints->isEmpty()
@@ -87,6 +93,7 @@ class RouteData extends Data
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     */
 =======
 
@@ -97,6 +104,9 @@ class RouteData extends Data
     */
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+    */
+>>>>>>> 6f0eea5 (.)
     /**
      * Ottiene un riepilogo del percorso.
      *
@@ -106,6 +116,7 @@ class RouteData extends Data
      *     steps: int,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      *     waypoints: int
 =======
      *     waypoints: int,
@@ -118,6 +129,9 @@ class RouteData extends Data
      *     waypoints: int
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+     *     waypoints: int
+>>>>>>> 6f0eea5 (.)
      * }
      */
     public function getSummary(): array
@@ -129,6 +143,7 @@ class RouteData extends Data
             'waypoints' => $this->waypoints->count(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //'optimized' => $this->isOptimized(),
 =======
             'optimized' => $this->isOptimized(),
@@ -139,6 +154,9 @@ class RouteData extends Data
             //'optimized' => $this->isOptimized(),
 >>>>>>> 3c5e1ea (.)
 >>>>>>> 0e7ec50 (.)
+=======
+            //'optimized' => $this->isOptimized(),
+>>>>>>> 6f0eea5 (.)
         ];
     }
 
