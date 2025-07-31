@@ -175,17 +175,10 @@ return [
                 'deleted' => 'Location deleted',
             ],
             'error' => [
-<<<<<<< HEAD
-                'not_found' => 'Posizione non trovata',
-                'invalid_coords' => 'Coordinate non valide',
-                'geocoding_failed' => 'Geocodifica fallita',
-                'network_error' => 'Error di rete',
-=======
                 'not_found' => 'Location not found',
                 'invalid_coords' => 'Invalid coordinates',
                 'geocoding_failed' => 'Geocoding failed',
                 'network_error' => 'Network error',
->>>>>>> 3ec90e2a7 (.)
             ],
         ],
         'filters' => [

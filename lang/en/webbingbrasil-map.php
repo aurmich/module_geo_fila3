@@ -1,14 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'navigation' => [
-<<<<<<< HEAD
-        'label' => 'Mappa Webbingbrasil',
-        'group' => 'Management Territorio',
-=======
         'label' => 'Webbingbrasil Map',
         'group' => 'Territory Management',
->>>>>>> 3ec90e2a7 (.)
         'icon' => 'heroicon-o-map',
         'sort' => '60',
     ],
@@ -21,13 +18,8 @@ return [
         'layers' => 'Change layer',
     ],
     'markers' => [
-<<<<<<< HEAD
-        'add' => 'Aggiungi marker',
-        'remove' => 'Rimuovi marker',
-=======
         'add' => 'Add marker',
         'remove' => 'Remove marker',
->>>>>>> 3ec90e2a7 (.)
         'edit' => 'Edit marker',
     ],
     'messages' => [
