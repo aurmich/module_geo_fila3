@@ -10,53 +10,30 @@ use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
- * Class Location.
+ * Modules\Geo\Models\Location.
  *
- * @property int                  $id
- * @property string|null          $model_type
- * @property string|null          $model_id
- * @property string|null          $name
- * @property float|null           $lat
- * @property float|null           $lng
- * @property string|null          $street
- * @property string|null          $city
- * @property string|null          $state
- * @property string|null          $zip
- * @property string|null          $formatted_address
- * @property string|null          $description
- * @property bool|null            $processed
- * @property Carbon|null          $created_at
- * @property Carbon|null          $updated_at
- * @property string|null          $updated_by
- * @property string|null          $created_by
- * @property string|null          $deleted_at
- * @property string|null          $deleted_by
- * @property array                $location
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- *
->>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
-=======
- *
-=======
->>>>>>> 3c5e1ea (.)
->>>>>>> 0e7ec50 (.)
-=======
->>>>>>> 6f0eea5 (.)
- * @method static \Illuminate\Database\Eloquent\Builder|Location query()
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereCity(string $value)
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereLat(float $value)
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereLng(float $value)
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereProcessed(bool $value)
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereState(string $value)
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereZip(string $value)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+ * @property int $id
+ * @property string|null $model_type
+ * @property int|null $model_id
+ * @property string|null $name
+ * @property float|null $lat
+ * @property float|null $lng
+ * @property string|null $street
+ * @property string|null $city
+ * @property string|null $state
+ * @property string|null $zip
+ * @property string|null $formatted_address
+ * @property bool|null $processed
+ * @property string|null $description
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read array<string, float> $location
+ * @property-read \Modules\User\Models\User|null $creator
+ * @property-read \Modules\User\Models\User|null $updater
  * @method static Builder<static>|Location newModelQuery()
  * @method static Builder<static>|Location newQuery()
  * @method static Builder<static>|Location withinDistance(float $latitude, float $longitude, float $distanceInKm)
@@ -73,35 +50,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Location whereStreet($value)
  * @method static Builder<static>|Location whereUpdatedAt($value)
  * @method static Builder<static>|Location whereUpdatedBy($value)
-=======
- *
->>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
-=======
- *
-=======
-=======
->>>>>>> 6f0eea5 (.)
- * @method static Builder<static>|Location newModelQuery()
- * @method static Builder<static>|Location newQuery()
- * @method static Builder<static>|Location withinDistance(float $latitude, float $longitude, float $distanceInKm)
- * @method static Builder<static>|Location whereCreatedAt($value)
- * @method static Builder<static>|Location whereCreatedBy($value)
- * @method static Builder<static>|Location whereDeletedAt($value)
- * @method static Builder<static>|Location whereDeletedBy($value)
- * @method static Builder<static>|Location whereDescription($value)
- * @method static Builder<static>|Location whereFormattedAddress($value)
- * @method static Builder<static>|Location whereId($value)
- * @method static Builder<static>|Location whereModelId($value)
- * @method static Builder<static>|Location whereModelType($value)
- * @method static Builder<static>|Location whereName($value)
- * @method static Builder<static>|Location whereStreet($value)
- * @method static Builder<static>|Location whereUpdatedAt($value)
- * @method static Builder<static>|Location whereUpdatedBy($value)
-<<<<<<< HEAD
->>>>>>> 3c5e1ea (.)
->>>>>>> 0e7ec50 (.)
-=======
->>>>>>> 6f0eea5 (.)
  * @mixin \Eloquent
  */
 class Location extends BaseModel
@@ -144,8 +92,8 @@ class Location extends BaseModel
     {
         return Attribute::make(
             get: fn (): array => [
-                'lat' => (float) $this->lat,
-                'lng' => (float) $this->lng,
+                'lat' => (float) ($this->lat ?? 0.0),
+                'lng' => (float) ($this->lng ?? 0.0),
             ],
             set: function (?array $value): void {
                 if (is_array($value)) {
