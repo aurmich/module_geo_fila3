@@ -1,10 +1,17 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+declare(strict_types=1);
+
+=======
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
 return [
     'navigation' => [
         'icons' => [
@@ -50,50 +57,86 @@ return [
                 'label' => 'Location Map',
                 'description' => 'View and manage locations on the map',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '1',
 =======
                 'sort' => 1,
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+                'sort' => 1,
+=======
+                'sort' => '1',
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             ],
             'lat-lng' => [
                 'label' => 'Coordinates',
                 'description' => 'Geographic coordinates management',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '2',
 =======
                 'sort' => 2,
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+                'sort' => 2,
+=======
+                'sort' => '2',
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             ],
             'webbingbrasil-map' => [
                 'label' => 'Webbingbrasil Map',
                 'description' => 'Map view with Webbingbrasil',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '3',
 =======
                 'sort' => 3,
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+                'sort' => 3,
+=======
+                'sort' => '3',
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             ],
             'osm-map' => [
                 'label' => 'OSM Map',
                 'description' => 'OpenStreetMap view',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '4',
 =======
                 'sort' => 4,
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+                'sort' => 4,
+=======
+                'sort' => '4',
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             ],
             'dotswan-map' => [
                 'label' => 'Dotswan Map',
                 'description' => 'Map view with Dotswan',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'sort' => '5',
 =======
                 'sort' => 5,
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+                'sort' => 5,
+=======
+                'sort' => '5',
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             ],
             'setting-page' => [
                 'label' => 'Settings',
                 'description' => 'Geo module configuration',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'sort' => '6',
             ],
@@ -111,6 +154,24 @@ return [
             ],
         ],
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+                'sort' => 6,
+            ],
+        ],
+=======
+                'sort' => '6',
+            ],
+        ],
+        'name' => 'Geo',
+        'group' => 'Mappe',
+        'sort' => '20',
+        'icon' => 'geo-menu',
+        'badge' => [
+            'color' => 'success',
+            'label' => 'Online',
+        ],
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
     ],
     'status' => [
         'waiting' => 'Waiting...',
@@ -131,6 +192,10 @@ return [
         'error' => 'An error occurred',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0e7ec50 (.)
     'sections' => [
         'map' => [
             'navigation' => [
@@ -220,6 +285,10 @@ return [
             'date_range' => 'Periodo',
         ],
     ],
+<<<<<<< HEAD
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
 ];

@@ -58,6 +58,7 @@ class RouteData extends Data
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
      * Verifica se il percorso è stato ottimizzato.
      
@@ -66,6 +67,16 @@ class RouteData extends Data
      * Verifica se il percorso è stato ottimizzato.
      */
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+    /**
+     * Verifica se il percorso è stato ottimizzato.
+     */
+=======
+    /*
+     * Verifica se il percorso è stato ottimizzato.
+     
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
     public function isOptimized(): bool
     {
         return ! $this->waypoints->isEmpty() && ! $this->originalWaypoints->isEmpty()
@@ -75,10 +86,17 @@ class RouteData extends Data
             );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     */
 =======
 
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+
+=======
+    */
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
     /**
      * Ottiene un riepilogo del percorso.
      *
@@ -87,11 +105,19 @@ class RouteData extends Data
      *     duration: string,
      *     steps: int,
 <<<<<<< HEAD
+<<<<<<< HEAD
      *     waypoints: int
 =======
      *     waypoints: int,
      *     optimized: bool
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+     *     waypoints: int,
+     *     optimized: bool
+=======
+     *     waypoints: int
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      * }
      */
     public function getSummary(): array
@@ -102,10 +128,17 @@ class RouteData extends Data
             'steps' => count($this->steps),
             'waypoints' => $this->waypoints->count(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             //'optimized' => $this->isOptimized(),
 =======
             'optimized' => $this->isOptimized(),
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+            'optimized' => $this->isOptimized(),
+=======
+            //'optimized' => $this->isOptimized(),
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
         ];
     }
 

@@ -18,6 +18,7 @@ class FilterCoordinatesAction
      * Filtra le coordinate che si trovano entro un certo raggio da un punto.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<array{latitude: float|string, longitude: float|string}>  $coordinates  Lista delle coordinate da filtrare
      * @param  float  $centerLat  Latitudine del punto centrale
      * @param  float  $centerLng  Longitudine del punto centrale
@@ -26,6 +27,8 @@ class FilterCoordinatesAction
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
 =======
+=======
+>>>>>>> 0e7ec50 (.)
      * @param array<array{latitude: float|string, longitude: float|string}> $coordinates Lista delle coordinate da filtrare
      * @param float                                                         $centerLat   Latitudine del punto centrale
      * @param float                                                         $centerLng   Longitudine del punto centrale
@@ -34,7 +37,19 @@ class FilterCoordinatesAction
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      *
      * @return array<array{latitude: float, longitude: float, distance: float}> Coordinate filtrate con distanza
+<<<<<<< HEAD
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+     * @param  array<array{latitude: float|string, longitude: float|string}>  $coordinates  Lista delle coordinate da filtrare
+     * @param  float  $centerLat  Latitudine del punto centrale
+     * @param  float  $centerLng  Longitudine del punto centrale
+     * @param  float  $radiusKm  Raggio in chilometri
+     * @return array<array{latitude: float, longitude: float, distance: float}> Coordinate filtrate con distanza
+     *
+     * @throws \InvalidArgumentException Se le coordinate non sono valide
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      */
     public function execute(array $coordinates, float $centerLat, float $centerLng, float $radiusKm): array
     {

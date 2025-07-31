@@ -16,20 +16,34 @@ use Webbingbrasil\FilamentMaps\Widgets\MapWidget;
 class OSMMapWidget extends MapWidget
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     protected static string $view = 'geo::filament.widgets.osm-map-widget';
 
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+    protected static string $view = 'geo::filament.widgets.osm-map-widget';
+
+=======
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
     protected int|string|array $columnSpan = 'full';
 
     protected function getData(): array
     {
         /** @var Collection<int, Place> $places */
 <<<<<<< HEAD
+<<<<<<< HEAD
         $places = Place::with(['address', 'placeType'])->get();
 =======
         $places = Place::with(['address', 'type'])->get();
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+        $places = Place::with(['address', 'type'])->get();
+=======
+        $places = Place::with(['address', 'placeType'])->get();
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
 
         return [
             'markers' => $this->getMarkers(),
@@ -49,6 +63,7 @@ class OSMMapWidget extends MapWidget
     public function getMarkers(): array
     {
         /** @var Collection<int, Place> $places */
+<<<<<<< HEAD
 <<<<<<< HEAD
         $places = Place::with(['address', 'placeType'])->get();
 
@@ -76,6 +91,8 @@ class OSMMapWidget extends MapWidget
     /**
      * @param  Collection<int, Place>  $places
 =======
+=======
+>>>>>>> 0e7ec50 (.)
         $places = Place::with(['address', 'type'])->get();
 
         return $places->map(function (Place $place): array {
@@ -99,7 +116,37 @@ class OSMMapWidget extends MapWidget
     /**
      * @param Collection<int, Place> $places
      *
+<<<<<<< HEAD
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+        $places = Place::with(['address', 'placeType'])->get();
+
+        return $places
+            ->filter(fn(Place $place) => $place->latitude !== null && $place->longitude !== null)
+            ->map(function (Place $place): array {
+                $marker = [
+                    'position' => [
+                        'lat' => (float) $place->latitude,
+                        'lng' => (float) $place->longitude,
+                    ],
+                    'title' => (string) ($place->name ?? 'Unnamed Place'),
+                    'content' => $this->getInfoWindowContent($place),
+                ];
+
+                $icon = $this->getMarkerIcon($place);
+                if ($icon !== null) {
+                    $marker['icon'] = $icon;
+                }
+
+                return $marker;
+            })->all();
+    }
+
+    /**
+     * @param  Collection<int, Place>  $places
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      * @return array{lat: float, lng: float}
      */
     protected function getMapCenter(Collection $places): array
@@ -119,10 +166,17 @@ class OSMMapWidget extends MapWidget
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  Collection<int, Place>  $places
 =======
      * @param Collection<int, Place> $places
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+     * @param Collection<int, Place> $places
+=======
+     * @param  Collection<int, Place>  $places
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      */
     protected function getMapZoom(Collection $places): int
     {
@@ -136,6 +190,7 @@ class OSMMapWidget extends MapWidget
     protected function getInfoWindowContent(Place $place): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.osm-map-info-window';
         
@@ -143,6 +198,15 @@ class OSMMapWidget extends MapWidget
 =======
         return view('geo::filament.widgets.osm-map-info-window', [
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+        return view('geo::filament.widgets.osm-map-info-window', [
+=======
+        /** @var view-string $viewName */
+        $viewName = 'geo::filament.widgets.osm-map-info-window';
+        
+        return view($viewName, [
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             'place' => $place,
         ])->render();
     }
@@ -153,11 +217,19 @@ class OSMMapWidget extends MapWidget
     protected function getMarkerIcon(Place $place): ?array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Uso placeType invece di type per evitare relazioni mancanti
         $type = $place->placeType->slug ?? 'default';
 =======
         $type = $place->type->slug ?? 'default';
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+        $type = $place->type->slug ?? 'default';
+=======
+        // Uso placeType invece di type per evitare relazioni mancanti
+        $type = $place->placeType->slug ?? 'default';
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
 
         $iconPath = resource_path("images/markers/{$type}.png");
         if (! file_exists($iconPath)) {
@@ -176,6 +248,7 @@ class OSMMapWidget extends MapWidget
     public function render(): View
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.osm-map-widget';
         
@@ -183,6 +256,15 @@ class OSMMapWidget extends MapWidget
 =======
         return view('geo::filament.widgets.osm-map-widget', [
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+        return view('geo::filament.widgets.osm-map-widget', [
+=======
+        /** @var view-string $viewName */
+        $viewName = 'geo::filament.widgets.osm-map-widget';
+        
+        return view($viewName, [
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             'data' => $this->getData(),
         ]);
     }

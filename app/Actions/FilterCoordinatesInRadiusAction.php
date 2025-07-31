@@ -13,17 +13,29 @@ use Modules\Geo\Datas\LocationData;
  * e restituisce solo le coordinate che si trovano entro il raggio specificato dal punto centrale.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @param  float  $centerLatitude  La latitudine del punto centrale
  * @param  float  $centerLongitude  La longitudine del punto centrale
  * @param  array<array{latitude: string, longitude: string}>  $coordinates  Array di coordinate da filtrare
  * @param  int  $radius  Raggio in metri entro cui filtrare le coordinate
 =======
+=======
+>>>>>>> 0e7ec50 (.)
  * @param float                                             $centerLatitude  La latitudine del punto centrale
  * @param float                                             $centerLongitude La longitudine del punto centrale
  * @param array<array{latitude: string, longitude: string}> $coordinates     Array di coordinate da filtrare
  * @param int                                               $radius          Raggio in metri entro cui filtrare le coordinate
  *
+<<<<<<< HEAD
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+ * @param  float  $centerLatitude  La latitudine del punto centrale
+ * @param  float  $centerLongitude  La longitudine del punto centrale
+ * @param  array<array{latitude: string, longitude: string}>  $coordinates  Array di coordinate da filtrare
+ * @param  int  $radius  Raggio in metri entro cui filtrare le coordinate
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
  * @return array<array{latitude: string, longitude: string}> Le coordinate filtrate
  */
 class FilterCoordinatesInRadiusAction
@@ -31,18 +43,30 @@ class FilterCoordinatesInRadiusAction
     public function __construct(
         private readonly CalculateDistanceAction $calculateDistanceAction,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 
     /**
      * @param  array<array{latitude: string, longitude: string}>  $coordinates
 =======
+=======
+>>>>>>> 0e7ec50 (.)
     ) {
     }
 
     /**
      * @param array<array{latitude: string, longitude: string}> $coordinates
      *
+<<<<<<< HEAD
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+    ) {}
+
+    /**
+     * @param  array<array{latitude: string, longitude: string}>  $coordinates
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      * @return array<array{latitude: string, longitude: string}>
      */
     public function execute(

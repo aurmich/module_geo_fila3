@@ -20,12 +20,21 @@ class CalculateDistanceMatrixAction
      * Calcola la matrice delle distanze tra origini e destinazioni.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Collection<int, LocationData> $origins      Punti di origine
      * @param Collection<int, LocationData> $destinations Punti di destinazione
 =======
      * @param Collection<LocationData> $origins      Punti di origine
      * @param Collection<LocationData> $destinations Punti di destinazione
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+     * @param Collection<LocationData> $origins      Punti di origine
+     * @param Collection<LocationData> $destinations Punti di destinazione
+=======
+     * @param Collection<int, LocationData> $origins      Punti di origine
+     * @param Collection<int, LocationData> $destinations Punti di destinazione
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce o i dati non sono validi
      *
@@ -41,12 +50,21 @@ class CalculateDistanceMatrixAction
 
         $response = Http::get(self::BASE_URL, [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'origins' => $origins->map(fn (LocationData $location): string => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
             'destinations' => $destinations->map(fn (LocationData $location): string => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
 =======
             'origins' => $origins->map(fn (LocationData $location) => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
             'destinations' => $destinations->map(fn (LocationData $location) => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+            'origins' => $origins->map(fn (LocationData $location) => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
+            'destinations' => $destinations->map(fn (LocationData $location) => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
+=======
+            'origins' => $origins->map(fn (LocationData $location): string => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
+            'destinations' => $destinations->map(fn (LocationData $location): string => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             'key' => $apiKey,
         ]);
 
@@ -54,6 +72,7 @@ class CalculateDistanceMatrixAction
             throw GoogleMapsApiException::requestFailed((string) $response->status());
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         /** @var array{status?: string, rows?: array<int, array{elements?: array<int, array{distance?: array{text: string, value: int}, duration?: array{text: string, value: int}, status?: string}>}>} $data */
         $data = $response->json();
@@ -64,6 +83,17 @@ class CalculateDistanceMatrixAction
 
         if ('OK' !== ($data['status'] ?? null)) {
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+        $data = $response->json();
+
+        if ('OK' !== ($data['status'] ?? null)) {
+=======
+        /** @var array{status?: string, rows?: array<int, array{elements?: array<int, array{distance?: array{text: string, value: int}, duration?: array{text: string, value: int}, status?: string}>}>} $data */
+        $data = $response->json();
+
+        if (!is_array($data) || 'OK' !== ($data['status'] ?? null)) {
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             throw GoogleMapsApiException::requestFailed('Stato della risposta non valido: '.($data['status'] ?? 'sconosciuto'));
         }
 
@@ -73,12 +103,21 @@ class CalculateDistanceMatrixAction
 
         return array_map(
 <<<<<<< HEAD
+<<<<<<< HEAD
             fn (array $row): array => array_map(
                 fn (array $element): array => [
 =======
             fn (array $row) => array_map(
                 fn (array $element) => [
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+            fn (array $row) => array_map(
+                fn (array $element) => [
+=======
+            fn (array $row): array => array_map(
+                fn (array $element): array => [
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
                     'distance' => $element['distance'] ?? ['text' => '0 km', 'value' => 0],
                     'duration' => $element['duration'] ?? ['text' => '0 min', 'value' => 0],
                     'status' => $element['status'] ?? 'ZERO_RESULTS',
@@ -86,10 +125,17 @@ class CalculateDistanceMatrixAction
                 $row['elements'] ?? []
             ),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $data['rows'] ?? []
 =======
             $data['rows']
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+            $data['rows']
+=======
+            $data['rows'] ?? []
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
         );
     }
 
@@ -98,10 +144,17 @@ class CalculateDistanceMatrixAction
         $apiKey = config('services.google.maps_api_key');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (empty($apiKey) || !is_string($apiKey)) {
 =======
         if (empty($apiKey)) {
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+        if (empty($apiKey)) {
+=======
+        if (empty($apiKey) || !is_string($apiKey)) {
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
             throw GoogleMapsApiException::missingApiKey();
         }
 

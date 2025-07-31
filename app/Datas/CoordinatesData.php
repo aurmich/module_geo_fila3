@@ -9,6 +9,7 @@ use Spatie\LaravelData\Data;
 class CoordinatesData extends Data
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         public readonly float $latitude,
         public readonly float $longitude,
@@ -19,4 +20,16 @@ class CoordinatesData extends Data
 
     public float $longitude;
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+    public float $latitude;
+
+    public float $longitude;
+=======
+    public function __construct(
+        public readonly float $latitude,
+        public readonly float $longitude,
+    ) {
+    }
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
 }

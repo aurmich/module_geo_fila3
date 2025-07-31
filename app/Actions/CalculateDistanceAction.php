@@ -23,45 +23,76 @@ class CalculateDistanceAction
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  CalculateDistanceMatrixAction  $distanceMatrixAction  Servizio per il calcolo delle distanze
      */
     public function __construct(
         private readonly CalculateDistanceMatrixAction $distanceMatrixAction,
     ) {}
 =======
+=======
+>>>>>>> 0e7ec50 (.)
      * @param CalculateDistanceMatrixAction $distanceMatrixAction Servizio per il calcolo delle distanze
      */
     public function __construct(
         private readonly CalculateDistanceMatrixAction $distanceMatrixAction,
     ) {
     }
+<<<<<<< HEAD
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+     * @param  CalculateDistanceMatrixAction  $distanceMatrixAction  Servizio per il calcolo delle distanze
+     */
+    public function __construct(
+        private readonly CalculateDistanceMatrixAction $distanceMatrixAction,
+    ) {}
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
 
     /**
      * Calcola la distanza e il tempo di percorrenza tra due punti.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  LocationData  $origin  Punto di origine con coordinate valide
      * @param  LocationData  $destination  Punto di destinazione con coordinate valide
 =======
+=======
+>>>>>>> 0e7ec50 (.)
      * @param LocationData $origin      Punto di origine con coordinate valide
      * @param LocationData $destination Punto di destinazione con coordinate valide
      *
      * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
      * @throws \InvalidArgumentException    Se le coordinate non sono valide
      *
+<<<<<<< HEAD
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+     * @param  LocationData  $origin  Punto di origine con coordinate valide
+     * @param  LocationData  $destination  Punto di destinazione con coordinate valide
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      * @return array{
      *     distance: array{text: string, value: int},
      *     duration: array{text: string, value: int},
      *     status: string
      * } Array con distanza, durata e stato
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
      * @throws \InvalidArgumentException Se le coordinate non sono valide
 =======
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+     *
+     * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
+     * @throws \InvalidArgumentException Se le coordinate non sono valide
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      */
     public function execute(LocationData $origin, LocationData $destination): array
     {
@@ -88,10 +119,17 @@ class CalculateDistanceAction
      * Formatta la distanza in metri in una stringa leggibile.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  int  $meters  Distanza in metri
 =======
      * @param int $meters Distanza in metri
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+     * @param int $meters Distanza in metri
+=======
+     * @param  int  $meters  Distanza in metri
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      *
      * @throws \InvalidArgumentException Se il valore in metri è negativo
      */
@@ -114,10 +152,17 @@ class CalculateDistanceAction
      * Valida le coordinate di una posizione.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  LocationData  $location  Posizione da validare
 =======
      * @param LocationData $location Posizione da validare
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+     * @param LocationData $location Posizione da validare
+=======
+     * @param  LocationData  $location  Posizione da validare
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      */

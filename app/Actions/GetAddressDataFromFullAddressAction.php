@@ -27,17 +27,29 @@ class GetAddressDataFromFullAddressAction
      * Ottiene i dati dell'indirizzo da un indirizzo completo.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $fullAddress  L'indirizzo da cercare
      * @return AddressData I dati dell'indirizzo trovato
      *
      * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
 =======
+=======
+>>>>>>> 0e7ec50 (.)
      * @param string $fullAddress L'indirizzo da cercare
      *
      * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
      *
      * @return AddressData I dati dell'indirizzo trovato
+<<<<<<< HEAD
 >>>>>>> 008ac07 (Merge commit 'b61ed6096ef292b50d6f8751d28a19fbee500bc4' as 'laravel/Modules/Geo')
+=======
+=======
+     * @param  string  $fullAddress  L'indirizzo da cercare
+     * @return AddressData I dati dell'indirizzo trovato
+     *
+     * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
+>>>>>>> 3c5e1ea (.)
+>>>>>>> 0e7ec50 (.)
      */
     public function execute(string $fullAddress): ?AddressData
     {
