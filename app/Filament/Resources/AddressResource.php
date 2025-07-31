@@ -100,6 +100,10 @@ class AddressResource extends XotBaseResource
                             return [];
                         }
 
+<<<<<<< HEAD
+=======
+                         
+>>>>>>> 3ec90e2a7 (.)
                             $res=Locality::where('region_id',$region)
                             ->where('province_id',$province)
                             ->orderBy('name')
@@ -126,6 +130,10 @@ class AddressResource extends XotBaseResource
                             return [];
                         }
                         $city = $get('locality');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ec90e2a7 (.)
                         $res=Locality::query()
                         ->where('region_id', $region)
                         ->where('province_id', $province)

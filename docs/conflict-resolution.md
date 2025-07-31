@@ -95,6 +95,13 @@ use function Safe\json_decode;
 ## Verifiche Post-Correzione
 
 ### 1. Controllo Conflitti
+<<<<<<< HEAD
+=======
+```bash
+grep -r "<<<<<<< HEAD" laravel/Modules/Geo/
+grep -r "<<<<<<< HEAD" laravel/Themes/Two/
+```
+>>>>>>> 3ec90e2a7 (.)
 **Risultato**: Nessun conflitto rimanente
 
 ### 2. Validazione PHPStan

@@ -169,16 +169,23 @@ return [
         ],
         'messages' => [
             'success' => [
-                'located' => 'Posizione trovata',
-                'saved' => 'Posizione salvata',
-                'updated' => 'Posizione aggiornata',
-                'deleted' => 'Posizione eliminata',
+                'located' => 'Location found',
+                'saved' => 'Location saved',
+                'updated' => 'Location updated',
+                'deleted' => 'Location deleted',
             ],
             'error' => [
+<<<<<<< HEAD
                 'not_found' => 'Posizione non trovata',
                 'invalid_coords' => 'Coordinate non valide',
                 'geocoding_failed' => 'Geocodifica fallita',
                 'network_error' => 'Error di rete',
+=======
+                'not_found' => 'Location not found',
+                'invalid_coords' => 'Invalid coordinates',
+                'geocoding_failed' => 'Geocoding failed',
+                'network_error' => 'Network error',
+>>>>>>> 3ec90e2a7 (.)
             ],
         ],
         'filters' => [
