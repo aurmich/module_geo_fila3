@@ -50,6 +50,7 @@ abstract class BaseMorphPivot extends MorphPivot
     /** @var string */
     protected $connection = 'geo';
 
+<<<<<<< HEAD
     /**
      * Get the attributes that should be cast.
      *
@@ -63,4 +64,7 @@ abstract class BaseMorphPivot extends MorphPivot
             'deleted_at' => 'datetime',
         ];
     }
+=======
+    protected $casts = ['created_at' => 'datetime', 'updated_at' => 'datetime', 'deleted_at' => 'datetime'];
+>>>>>>> 6651d63 (.)
 }

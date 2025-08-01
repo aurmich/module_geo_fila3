@@ -41,6 +41,7 @@ abstract class BaseModel extends Model
     /** @var list<string> */
     protected $fillable = ['id'];
 
+<<<<<<< HEAD
     /**
      * Get the attributes that should be cast.
      *
@@ -54,6 +55,10 @@ abstract class BaseModel extends Model
             'updated_at' => 'datetime',
         ]);
     }
+=======
+    /** @var array<string, string> */
+    protected $casts = ['published_at' => 'datetime', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+>>>>>>> 6651d63 (.)
 
     /** @var string */
     protected $primaryKey = 'id';

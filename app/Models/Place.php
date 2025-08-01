@@ -86,6 +86,7 @@ class Place extends BaseModel implements HasGeolocation
         'nearest_street', 'extra_data',
     ];
 
+<<<<<<< HEAD
     /**
      * Get the attributes that should be cast.
      *
@@ -99,6 +100,13 @@ class Place extends BaseModel implements HasGeolocation
             'extra_data' => 'array',
         ];
     }
+=======
+    protected $casts = [
+        'latitude' => 'float',
+        'longitude' => 'float',
+        'extra_data' => 'array',
+    ];
+>>>>>>> 6651d63 (.)
 
     /**
      * @return MorphTo<Model, self>
