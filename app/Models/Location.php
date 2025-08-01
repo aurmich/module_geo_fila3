@@ -78,7 +78,6 @@ class Location extends BaseModel
         'location',
     ];
 
-<<<<<<< HEAD
     /**
      * Get the attributes that should be cast.
      *
@@ -92,13 +91,6 @@ class Location extends BaseModel
             'processed' => 'bool',
         ];
     }
-=======
-    protected $casts = [
-        'lat' => 'float',
-        'lng' => 'float',
-        'processed' => 'bool',
-    ];
->>>>>>> 6651d63 (.)
 
     /**
      * Accessor for the "location" attribute.

@@ -87,10 +87,6 @@ use Modules\Geo\Enums\AddressTypeEnum;
  */
 class Address extends BaseModel 
 {
-<<<<<<< HEAD
-=======
-    use HasFactory;
->>>>>>> 6651d63 (.)
         
     /** @var list<string> */
    protected $fillable = [
@@ -116,7 +112,6 @@ class Address extends BaseModel
     ];
     
     /**
-<<<<<<< HEAD
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -131,19 +126,6 @@ class Address extends BaseModel
             'type' => AddressTypeEnum::class,
         ];
     }
-=======
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'latitude' => 'float',
-        'longitude' => 'float',
-        'is_primary' => 'boolean',
-        'extra_data' => 'array',
-        'type' => AddressTypeEnum::class,
-    ];
->>>>>>> 6651d63 (.)
     
     
     /**

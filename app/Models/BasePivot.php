@@ -37,7 +37,6 @@ abstract class BasePivot extends Pivot
 
     protected $appends = [];
 
-<<<<<<< HEAD
     /**
      * Get the attributes that should be cast.
      *
@@ -51,14 +50,6 @@ abstract class BasePivot extends Pivot
             'updated_at' => 'datetime',
         ];
     }
-=======
-    /** @var array<string, string> */
-    protected $casts = [
-        'id' => 'string', // must be string else primary key of related model will be typed as int
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
-    ];
->>>>>>> 6651d63 (.)
 
     /**
      * Undocumented variable.
