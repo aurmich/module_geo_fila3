@@ -13,56 +13,6 @@ use Modules\Geo\Database\Factories\PlaceFactory;
 
 use function Safe\json_encode;
 
-/**
-<<<<<<< HEAD
- * @property-read \Modules\Geo\Models\Address|null $address
- * @property-read \Modules\User\Models\Profile|null $creator
-=======
- * 
- *
- * @property-read \Modules\Geo\Models\Address|null $address
- * @property-read \Modules\SaluteOra\Models\Profile|null $creator
->>>>>>> 7b895b0 (.)
- * @property-read string $formatted_address
- * @property-read float|null $latitude
- * @property-read float|null $longitude
- * @property-read \Illuminate\Database\Eloquent\Model $linked
- * @property-read \Modules\Geo\Models\PlaceType|null $placeType
-<<<<<<< HEAD
- * @property-read \Modules\User\Models\Profile|null $updater
-=======
- * @property-read \Modules\SaluteOra\Models\Profile|null $updater
->>>>>>> 7b895b0 (.)
- * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place query()
- * @property int $id
- * @property string|null $model_type
- * @property int|null $model_id
- * @property string|null $nearest_street
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $post_type
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereAddress($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereFormattedAddress($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereLatitude($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereLongitude($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereModelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereModelType($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereNearestStreet($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place wherePostType($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedBy($value)
- * @mixin \Eloquent
- */
 class Place extends BaseModel implements HasGeolocation
 {
     /**
@@ -84,7 +34,7 @@ class Place extends BaseModel implements HasGeolocation
         'point_of_interest',
         'political'
     ];
-    use HasFactory;
+    
 
     protected $fillable = [
         'id', 'post_id', 'post_type', 'model_id', 'model_type',
@@ -97,19 +47,11 @@ class Place extends BaseModel implements HasGeolocation
         'nearest_street', 'extra_data',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'latitude' => 'float',
-            'longitude' => 'float',
-            'extra_data' => 'array',
-        ];
-    }
+    protected $casts = [
+        'latitude' => 'float',
+        'longitude' => 'float',
+        'extra_data' => 'array',
+    ];
 
     /**
      * @return MorphTo<Model, self>

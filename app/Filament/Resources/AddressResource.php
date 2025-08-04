@@ -60,8 +60,12 @@ class AddressResource extends XotBaseResource
                     ->columnSpan(2),
                 
                 "administrative_area_level_1" => Select::make('administrative_area_level_1')
+<<<<<<< HEAD
                     
                     ->options(fn(Get $get)=>Region::getOptions($get))
+=======
+                    ->options(Region::orderBy('name')->get()->pluck("name", "id"))
+>>>>>>> 7b895b0 (.)
                     ->searchable()
                     ->required()
                     ->live()
@@ -74,6 +78,7 @@ class AddressResource extends XotBaseResource
                 
                 
                 'administrative_area_level_2' => Select::make('administrative_area_level_2')
+<<<<<<< HEAD
                     ->options(fn(Get $get)=>Province::getOptions($get))
                     ->searchable()
                     ->required()
@@ -99,6 +104,76 @@ class AddressResource extends XotBaseResource
 
                 'postal_code' => Select::make('postal_code')
                     ->options(fn(Get $get)=>Locality::getPostalCodeOptions($get))
+=======
+                
+                    ->options(fn(Get $get)=>Province::where('region_id',$get('administrative_area_level_1'))
+                    ->orderBy('name')
+                    ->get()->pluck("name", "id"))
+                ->searchable()
+                ->required()
+                ->live()
+                ->afterStateUpdated(function (Set $set){
+                    $set('cap', null);
+                    $set('postal_code', null);
+                    $set('locality', null);
+                })
+                ->disabled(fn (Get $get) => !$get('administrative_area_level_1') )
+                ,
+               
+
+                    'locality' => Select::make('locality')
+                    ->options(function (Get $get) {
+                        $region = $get('administrative_area_level_1');
+                        if (!$region) {
+                            return [];
+                        }
+                        $province = $get('administrative_area_level_2');
+                        if (!$province) {
+                            return [];
+                        }
+
+                            $res=Locality::where('region_id',$region)
+                            ->where('province_id',$province)
+                            ->orderBy('name')
+                            ->get()
+                            ->pluck("name", "id")
+                            ->toArray();
+
+                        return $res;
+                    })
+                    ->searchable()
+                    ->required()
+                    ->live()
+                    ->disabled(fn (Get $get) => !$get('administrative_area_level_1') || !$get('administrative_area_level_2')),
+
+                   
+                    'postal_code' => Select::make('postal_code')
+                    ->options(function (Get $get) {
+                        $region = $get('administrative_area_level_1');
+                        if (!$region) {
+                            return [];
+                        }
+                        $province = $get('administrative_area_level_2');
+                        if (!$province) {
+                            return [];
+                        }
+                        $city = $get('locality');
+                        $res=Locality::query()
+                        ->where('region_id', $region)
+                        ->where('province_id', $province)
+                        ->when($city, fn($query) => $query->where('id', $city))
+                        ->select('postal_code')
+                        ->distinct()
+                        ->orderBy('postal_code')
+                        ->get()
+                        ->pluck('postal_code', 'postal_code')
+                        ->toArray();
+
+                        
+                        
+                        return $res ?? [];
+                    })
+>>>>>>> 7b895b0 (.)
                     ->searchable()
                     ->required()
                     ->live()

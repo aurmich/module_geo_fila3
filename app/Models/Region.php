@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Models;
 
+<<<<<<< HEAD
 use Filament\Forms\Get;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -22,6 +23,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region whereName($value)
  * @mixin \Eloquent
  */
+=======
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+>>>>>>> 7b895b0 (.)
 class Region extends BaseModel
 {
     use \Sushi\Sushi;
@@ -52,6 +58,7 @@ class Region extends BaseModel
     {
         return $this->hasMany(Province::class);
     }
+<<<<<<< HEAD
 
     public static function getOptions(Get $get): array
     {
@@ -60,4 +67,6 @@ class Region extends BaseModel
             ->pluck("name", "id")
             ->toArray();
     }
+=======
+>>>>>>> 7b895b0 (.)
 }

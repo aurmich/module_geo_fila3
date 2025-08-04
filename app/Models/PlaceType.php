@@ -7,6 +7,11 @@ namespace Modules\Geo\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
+<<<<<<< HEAD
+=======
+ * 
+ *
+>>>>>>> 7b895b0 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PlaceType newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PlaceType newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PlaceType query()

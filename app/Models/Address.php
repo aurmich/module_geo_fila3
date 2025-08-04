@@ -45,11 +45,19 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * @property string|null $created_by
  * @property string|null $deleted_by
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $addressable
+<<<<<<< HEAD
  * @property-read \Modules\User\Models\Profile|null $creator
  * @property-read string $full_address
  * @property-read string $street_address
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $model
  * @property-read \Modules\User\Models\Profile|null $updater
+=======
+ * @property-read \Modules\SaluteOra\Models\Profile|null $creator
+ * @property-read string $full_address
+ * @property-read string $street_address
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $model
+ * @property-read \Modules\SaluteOra\Models\Profile|null $updater
+>>>>>>> 7b895b0 (.)
  * @method static \Modules\Geo\Database\Factories\AddressFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address nearby(float $latitude, float $longitude, float $radiusKm = '10')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address newModelQuery()
@@ -87,6 +95,10 @@ use Modules\Geo\Enums\AddressTypeEnum;
  */
 class Address extends BaseModel 
 {
+<<<<<<< HEAD
+=======
+    use HasFactory;
+>>>>>>> 7b895b0 (.)
         
     /** @var list<string> */
    protected $fillable = [
@@ -112,6 +124,7 @@ class Address extends BaseModel
     ];
     
     /**
+<<<<<<< HEAD
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -126,6 +139,19 @@ class Address extends BaseModel
             'type' => AddressTypeEnum::class,
         ];
     }
+=======
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'latitude' => 'float',
+        'longitude' => 'float',
+        'is_primary' => 'boolean',
+        'extra_data' => 'array',
+        'type' => AddressTypeEnum::class,
+    ];
+>>>>>>> 7b895b0 (.)
     
     
     /**

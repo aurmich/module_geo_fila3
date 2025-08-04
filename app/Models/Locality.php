@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Models;
 
+<<<<<<< HEAD
 use Filament\Forms\Get;
 use function Safe\json_decode;
 use Illuminate\Database\Eloquent\Model;
@@ -26,6 +27,11 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Locality whereRegionId($value)
  * @mixin \Eloquent
  */
+=======
+use Illuminate\Database\Eloquent\Model;
+use function Safe\json_decode;
+
+>>>>>>> 7b895b0 (.)
 class Locality extends BaseModel
 {
     use \Sushi\Sushi;
@@ -57,6 +63,7 @@ class Locality extends BaseModel
        
         return $rows->toArray();
     }
+<<<<<<< HEAD
 
     public static function getOptions(Get $get): array
     {
@@ -120,4 +127,6 @@ class Locality extends BaseModel
                         
         return $res ?? [];
     }
+=======
+>>>>>>> 7b895b0 (.)
 }

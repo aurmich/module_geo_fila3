@@ -82567,8 +82567,15 @@
               }
               /* }}} */
     
+<<<<<<< HEAD
               // Public interface {{{
               // All functions below are considered public.
+=======
+              //======================================================================
+              // Public interface {{{
+              // All functions below are considered public.
+              //======================================================================
+>>>>>>> 7b895b0 (.)
     
               // Simple API {{{
     
