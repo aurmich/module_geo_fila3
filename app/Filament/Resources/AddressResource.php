@@ -61,11 +61,16 @@ class AddressResource extends XotBaseResource
                 
                 "administrative_area_level_1" => Select::make('administrative_area_level_1')
 <<<<<<< HEAD
+<<<<<<< HEAD
                     
                     ->options(fn(Get $get)=>Region::getOptions($get))
 =======
                     ->options(Region::orderBy('name')->get()->pluck("name", "id"))
 >>>>>>> 7b895b0 (.)
+=======
+                    
+                    ->options(fn(Get $get)=>Region::getOptions($get))
+>>>>>>> bda2447 (.)
                     ->searchable()
                     ->required()
                     ->live()
@@ -79,6 +84,9 @@ class AddressResource extends XotBaseResource
                 
                 'administrative_area_level_2' => Select::make('administrative_area_level_2')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bda2447 (.)
                     ->options(fn(Get $get)=>Province::getOptions($get))
                     ->searchable()
                     ->required()
@@ -104,6 +112,7 @@ class AddressResource extends XotBaseResource
 
                 'postal_code' => Select::make('postal_code')
                     ->options(fn(Get $get)=>Locality::getPostalCodeOptions($get))
+<<<<<<< HEAD
 =======
                 
                     ->options(fn(Get $get)=>Province::where('region_id',$get('administrative_area_level_1'))
@@ -174,6 +183,8 @@ class AddressResource extends XotBaseResource
                         return $res ?? [];
                     })
 >>>>>>> 7b895b0 (.)
+=======
+>>>>>>> bda2447 (.)
                     ->searchable()
                     ->required()
                     ->live()

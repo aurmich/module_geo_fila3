@@ -81,17 +81,25 @@ class SafeSushiModel extends BaseModel
 ### Verifica File Path
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7b895b0 (.)
+=======
+
+>>>>>>> bda2447 (.)
 # Verifica esistenza file
 ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.json
 
 # Output atteso:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7b895b0 (.)
+=======
+
+>>>>>>> bda2447 (.)
 # -rw-r--r-- 1 user group 1.8M date comuni.json
 ```
 
@@ -140,6 +148,9 @@ La trasparenza del path diretto è superiore all'astrazione del `module_path()` 
 **Priorità**: P0 (Critical) - Bloccava registrazioni  
 **Impatto**: Sistema completamente non funzionale  
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 **Tempo di risoluzione**: 5 minuti 
 >>>>>>> 7b895b0 (.)
+=======
+>>>>>>> bda2447 (.)

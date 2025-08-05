@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  * 
  *
 >>>>>>> 7b895b0 (.)
+=======
+>>>>>>> bda2447 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PlaceType newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PlaceType newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PlaceType query()

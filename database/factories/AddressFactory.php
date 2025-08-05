@@ -197,6 +197,7 @@ class AddressFactory extends Factory
         return $this->state(function (array $attributes) use ($city, $cityInfo) {
             /** @var float $baseLat */
 <<<<<<< HEAD
+<<<<<<< HEAD
             $baseLat = is_numeric($cityInfo['lat'] ?? null) ? (float) $cityInfo['lat'] : 45.4642;
             /** @var float $baseLng */
             $baseLng = is_numeric($cityInfo['lng'] ?? null) ? (float) $cityInfo['lng'] : 9.1900;
@@ -205,6 +206,11 @@ class AddressFactory extends Factory
             /** @var float $baseLng */
             $baseLng = (float) ($cityInfo['lng'] ?? 9.1900);
 >>>>>>> 7b895b0 (.)
+=======
+            $baseLat = is_numeric($cityInfo['lat'] ?? null) ? (float) $cityInfo['lat'] : 45.4642;
+            /** @var float $baseLng */
+            $baseLng = is_numeric($cityInfo['lng'] ?? null) ? (float) $cityInfo['lng'] : 9.1900;
+>>>>>>> bda2447 (.)
             
             $latitude = $baseLat + $this->faker->randomFloat(4, -0.05, 0.05);
             $longitude = $baseLng + $this->faker->randomFloat(4, -0.05, 0.05);
@@ -214,11 +220,15 @@ class AddressFactory extends Factory
 
             /** @var string $postal */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bda2447 (.)
             $postal = is_string($cityInfo['postal'] ?? null) ? $cityInfo['postal'] : '20100';
             /** @var string $province */
             $province = is_string($cityInfo['province'] ?? null) ? $cityInfo['province'] : $city;
             /** @var string $region */
             $region = is_string($cityInfo['region'] ?? null) ? $cityInfo['region'] : 'Lombardia';
+<<<<<<< HEAD
 =======
             $postal = (string) ($cityInfo['postal'] ?? '20100');
             /** @var string $province */
@@ -226,6 +236,8 @@ class AddressFactory extends Factory
             /** @var string $region */
             $region = (string) ($cityInfo['region'] ?? 'Lombardia');
 >>>>>>> 7b895b0 (.)
+=======
+>>>>>>> bda2447 (.)
 
             return [
                 'locality' => $city,

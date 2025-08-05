@@ -102,6 +102,9 @@ class SushiCommand extends Command
                 
                 DB::table('comuni')->insert([
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bda2447 (.)
                     'id' => is_string($validComune['id'] ?? null) ? $validComune['id'] : '',
                     'regione' => is_string($validComune['regione'] ?? null) ? $validComune['regione'] : '',
                     'provincia' => is_string($validComune['provincia'] ?? null) ? $validComune['provincia'] : '',
@@ -109,6 +112,7 @@ class SushiCommand extends Command
                     'cap' => is_string($validComune['cap'] ?? null) ? $validComune['cap'] : '',
                     'lat' => is_numeric($validComune['lat'] ?? null) ? (float) $validComune['lat'] : 0.0,
                     'lng' => is_numeric($validComune['lng'] ?? null) ? (float) $validComune['lng'] : 0.0,
+<<<<<<< HEAD
 =======
                     'id' => $validComune['id'],
                     'regione' => (string) $validComune['regione'],
@@ -118,6 +122,8 @@ class SushiCommand extends Command
                     'lat' => (float) $validComune['lat'],
                     'lng' => (float) $validComune['lng'],
 >>>>>>> 7b895b0 (.)
+=======
+>>>>>>> bda2447 (.)
                     'created_at' => $validComune['created_at'] ?? now(),
                     'updated_at' => $validComune['updated_at'] ?? now(),
                 ]);

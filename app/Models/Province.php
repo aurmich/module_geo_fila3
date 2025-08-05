@@ -5,14 +5,21 @@ declare(strict_types=1);
 namespace Modules\Geo\Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Get;
 =======
 >>>>>>> 7b895b0 (.)
+=======
+use Filament\Forms\Get;
+>>>>>>> bda2447 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bda2447 (.)
 /**
  * @property int|null $region_id
  * @property int $id
@@ -30,8 +37,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Province whereRegionId($value)
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 =======
 >>>>>>> 7b895b0 (.)
+=======
+>>>>>>> bda2447 (.)
 class Province extends BaseModel
 {
     use \Sushi\Sushi;
@@ -62,6 +72,9 @@ class Province extends BaseModel
         return $this->hasMany(Locality::class);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bda2447 (.)
 
     public static function getOptions(Get $get): array
     {
@@ -73,6 +86,9 @@ class Province extends BaseModel
 
             
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 7b895b0 (.)
+=======
+>>>>>>> bda2447 (.)
 }
