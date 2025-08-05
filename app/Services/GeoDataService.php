@@ -171,15 +171,7 @@ class GeoDataService
                 /** @var array<string, mixed>|null $city */
                 $city = $cityCollection->firstWhere('code', $cityCode);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return is_array($city) && isset($city['cap']) && is_string($city['cap']) ? $city['cap'] : null;
-=======
-                return is_array($city) && isset($city['cap']) ? (string) $city['cap'] : null;
->>>>>>> 7b895b0 (.)
-=======
-                return is_array($city) && isset($city['cap']) && is_string($city['cap']) ? $city['cap'] : null;
->>>>>>> bda2447 (.)
             }
         );
 

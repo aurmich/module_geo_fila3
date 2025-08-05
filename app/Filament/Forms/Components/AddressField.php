@@ -22,13 +22,6 @@ class AddressField extends Forms\Components\Section
     protected function setUp(): void
     {
         parent::setUp();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
         $this->schema($this->getAddressFormSchema());
         $this->columns(2);
     }

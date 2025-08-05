@@ -45,25 +45,11 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * @property string|null $created_by
  * @property string|null $deleted_by
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $addressable
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bda2447 (.)
  * @property-read \Modules\User\Models\Profile|null $creator
  * @property-read string $full_address
  * @property-read string $street_address
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $model
  * @property-read \Modules\User\Models\Profile|null $updater
-<<<<<<< HEAD
-=======
- * @property-read \Modules\SaluteOra\Models\Profile|null $creator
- * @property-read string $full_address
- * @property-read string $street_address
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $model
- * @property-read \Modules\SaluteOra\Models\Profile|null $updater
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
  * @method static \Modules\Geo\Database\Factories\AddressFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address nearby(float $latitude, float $longitude, float $radiusKm = '10')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address newModelQuery()
@@ -101,13 +87,6 @@ use Modules\Geo\Enums\AddressTypeEnum;
  */
 class Address extends BaseModel 
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    use HasFactory;
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
         
     /** @var list<string> */
    protected $fillable = [
@@ -133,10 +112,6 @@ class Address extends BaseModel
     ];
     
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bda2447 (.)
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -151,22 +126,6 @@ class Address extends BaseModel
             'type' => AddressTypeEnum::class,
         ];
     }
-<<<<<<< HEAD
-=======
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'latitude' => 'float',
-        'longitude' => 'float',
-        'is_primary' => 'boolean',
-        'extra_data' => 'array',
-        'type' => AddressTypeEnum::class,
-    ];
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
     
     
     /**

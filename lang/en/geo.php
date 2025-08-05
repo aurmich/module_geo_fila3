@@ -169,10 +169,6 @@ return [
         ],
         'messages' => [
             'success' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bda2447 (.)
                 'located' => 'Location found',
                 'saved' => 'Location saved',
                 'updated' => 'Location updated',
@@ -183,21 +179,6 @@ return [
                 'invalid_coords' => 'Invalid coordinates',
                 'geocoding_failed' => 'Geocoding failed',
                 'network_error' => 'Network error',
-<<<<<<< HEAD
-=======
-                'located' => 'Posizione trovata',
-                'saved' => 'Posizione salvata',
-                'updated' => 'Posizione aggiornata',
-                'deleted' => 'Posizione eliminata',
-            ],
-            'error' => [
-                'not_found' => 'Posizione non trovata',
-                'invalid_coords' => 'Coordinate non valide',
-                'geocoding_failed' => 'Geocodifica fallita',
-                'network_error' => 'Error di rete',
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
             ],
         ],
         'filters' => [

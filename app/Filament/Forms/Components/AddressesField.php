@@ -87,22 +87,10 @@ class AddressesField extends Forms\Components\Repeater
                         // Disattiva is_primary negli altri elementi
                         /** @phpstan-ignore foreach.nonIterable */
                         foreach ($addresses as $index => $address) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bda2447 (.)
                             $indexStr = app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($index);
                             $currentIndexStr = app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($currentIndex);
                             if ($indexStr !== $currentIndexStr) {
                                 $set("../../addresses." . $indexStr . ".is_primary", false);
-<<<<<<< HEAD
-=======
-                            if ((string)$index !== (string)$currentIndex) {
-                                /** @phpstan-ignore encapsedStringPart.nonString */
-                                $set("../../addresses.{$index}.is_primary", false);
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
                             }
                         }
                     }

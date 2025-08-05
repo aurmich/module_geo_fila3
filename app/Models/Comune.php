@@ -35,18 +35,8 @@ use Modules\Tenant\Models\Traits\SushiToJson;
  * @property array<array-key, mixed>|null $zona
  * @property string|null $sigla
  * @property string|null $codiceCatastale
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @property-read \Modules\User\Models\Profile|null $creator
  * @property-read \Modules\User\Models\Profile|null $updater
-=======
- * @property-read \Modules\SaluteOra\Models\Profile|null $creator
- * @property-read \Modules\SaluteOra\Models\Profile|null $updater
->>>>>>> 7b895b0 (.)
-=======
- * @property-read \Modules\User\Models\Profile|null $creator
- * @property-read \Modules\User\Models\Profile|null $updater
->>>>>>> bda2447 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Comune newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Comune newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Comune query()

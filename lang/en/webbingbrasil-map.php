@@ -1,33 +1,16 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bda2447 (.)
 declare(strict_types=1);
 
 return [
     'navigation' => [
         'label' => 'Webbingbrasil Map',
         'group' => 'Territory Management',
-<<<<<<< HEAD
-=======
-return [
-    'navigation' => [
-        'label' => 'Mappa Webbingbrasil',
-        'group' => 'Management Territorio',
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
         'icon' => 'heroicon-o-map',
         'sort' => '60',
     ],
     'controls' => [
         'zoom' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bda2447 (.)
             'in' => 'Zoom in',
             'out' => 'Zoom out',
         ],
@@ -43,25 +26,5 @@ return [
         'marker_added' => 'Marker added successfully',
         'marker_removed' => 'Marker removed successfully',
         'marker_updated' => 'Marker updated successfully',
-<<<<<<< HEAD
-=======
-            'in' => 'Aumenta zoom',
-            'out' => 'Diminuisci zoom',
-        ],
-        'fullscreen' => 'Schermo intero',
-        'layers' => 'Cambia layer',
-    ],
-    'markers' => [
-        'add' => 'Aggiungi marker',
-        'remove' => 'Rimuovi marker',
-        'edit' => 'Edit marker',
-    ],
-    'messages' => [
-        'marker_added' => 'Marker aggiunto con successo',
-        'marker_removed' => 'Marker rimosso con successo',
-        'marker_updated' => 'Marker aggiornato con successo',
->>>>>>> 7b895b0 (.)
-=======
->>>>>>> bda2447 (.)
     ],
 ];
