@@ -1,6 +1,9 @@
 # :package_description
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Geo Module
+=======
+>>>>>>> e0d1f5b (.)
 
 # Geo Module
 =======

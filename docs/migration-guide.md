@@ -131,6 +131,7 @@ composer require calebporzio/sushi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7b895b0 (.)
@@ -140,6 +141,9 @@ composer require calebporzio/sushi
 =======
 
 >>>>>>> 70c8c33 (.)
+=======
+
+>>>>>>> e0d1f5b (.)
 # Backup del file JSON
 cp database/content/comuni.json database/content/comuni.json.bak
 
