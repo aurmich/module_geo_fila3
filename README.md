@@ -1,7 +1,10 @@
 # :package_description
+<<<<<<< HEAD
 # Geo Module
 
 # Geo Module
+=======
+>>>>>>> 70c8c33 (.)
 
 # Geo Module
 
