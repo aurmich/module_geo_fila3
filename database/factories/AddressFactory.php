@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Geo\Models\Address;
 use Modules\Geo\Models\Address as Model;
 use Modules\Geo\Enums\AddressTypeEnum;
 
@@ -12,6 +13,8 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * AddressFactory
  * 
  * Factory per generare indirizzi di test per il modello Address
+ * 
+ * @extends Factory<Address>
  */
 class AddressFactory extends Factory
 {

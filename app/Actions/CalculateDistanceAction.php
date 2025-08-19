@@ -49,8 +49,8 @@ class CalculateDistanceAction
 
         try {
             $response = $this->distanceMatrixAction->execute(
-                new Collection([$origin]),
-                new Collection([$destination])
+                collect([$origin]),
+                collect([$destination])
             );
 
             if (empty($response) || empty($response[0]) || empty($response[0][0])) {
