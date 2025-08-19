@@ -7,11 +7,6 @@ namespace Modules\Geo\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
-<<<<<<< HEAD
- * 
- *
-=======
->>>>>>> 70c8c33 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|County newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|County newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|County query()
