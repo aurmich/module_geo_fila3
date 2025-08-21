@@ -85,6 +85,7 @@ class SafeSushiModel extends BaseModel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8633bc (.)
 
@@ -102,6 +103,9 @@ class SafeSushiModel extends BaseModel
 >>>>>>> e0d1f5b (.)
 =======
 >>>>>>> f8633bc (.)
+=======
+
+>>>>>>> 0c268a4 (.)
 # Verifica esistenza file
 ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.json
 
@@ -111,6 +115,7 @@ ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.js
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8633bc (.)
 
@@ -128,6 +133,9 @@ ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.js
 >>>>>>> e0d1f5b (.)
 =======
 >>>>>>> f8633bc (.)
+=======
+
+>>>>>>> 0c268a4 (.)
 # -rw-r--r-- 1 user group 1.8M date comuni.json
 ```
 
@@ -180,6 +188,7 @@ La trasparenza del path diretto è superiore all'astrazione del `module_path()` 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8633bc (.)
 =======
@@ -194,3 +203,5 @@ La trasparenza del path diretto è superiore all'astrazione del `module_path()` 
 >>>>>>> e0d1f5b (.)
 =======
 >>>>>>> f8633bc (.)
+=======
+>>>>>>> 0c268a4 (.)
