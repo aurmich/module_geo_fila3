@@ -9,8 +9,14 @@ return [
     'sort' => 96,
     'icon' => 'heroicon-o-map-pin',
     'group' => 'Geo',
+<<<<<<< HEAD
   ],
   'actions' => [
+=======
+  ),
+  'actions' => 
+  array (
+>>>>>>> a93f634 (.)
     'create' => 'Crea indirizzo',
     'edit' => 'Modifica indirizzo',
     'view' => 'Visualizza indirizzo',
@@ -26,29 +32,53 @@ return [
       'help' => 'Tipo di modello associato all\'indirizzo',
       'description' => 'Tipo del modello che possiede questo indirizzo',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'model_id' => [
+=======
+    ),
+    'model_id' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'ID modello',
       'placeholder' => 'Inserisci ID del modello',
       'help' => 'Identificativo del modello associato',
       'description' => 'ID del modello che possiede questo indirizzo',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'name' => [
+=======
+    ),
+    'name' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Nome',
       'placeholder' => 'Inserisci un nome per l\'indirizzo',
       'help' => 'Un nome identificativo per questo indirizzo, es. "Casa" o "Ufficio"',
       'helper_text' => '',
       'description' => 'Nome identificativo dell\'indirizzo',
+<<<<<<< HEAD
     ],
     'description' => [
+=======
+    ),
+    'description' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Descrizione',
       'placeholder' => 'Inserisci una descrizione',
       'help' => 'Note aggiuntive sull\'indirizzo',
       'description' => 'Descrizione aggiuntiva dell\'indirizzo',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'route' => [
+=======
+    ),
+    'route' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Via',
       'placeholder' => 'Inserisci la via',
       'help' => 'Nome della via o strada',
@@ -75,8 +105,14 @@ return [
       'help' => 'Comune di appartenenza',
       'description' => 'Comune di appartenenza',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'administrative_area_level_2' => [
+=======
+    ),
+    'administrative_area_level_2' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Provincia',
       'placeholder' => 'Inserisci la provincia',
       'help' => 'Provincia di appartenenza',
@@ -117,15 +153,27 @@ return [
       'help' => 'Identificativo Google Maps del luogo',
       'description' => 'Identificativo Google Maps del luogo',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'latitude' => [
+=======
+    ),
+    'latitude' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Latitudine',
       'placeholder' => 'Inserisci la latitudine',
       'help' => 'Coordinate geografiche latitudine',
       'description' => 'Coordinate geografiche latitudine',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'longitude' => [
+=======
+    ),
+    'longitude' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Longitudine',
       'placeholder' => 'Inserisci la longitudine',
       'help' => 'Coordinate geografiche longitudine',
@@ -138,7 +186,12 @@ return [
       'help' => 'Tipo di indirizzo (casa, lavoro, ecc.)',
       'description' => 'Tipo di indirizzo',
       'helper_text' => '',
+<<<<<<< HEAD
       'options' => [
+=======
+      'options' => 
+      array (
+>>>>>>> a93f634 (.)
         'billing' => 'Fatturazione',
         'shipping' => 'Spedizione',
         'home' => 'Casa',
@@ -152,12 +205,19 @@ return [
       'description' => 'Indirizzo principale',
       'helper_text' => '',
       'placeholder' => 'Imposta come principale',
+<<<<<<< HEAD
     ],
     'extra_data' => [
+=======
+    ),
+    'extra_data' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Dati aggiuntivi',
       'placeholder' => 'Inserisci dati aggiuntivi',
       'help' => 'Informazioni aggiuntive sull\'indirizzo',
       'description' => 'Dati aggiuntivi dell\'indirizzo',
+<<<<<<< HEAD
       'helper_text' => '',
     ],
     'full_address' => [
@@ -182,28 +242,77 @@ return [
       'helper_text' => '',
     ],
     'cap' => [
+=======
+      'helper_text' => '',
+    ),
+    'full_address' => 
+    array (
+      'label' => 'Indirizzo completo',
+      'placeholder' => '',
+      'help' => 'Indirizzo completo formattato',
+      'description' => 'Indirizzo completo formattato',
+      'helper_text' => '',
+    ),
+    'street_address' => 
+    array (
+      'label' => 'Indirizzo stradale',
+      'placeholder' => '',
+      'help' => 'Indirizzo stradale completo',
+      'description' => 'Indirizzo stradale completo',
+      'helper_text' => '',
+    ),
+    'map' => 
+    array (
+      'label' => 'Mappa',
+      'placeholder' => '',
+      'help' => 'Visualizzazione su mappa',
+      'description' => 'Visualizzazione su mappa',
+      'helper_text' => '',
+    ),
+    'cap' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'CAP',
       'placeholder' => 'Inserisci il CAP',
       'help' => 'Codice di Avviamento Postale',
       'description' => 'Codice di Avviamento Postale',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'region' => [
+=======
+    ),
+    'region' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Regione',
       'placeholder' => 'Inserisci la regione',
       'help' => 'Regione di appartenenza',
       'description' => 'Regione di appartenenza',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
     'province' => [
+=======
+    ),
+    'province' => 
+    array (
+>>>>>>> a93f634 (.)
       'label' => 'Provincia',
       'placeholder' => 'Inserisci la provincia',
       'help' => 'Provincia di appartenenza',
       'description' => 'Provincia di appartenenza',
       'helper_text' => '',
+<<<<<<< HEAD
     ],
   ],
   'columns' => [
+=======
+    ),
+  ),
+  'columns' => 
+  array (
+>>>>>>> a93f634 (.)
     'name' => 'Nome',
     'full_address' => 'Indirizzo completo',
     'type' => 'Tipo',
@@ -234,6 +343,150 @@ return [
     'map' => [
       'label' => 'Mappa',
       'description' => 'Visualizzazione su mappa',
+<<<<<<< HEAD
     ],
   ],
 ];
+=======
+    ),
+  ),
+  'steps' => 
+  array (
+    'Is primary' => 
+    array (
+      'description' => 'Is primary',
+      'helper_text' => 'Is primary',
+      'placeholder' => 'Is primary',
+      'label' => 'Is primary',
+    ),
+    'Name' => 
+    array (
+      'label' => 'Name',
+      'placeholder' => 'Name',
+      'helper_text' => 'Name',
+      'description' => 'Name',
+    ),
+    'Country' => 
+    array (
+      'label' => 'Country',
+      'placeholder' => 'Country',
+      'helper_text' => 'Country',
+      'description' => 'Country',
+    ),
+    'Administrative area level 1' => 
+    array (
+      'label' => 'Administrative area level 1',
+      'placeholder' => 'Administrative area level 1',
+      'helper_text' => 'Administrative area level 1',
+      'description' => 'Administrative area level 1',
+    ),
+    'Administrative area level 2' => 
+    array (
+      'label' => 'Administrative area level 2',
+      'placeholder' => 'Administrative area level 2',
+      'helper_text' => 'Administrative area level 2',
+      'description' => 'Administrative area level 2',
+    ),
+    'Locality' => 
+    array (
+      'label' => 'Locality',
+      'placeholder' => 'Locality',
+      'helper_text' => 'Locality',
+      'description' => 'Locality',
+    ),
+    'Postal code' => 
+    array (
+      'label' => 'Postal code',
+      'placeholder' => 'Postal code',
+      'helper_text' => 'Postal code',
+      'description' => 'Postal code',
+    ),
+    'Route' => 
+    array (
+      'label' => 'Route',
+      'placeholder' => 'Route',
+      'helper_text' => 'Route',
+      'description' => 'Route',
+    ),
+    'Street number' => 
+    array (
+      'label' => 'Street number',
+      'placeholder' => 'Street number',
+      'helper_text' => 'Street number',
+      'description' => 'Street number',
+    ),
+  ),
+  'toggles' => 
+  array (
+    'is_primary' => 
+    array (
+      'description' => 'is_primary',
+      'helper_text' => 'is_primary',
+      'label' => 'is_primary',
+      'placeholder' => 'is_primary',
+    ),
+  ),
+  'text_inputs' => 
+  array (
+    'name' => 
+    array (
+      'label' => 'name',
+      'placeholder' => 'name',
+      'helper_text' => 'name',
+      'description' => 'name',
+    ),
+    'country' => 
+    array (
+      'label' => 'country',
+      'placeholder' => 'country',
+      'helper_text' => 'country',
+      'description' => 'country',
+    ),
+    'route' => 
+    array (
+      'label' => 'route',
+      'placeholder' => 'route',
+      'helper_text' => 'route',
+      'description' => 'route',
+    ),
+    'street_number' => 
+    array (
+      'label' => 'street_number',
+      'placeholder' => 'street_number',
+      'helper_text' => 'street_number',
+      'description' => 'street_number',
+    ),
+  ),
+  'selects' => 
+  array (
+    'administrative_area_level_1' => 
+    array (
+      'label' => 'administrative_area_level_1',
+      'placeholder' => 'administrative_area_level_1',
+      'helper_text' => 'administrative_area_level_1',
+      'description' => 'administrative_area_level_1',
+    ),
+    'administrative_area_level_2' => 
+    array (
+      'label' => 'administrative_area_level_2',
+      'placeholder' => 'administrative_area_level_2',
+      'helper_text' => 'administrative_area_level_2',
+      'description' => 'administrative_area_level_2',
+    ),
+    'locality' => 
+    array (
+      'label' => 'locality',
+      'placeholder' => 'locality',
+      'helper_text' => 'locality',
+      'description' => 'locality',
+    ),
+    'postal_code' => 
+    array (
+      'label' => 'postal_code',
+      'placeholder' => 'postal_code',
+      'helper_text' => 'postal_code',
+      'description' => 'postal_code',
+    ),
+  ),
+);
+>>>>>>> a93f634 (.)

@@ -16,7 +16,10 @@ use Modules\Geo\Tests\TestCase;
 */
 
 pest()->extend(TestCase::class)
+<<<<<<< HEAD
     ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+=======
+>>>>>>> a93f634 (.)
     ->in('Feature', 'Unit');
 
 /*

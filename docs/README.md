@@ -36,6 +36,7 @@ $address = Address::create([
 ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Sushi Models
 - [Sushi Implementation](sushi-implementation.md) - Modelli Sushi per dati statici
 - [Sushi Configuration](sushi-configuration.md) - Configurazione modelli Sushi
@@ -137,6 +138,10 @@ cd laravel
 // Ricerca indirizzi nelle vicinanze
 $nearby = Address::nearby($lat, $lng, 5); // 5km radius
 >>>>>>> 0c268a4 (.)
+=======
+// Ricerca indirizzi nelle vicinanze
+$nearby = Address::nearby($lat, $lng, 5); // 5km radius
+>>>>>>> a93f634 (.)
 ```
 
 ### 🗺️ **API Integration**
@@ -188,6 +193,7 @@ $lombardia = $milano->regione; // "Lombardia"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8633bc (.)
 
@@ -207,6 +213,8 @@ $lombardia = $milano->regione; // "Lombardia"
 >>>>>>> f8633bc (.)
 =======
 >>>>>>> 0c268a4 (.)
+=======
+>>>>>>> a93f634 (.)
 # Abilitare il modulo
 php artisan module:enable Geo
 
@@ -246,6 +254,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8633bc (.)
 
@@ -265,6 +274,8 @@ return [
 >>>>>>> f8633bc (.)
 =======
 >>>>>>> 0c268a4 (.)
+=======
+>>>>>>> a93f634 (.)
 # Test del modulo
 php artisan test --testsuite=Geo
 

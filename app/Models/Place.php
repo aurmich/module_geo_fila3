@@ -22,8 +22,11 @@ use function Safe\json_encode;
  * @property-read \Illuminate\Database\Eloquent\Model $linked
  * @property-read \Modules\Geo\Models\PlaceType|null $placeType
  * @property-read \Modules\User\Models\Profile|null $updater
+<<<<<<< HEAD
  *
  * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
+=======
+>>>>>>> a93f634 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place query()
@@ -53,7 +56,11 @@ use function Safe\json_encode;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place wherePostType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedBy($value)
+<<<<<<< HEAD
  *
+=======
+ * @mixin IdeHelperPlace
+>>>>>>> a93f634 (.)
  * @mixin \Eloquent
  */
 class Place extends BaseModel implements HasGeolocation
@@ -220,8 +227,4 @@ class Place extends BaseModel implements HasGeolocation
         return $this->placeType->name ?? null;
     }
 
-    protected static function newFactory(): PlaceFactory
-    {
-        return PlaceFactory::new();
-    }
 }

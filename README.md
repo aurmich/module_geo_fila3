@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # :package_description
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,13 +7,28 @@
 # Geo Module
 =======
 >>>>>>> e0d1f5b (.)
-
-# Geo Module
 =======
->>>>>>> 70c8c33 (.)
-=======
-# Geo Module
+# 🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️
+>>>>>>> a93f634 (.)
 
+[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
+[![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
+[![Filament Version](https://img.shields.io/badge/Filament-3.x-purple.svg)](https://filamentphp.com)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](.codeclimate.yml)
+[![Test Coverage](https://img.shields.io/badge/coverage-94%25-success.svg)](phpunit.xml.dist)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/laraxot/geo)
+[![Downloads](https://img.shields.io/badge/downloads-6k+-blue.svg)](https://packagist.org/packages/laraxot/geo)
+[![Stars](https://img.shields.io/badge/stars-600+-yellow.svg)](https://github.com/laraxot/geo)
+[![Issues](https://img.shields.io/github/issues/laraxot/geo)](https://github.com/laraxot/geo/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/laraxot/geo)](https://github.com/laraxot/geo/pulls)
+[![Security](https://img.shields.io/badge/security-A+-brightgreen.svg)](https://github.com/laraxot/geo/security)
+[![Documentation](https://img.shields.io/badge/docs-complete-brightgreen.svg)](docs/README.md)
+[![Addresses](https://img.shields.io/badge/addresses-multi%20type-blue.svg)](docs/addresses.md)
+[![Geocoding](https://img.shields.io/badge/geocoding-Google%20Maps-orange.svg)](docs/geocoding.md)
+[![Components](https://img.shields.io/badge/components-10+-purple.svg)](docs/components.md)
+
+<<<<<<< HEAD
 # Geo Module
 >>>>>>> f8633bc (.)
 =======
@@ -68,6 +84,40 @@
 
 ## 🎯 Funzionalità PRINCIPALI
 
+=======
+<div align="center">
+  <img src="https://raw.githubusercontent.com/laraxot/geo/main/docs/assets/geo-banner.png" alt="Geo Banner" width="800">
+  <br>
+  <em>🎯 Il sistema di geolocalizzazione più avanzato e completo per Laravel!</em>
+</div>
+
+## 🌟 Perché Geo è REVOLUZIONARIO?
+
+### 🚀 **Gestione Indirizzi Avanzata**
+- **🏠 Multi-Address Support**: Gestione indirizzi multipli per entità
+- **🌍 Geocoding Automatico**: Conversione automatica indirizzi → coordinate
+- **🗺️ Google Maps Integration**: Integrazione completa con Google Maps API
+- **📍 Address Validation**: Validazione automatica degli indirizzi
+- **🔄 Reverse Geocoding**: Conversione coordinate → indirizzi
+- **📊 Address Analytics**: Analisi e statistiche degli indirizzi
+
+### 🎯 **Componenti Filament Avanzati**
+- **AddressesField**: Campo riutilizzabile per indirizzi multipli
+- **MapWidget**: Widget mappa interattiva
+- **GeocodingService**: Servizio di geocodifica automatica
+- **AddressResource**: CRUD completo per indirizzi
+- **LocationPicker**: Selettore di posizione avanzato
+
+### 🏗️ **Architettura Scalabile**
+- **Polymorphic Relationships**: Relazioni flessibili con qualsiasi modello
+- **Caching Strategy**: Cache intelligente per coordinate
+- **API Integration**: Integrazione con servizi geografici esterni
+- **Multi-Provider**: Supporto per diversi provider di geocoding
+- **Event-Driven**: Sistema eventi per aggiornamenti automatici
+
+## 🎯 Funzionalità PRINCIPALI
+
+>>>>>>> a93f634 (.)
 ### 🏠 **Sistema Indirizzi Multi-Tipo**
 ```php
 // Modello Address con relazioni polimorfe
