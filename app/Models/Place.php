@@ -23,10 +23,13 @@ use function Safe\json_encode;
  * @property-read \Modules\Geo\Models\PlaceType|null $placeType
  * @property-read \Modules\User\Models\Profile|null $updater
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
 =======
 >>>>>>> a93f634 (.)
+=======
+>>>>>>> f90a9bb (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place query()
@@ -57,10 +60,14 @@ use function Safe\json_encode;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedBy($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * @mixin IdeHelperPlace
 >>>>>>> a93f634 (.)
+=======
+ * @mixin IdeHelperPlace
+>>>>>>> f90a9bb (.)
  * @mixin \Eloquent
  */
 class Place extends BaseModel implements HasGeolocation
