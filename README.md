@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # :package_description
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -589,3 +590,15 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
   <br>
   <em>Costruito con ❤️ per la comunità Laravel</em>
 </div>
+=======
+# Modulo Geo
+
+## Descrizione
+Modulo per la gestione di dati geografici, indirizzi e localizzazioni.
+
+## Caratteristiche
+- Gestione indirizzi
+- Geocoding e reverse geocoding
+- Validazione indirizzi
+- Integrazione con servizi esterni
+>>>>>>> 8946c2f (.)

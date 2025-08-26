@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
   'singular' => 'Indirizzo',
   'plural' => 'Indirizzi',
   'navigation' => [
@@ -679,3 +680,57 @@ return [
   ),
 );
 >>>>>>> a93f634 (.)
+=======
+    'fields' => [
+        'street' => [
+            'label' => 'Via',
+            'placeholder' => 'Inserisci la via',
+            'help' => 'Nome della strada o via',
+        ],
+        'number' => [
+            'label' => 'Numero',
+            'placeholder' => 'Inserisci il numero civico',
+            'help' => 'Numero civico dell\'indirizzo',
+        ],
+        'city' => [
+            'label' => 'Città',
+            'placeholder' => 'Inserisci la città',
+            'help' => 'Nome della città',
+        ],
+        'postal_code' => [
+            'label' => 'CAP',
+            'placeholder' => 'Inserisci il CAP',
+            'help' => 'Codice di avviamento postale',
+        ],
+        'country' => [
+            'label' => 'Paese',
+            'placeholder' => 'Seleziona il paese',
+            'help' => 'Paese dell\'indirizzo',
+        ],
+        'latitude' => [
+            'label' => 'Latitudine',
+            'placeholder' => 'Inserisci la latitudine',
+            'help' => 'Coordinate geografiche - latitudine',
+        ],
+        'longitude' => [
+            'label' => 'Longitudine',
+            'placeholder' => 'Inserisci la longitudine',
+            'help' => 'Coordinate geografiche - longitudine',
+        ],
+    ],
+    'validation' => [
+        'street_required' => 'La via è obbligatoria',
+        'city_required' => 'La città è obbligatoria',
+        'postal_code_required' => 'Il CAP è obbligatorio',
+        'country_required' => 'Il paese è obbligatorio',
+        'coordinates_invalid' => 'Le coordinate geografiche non sono valide',
+    ],
+    'messages' => [
+        'address_created' => 'Indirizzo creato con successo',
+        'address_updated' => 'Indirizzo aggiornato con successo',
+        'address_deleted' => 'Indirizzo eliminato con successo',
+        'geocoding_success' => 'Geocoding completato con successo',
+        'geocoding_error' => 'Errore durante il geocoding',
+    ],
+];
+>>>>>>> 8946c2f (.)

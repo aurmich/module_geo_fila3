@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8946c2f (.)
 use Modules\Geo\Models\Address;
 use Modules\Geo\Enums\AddressTypeEnum;
 use Modules\SaluteOra\Models\Patient;
@@ -14,6 +17,7 @@ describe('Address Integration', function () {
         
         $address = Address::factory()->create([
             'model_type' => Patient::class,
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f90a9bb (.)
@@ -80,6 +84,8 @@ describe('Address Integration', function () {
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> 8946c2f (.)
             'model_id' => $patient->id,
             'route' => 'Via Roma',
             'street_number' => '123',
@@ -87,6 +93,7 @@ describe('Address Integration', function () {
             'postal_code' => '20100',
             'is_primary' => true,
         ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         
@@ -102,10 +109,16 @@ describe('Address Integration', function () {
         expect($address->model_type)->toBe('patient')
             ->and($address->model_id)->toBe($patient->id)
 >>>>>>> f90a9bb (.)
+=======
+        
+        expect($address->addressable)->toBeInstanceOf(Patient::class)
+            ->and($address->addressable->id)->toBe($patient->id)
+>>>>>>> 8946c2f (.)
             ->and($address->is_primary)->toBeTrue();
     });
 
     it('generates proper full address from components', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $address = Address::factory()->create([
@@ -153,11 +166,81 @@ describe('Address Integration', function () {
         
         $address = Address::factory()->create($milanCoordinates);
         
+=======
+        $address = Address::factory()->create([
+            'route' => 'Via Roma',
+            'street_number' => '123',
+            'locality' => 'Milano',
+            'postal_code' => '20100',
+            'country' => 'Italia',
+        ]);
+
+        $fullAddress = $address->formatted_address;
+        
+        expect($fullAddress)
+            ->toBeString()
+            ->toContain('Via Roma')
+            ->toContain('123')
+            ->toContain('Milano')
+            ->toContain('20100');
+    });
+
+    it('handles address type enum correctly', function () {
+        $address = Address::factory()->create([
+            'type' => AddressTypeEnum::HOME,
+        ]);
+
+        expect($address->type)
+            ->toBeInstanceOf(AddressTypeEnum::class)
+            ->toBe(AddressTypeEnum::HOME);
+    });
+
+    it('can set address as primary', function () {
+        $patient = Patient::factory()->create();
+        
+        $address1 = Address::factory()->create([
+            'model_type' => Patient::class,
+            'model_id' => $patient->id,
+            'is_primary' => true,
+        ]);
+
+        $address2 = Address::factory()->create([
+            'model_type' => Patient::class,
+            'model_id' => $patient->id,
+            'is_primary' => false,
+        ]);
+
+        expect($address1->is_primary)->toBeTrue()
+            ->and($address2->is_primary)->toBeFalse();
+    });
+
+    it('validates required address fields', function () {
+        $addressData = [
+            'route' => 'Via Roma',
+            'locality' => 'Milano',
+            'postal_code' => '20100',
+        ];
+
+        $address = Address::factory()->create($addressData);
+        
+        expect($address->route)->toBe('Via Roma')
+            ->and($address->locality)->toBe('Milano')
+            ->and($address->postal_code)->toBe('20100');
+    });
+
+    it('handles geolocation data correctly', function () {
+        $address = Address::factory()->create([
+            'latitude' => 45.4642,
+            'longitude' => 9.1900,
+        ]);
+
+>>>>>>> 8946c2f (.)
         expect($address->latitude)->toBe(45.4642)
             ->and($address->longitude)->toBe(9.1900);
     });
 
     it('can store Google Places API data', function () {
+<<<<<<< HEAD
         $googlePlacesData = [
 =======
 =======
@@ -177,6 +260,9 @@ describe('Address Integration', function () {
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+        $address = Address::factory()->create([
+>>>>>>> 8946c2f (.)
             'place_id' => 'ChIJu46S-ZZjhkcRLuFvLjVZ400',
             'formatted_address' => 'Piazza del Duomo, 20121 Milano MI, Italy',
             'extra_data' => [
@@ -184,6 +270,7 @@ describe('Address Integration', function () {
                 'rating' => 4.5,
                 'business_status' => 'OPERATIONAL',
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         ];
@@ -198,6 +285,10 @@ describe('Address Integration', function () {
         ]);
 
 >>>>>>> f90a9bb (.)
+=======
+        ]);
+
+>>>>>>> 8946c2f (.)
         expect($address->place_id)->toBe('ChIJu46S-ZZjhkcRLuFvLjVZ400')
             ->and($address->formatted_address)->toContain('Piazza del Duomo')
             ->and($address->extra_data['google_types'])->toContain('establishment')
@@ -207,21 +298,31 @@ describe('Address Integration', function () {
     it('supports multiple addresses per entity', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $patient = Patient::factory()->create();
         
+=======
+        $patient = Patient::factory()->create();
+
+>>>>>>> 8946c2f (.)
         $homeAddress = Address::factory()->create([
             'model_type' => Patient::class,
             'model_id' => $patient->id,
             'type' => AddressTypeEnum::HOME,
             'is_primary' => true,
         ]);
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 8946c2f (.)
         $workAddress = Address::factory()->create([
             'model_type' => Patient::class,
             'model_id' => $patient->id,
             'type' => AddressTypeEnum::WORK,
             'is_primary' => false,
         ]);
+<<<<<<< HEAD
         
         $patientAddresses = Address::where('model_type', Patient::class)
             ->where('model_id', $patient->id)
@@ -231,10 +332,21 @@ describe('Address Integration', function () {
         
         $primaryAddress = $patientAddresses->where('is_primary', true)->first();
         expect($primaryAddress->id)->toBe($homeAddress->id);
+=======
+
+        $patientAddresses = Address::where('model_type', Patient::class)
+            ->where('model_id', $patient->id)
+            ->get();
+
+        expect($patientAddresses)->toHaveCount(2)
+            ->and($homeAddress->is_primary)->toBeTrue()
+            ->and($workAddress->is_primary)->toBeFalse();
+>>>>>>> 8946c2f (.)
     });
 
     it('handles soft deletion correctly', function () {
         $address = Address::factory()->create();
+<<<<<<< HEAD
         $addressId = $address->id;
         
         $address->delete();
@@ -292,5 +404,13 @@ describe('Address Integration', function () {
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+        
+        $address->delete();
+
+        expect(Address::find($address->id))->toBeNull()
+            ->and(Address::withTrashed()->find($address->id))->not->toBeNull()
+            ->and(Address::withTrashed()->find($address->id)->deleted_at)->not->toBeNull();
+>>>>>>> 8946c2f (.)
     });
 });
