@@ -294,6 +294,7 @@ La trasparenza del path diretto è superiore all'astrazione del `module_path()` 
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+<<<<<<< HEAD
 =======
 ### 2. **Relationship Resolution**
 Use lazy loading for relationships to avoid circular dependencies:
@@ -649,3 +650,5 @@ class SushiModelRegistry
 
 *Sushi Models Dependency Cycle Fix - Resolving Circular Dependencies in Geo Module*
 >>>>>>> 8946c2f (.)
+=======
+>>>>>>> ea4011f (.)

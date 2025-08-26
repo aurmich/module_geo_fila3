@@ -3,6 +3,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4011f (.)
 # :package_description
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,8 +125,11 @@
 
 >>>>>>> a93f634 (.)
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 3dd298a (.)
+=======
+>>>>>>> ea4011f (.)
 # 🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
@@ -176,6 +182,9 @@
 ## 🎯 Funzionalità PRINCIPALI
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4011f (.)
 >>>>>>> f90a9bb (.)
 ### 🏠 **Sistema Indirizzi Multi-Tipo**
 ```php
