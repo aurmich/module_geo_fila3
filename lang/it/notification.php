@@ -151,7 +151,3 @@ return [
         'expired' => 'Scaduta',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

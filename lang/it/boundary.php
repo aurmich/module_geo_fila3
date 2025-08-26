@@ -87,7 +87,3 @@ return [
         '7' => 'Personalizzato',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

@@ -455,7 +455,3 @@ class CalculateDistanceActionTest extends TestCase
         parent::tearDown();
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

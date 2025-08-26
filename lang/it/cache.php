@@ -125,7 +125,3 @@ return [
         'network_usage' => 'Uso rete',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

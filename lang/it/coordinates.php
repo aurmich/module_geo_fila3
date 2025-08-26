@@ -89,7 +89,3 @@ return [
         'nautical_miles' => 'Miglia nautiche',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

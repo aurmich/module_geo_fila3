@@ -186,7 +186,3 @@ return [
         'waterfall' => 'Cascata',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

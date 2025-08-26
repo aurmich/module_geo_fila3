@@ -75,7 +75,3 @@ return [
         'municipality_deactivated' => 'Comune disattivato con successo',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

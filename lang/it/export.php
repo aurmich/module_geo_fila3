@@ -119,7 +119,3 @@ return [
         'desc' => 'Decrescente',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

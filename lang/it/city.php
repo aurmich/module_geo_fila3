@@ -65,7 +65,3 @@ return [
         'geocoding_error' => 'Errore durante il geocoding',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

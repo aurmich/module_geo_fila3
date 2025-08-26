@@ -166,7 +166,3 @@ return [
         'check_projection' => 'Verifica la proiezione cartografica',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

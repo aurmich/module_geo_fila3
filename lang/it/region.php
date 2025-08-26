@@ -53,7 +53,3 @@ return [
         'region_deactivated' => 'Regione disattivata con successo',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

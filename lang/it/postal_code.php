@@ -50,7 +50,3 @@ return [
         'postal_code_deactivated' => 'CAP disattivato con successo',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)

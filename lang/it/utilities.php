@@ -146,7 +146,3 @@ return [
         'shapefile' => 'Shapefile',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 3dd298a (.)
