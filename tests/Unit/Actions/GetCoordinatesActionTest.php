@@ -402,3 +402,7 @@ class GetCoordinatesActionTest extends TestCase
         parent::tearDown();
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd298a (.)

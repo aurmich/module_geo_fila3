@@ -25,6 +25,7 @@ use function Safe\json_encode;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
 =======
@@ -35,6 +36,9 @@ use function Safe\json_encode;
  *
  * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
 >>>>>>> 8946c2f (.)
+=======
+ * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
+>>>>>>> 3dd298a (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place query()
@@ -67,6 +71,7 @@ use function Safe\json_encode;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * @mixin IdeHelperPlace
@@ -77,6 +82,9 @@ use function Safe\json_encode;
 =======
  * @mixin IdeHelperPlace
 >>>>>>> 8946c2f (.)
+=======
+ * @mixin IdeHelperPlace
+>>>>>>> 3dd298a (.)
  * @mixin \Eloquent
  */
 class Place extends BaseModel implements HasGeolocation
@@ -243,4 +251,15 @@ class Place extends BaseModel implements HasGeolocation
         return $this->placeType->name ?? null;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Scope to filter by country.
+     */
+    public function scopeInCountry($query, $country)
+    {
+        return $query->where('country', $country);
+    }
+
+>>>>>>> 3dd298a (.)
 }

@@ -153,3 +153,7 @@ return [
         'boolean' => 'Booleano',
     ],
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd298a (.)

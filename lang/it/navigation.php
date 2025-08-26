@@ -253,3 +253,7 @@ return [
         'private' => 'Privato',
     ],
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd298a (.)

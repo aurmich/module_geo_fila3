@@ -148,3 +148,7 @@ return [
         'error' => 'Errore nel caricamento',
     ],
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd298a (.)

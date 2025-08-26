@@ -53,3 +53,7 @@ return [
         'no_results_found' => 'Nessun risultato trovato',
     ],
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd298a (.)

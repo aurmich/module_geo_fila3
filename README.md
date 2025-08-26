@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # :package_description
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,6 +122,8 @@
 
 >>>>>>> a93f634 (.)
 =======
+=======
+>>>>>>> 3dd298a (.)
 # 🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
@@ -172,6 +175,7 @@
 
 ## 🎯 Funzionalità PRINCIPALI
 
+<<<<<<< HEAD
 >>>>>>> f90a9bb (.)
 ### 🏠 **Sistema Indirizzi Multi-Tipo**
 ```php
@@ -582,10 +586,128 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
 ## 👨‍💻 Autore
 
 **Marco Sottana** - [@marco76tv](https://github.com/marco76tv)
+=======
+### 🌍 **Geocoding & Reverse Geocoding**
+- **Google Maps API**: Integrazione completa con Google Maps
+- **Automatic Address Resolution**: Risoluzione automatica indirizzi
+- **Coordinate Validation**: Validazione coordinate geografiche
+- **Batch Processing**: Elaborazione in batch per grandi volumi
+- **Fallback Providers**: Provider di fallback per alta disponibilità
+
+### 🏠 **Address Management**
+- **Multi-Address Support**: Più indirizzi per entità
+- **Address Types**: Tipi di indirizzo configurabili
+- **Address Validation**: Validazione automatica formati
+- **International Support**: Supporto per formati internazionali
+- **Address History**: Storico modifiche indirizzi
+
+### 🗺️ **Interactive Maps**
+- **Google Maps Integration**: Mappe Google Maps interattive
+- **Custom Markers**: Marcatori personalizzabili
+- **Cluster Management**: Gestione cluster per grandi dataset
+- **Real-time Updates**: Aggiornamenti in tempo reale
+- **Responsive Design**: Design responsive per tutti i dispositivi
+
+### 📱 **Filament Components**
+- **AddressesField**: Campo indirizzi multipli
+- **MapWidget**: Widget mappa interattiva
+- **LocationPicker**: Selettore posizione
+- **GeocodingService**: Servizio geocodifica
+- **AddressResource**: CRUD indirizzi completo
+
+## 🚀 Installazione Rapida
+
+```bash
+# Installazione via Composer
+composer require laraxot/geo
+
+# Pubblicazione configurazioni
+php artisan vendor:publish --tag="geo-config"
+
+# Esecuzione migrazioni
+php artisan migrate
+
+# Pubblicazione assets
+php artisan vendor:publish --tag="geo-assets"
+```
+
+## ⚙️ Configurazione
+
+### 1. **Environment Variables**
+```env
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+GEO_CACHE_TTL=3600
+GEO_DEFAULT_PROVIDER=google
+```
+
+### 2. **Config File**
+```php
+// config/geo.php
+return [
+    'default_provider' => env('GEO_DEFAULT_PROVIDER', 'google'),
+    'providers' => [
+        'google' => [
+            'api_key' => env('GOOGLE_MAPS_API_KEY'),
+            'enabled' => true,
+        ],
+    ],
+    'cache' => [
+        'enabled' => true,
+        'ttl' => env('GEO_CACHE_TTL', 3600),
+    ],
+];
+```
+
+## 📖 Documentazione Completa
+
+- **[📚 Guida Completa](docs/README.md)** - Documentazione principale
+- **[🏠 Gestione Indirizzi](docs/addresses.md)** - Guida indirizzi
+- **[🌍 Geocoding](docs/geocoding.md)** - Servizi geocoding
+- **[🗺️ Componenti](docs/components.md)** - Componenti Filament
+- **[🔧 API Reference](docs/api.md)** - Riferimento API
+- **[🧪 Testing](docs/testing.md)** - Guide testing
+- **[🚀 Deployment](docs/deployment.md)** - Guide deployment
+
+## 🎯 Casi d'Uso
+
+### 🏢 **Business Applications**
+- **E-commerce**: Gestione indirizzi spedizione
+- **CRM**: Localizzazione clienti e lead
+- **Logistics**: Ottimizzazione percorsi
+- **Real Estate**: Gestione proprietà immobiliari
+
+### 📱 **Mobile Applications**
+- **Location Services**: Servizi basati su posizione
+- **Navigation**: Navigazione e routing
+- **Social**: Condivisione posizioni
+- **Travel**: App viaggio e turismo
+
+## 🤝 Contribuire
+
+Siamo sempre aperti a contributi! Ecco come puoi aiutare:
+
+1. **🐛 Report Bugs**: Apri issue per bug trovati
+2. **💡 Feature Requests**: Suggerisci nuove funzionalità
+3. **📝 Documentation**: Migliora la documentazione
+4. **🔧 Code Contributions**: Invia pull request
+5. **⭐ Star the Project**: Dona una stella al progetto
+
+## 📄 Licenza
+
+Questo progetto è rilasciato sotto la licenza MIT. Vedi il file [LICENSE](LICENSE) per i dettagli.
+
+## 🙏 Ringraziamenti
+
+- **Google Maps API** per i servizi di geocoding
+- **Laravel Community** per il framework eccezionale
+- **Filament Team** per i componenti UI avanzati
+- **Tutti i contributors** che hanno reso questo progetto possibile
+>>>>>>> 3dd298a (.)
 
 ---
 
 <div align="center">
+<<<<<<< HEAD
   <strong>🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️</strong>
   <br>
   <em>Costruito con ❤️ per la comunità Laravel</em>
@@ -602,3 +724,9 @@ Modulo per la gestione di dati geografici, indirizzi e localizzazioni.
 - Validazione indirizzi
 - Integrazione con servizi esterni
 >>>>>>> 8946c2f (.)
+=======
+  <strong>🌍 Made with ❤️ by the Laraxot Team</strong>
+  <br>
+  <em>Il futuro della geolocalizzazione è qui!</em>
+</div>
+>>>>>>> 3dd298a (.)

@@ -112,3 +112,7 @@ return [
         'pending' => 'Validazione in attesa',
     ],
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd298a (.)

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
 <<<<<<< HEAD
+<<<<<<< HEAD
   'singular' => 'Indirizzo',
   'plural' => 'Indirizzi',
   'navigation' => [
@@ -696,26 +697,202 @@ return [
             'label' => 'Città',
             'placeholder' => 'Inserisci la città',
             'help' => 'Nome della città',
+=======
+    'singular' => 'Indirizzo',
+    'plural' => 'Indirizzi',
+    'navigation' => [
+        'sort' => 96,
+        'icon' => 'heroicon-o-map-pin',
+        'group' => 'Geo',
+    ],
+    'actions' => [
+        'create' => 'Crea indirizzo',
+        'edit' => 'Modifica indirizzo',
+        'view' => 'Visualizza indirizzo',
+        'delete' => 'Elimina indirizzo',
+        'set_primary' => 'Imposta come principale',
+        'verify' => 'Verifica indirizzo',
+        'geocode' => 'Geocodifica',
+    ],
+    'fields' => [
+        'model_type' => [
+            'label' => 'Tipo modello',
+            'placeholder' => 'Seleziona il tipo di modello',
+            'help' => 'Tipo di modello associato all\'indirizzo',
+            'description' => 'Tipo del modello che possiede questo indirizzo',
+            'helper_text' => '',
+        ],
+        'model_id' => [
+            'label' => 'ID modello',
+            'placeholder' => 'Inserisci ID del modello',
+            'help' => 'Identificativo del modello associato',
+            'description' => 'ID del modello che possiede questo indirizzo',
+            'helper_text' => '',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci un nome per l\'indirizzo',
+            'help' => 'Un nome identificativo per questo indirizzo, es. "Casa" o "Ufficio"',
+            'helper_text' => '',
+            'description' => 'Nome identificativo dell\'indirizzo',
+        ],
+        'description' => [
+            'label' => 'Descrizione',
+            'placeholder' => 'Inserisci una descrizione',
+            'help' => 'Note aggiuntive sull\'indirizzo',
+            'description' => 'Descrizione aggiuntiva dell\'indirizzo',
+            'helper_text' => '',
+        ],
+        'route' => [
+            'label' => 'Via',
+            'placeholder' => 'Inserisci la via',
+            'help' => 'Nome della via o strada',
+            'description' => 'Nome della strada o via',
+            'helper_text' => '',
+        ],
+        'street_number' => [
+            'label' => 'Numero civico',
+            'placeholder' => 'Inserisci il numero civico',
+            'help' => 'Numero civico dell\'indirizzo',
+            'description' => 'Numero civico dell\'edificio',
+            'helper_text' => '',
+        ],
+        'locality' => [
+            'label' => 'Località',
+            'placeholder' => 'Inserisci la località',
+            'help' => 'Nome della località o frazione',
+            'description' => 'Località o frazione dell\'indirizzo',
+            'helper_text' => '',
+        ],
+        'administrative_area_level_1' => [
+            'label' => 'Regione',
+            'placeholder' => 'Seleziona la regione',
+            'help' => 'Regione dell\'indirizzo',
+            'description' => 'Regione o stato dell\'indirizzo',
+            'helper_text' => '',
+        ],
+        'administrative_area_level_2' => [
+            'label' => 'Provincia',
+            'placeholder' => 'Seleziona la provincia',
+            'help' => 'Provincia dell\'indirizzo',
+            'description' => 'Provincia o contea dell\'indirizzo',
+            'helper_text' => '',
+>>>>>>> 3dd298a (.)
         ],
         'postal_code' => [
             'label' => 'CAP',
             'placeholder' => 'Inserisci il CAP',
             'help' => 'Codice di avviamento postale',
+<<<<<<< HEAD
+=======
+            'description' => 'Codice postale dell\'indirizzo',
+            'helper_text' => '',
+>>>>>>> 3dd298a (.)
         ],
         'country' => [
             'label' => 'Paese',
             'placeholder' => 'Seleziona il paese',
             'help' => 'Paese dell\'indirizzo',
+<<<<<<< HEAD
+=======
+            'description' => 'Paese dell\'indirizzo',
+            'helper_text' => '',
+>>>>>>> 3dd298a (.)
         ],
         'latitude' => [
             'label' => 'Latitudine',
             'placeholder' => 'Inserisci la latitudine',
             'help' => 'Coordinate geografiche - latitudine',
+<<<<<<< HEAD
+=======
+            'description' => 'Latitudine dell\'indirizzo',
+            'helper_text' => '',
+>>>>>>> 3dd298a (.)
         ],
         'longitude' => [
             'label' => 'Longitudine',
             'placeholder' => 'Inserisci la longitudine',
             'help' => 'Coordinate geografiche - longitudine',
+<<<<<<< HEAD
+=======
+            'description' => 'Longitudine dell\'indirizzo',
+            'helper_text' => '',
+        ],
+        'is_primary' => [
+            'label' => 'Indirizzo principale',
+            'placeholder' => 'Seleziona se è l\'indirizzo principale',
+            'help' => 'Indica se questo è l\'indirizzo principale',
+            'description' => 'Indirizzo principale per questa entità',
+            'helper_text' => '',
+        ],
+        'type' => [
+            'label' => 'Tipo indirizzo',
+            'placeholder' => 'Seleziona il tipo di indirizzo',
+            'help' => 'Tipo di indirizzo (casa, ufficio, ecc.)',
+            'description' => 'Categoria dell\'indirizzo',
+            'helper_text' => '',
+        ],
+        'formatted_address' => [
+            'label' => 'Indirizzo formattato',
+            'placeholder' => 'Indirizzo completo formattato',
+            'help' => 'Indirizzo completo formattato automaticamente',
+            'description' => 'Indirizzo completo in formato leggibile',
+            'helper_text' => '',
+        ],
+        'place_id' => [
+            'label' => 'ID luogo',
+            'placeholder' => 'ID univoco del luogo',
+            'help' => 'Identificativo univoco del luogo da Google Maps',
+            'description' => 'ID del luogo da Google Maps',
+            'helper_text' => '',
+        ],
+        'geometry' => [
+            'label' => 'Geometria',
+            'placeholder' => 'Dati geometrici del luogo',
+            'help' => 'Informazioni geometriche del luogo',
+            'description' => 'Dati geometrici e coordinate del luogo',
+            'helper_text' => '',
+        ],
+        'viewport' => [
+            'label' => 'Viewport',
+            'placeholder' => 'Area di visualizzazione della mappa',
+            'help' => 'Area di visualizzazione ottimale per la mappa',
+            'description' => 'Area di visualizzazione della mappa',
+            'helper_text' => '',
+        ],
+        'bounds' => [
+            'label' => 'Limiti',
+            'placeholder' => 'Limiti geografici del luogo',
+            'help' => 'Limiti geografici del luogo',
+            'description' => 'Limiti geografici del luogo',
+            'helper_text' => '',
+        ],
+    ],
+    'selects' => [
+        'administrative_area_level_1' => [
+            'label' => 'Regione',
+            'placeholder' => 'Seleziona la regione',
+            'helper_text' => 'Regione o stato dell\'indirizzo',
+            'description' => 'Regione dell\'indirizzo',
+        ],
+        'administrative_area_level_2' => [
+            'label' => 'Provincia',
+            'placeholder' => 'Seleziona la provincia',
+            'helper_text' => 'Provincia o contea dell\'indirizzo',
+            'description' => 'Provincia dell\'indirizzo',
+        ],
+        'locality' => [
+            'label' => 'Località',
+            'placeholder' => 'Seleziona la località',
+            'helper_text' => 'Località o frazione dell\'indirizzo',
+            'description' => 'Località dell\'indirizzo',
+        ],
+        'postal_code' => [
+            'label' => 'CAP',
+            'placeholder' => 'Inserisci il CAP',
+            'helper_text' => 'Codice postale dell\'indirizzo',
+            'description' => 'CAP dell\'indirizzo',
+>>>>>>> 3dd298a (.)
         ],
     ],
     'validation' => [
@@ -724,6 +901,11 @@ return [
         'postal_code_required' => 'Il CAP è obbligatorio',
         'country_required' => 'Il paese è obbligatorio',
         'coordinates_invalid' => 'Le coordinate geografiche non sono valide',
+<<<<<<< HEAD
+=======
+        'model_type_required' => 'Il tipo di modello è obbligatorio',
+        'model_id_required' => 'L\'ID del modello è obbligatorio',
+>>>>>>> 3dd298a (.)
     ],
     'messages' => [
         'address_created' => 'Indirizzo creato con successo',
@@ -731,6 +913,13 @@ return [
         'address_deleted' => 'Indirizzo eliminato con successo',
         'geocoding_success' => 'Geocoding completato con successo',
         'geocoding_error' => 'Errore durante il geocoding',
+<<<<<<< HEAD
     ],
 ];
 >>>>>>> 8946c2f (.)
+=======
+        'address_verified' => 'Indirizzo verificato con successo',
+        'address_set_primary' => 'Indirizzo impostato come principale',
+    ],
+];
+>>>>>>> 3dd298a (.)

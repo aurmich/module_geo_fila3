@@ -83,3 +83,7 @@ return [
         'building' => 'Edificio',
     ],
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd298a (.)
