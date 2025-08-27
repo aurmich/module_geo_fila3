@@ -17,6 +17,7 @@ use Modules\Geo\Tests\TestCase;
 
 pest()->extend(TestCase::class)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ pest()->extend(TestCase::class)
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> ea4011f (.)
+=======
+>>>>>>> f0f95d7 (.)
     ->in('Feature', 'Unit');
 
 /*

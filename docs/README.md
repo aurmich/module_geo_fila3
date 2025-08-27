@@ -91,6 +91,7 @@ Il modulo Geo ha raggiunto la **compliance PHPStan livello 9** sui file core:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8633bc (.)
 
@@ -108,6 +109,9 @@ Il modulo Geo ha raggiunto la **compliance PHPStan livello 9** sui file core:
 >>>>>>> e0d1f5b (.)
 =======
 >>>>>>> f8633bc (.)
+=======
+
+>>>>>>> f0f95d7 (.)
 # Test file core PHPStan level 9
 cd laravel
 ./vendor/bin/phpstan analyze Modules/Geo/app/Services/BaseGeoService.php \
@@ -120,6 +124,7 @@ cd laravel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8633bc (.)
 
@@ -137,6 +142,9 @@ cd laravel
 >>>>>>> e0d1f5b (.)
 =======
 >>>>>>> f8633bc (.)
+=======
+
+>>>>>>> f0f95d7 (.)
 # Risultato: [OK] No errors ✅
 =======
 // Ricerca indirizzi nelle vicinanze
@@ -202,6 +210,7 @@ $lombardia = $milano->regione; // "Lombardia"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f90a9bb (.)
 =======
@@ -228,6 +237,9 @@ $lombardia = $milano->regione; // "Lombardia"
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+
+>>>>>>> f0f95d7 (.)
 # Abilitare il modulo
 php artisan module:enable Geo
 
@@ -269,6 +281,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f90a9bb (.)
 =======
@@ -295,6 +308,9 @@ return [
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+
+>>>>>>> f0f95d7 (.)
 # Test del modulo
 php artisan test --testsuite=Geo
 

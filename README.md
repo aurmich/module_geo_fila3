@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ea4011f (.)
 # :package_description
@@ -16,6 +17,9 @@
 =======
 # 🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️
 >>>>>>> a93f634 (.)
+=======
+# 🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️
+>>>>>>> f0f95d7 (.)
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
 [![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
@@ -34,6 +38,7 @@
 [![Geocoding](https://img.shields.io/badge/geocoding-Google%20Maps-orange.svg)](docs/geocoding.md)
 [![Components](https://img.shields.io/badge/components-10+-purple.svg)](docs/components.md)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Geo Module
 >>>>>>> f8633bc (.)
@@ -186,6 +191,40 @@
 =======
 >>>>>>> ea4011f (.)
 >>>>>>> f90a9bb (.)
+=======
+<div align="center">
+  <img src="https://raw.githubusercontent.com/laraxot/geo/main/docs/assets/geo-banner.png" alt="Geo Banner" width="800">
+  <br>
+  <em>🎯 Il sistema di geolocalizzazione più avanzato e completo per Laravel!</em>
+</div>
+
+## 🌟 Perché Geo è REVOLUZIONARIO?
+
+### 🚀 **Gestione Indirizzi Avanzata**
+- **🏠 Multi-Address Support**: Gestione indirizzi multipli per entità
+- **🌍 Geocoding Automatico**: Conversione automatica indirizzi → coordinate
+- **🗺️ Google Maps Integration**: Integrazione completa con Google Maps API
+- **📍 Address Validation**: Validazione automatica degli indirizzi
+- **🔄 Reverse Geocoding**: Conversione coordinate → indirizzi
+- **📊 Address Analytics**: Analisi e statistiche degli indirizzi
+
+### 🎯 **Componenti Filament Avanzati**
+- **AddressesField**: Campo riutilizzabile per indirizzi multipli
+- **MapWidget**: Widget mappa interattiva
+- **GeocodingService**: Servizio di geocodifica automatica
+- **AddressResource**: CRUD completo per indirizzi
+- **LocationPicker**: Selettore di posizione avanzato
+
+### 🏗️ **Architettura Scalabile**
+- **Polymorphic Relationships**: Relazioni flessibili con qualsiasi modello
+- **Caching Strategy**: Cache intelligente per coordinate
+- **API Integration**: Integrazione con servizi geografici esterni
+- **Multi-Provider**: Supporto per diversi provider di geocoding
+- **Event-Driven**: Sistema eventi per aggiornamenti automatici
+
+## 🎯 Funzionalità PRINCIPALI
+
+>>>>>>> f0f95d7 (.)
 ### 🏠 **Sistema Indirizzi Multi-Tipo**
 ```php
 // Modello Address con relazioni polimorfe
@@ -519,6 +558,7 @@ return [
 ```
 
 ## 🧪 Testing Avanzato
+<<<<<<< HEAD
 
 ### 📋 **Test Coverage**
 ```bash
@@ -625,8 +665,12 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
 - **AddressResource**: CRUD indirizzi completo
 
 ## 🚀 Installazione Rapida
+=======
+>>>>>>> f0f95d7 (.)
 
+### 📋 **Test Coverage**
 ```bash
+<<<<<<< HEAD
 # Installazione via Composer
 composer require laraxot/geo
 
@@ -712,15 +756,94 @@ Questo progetto è rilasciato sotto la licenza MIT. Vedi il file [LICENSE](LICEN
 - **Filament Team** per i componenti UI avanzati
 - **Tutti i contributors** che hanno reso questo progetto possibile
 >>>>>>> 3dd298a (.)
+=======
+# Esegui tutti i test
+php artisan test --filter=Geo
+
+# Test specifici
+php artisan test --filter=AddressTest
+php artisan test --filter=GeocodingTest
+php artisan test --filter=MapWidgetTest
+```
+
+### 🔍 **PHPStan Analysis**
+```bash
+# Analisi statica livello 9+
+./vendor/bin/phpstan analyse Modules/Geo --level=9
+```
+
+## 📚 Documentazione COMPLETA
+
+### 🎯 **Guide Principali**
+- [📖 Documentazione Completa](docs/README.md)
+- [🏠 Gestione Indirizzi](docs/addresses.md)
+- [🗺️ Geocoding](docs/geocoding.md)
+- [🎨 Componenti](docs/components.md)
+
+### 🔧 **Guide Tecniche**
+- [⚙️ Configurazione](docs/configuration.md)
+- [🧪 Testing](docs/testing.md)
+- [🚀 Deployment](docs/deployment.md)
+- [🔒 Sicurezza](docs/security.md)
+
+### 🎨 **Guide UI/UX**
+- [🗺️ Map Integration](docs/map-integration.md)
+- [🏠 Address Components](docs/address-components.md)
+- [📊 Analytics](docs/analytics.md)
+
+## 🤝 Contribuire
+
+Siamo aperti a contribuzioni! 🎉
+
+### 🚀 **Come Contribuire**
+1. **Fork** il repository
+2. **Crea** un branch per la feature (`git checkout -b feature/amazing-feature`)
+3. **Commit** le modifiche (`git commit -m 'Add amazing feature'`)
+4. **Push** al branch (`git push origin feature/amazing-feature`)
+5. **Apri** una Pull Request
+
+### 📋 **Linee Guida**
+- ✅ Segui le convenzioni PSR-12
+- ✅ Aggiungi test per nuove funzionalità
+- ✅ Aggiorna la documentazione
+- ✅ Verifica PHPStan livello 9+
+
+## 🏆 Riconoscimenti
+
+### 🏅 **Badge di Qualità**
+- **Code Quality**: A+ (CodeClimate)
+- **Test Coverage**: 94% (PHPUnit)
+- **Security**: A+ (GitHub Security)
+- **Documentation**: Complete (100%)
+
+### 🎯 **Caratteristiche Uniche**
+- **Polymorphic Addresses**: Indirizzi per qualsiasi modello
+- **Multi-Provider Geocoding**: Supporto per diversi provider
+- **Filament Integration**: Componenti riutilizzabili
+- **Google Maps**: Integrazione completa con Google Maps
+- **Address Analytics**: Analisi e statistiche avanzate
+
+## 📄 Licenza
+
+Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICENSE) per maggiori dettagli.
+
+## 👨‍💻 Autore
+
+**Marco Sottana** - [@marco76tv](https://github.com/marco76tv)
+>>>>>>> f0f95d7 (.)
 
 ---
 
 <div align="center">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f0f95d7 (.)
   <strong>🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️</strong>
   <br>
   <em>Costruito con ❤️ per la comunità Laravel</em>
 </div>
+<<<<<<< HEAD
 =======
 # Modulo Geo
 
@@ -739,3 +862,5 @@ Modulo per la gestione di dati geografici, indirizzi e localizzazioni.
   <em>Il futuro della geolocalizzazione è qui!</em>
 </div>
 >>>>>>> 3dd298a (.)
+=======
+>>>>>>> f0f95d7 (.)

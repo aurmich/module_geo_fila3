@@ -148,6 +148,7 @@ class Country extends Model
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f90a9bb (.)
 =======
@@ -176,6 +177,9 @@ class Country extends Model
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+
+>>>>>>> f0f95d7 (.)
 # Verifica esistenza file
 ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.json
 
@@ -188,6 +192,7 @@ ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.js
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f90a9bb (.)
 =======
@@ -216,6 +221,9 @@ ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.js
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+
+>>>>>>> f0f95d7 (.)
 # -rw-r--r-- 1 user group 1.8M date comuni.json
 ```
 
@@ -263,6 +271,7 @@ La trasparenza del path diretto è superiore all'astrazione del `module_path()` 
 **Risolto**: Dicembre 2024  
 **Priorità**: P0 (Critical) - Bloccava registrazioni  
 **Impatto**: Sistema completamente non funzionale  
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -652,3 +661,5 @@ class SushiModelRegistry
 >>>>>>> 8946c2f (.)
 =======
 >>>>>>> ea4011f (.)
+=======
+>>>>>>> f0f95d7 (.)

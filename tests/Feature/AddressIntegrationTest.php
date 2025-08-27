@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Geo\Models\Address;
 use Modules\Geo\Enums\AddressTypeEnum;
 use Modules\User\Models\Profile;
@@ -21,6 +22,8 @@ describe('Address Integration', function () {
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
 /**
  * In-memory Address tests (no factories / DB / container).
  * Keep business rules verifiable without touching app code.
@@ -81,17 +84,22 @@ describe('Address Integration', function () {
         $address = makeAddress([
             'model_type' => 'patient',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
             'model_id' => $patient->id,
 >>>>>>> ea4011f (.)
+=======
+            'model_id' => $patient->id,
+>>>>>>> f0f95d7 (.)
             'route' => 'Via Roma',
             'street_number' => '123',
             'locality' => 'Milano',
             'postal_code' => '20100',
             'is_primary' => true,
         ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         
@@ -143,10 +151,16 @@ describe('Address Integration', function () {
         expect($address->model_type)->toBe('patient')
             ->and($address->model_id)->toBe($patient->id)
 >>>>>>> f90a9bb (.)
+=======
+
+        expect($address->model_type)->toBe('patient')
+            ->and($address->model_id)->toBe($patient->id)
+>>>>>>> f0f95d7 (.)
             ->and($address->is_primary)->toBeTrue();
     });
 
     it('generates proper full address from components', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $address = Address::factory()->create([
@@ -156,6 +170,9 @@ describe('Address Integration', function () {
 =======
         $address = makeAddress([
 >>>>>>> f90a9bb (.)
+=======
+        $address = makeAddress([
+>>>>>>> f0f95d7 (.)
             'route' => 'Via Giuseppe Verdi',
             'street_number' => '42',
             'locality' => 'Milano',
@@ -163,6 +180,7 @@ describe('Address Integration', function () {
             'postal_code' => '20121',
             'country' => 'Italia',
         ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ea4011f (.)
@@ -211,6 +229,11 @@ describe('Address Integration', function () {
         $fullAddress = formatFullAddress($address);
 
 >>>>>>> f90a9bb (.)
+=======
+
+        $fullAddress = formatFullAddress($address);
+
+>>>>>>> f0f95d7 (.)
         expect($fullAddress)->toContain('Via Giuseppe Verdi')
             ->and($fullAddress)->toContain('42')
             ->and($fullAddress)->toContain('Milano')
@@ -218,6 +241,7 @@ describe('Address Integration', function () {
     });
 
     it('handles geolocation data correctly', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $milanCoordinates = [
@@ -238,6 +262,8 @@ describe('Address Integration', function () {
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
         $milan = makeAddress([
             'latitude' => 45.4642,
             'longitude' => 9.1900,
@@ -250,10 +276,13 @@ describe('Address Integration', function () {
     it('can store Google Places API data', function () {
         $address = makeAddress([
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> ea4011f (.)
+=======
+>>>>>>> f0f95d7 (.)
             'place_id' => 'ChIJu46S-ZZjhkcRLuFvLjVZ400',
             'formatted_address' => 'Piazza del Duomo, 20121 Milano MI, Italy',
             'extra_data' => [
@@ -261,6 +290,7 @@ describe('Address Integration', function () {
                 'rating' => 4.5,
                 'business_status' => 'OPERATIONAL',
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
         ]);
 
@@ -280,6 +310,10 @@ describe('Address Integration', function () {
 
 >>>>>>> f90a9bb (.)
 >>>>>>> ea4011f (.)
+=======
+        ]);
+
+>>>>>>> f0f95d7 (.)
         expect($address->place_id)->toBe('ChIJu46S-ZZjhkcRLuFvLjVZ400')
             ->and($address->formatted_address)->toContain('Piazza del Duomo')
             ->and($address->extra_data['google_types'])->toContain('establishment')
@@ -287,6 +321,7 @@ describe('Address Integration', function () {
     });
 
     it('supports multiple addresses per entity', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $profile = Profile::factory()->create();
 
@@ -376,6 +411,8 @@ describe('Address Integration', function () {
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
         $patient = (object) ['id' => 2001, 'type' => 'patient'];
 
         $homeAddress = makeAddress([
@@ -420,9 +457,12 @@ describe('Address Integration', function () {
             ->and($withTrashed)->not->toBeNull()
             ->and($withTrashed->deleted_at)->not->toBeNull();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> ea4011f (.)
+=======
+>>>>>>> f0f95d7 (.)
     });
 });

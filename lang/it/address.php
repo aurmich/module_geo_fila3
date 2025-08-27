@@ -205,11 +205,14 @@ return [
     'group' => 'Geo',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ],
   'actions' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
   ),
   'actions' => 
   array (
@@ -231,11 +234,14 @@ return [
       'helper_text' => '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'model_id' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'model_id' => 
     array (
@@ -247,11 +253,14 @@ return [
       'helper_text' => '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'name' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'name' => 
     array (
@@ -263,11 +272,14 @@ return [
       'description' => 'Nome identificativo dell\'indirizzo',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'description' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'description' => 
     array (
@@ -279,11 +291,14 @@ return [
       'helper_text' => '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'route' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'route' => 
     array (
@@ -293,6 +308,7 @@ return [
       'help' => 'Nome della via o strada',
       'description' => 'Nome della via o strada',
       'helper_text' => '',
+<<<<<<< HEAD
 >>>>>>> ea4011f (.)
     ],
     'messages' => [
@@ -307,6 +323,19 @@ return [
 <<<<<<< HEAD
 =======
     'locality' => [
+=======
+    ),
+    'street_number' => 
+    array (
+      'label' => 'Numero civico',
+      'placeholder' => 'Inserisci il numero civico',
+      'help' => 'Numero civico dell\'edificio',
+      'description' => 'Numero civico dell\'edificio',
+      'helper_text' => '',
+    ),
+    'locality' => 
+    array (
+>>>>>>> f0f95d7 (.)
       'label' => 'Città',
       'placeholder' => 'Inserisci la città',
       'help' => 'Nome della città o località',
@@ -321,11 +350,14 @@ return [
       'helper_text' => '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'administrative_area_level_2' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'administrative_area_level_2' => 
     array (
@@ -372,11 +404,14 @@ return [
       'helper_text' => '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'latitude' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'latitude' => 
     array (
@@ -388,11 +423,14 @@ return [
       'helper_text' => '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'longitude' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'longitude' => 
     array (
@@ -411,10 +449,13 @@ return [
       'helper_text' => '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       'options' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
       'options' => 
       array (
 >>>>>>> a93f634 (.)
@@ -433,11 +474,14 @@ return [
       'placeholder' => 'Imposta come principale',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ],
     'extra_data' => [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
     'extra_data' => 
     array (
@@ -446,6 +490,7 @@ return [
       'placeholder' => 'Inserisci dati aggiuntivi',
       'help' => 'Informazioni aggiuntive sull\'indirizzo',
       'description' => 'Dati aggiuntivi dell\'indirizzo',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       'helper_text' => '',
@@ -475,6 +520,8 @@ return [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
       'helper_text' => '',
     ),
     'full_address' => 
@@ -504,14 +551,18 @@ return [
     'cap' => 
     array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a93f634 (.)
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
       'label' => 'CAP',
       'placeholder' => 'Inserisci il CAP',
       'help' => 'Codice di Avviamento Postale',
       'description' => 'Codice di Avviamento Postale',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ],
@@ -526,11 +577,17 @@ return [
     'region' => 
     array (
 >>>>>>> f90a9bb (.)
+=======
+    ),
+    'region' => 
+    array (
+>>>>>>> f0f95d7 (.)
       'label' => 'Regione',
       'placeholder' => 'Inserisci la regione',
       'help' => 'Regione di appartenenza',
       'description' => 'Regione di appartenenza',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ],
@@ -545,11 +602,17 @@ return [
     'province' => 
     array (
 >>>>>>> f90a9bb (.)
+=======
+    ),
+    'province' => 
+    array (
+>>>>>>> f0f95d7 (.)
       'label' => 'Provincia',
       'placeholder' => 'Inserisci la provincia',
       'help' => 'Provincia di appartenenza',
       'description' => 'Provincia di appartenenza',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ],
@@ -558,6 +621,8 @@ return [
 =======
 =======
 >>>>>>> f90a9bb (.)
+=======
+>>>>>>> f0f95d7 (.)
     ),
   ),
   'columns' => 
@@ -599,6 +664,144 @@ return [
 >>>>>>> ea4011f (.)
 ];
 =======
+    ),
+  ),
+  'steps' => 
+  array (
+    'Is primary' => 
+    array (
+      'description' => 'Is primary',
+      'helper_text' => 'Is primary',
+      'placeholder' => 'Is primary',
+      'label' => 'Is primary',
+    ),
+    'Name' => 
+    array (
+      'label' => 'Name',
+      'placeholder' => 'Name',
+      'helper_text' => 'Name',
+      'description' => 'Name',
+    ),
+    'Country' => 
+    array (
+      'label' => 'Country',
+      'placeholder' => 'Country',
+      'helper_text' => 'Country',
+      'description' => 'Country',
+    ),
+    'Administrative area level 1' => 
+    array (
+      'label' => 'Administrative area level 1',
+      'placeholder' => 'Administrative area level 1',
+      'helper_text' => 'Administrative area level 1',
+      'description' => 'Administrative area level 1',
+    ),
+    'Administrative area level 2' => 
+    array (
+      'label' => 'Administrative area level 2',
+      'placeholder' => 'Administrative area level 2',
+      'helper_text' => 'Administrative area level 2',
+      'description' => 'Administrative area level 2',
+    ),
+    'Locality' => 
+    array (
+      'label' => 'Locality',
+      'placeholder' => 'Locality',
+      'helper_text' => 'Locality',
+      'description' => 'Locality',
+    ),
+    'Postal code' => 
+    array (
+      'label' => 'Postal code',
+      'placeholder' => 'Postal code',
+      'helper_text' => 'Postal code',
+      'description' => 'Postal code',
+    ),
+    'Route' => 
+    array (
+      'label' => 'Route',
+      'placeholder' => 'Route',
+      'helper_text' => 'Route',
+      'description' => 'Route',
+    ),
+    'Street number' => 
+    array (
+      'label' => 'Street number',
+      'placeholder' => 'Street number',
+      'helper_text' => 'Street number',
+      'description' => 'Street number',
+    ),
+  ),
+  'toggles' => 
+  array (
+    'is_primary' => 
+    array (
+      'description' => 'is_primary',
+      'helper_text' => 'is_primary',
+      'label' => 'is_primary',
+      'placeholder' => 'is_primary',
+    ),
+  ),
+  'text_inputs' => 
+  array (
+    'name' => 
+    array (
+      'label' => 'name',
+      'placeholder' => 'name',
+      'helper_text' => 'name',
+      'description' => 'name',
+    ),
+    'country' => 
+    array (
+      'label' => 'country',
+      'placeholder' => 'country',
+      'helper_text' => 'country',
+      'description' => 'country',
+    ),
+    'route' => 
+    array (
+      'label' => 'route',
+      'placeholder' => 'route',
+      'helper_text' => 'route',
+      'description' => 'route',
+    ),
+    'street_number' => 
+    array (
+      'label' => 'street_number',
+      'placeholder' => 'street_number',
+      'helper_text' => 'street_number',
+      'description' => 'street_number',
+    ),
+  ),
+  'selects' => 
+  array (
+    'administrative_area_level_1' => 
+    array (
+      'label' => 'administrative_area_level_1',
+      'placeholder' => 'administrative_area_level_1',
+      'helper_text' => 'administrative_area_level_1',
+      'description' => 'administrative_area_level_1',
+    ),
+    'administrative_area_level_2' => 
+    array (
+      'label' => 'administrative_area_level_2',
+      'placeholder' => 'administrative_area_level_2',
+      'helper_text' => 'administrative_area_level_2',
+      'description' => 'administrative_area_level_2',
+    ),
+    'locality' => 
+    array (
+      'label' => 'locality',
+      'placeholder' => 'locality',
+      'helper_text' => 'locality',
+      'description' => 'locality',
+    ),
+    'postal_code' => 
+    array (
+      'label' => 'postal_code',
+      'placeholder' => 'postal_code',
+      'helper_text' => 'postal_code',
+      'description' => 'postal_code',
     ),
   ),
   'steps' => 
