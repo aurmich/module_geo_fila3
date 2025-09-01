@@ -9,11 +9,7 @@ use Modules\Geo\Models\Locality;
 
 /**
  * Locality Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 63c6dd4 (.)
  * @extends Factory<Locality>
  */
 class LocalityFactory extends Factory

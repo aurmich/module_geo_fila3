@@ -6,18 +6,11 @@ namespace Modules\Geo\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Geo\Models\Address;
-<<<<<<< HEAD
-
-/**
- * Address Factory
- *
-=======
 use Modules\Geo\Models\Comune;
 
 /**
  * Address Factory
  * 
->>>>>>> 63c6dd4 (.)
  * @extends Factory<Address>
  */
 class AddressFactory extends Factory
@@ -50,8 +43,4 @@ class AddressFactory extends Factory
             'administrative_area_level_1' => $this->faker->randomElement(['Lombardia', 'Lazio', 'Campania', 'Sicilia', 'Veneto']),
         ]);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 63c6dd4 (.)

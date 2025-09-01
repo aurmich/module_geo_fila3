@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Pages;
 
-<<<<<<< HEAD
-=======
 use Modules\Xot\Filament\Pages\XotBasePage;
->>>>>>> 63c6dd4 (.)
 use Modules\Xot\Filament\Pages\XotBaseDashboard;
 
 class Dashboard extends XotBaseDashboard

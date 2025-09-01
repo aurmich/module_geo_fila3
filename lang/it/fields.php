@@ -21,8 +21,4 @@ return [
         'placeholder' => 'Seleziona un CAP',
         'tooltip' => 'CAP della città selezionata',
     ],
-<<<<<<< HEAD
-];
-=======
 ]; 
->>>>>>> 63c6dd4 (.)

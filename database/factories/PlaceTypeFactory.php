@@ -9,26 +9,16 @@ use Modules\Geo\Models\PlaceType;
 
 /**
  * PlaceType Factory
-<<<<<<< HEAD
- *
- * Factory for creating PlaceType model instances for testing and seeding.
- *
-=======
  * 
  * Factory for creating PlaceType model instances for testing and seeding.
  * 
->>>>>>> 63c6dd4 (.)
  * @extends Factory<PlaceType>
  */
 class PlaceTypeFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 63c6dd4 (.)
      * @var class-string<PlaceType>
      */
     protected $model = PlaceType::class;
@@ -61,11 +51,8 @@ class PlaceTypeFactory extends Factory
 
     /**
      * Create place type for hospital.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function hospital(): static
     {
@@ -77,11 +64,8 @@ class PlaceTypeFactory extends Factory
 
     /**
      * Create place type for clinic.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function clinic(): static
     {
@@ -93,11 +77,8 @@ class PlaceTypeFactory extends Factory
 
     /**
      * Create place type for medical office.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function medicalOffice(): static
     {
@@ -109,11 +90,8 @@ class PlaceTypeFactory extends Factory
 
     /**
      * Create place type for pharmacy.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function pharmacy(): static
     {
@@ -125,11 +103,8 @@ class PlaceTypeFactory extends Factory
 
     /**
      * Create place type for laboratory.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function laboratory(): static
     {
@@ -138,8 +113,4 @@ class PlaceTypeFactory extends Factory
             'description' => 'Laboratorio di analisi mediche e diagnostiche',
         ]);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 63c6dd4 (.)

@@ -6,20 +6,13 @@ namespace Modules\Geo\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-<<<<<<< HEAD
-=======
 use Illuminate\Database\Eloquent\SoftDeletes;
->>>>>>> 63c6dd4 (.)
 use Modules\Geo\Contracts\HasGeolocation;
 use Modules\Geo\Enums\AddressTypeEnum;
 
 /**
  * Class Address
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 63c6dd4 (.)
  * Implementazione di Schema.org PostalAddress
  *
  * @property int $id
@@ -45,11 +38,7 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
-<<<<<<< HEAD
- *                                                       // implements HasGeolocation
-=======
  * // implements HasGeolocation
->>>>>>> 63c6dd4 (.)
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_by
@@ -59,10 +48,6 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * @property-read string $street_address
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $model
  * @property-read \Modules\User\Models\Profile|null $updater
-<<<<<<< HEAD
- *
-=======
->>>>>>> 63c6dd4 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address nearby(float $latitude, float $longitude, float $radiusKm = '10')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address newQuery()
@@ -95,16 +80,6 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Address whereUpdatedBy($value)
-<<<<<<< HEAD
- *
- * @mixin IdeHelperAddress
- * @mixin \Eloquent
- */
-class Address extends BaseModel
-{
-    /** @var list<string> */
-    protected $fillable = [
-=======
  * @mixin IdeHelperAddress
  * @mixin \Eloquent
  */
@@ -113,7 +88,6 @@ class Address extends BaseModel
         
     /** @var list<string> */
    protected $fillable = [
->>>>>>> 63c6dd4 (.)
         'model_type',
         'model_id',
         'name',
@@ -124,11 +98,7 @@ class Address extends BaseModel
         'administrative_area_level_3', // comune
         'administrative_area_level_2', // provincia
         'administrative_area_level_1', // regione
-<<<<<<< HEAD
-        'country', // Stato/Paese
-=======
         'country',// Stato/Paese
->>>>>>> 63c6dd4 (.)
         'postal_code',
         'formatted_address',
         'place_id',
@@ -138,11 +108,7 @@ class Address extends BaseModel
         'is_primary',
         'extra_data',
     ];
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 63c6dd4 (.)
     /**
      * Get the attributes that should be cast.
      *
@@ -158,53 +124,33 @@ class Address extends BaseModel
             'type' => AddressTypeEnum::class,
         ];
     }
-<<<<<<< HEAD
-
-    /**
-     * Get the parent model.
-=======
     
     
     /**
      * Get the parent model.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
->>>>>>> 63c6dd4 (.)
      */
     public function model(): MorphTo
     {
         return $this->morphTo();
     }
-<<<<<<< HEAD
-
-    /**
-     * Relazione polimorfica (alternativa con nome più descrittivo)
-=======
     
     /**
      * Relazione polimorfica (alternativa con nome più descrittivo)
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
->>>>>>> 63c6dd4 (.)
      */
     public function addressable(): MorphTo
     {
         return $this->morphTo('model');
     }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 63c6dd4 (.)
     /*
      * Get the city relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-<<<<<<< HEAD
-
-=======
      
->>>>>>> 63c6dd4 (.)
     public function city(): BelongsTo
     {
         return $this->belongsTo(City::class, 'locality', 'name');
@@ -214,11 +160,7 @@ class Address extends BaseModel
      * Get the province relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-<<<<<<< HEAD
-
-=======
      
->>>>>>> 63c6dd4 (.)
     public function provincia(): BelongsTo
     {
         return $this->belongsTo(Provincia::class, 'administrative_area_level_2', 'name');
@@ -228,76 +170,12 @@ class Address extends BaseModel
      * Get the region relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-<<<<<<< HEAD
-
-=======
      
->>>>>>> 63c6dd4 (.)
     public function regione(): BelongsTo
     {
         return $this->belongsTo(Regione::class, 'administrative_area_level_1', 'name');
     }
      */
-<<<<<<< HEAD
-    public function getRegione(): ?array
-    {
-        /** @phpstan-ignore method.unresolvableReturnType */
-        $res = Comune::select('regione')
-            ->distinct()
-            ->orderBy('regione->nome')
-            ->where('regione->codice', $this->administrative_area_level_1)
-            ->get()
-        /** @phpstan-ignore argument.unresolvableType */
-            ->map(function ($item) {
-                /** @phpstan-ignore offsetAccess.notFound, offsetAccess.notFound */
-                return ['codice' => $item->regione['codice'], 'nome' => $item->regione['nome']];
-            });
-
-        return $res->first();
-    }
-
-    public function getProvincia(): ?array
-    {
-        /** @phpstan-ignore method.unresolvableReturnType */
-        $res = Comune::select('provincia')
-            ->distinct()
-            ->orderBy('provincia->nome')
-            ->where('provincia->codice', $this->administrative_area_level_2)
-            ->get()
-        /** @phpstan-ignore argument.unresolvableType */
-            ->map(function ($item) {
-                /** @phpstan-ignore-next-line */
-                return [
-                    /** @phpstan-ignore offsetAccess.notFound */
-                    'codice' => $item->provincia['codice'],
-                    /** @phpstan-ignore offsetAccess.notFound */
-                    'nome' => $item->provincia['nome'],
-                ];
-            });
-
-        return $res->first();
-    }
-
-    public function getLocality(): ?array
-    {
-        /** @phpstan-ignore-next-line */
-        $res = Comune::where('codice', $this->locality)
-            ->distinct()
-            ->first()
-            ?->toArray();
-
-        return $res;
-    }
-
-    /**
-     * Getter per l'indirizzo completo in formato italiano
-     */
-    public function getFullAddressAttribute(): string
-    {
-
-        $parts = array_filter([
-            $this->route.($this->street_number ? ' '.$this->street_number : ''),
-=======
     public function getRegione():?array{
         /** @phpstan-ignore method.unresolvableReturnType */
         $res= Comune::select('regione')
@@ -358,59 +236,30 @@ class Address extends BaseModel
         
         $parts = array_filter([
             $this->route . ($this->street_number ? ' ' . $this->street_number : ''),
->>>>>>> 63c6dd4 (.)
             $this->locality,
             $this->administrative_area_level_3, // Provincia
             $this->administrative_area_level_2, // Regione
             $this->postal_code,
-<<<<<<< HEAD
-            $this->country,
-=======
             $this->country
->>>>>>> 63c6dd4 (.)
         ]);
 
         return implode(', ', $parts);
     }
 
-<<<<<<< HEAD
-    public function getFullAddress(): ?string
-    {
-        $parts = array_filter([
-            $this->route.($this->street_number ? ' '.$this->street_number : ''),
-=======
 
     public function getFullAddress(): ?string
     {
         $parts = array_filter([
             $this->route . ($this->street_number ? ' ' . $this->street_number : ''),
->>>>>>> 63c6dd4 (.)
             $this->locality,
             $this->administrative_area_level_3, // Provincia
             $this->administrative_area_level_2, // Regione
             $this->postal_code,
-<<<<<<< HEAD
-            $this->country,
-=======
             $this->country
->>>>>>> 63c6dd4 (.)
         ]);
 
         return implode(', ', $parts);
     }
-<<<<<<< HEAD
-
-    /**
-     * Getter per l'indirizzo strada completo
-     */
-    public function getStreetAddressAttribute(): string
-    {
-        return trim(($this->route ?? '').' '.($this->street_number ?? ''));
-    }
-
-    /**
-     * Get the formatted address.
-=======
     
     /**
      * Getter per l'indirizzo strada completo
@@ -426,47 +275,29 @@ class Address extends BaseModel
      * Get the formatted address.
      *
      * @return string
->>>>>>> 63c6dd4 (.)
      */
     public function getFormattedAddressAttribute(?string $value): ?string
     {
         if ($value) {
             return $value;
         }
-<<<<<<< HEAD
-
-        $parts = [];
-
-=======
         
         $parts = [];
         
->>>>>>> 63c6dd4 (.)
         // Indirizzo stradale
         if ($this->route) {
             $parts[] = $this->getStreetAddressAttribute();
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 63c6dd4 (.)
         // Località e provincia (formato italiano)
         $localityParts = [];
         if ($this->postal_code) {
             $localityParts[] = $this->postal_code;
         }
-<<<<<<< HEAD
-
-        if ($this->locality) {
-            $localityParts[] = $this->locality;
-
-=======
         
         if ($this->locality) {
             $localityParts[] = $this->locality;
             
->>>>>>> 63c6dd4 (.)
             // Per indirizzi italiani, aggiungiamo la sigla provincia
             if ($this->country === 'IT' && $this->administrative_area_level_3) {
                 // Se è un'implementazione reale, potremmo derivare la sigla dalla provincia
@@ -476,41 +307,21 @@ class Address extends BaseModel
                 }
             }
         }
-<<<<<<< HEAD
-
-        if (! empty($localityParts)) {
-            $parts[] = implode(' ', $localityParts);
-        }
-
-=======
         
         if (!empty($localityParts)) {
             $parts[] = implode(' ', $localityParts);
         }
         
->>>>>>> 63c6dd4 (.)
         // Regione
         if ($this->administrative_area_level_2) {
             $parts[] = $this->administrative_area_level_2;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 63c6dd4 (.)
         // Paese
         if ($this->country) {
             $countryName = $this->administrative_area_level_1 ?? $this->country;
             $parts[] = strtoupper($countryName);
         }
-<<<<<<< HEAD
-
-        return implode("\n", $parts);
-    }
-
-    /**
-     * Get the latitude of the address.
-=======
         
         return implode("\n", $parts);
     }
@@ -519,49 +330,32 @@ class Address extends BaseModel
      * Get the latitude of the address.
      *
      * @return float|null
->>>>>>> 63c6dd4 (.)
      */
     public function getLatitude(): ?float
     {
         return $this->latitude;
     }
-<<<<<<< HEAD
-
-    /**
-     * Get the longitude of the address.
-=======
     
     /**
      * Get the longitude of the address.
      *
      * @return float|null
->>>>>>> 63c6dd4 (.)
      */
     public function getLongitude(): ?float
     {
         return $this->longitude;
     }
-<<<<<<< HEAD
-
-    /**
-     * Get the formatted address required by HasGeolocation interface.
-=======
     
     /**
      * Get the formatted address required by HasGeolocation interface.
      *
      * @return string
->>>>>>> 63c6dd4 (.)
      */
     public function getFormattedAddress(): string
     {
         return $this->formatted_address ?? '';
     }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 63c6dd4 (.)
     /**
      * Restituisce i dati in formato Schema.org PostalAddress
      *
@@ -582,13 +376,6 @@ class Address extends BaseModel
             'postalCode' => $this->postal_code,
         ];
     }
-<<<<<<< HEAD
-
-    /**
-     * Scope per cercare indirizzi nelle vicinanze
-     *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-=======
     
    
     /**
@@ -598,25 +385,10 @@ class Address extends BaseModel
      * @param float $latitude
      * @param float $longitude
      * @param float $radiusKm
->>>>>>> 63c6dd4 (.)
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeNearby($query, float $latitude, float $longitude, float $radiusKm = 10)
     {
-<<<<<<< HEAD
-        return $query->selectRaw('
-            *,
-            (6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude)))) AS distance
-        ', [$latitude, $longitude, $latitude])
-            ->having('distance', '<', $radiusKm)
-            ->orderBy('distance');
-    }
-
-    /**
-     * Scope a query to only include primary addresses.
-     *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-=======
         return $query->selectRaw("
             *,
             (6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude)))) AS distance
@@ -629,28 +401,18 @@ class Address extends BaseModel
      * Scope a query to only include primary addresses.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
->>>>>>> 63c6dd4 (.)
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopePrimary($query)
     {
         return $query->where('is_primary', true);
     }
-<<<<<<< HEAD
-
-    /**
-     * Scope a query to filter by address type.
-     *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  string|AddressTypeEnum  $type
-=======
     
     /**
      * Scope a query to filter by address type.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @param string|AddressTypeEnum $type
->>>>>>> 63c6dd4 (.)
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeOfType($query, $type)

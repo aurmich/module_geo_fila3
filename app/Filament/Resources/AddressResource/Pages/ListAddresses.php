@@ -5,14 +5,9 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Resources\AddressResource\Pages;
 
 use Filament\Actions;
-<<<<<<< HEAD
-use Modules\Geo\Filament\Resources\AddressResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-=======
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\Geo\Filament\Resources\AddressResource;
 
->>>>>>> 63c6dd4 (.)
 
 class ListAddresses extends XotBaseListRecords
 {
@@ -27,8 +22,4 @@ class ListAddresses extends XotBaseListRecords
             Actions\CreateAction::make(),
         ];
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 63c6dd4 (.)

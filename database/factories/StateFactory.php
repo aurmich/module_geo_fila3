@@ -9,11 +9,7 @@ use Modules\Geo\Models\State;
 
 /**
  * State Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 63c6dd4 (.)
  * @extends Factory<State>
  */
 class StateFactory extends Factory
@@ -32,11 +28,7 @@ class StateFactory extends Factory
             'Emilia-Romagna' => 'EMR',
             'Toscana' => 'TOS',
             'Puglia' => 'PUG',
-<<<<<<< HEAD
-            'Calabria' => 'CAL',
-=======
             'Calabria' => 'CAL'
->>>>>>> 63c6dd4 (.)
         ];
 
         $state = $this->faker->randomElement(array_keys($italianRegions));

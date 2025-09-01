@@ -9,8 +9,4 @@ return [
             'error' => 'Errore durante la selezione della località',
         ],
     ],
-<<<<<<< HEAD
-];
-=======
 ]; 
->>>>>>> 63c6dd4 (.)

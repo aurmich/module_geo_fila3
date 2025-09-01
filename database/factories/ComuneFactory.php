@@ -9,11 +9,7 @@ use Modules\Geo\Models\Comune;
 
 /**
  * Factory for Comune model.
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 63c6dd4 (.)
  * @extends Factory<Comune>
  */
 class ComuneFactory extends Factory
@@ -60,11 +56,7 @@ class ComuneFactory extends Factory
         $comuneData = $this->faker->randomElement($comuniReali);
         $latBase = (float) $comuneData['lat'];
         $lngBase = (float) $comuneData['lng'];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 63c6dd4 (.)
         return [
             'nome' => $comuneData['nome'],
             'codice' => $this->faker->unique()->numberBetween(1000, 9999),
@@ -84,11 +76,8 @@ class ComuneFactory extends Factory
 
     /**
      * Create a comune in Lombardia region.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function lombardia(): static
     {
@@ -116,11 +105,8 @@ class ComuneFactory extends Factory
 
     /**
      * Create a comune in Emilia-Romagna region.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function emiliaRomagna(): static
     {
@@ -153,11 +139,8 @@ class ComuneFactory extends Factory
 
     /**
      * Create a small comune (under 5000 inhabitants).
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function small(): static
     {
@@ -169,11 +152,8 @@ class ComuneFactory extends Factory
 
     /**
      * Create a large comune (over 100000 inhabitants).
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function large(): static
     {
@@ -185,11 +165,8 @@ class ComuneFactory extends Factory
 
     /**
      * Create a mountain comune.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function mountain(): static
     {
@@ -202,11 +179,8 @@ class ComuneFactory extends Factory
 
     /**
      * Create a coastal comune.
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function coastal(): static
     {
@@ -219,12 +193,9 @@ class ComuneFactory extends Factory
 
     /**
      * Create a specific comune by name.
-<<<<<<< HEAD
-=======
      *
      * @param string $name
      * @return static
->>>>>>> 63c6dd4 (.)
      */
     public function named(string $name): static
     {

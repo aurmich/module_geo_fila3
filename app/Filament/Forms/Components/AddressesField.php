@@ -5,36 +5,21 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Forms\Components;
 
 use Filament\Forms;
-<<<<<<< HEAD
-use Filament\Forms\Components\Component;
-use Filament\Forms\Get;
-use Modules\Geo\Filament\Resources\AddressResource;
-
-=======
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Forms\Components\Component;
 use Modules\Geo\Filament\Resources\AddressResource;
->>>>>>> 63c6dd4 (.)
 use function Safe\preg_match;
 
 /**
  * Componente riutilizzabile per la gestione di indirizzi multipli.
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 63c6dd4 (.)
  * Questo componente incapsula la logica complessa per gestire:
  * - Indirizzi multipli attraverso un Repeater
  * - Visibilità condizionale del campo 'name' (solo con più di 1 indirizzo)
  * - Gestione esclusiva del campo 'is_primary' (solo uno può essere primario)
  * - Utilizzo dello schema completo dell'AddressResource
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 63c6dd4 (.)
  * @example
  * AddressesField::make('addresses')
  *     ->relationship('addresses')
@@ -43,11 +28,7 @@ use function Safe\preg_match;
  */
 class AddressesField extends Forms\Components\Repeater
 {
-<<<<<<< HEAD
-    // protected string $view = 'geo::filament.forms.components.addresses-field';
-=======
     //protected string $view = 'geo::filament.forms.components.addresses-field';
->>>>>>> 63c6dd4 (.)
 
     protected function setUp(): void
     {
@@ -60,12 +41,7 @@ class AddressesField extends Forms\Components\Repeater
             ->addActionLabel('Aggiungi Indirizzo');
 
     }
-<<<<<<< HEAD
-
-    /**
-=======
      /**
->>>>>>> 63c6dd4 (.)
      * Schema form personalizzato per gli indirizzi con logica condizionale per i campi name e is_primary.
      *
      * @return array<string, \Filament\Forms\Components\Component>
@@ -79,10 +55,6 @@ class AddressesField extends Forms\Components\Repeater
             ->maxLength(255)
             ->visible(function (Get $get): bool {
                 $addresses = $get('../../addresses') ?? [];
-<<<<<<< HEAD
-
-=======
->>>>>>> 63c6dd4 (.)
                 /** @phpstan-ignore argument.type */
                 return count($addresses) > 1;
             })
@@ -92,19 +64,11 @@ class AddressesField extends Forms\Components\Repeater
         $baseSchema['is_primary'] = Forms\Components\Toggle::make('is_primary')
             ->visible(function (Get $get): bool {
                 $addresses = $get('../../addresses') ?? [];
-<<<<<<< HEAD
-
-=======
->>>>>>> 63c6dd4 (.)
                 /** @phpstan-ignore argument.type */
                 return count($addresses) > 1;
             })
             ->default(function (Get $get): bool {
                 $addresses = $get('../../addresses') ?? [];
-<<<<<<< HEAD
-
-=======
->>>>>>> 63c6dd4 (.)
                 // Se è il primo elemento o c'è un solo elemento, default true
                 /** @phpstan-ignore argument.type */
                 return count($addresses) <= 1;
@@ -126,11 +90,7 @@ class AddressesField extends Forms\Components\Repeater
                             $indexStr = app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($index);
                             $currentIndexStr = app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($currentIndex);
                             if ($indexStr !== $currentIndexStr) {
-<<<<<<< HEAD
-                                $set('../../addresses.'.$indexStr.'.is_primary', false);
-=======
                                 $set("../../addresses." . $indexStr . ".is_primary", false);
->>>>>>> 63c6dd4 (.)
                             }
                         }
                     }
@@ -144,17 +104,9 @@ class AddressesField extends Forms\Components\Repeater
                 if (count($addresses) <= 1) {
                     return true;
                 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 63c6dd4 (.)
                 return (bool) $state;
             });
 
         return $baseSchema;
     }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> 63c6dd4 (.)

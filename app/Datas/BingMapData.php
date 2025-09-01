@@ -30,12 +30,8 @@ class BingMapData extends Data
      */
     public function __construct(
         private readonly array $data,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> 63c6dd4 (.)
 
     /**
      * Converte i dati in un array.

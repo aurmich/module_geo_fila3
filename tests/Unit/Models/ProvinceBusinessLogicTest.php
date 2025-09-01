@@ -11,32 +11,19 @@ describe('Province Business Logic', function () {
 
     test('province has factory trait for testing', function () {
         $traits = class_uses(Province::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 63c6dd4 (.)
         expect($traits)->toHaveKey(\Illuminate\Database\Eloquent\Factories\HasFactory::class);
     });
 
     test('province uses sushi trait for in-memory data', function () {
         $traits = class_uses(Province::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 63c6dd4 (.)
         expect($traits)->toHaveKey(\Sushi\Sushi::class);
     });
 
     test('province has schema definition for geographic hierarchy', function () {
-<<<<<<< HEAD
-        $province = new Province;
-
-=======
         $province = new Province();
         
->>>>>>> 63c6dd4 (.)
         expect($province)->toHaveProperty('schema');
         expect($province->schema['region_id'])->toBe('integer');
         expect($province->schema['id'])->toBe('integer');
@@ -44,49 +31,28 @@ describe('Province Business Logic', function () {
     });
 
     test('province can get rows from comune data', function () {
-<<<<<<< HEAD
-        $province = new Province;
-
-=======
         $province = new Province();
         
->>>>>>> 63c6dd4 (.)
         expect(method_exists($province, 'getRows'))->toBeTrue();
         expect($province->getRows())->toBeArray();
     });
 
     test('province model can be instantiated without errors', function () {
-<<<<<<< HEAD
-        $province = new Province;
-
-=======
         $province = new Province();
         
->>>>>>> 63c6dd4 (.)
         expect($province)->toBeInstanceOf(Province::class);
         expect($province)->toBeInstanceOf(\Modules\Geo\Models\BaseModel::class);
     });
 
     test('province can be queried by name', function () {
         $query = Province::whereName('Milano');
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 63c6dd4 (.)
         expect($query)->toBeInstanceOf(\Illuminate\Database\Eloquent\Builder::class);
     });
 
     test('province can be queried by region id', function () {
         $query = Province::whereRegionId(1);
-<<<<<<< HEAD
-
-        expect($query)->toBeInstanceOf(\Illuminate\Database\Eloquent\Builder::class);
-    });
-});
-=======
         
         expect($query)->toBeInstanceOf(\Illuminate\Database\Eloquent\Builder::class);
     });
 });
->>>>>>> 63c6dd4 (.)

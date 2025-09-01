@@ -65,19 +65,11 @@ class GetCoordinatesByAddressAction
 
         /** @var array{results?: array<int, array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
         $data = $response->json() ?? [];
-<<<<<<< HEAD
-
-        if (! isset($data['results'])) {
-            return ['results' => []];
-        }
-
-=======
         
         if (!isset($data['results'])) {
             return ['results' => []];
         }
         
->>>>>>> 63c6dd4 (.)
         return ['results' => $data['results']];
     }
 
@@ -92,21 +84,13 @@ class GetCoordinatesByAddressAction
         $firstResult = $data['results'][0] ?? [];
         $location = $firstResult['geometry']['location'] ?? null;
 
-<<<<<<< HEAD
-        if (! is_array($location) || ! isset($location['lat'], $location['lng'])) {
-=======
         if (!is_array($location) || !isset($location['lat'], $location['lng'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         return CoordinatesData::from([
             'latitude' => (float) $location['lat'],
-<<<<<<< HEAD
-            'longitude' => (float) $location['lng'],
-=======
             'longitude' => (float) $location['lng']
->>>>>>> 63c6dd4 (.)
         ]);
     }
 
@@ -127,86 +111,50 @@ class GetCoordinatesByAddressAction
         }
 
         $data = $response->json();
-<<<<<<< HEAD
-
-        if (! is_array($data) || ! isset($data['resourceSets'])) {
-            return ['resourceSets' => []];
-        }
-
-=======
         
         if (!is_array($data) || !isset($data['resourceSets'])) {
             return ['resourceSets' => []];
         }
         
->>>>>>> 63c6dd4 (.)
         return ['resourceSets' => $data['resourceSets']];
     }
 
     private function getFromBing(string $address): ?CoordinatesData
     {
         $apiKey = config('services.bing.maps_api_key');
-<<<<<<< HEAD
-        if (! is_string($apiKey) || $apiKey === '') {
-=======
         if (!is_string($apiKey) || $apiKey === '') {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         $data = $this->getBingResponse($address, $apiKey);
 
         // Type-safe navigation attraverso la struttura Bing response
-<<<<<<< HEAD
-        if (! isset($data['resourceSets']) || ! is_array($data['resourceSets'])) {
-=======
         if (!isset($data['resourceSets']) || !is_array($data['resourceSets'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         $resourceSets = $data['resourceSets'];
-<<<<<<< HEAD
-        if (empty($resourceSets[0]) || ! is_array($resourceSets[0])) {
-=======
         if (empty($resourceSets[0]) || !is_array($resourceSets[0])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         $firstResourceSet = $resourceSets[0];
-<<<<<<< HEAD
-        if (! isset($firstResourceSet['resources']) || ! is_array($firstResourceSet['resources'])) {
-=======
         if (!isset($firstResourceSet['resources']) || !is_array($firstResourceSet['resources'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         $resources = $firstResourceSet['resources'];
-<<<<<<< HEAD
-        if (empty($resources[0]) || ! is_array($resources[0])) {
-=======
         if (empty($resources[0]) || !is_array($resources[0])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         $firstResource = $resources[0];
-<<<<<<< HEAD
-        if (! isset($firstResource['point']) || ! is_array($firstResource['point'])) {
-=======
         if (!isset($firstResource['point']) || !is_array($firstResource['point'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         $point = $firstResource['point'];
-<<<<<<< HEAD
-        if (! isset($point['coordinates']) || ! is_array($point['coordinates'])) {
-=======
         if (!isset($point['coordinates']) || !is_array($point['coordinates'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
@@ -239,30 +187,18 @@ class GetCoordinatesByAddressAction
 
         /** @var array{results?: array<int, array{geometry: array{lat: float, lng: float}}>} $data */
         $data = $response->json();
-<<<<<<< HEAD
-
-        if (! is_array($data) || ! isset($data['results'])) {
-            return ['results' => []];
-        }
-
-=======
         
         if (!is_array($data) || !isset($data['results'])) {
             return ['results' => []];
         }
         
->>>>>>> 63c6dd4 (.)
         return ['results' => $data['results']];
     }
 
     private function getFromOpenCage(string $address): ?CoordinatesData
     {
         $apiKey = config('services.opencage.api_key');
-<<<<<<< HEAD
-        if (! is_string($apiKey) || $apiKey === '') {
-=======
         if (!is_string($apiKey) || $apiKey === '') {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
@@ -274,21 +210,13 @@ class GetCoordinatesByAddressAction
 
         $location = $data['results'][0]['geometry'] ?? [];
 
-<<<<<<< HEAD
-        if (! isset($location['lat'], $location['lng'])) {
-=======
         if (!isset($location['lat'], $location['lng'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         return CoordinatesData::from([
             'latitude' => (float) $location['lat'],
-<<<<<<< HEAD
-            'longitude' => (float) $location['lng'],
-=======
             'longitude' => (float) $location['lng']
->>>>>>> 63c6dd4 (.)
         ]);
     }
 
@@ -309,10 +237,6 @@ class GetCoordinatesByAddressAction
 
         /** @var array<int, array{lat: string, lon: string}>|null $data */
         $data = $response->json();
-<<<<<<< HEAD
-
-=======
->>>>>>> 63c6dd4 (.)
         return is_array($data) ? array_values(array_filter($data, 'is_array')) : [];
     }
 
@@ -326,21 +250,13 @@ class GetCoordinatesByAddressAction
 
         $location = $data[0];
 
-<<<<<<< HEAD
-        if (! isset($location['lat'], $location['lon'])) {
-=======
         if (!isset($location['lat'], $location['lon'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         return CoordinatesData::from([
             'latitude' => (float) $location['lat'],
-<<<<<<< HEAD
-            'longitude' => (float) $location['lon'],
-=======
             'longitude' => (float) $location['lon']
->>>>>>> 63c6dd4 (.)
         ]);
     }
 
@@ -360,19 +276,11 @@ class GetCoordinatesByAddressAction
 
         /** @var array{results?: array<int, array{latitude: float, longitude: float}>} $data */
         $data = $response->json() ?? [];
-<<<<<<< HEAD
-
-        if (! isset($data['results'])) {
-            return ['results' => []];
-        }
-
-=======
         
         if (!isset($data['results'])) {
             return ['results' => []];
         }
         
->>>>>>> 63c6dd4 (.)
         return ['results' => $data['results']];
     }
 
@@ -386,21 +294,13 @@ class GetCoordinatesByAddressAction
 
         $firstResult = $data['results'][0] ?? [];
 
-<<<<<<< HEAD
-        if (! isset($firstResult['latitude'], $firstResult['longitude'])) {
-=======
         if (!isset($firstResult['latitude'], $firstResult['longitude'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 
         return CoordinatesData::from([
             'latitude' => (float) $firstResult['latitude'],
-<<<<<<< HEAD
-            'longitude' => (float) $firstResult['longitude'],
-=======
             'longitude' => (float) $firstResult['longitude']
->>>>>>> 63c6dd4 (.)
         ]);
     }
 }

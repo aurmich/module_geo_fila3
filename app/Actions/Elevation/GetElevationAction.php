@@ -20,38 +20,22 @@ use Modules\Geo\Services\GoogleMapsService;
 class GetElevationAction
 {
     /**
-<<<<<<< HEAD
-     * @param  GoogleMapsService  $googleMapsService  Servizio per le richieste a Google Maps
-     */
-    public function __construct(
-        private readonly GoogleMapsService $googleMapsService,
-    ) {}
-=======
      * @param GoogleMapsService $googleMapsService Servizio per le richieste a Google Maps
      */
     public function __construct(
         private readonly GoogleMapsService $googleMapsService,
     ) {
     }
->>>>>>> 63c6dd4 (.)
 
     /**
      * Ottiene l'elevazione per una posizione geografica.
      *
-<<<<<<< HEAD
-     * @param  LocationData  $location  La posizione di cui ottenere l'elevazione
-     * @return float L'elevazione in metri sul livello del mare
-     *
-     * @throws ElevationException Se il recupero dell'elevazione fallisce
-     * @throws \InvalidArgumentException Se le coordinate non sono valide
-=======
      * @param LocationData $location La posizione di cui ottenere l'elevazione
      *
      * @throws ElevationException        Se il recupero dell'elevazione fallisce
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      *
      * @return float L'elevazione in metri sul livello del mare
->>>>>>> 63c6dd4 (.)
      */
     public function execute(LocationData $location): float
     {
@@ -64,20 +48,12 @@ class GetElevationAction
                 $location->longitude
             );
 
-<<<<<<< HEAD
-            if (! isset($response['results']) || ! is_array($response['results']) || empty($response['results'])) {
-=======
             if (!isset($response['results']) || !is_array($response['results']) || empty($response['results'])) {
->>>>>>> 63c6dd4 (.)
                 throw ElevationException::invalidResponse();
             }
 
             $firstResult = $response['results'][0] ?? null;
-<<<<<<< HEAD
-            if (! is_array($firstResult) || ! isset($firstResult['elevation'])) {
-=======
             if (!is_array($firstResult) || !isset($firstResult['elevation'])) {
->>>>>>> 63c6dd4 (.)
                 throw ElevationException::invalidResponse();
             }
 
@@ -94,12 +70,8 @@ class GetElevationAction
     /**
      * Formatta l'elevazione in una stringa leggibile.
      *
-<<<<<<< HEAD
-     * @param  float  $meters  Elevazione in metri
-=======
      * @param float $meters Elevazione in metri
      *
->>>>>>> 63c6dd4 (.)
      * @return string Elevazione formattata con unità di misura
      */
     public function formatElevation(float $meters): string
@@ -110,11 +82,7 @@ class GetElevationAction
     /**
      * Valida le coordinate di una posizione.
      *
-<<<<<<< HEAD
-     * @param  LocationData  $location  Posizione da validare
-=======
      * @param LocationData $location Posizione da validare
->>>>>>> 63c6dd4 (.)
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      */

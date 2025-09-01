@@ -13,13 +13,8 @@ use Spatie\LaravelData\Data;
 class RouteData extends Data
 {
     /**
-<<<<<<< HEAD
-     * @param  Collection<LocationData>  $waypoints  Punti del percorso ottimizzato
-     * @param  Collection<LocationData>  $originalWaypoints  Punti del percorso originale
-=======
      * @param Collection<LocationData> $waypoints         Punti del percorso ottimizzato
      * @param Collection<LocationData> $originalWaypoints Punti del percorso originale
->>>>>>> 63c6dd4 (.)
      * @param array<array{
      *     distance: array{value: int, text: string},
      *     duration: array{value: int, text: string},
@@ -32,12 +27,8 @@ class RouteData extends Data
         public readonly int $totalDistance,
         public readonly int $totalDuration,
         public readonly array $steps,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> 63c6dd4 (.)
 
     /**
      * Formatta la distanza totale in un formato leggibile.
@@ -68,11 +59,7 @@ class RouteData extends Data
 
     /*
      * Verifica se il percorso è stato ottimizzato.
-<<<<<<< HEAD
-
-=======
      
->>>>>>> 63c6dd4 (.)
     public function isOptimized(): bool
     {
         return ! $this->waypoints->isEmpty() && ! $this->originalWaypoints->isEmpty()
@@ -99,11 +86,7 @@ class RouteData extends Data
             'duration' => $this->getFormattedDuration(),
             'steps' => count($this->steps),
             'waypoints' => $this->waypoints->count(),
-<<<<<<< HEAD
-            // 'optimized' => $this->isOptimized(),
-=======
             //'optimized' => $this->isOptimized(),
->>>>>>> 63c6dd4 (.)
         ];
     }
 

@@ -8,18 +8,11 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\AddressData;
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-
-use function Safe\json_decode;
-
-=======
 
 use function Safe\json_decode;
 
 use Webmozart\Assert\Assert;
 
->>>>>>> 63c6dd4 (.)
 /**
  * Action per ottenere l'indirizzo da coordinate tramite Bing Maps.
  *
@@ -32,12 +25,8 @@ class GetAddressFromBingMapsAction
 
     public function __construct(
         private readonly Client $client,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> 63c6dd4 (.)
 
     /**
      * Ottiene i dettagli dell'indirizzo utilizzando Bing Maps.
@@ -119,11 +108,7 @@ class GetAddressFromBingMapsAction
          * } $data */
         $data = json_decode($response, true);
 
-<<<<<<< HEAD
-        if ($data['statusCode'] !== 200 || empty($data['resourceSets'][0]['resources'])) {
-=======
         if (200 !== $data['statusCode'] || empty($data['resourceSets'][0]['resources'])) {
->>>>>>> 63c6dd4 (.)
             return null;
         }
 

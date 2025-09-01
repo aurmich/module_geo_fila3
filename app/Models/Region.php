@@ -16,19 +16,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Geo\Models\Province> $provinces
  * @property-read int|null $provinces_count
  * @property-read \Modules\SaluteOra\Models\Profile|null $updater
-<<<<<<< HEAD
- *
-=======
->>>>>>> 63c6dd4 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region query()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region whereName($value)
-<<<<<<< HEAD
- *
-=======
->>>>>>> 63c6dd4 (.)
  * @mixin IdeHelperRegion
  * @mixin \Eloquent
  */
@@ -51,31 +43,18 @@ class Region extends BaseModel
      */
     protected $keyType = 'integer';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 63c6dd4 (.)
     protected array $schema = [
         'id' => 'integer',
         'name' => 'string',
     ];
 
-<<<<<<< HEAD
-    public function getRows(): array
-    {
-        $rows = Comune::select('regione->codice as id', 'regione->nome as name')
-            ->distinct()
-            ->orderBy('regione->nome')
-            ->get();
-
-=======
     public function getRows(): array{
         $rows=Comune::select("regione->codice as id","regione->nome as name")
             ->distinct()
             ->orderBy("regione->nome")
             ->get();
        
->>>>>>> 63c6dd4 (.)
         return $rows->toArray();
     }
 
@@ -88,14 +67,7 @@ class Region extends BaseModel
     {
         return self::orderBy('name')
             ->get()
-<<<<<<< HEAD
-            ->pluck('name', 'id')
-            ->toArray();
-    }
-}
-=======
             ->pluck("name", "id")
             ->toArray();
     }
 }
->>>>>>> 63c6dd4 (.)
