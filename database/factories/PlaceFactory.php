@@ -10,7 +10,11 @@ use Modules\Geo\Models\PlaceType;
 
 /**
  * Place Factory
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 63c6dd4 (.)
  * @extends Factory<Place>
  */
 class PlaceFactory extends Factory
@@ -32,14 +36,25 @@ class PlaceFactory extends Factory
     public function hospital(): static
     {
         return $this->state([
+<<<<<<< HEAD
             'name' => 'Ospedale '.$this->faker->lastName(),
+=======
+            'name' => 'Ospedale ' . $this->faker->lastName(),
+>>>>>>> 63c6dd4 (.)
         ]);
     }
 
     public function clinic(): static
     {
         return $this->state([
+<<<<<<< HEAD
             'name' => 'Clinica '.$this->faker->lastName(),
         ]);
     }
 }
+=======
+            'name' => 'Clinica ' . $this->faker->lastName(),
+        ]);
+    }
+}
+>>>>>>> 63c6dd4 (.)

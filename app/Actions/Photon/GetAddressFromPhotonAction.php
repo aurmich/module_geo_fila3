@@ -9,10 +9,18 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Datas\Photon\PhotonAddressData;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
 
+=======
+
+use function Safe\json_decode;
+
+use Webmozart\Assert\Assert;
+
+>>>>>>> 63c6dd4 (.)
 /**
  * Action per ottenere l'indirizzo e le coordinate tramite Photon.
  *
@@ -25,7 +33,12 @@ class GetAddressFromPhotonAction
 
     public function __construct(
         private readonly Client $client,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 63c6dd4 (.)
 
     /**
      * Ottiene i dettagli dell'indirizzo utilizzando Photon.

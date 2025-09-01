@@ -36,7 +36,11 @@ trait GeographicalScopes
                 sin(radians(latitude))
             ))
         ";
+<<<<<<< HEAD
         if ($alias !== null) {
+=======
+        if (null !== $alias) {
+>>>>>>> 63c6dd4 (.)
             $sql .= " AS $alias";
         }
 

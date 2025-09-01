@@ -12,11 +12,21 @@ use Spatie\LaravelData\Data;
 class GoogleMapLocationData extends Data
 {
     /**
+<<<<<<< HEAD
      * @param  float  $lat  Latitudine
      * @param  float  $lng  Longitudine
+=======
+     * @param float $lat Latitudine
+     * @param float $lng Longitudine
+>>>>>>> 63c6dd4 (.)
      */
     public function __construct(
         public readonly float $lat,
         public readonly float $lng,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 63c6dd4 (.)
 }

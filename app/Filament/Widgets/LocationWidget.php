@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Widgets;
 
+<<<<<<< HEAD
 use Modules\Geo\Filament\Forms\LocationForm;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -13,6 +14,17 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  * Questo widget fornisce un form per la selezione della località utilizzando
  * il form LocationForm.
  *
+=======
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\Geo\Filament\Forms\LocationForm;
+
+/**
+ * Widget per la selezione della località.
+ * 
+ * Questo widget fornisce un form per la selezione della località utilizzando
+ * il form LocationForm.
+ * 
+>>>>>>> 63c6dd4 (.)
  * @see \Modules\Geo\docs\json-database.md
  */
 class LocationWidget extends XotBaseWidget
@@ -57,11 +69,20 @@ class LocationWidget extends XotBaseWidget
      */
     public function __construct()
     {
+<<<<<<< HEAD
         $this->locationForm = new \Modules\Geo\Filament\Forms\LocationForm;
+=======
+        $this->locationForm = new \Modules\Geo\Filament\Forms\LocationForm();
+>>>>>>> 63c6dd4 (.)
     }
 
     /**
      * Inizializza il widget.
+<<<<<<< HEAD
+=======
+     * 
+     * @return void
+>>>>>>> 63c6dd4 (.)
      */
     public function mount(): void
     {
@@ -70,7 +91,11 @@ class LocationWidget extends XotBaseWidget
 
     /**
      * Ottiene lo schema del form.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 63c6dd4 (.)
      * @return array<int, \Filament\Forms\Components\Component>
      */
     public function getFormSchema(): array
@@ -80,6 +105,11 @@ class LocationWidget extends XotBaseWidget
 
     /**
      * Gestisce l'invio del form.
+<<<<<<< HEAD
+=======
+     * 
+     * @return void
+>>>>>>> 63c6dd4 (.)
      */
     public function submit(): void
     {
@@ -90,15 +120,28 @@ class LocationWidget extends XotBaseWidget
         // Utilizzo metodo Livewire per notifiche
         $this->dispatch('notify', [
             'type' => 'success',
+<<<<<<< HEAD
             'message' => __('geo::widgets.location.messages.success'),
+=======
+            'message' => __('geo::widgets.location.messages.success')
+>>>>>>> 63c6dd4 (.)
         ]);
     }
 
     /**
      * Verifica se il widget può essere visualizzato.
+<<<<<<< HEAD
+=======
+     * 
+     * @return bool
+>>>>>>> 63c6dd4 (.)
      */
     public static function canView(): bool
     {
         return true;
     }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 63c6dd4 (.)

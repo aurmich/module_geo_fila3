@@ -165,7 +165,11 @@ class LocationMapTableWidget extends MapTableWidget
         foreach ($locations as $location) {
             if ($location->latitude && $location->longitude) {
                 $iconUrl = $this->getMarkerIcon($location);
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 63c6dd4 (.)
                 $data[] = [
                     'location' => [
                         'lat' => (float) $location->latitude,
@@ -206,33 +210,56 @@ class LocationMapTableWidget extends MapTableWidget
             ->modalSubmitAction(false);
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return string|null
+     */
+>>>>>>> 63c6dd4 (.)
     public function getMarkerIcon(Place $place): ?string
     {
         $type = $place->placeType->slug ?? 'default';
         /** @var array<string, mixed>|null $markerConfig */
         $markerConfig = config("geo.markers.types.{$type}");
 
+<<<<<<< HEAD
         if (! is_array($markerConfig)) {
+=======
+        if (!is_array($markerConfig)) {
+>>>>>>> 63c6dd4 (.)
             /** @var array<string, mixed>|null $defaultConfig */
             $defaultConfig = config('geo.markers.types.default');
             $markerConfig = $defaultConfig;
         }
 
+<<<<<<< HEAD
         if (! is_array($markerConfig)) {
+=======
+        if (!is_array($markerConfig)) {
+>>>>>>> 63c6dd4 (.)
             return null;
         }
 
         // Validazione sicura per accesso nested all'icona
         /** @var mixed $iconConfig */
         $iconConfig = $markerConfig['icon'] ?? null;
+<<<<<<< HEAD
 
         if (! is_array($iconConfig)) {
+=======
+        
+        if (!is_array($iconConfig)) {
+>>>>>>> 63c6dd4 (.)
             return null;
         }
 
         /** @var string|null $iconUrl */
         $iconUrl = $iconConfig['url'] ?? null;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 63c6dd4 (.)
         return is_string($iconUrl) ? $iconUrl : null;
     }
 }

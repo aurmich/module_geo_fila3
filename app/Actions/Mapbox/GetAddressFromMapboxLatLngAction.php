@@ -46,7 +46,11 @@ class GetAddressFromMapboxLatLngAction
     {
         $apiKey = config('services.mapbox.api_key');
 
+<<<<<<< HEAD
         if (empty($apiKey) || ! is_string($apiKey)) {
+=======
+        if (empty($apiKey) || !is_string($apiKey)) {
+>>>>>>> 63c6dd4 (.)
             throw InvalidLocationException::invalidData('API key di Mapbox non configurata');
         }
 
@@ -67,8 +71,13 @@ class GetAddressFromMapboxLatLngAction
         }
 
         $data = $response->json();
+<<<<<<< HEAD
 
         if (! is_array($data)) {
+=======
+        
+        if (!is_array($data)) {
+>>>>>>> 63c6dd4 (.)
             throw InvalidLocationException::invalidData('Risposta di Mapbox non valida');
         }
 
@@ -88,7 +97,11 @@ class GetAddressFromMapboxLatLngAction
         // Estrai il contesto dal risultato
         /** @var array<int, array{id?: string, text?: string, short_code?: string}> $contextItems */
         $contextItems = $location['context'] ?? [];
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 63c6dd4 (.)
         $context = [];
         foreach ($contextItems as $item) {
             $id = $item['id'] ?? '';
@@ -98,7 +111,11 @@ class GetAddressFromMapboxLatLngAction
             // Determina il tipo di contesto dal prefisso dell'ID
             $type = explode('.', $id)[0] ?? '';
 
+<<<<<<< HEAD
             if (! empty($type)) {
+=======
+            if (!empty($type)) {
+>>>>>>> 63c6dd4 (.)
                 $context[$type] = [
                     'text' => $text,
                     'short_code' => $shortCode,
@@ -108,17 +125,30 @@ class GetAddressFromMapboxLatLngAction
 
         // Costruisce la struttura dati richiesta da MapboxMapData
         $center = $location['center'] ?? [0.0, 0.0];
+<<<<<<< HEAD
 
         // Validazione del tipo e dell'array center
         if (! is_array($center) || count($center) < 2) {
             $center = [0.0, 0.0];
         }
 
+=======
+        
+        // Validazione del tipo e dell'array center
+        if (!is_array($center) || count($center) < 2) {
+            $center = [0.0, 0.0];
+        }
+        
+>>>>>>> 63c6dd4 (.)
         /** @var array{center: array{float, float}, text: string, address: string|null, context: array{country: string|null, country_code: string|null, place: string|null, postcode: string|null, locality: string|null, region: string|null, neighborhood: string|null}} $mappedData */
         $mappedData = [
             'center' => [
                 (float) ($center[0] ?? 0.0),
+<<<<<<< HEAD
                 (float) ($center[1] ?? 0.0),
+=======
+                (float) ($center[1] ?? 0.0)
+>>>>>>> 63c6dd4 (.)
             ],
             'text' => (string) ($location['text'] ?? ''),
             'address' => isset($location['address']) ? (string) $location['address'] : null,

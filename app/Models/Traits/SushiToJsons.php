@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Models\Traits;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
+=======
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Cache;
+>>>>>>> 63c6dd4 (.)
 use Sushi\Sushi;
 
 trait SushiToJsons
@@ -30,15 +35,24 @@ trait SushiToJsons
     protected function loadFromJson(): array
     {
         $path = $this->getJsonFile();
+<<<<<<< HEAD
 
         if (! File::exists($path)) {
+=======
+        
+        if (!File::exists($path)) {
+>>>>>>> 63c6dd4 (.)
             return [];
         }
 
         $data = json_decode(File::get($path), true);
 
         if (json_last_error() !== JSON_ERROR_NONE) {
+<<<<<<< HEAD
             throw new \RuntimeException('Errore nel parsing del file JSON: '.json_last_error_msg());
+=======
+            throw new \RuntimeException('Errore nel parsing del file JSON: ' . json_last_error_msg());
+>>>>>>> 63c6dd4 (.)
         }
 
         return $data;
@@ -57,7 +71,11 @@ trait SushiToJsons
      */
     protected function getCacheKey(): string
     {
+<<<<<<< HEAD
         return 'sushi_'.class_basename($this).'_data';
+=======
+        return 'sushi_' . class_basename($this) . '_data';
+>>>>>>> 63c6dd4 (.)
     }
 
     /**
@@ -74,6 +92,7 @@ trait SushiToJsons
     public function saveToJson(array $data): bool
     {
         $path = $this->getJsonFile();
+<<<<<<< HEAD
 
         try {
             File::put($path, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
@@ -83,6 +102,15 @@ trait SushiToJsons
         } catch (\Exception $e) {
             report($e);
 
+=======
+        
+        try {
+            File::put($path, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+            Cache::forget($this->getCacheKey());
+            return true;
+        } catch (\Exception $e) {
+            report($e);
+>>>>>>> 63c6dd4 (.)
             return false;
         }
     }
@@ -96,6 +124,7 @@ trait SushiToJsons
         $attributes['id'] = $this->generateId();
         $attributes['created_at'] = now();
         $attributes['updated_at'] = now();
+<<<<<<< HEAD
 
         $data[] = $attributes;
 
@@ -103,6 +132,15 @@ trait SushiToJsons
             return $this->newInstance($attributes);
         }
 
+=======
+        
+        $data[] = $attributes;
+        
+        if ($this->saveToJson($data)) {
+            return $this->newInstance($attributes);
+        }
+        
+>>>>>>> 63c6dd4 (.)
         throw new \RuntimeException('Impossibile salvare il record');
     }
 
@@ -113,6 +151,7 @@ trait SushiToJsons
     {
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
+<<<<<<< HEAD
 
         if ($index === null) {
             return false;
@@ -121,6 +160,16 @@ trait SushiToJsons
         $attributes['updated_at'] = now();
         $data[$index] = array_merge($data[$index], $attributes);
 
+=======
+        
+        if ($index === null) {
+            return false;
+        }
+        
+        $attributes['updated_at'] = now();
+        $data[$index] = array_merge($data[$index], $attributes);
+        
+>>>>>>> 63c6dd4 (.)
         return $this->saveToJson($data);
     }
 
@@ -131,6 +180,7 @@ trait SushiToJsons
     {
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
+<<<<<<< HEAD
 
         if ($index === null) {
             return false;
@@ -138,6 +188,15 @@ trait SushiToJsons
 
         array_splice($data, $index, 1);
 
+=======
+        
+        if ($index === null) {
+            return false;
+        }
+        
+        array_splice($data, $index, 1);
+        
+>>>>>>> 63c6dd4 (.)
         return $this->saveToJson($data);
     }
 
@@ -147,13 +206,21 @@ trait SushiToJsons
     protected function findIndex($id): ?int
     {
         $data = $this->loadFromJson();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 63c6dd4 (.)
         foreach ($data as $index => $item) {
             if ($item['id'] === $id) {
                 return $index;
             }
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 63c6dd4 (.)
         return null;
     }
 
@@ -164,4 +231,8 @@ trait SushiToJsons
     {
         return uniqid('comune_', true);
     }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 63c6dd4 (.)

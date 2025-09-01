@@ -46,7 +46,10 @@ class LocationMapWidget extends MapWidget
     protected function getMaxHeight(): ?string
     {
         $height = $this->maxHeight ?? '50vh';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 63c6dd4 (.)
         return is_string($height) ? $height : (string) $height;
     }
 
@@ -99,7 +102,11 @@ class LocationMapWidget extends MapWidget
     public function getMarkers(): array
     {
         return $this->getPlaces()
+<<<<<<< HEAD
             ->filter(fn (Place $place) => $place->latitude !== null && $place->longitude !== null)
+=======
+            ->filter(fn(Place $place) => $place->latitude !== null && $place->longitude !== null)
+>>>>>>> 63c6dd4 (.)
             ->map(function (Place $place): array {
                 $marker = [
                     'position' => [
@@ -134,11 +141,19 @@ class LocationMapWidget extends MapWidget
         $centerConfig = $config['center'] ?? null;
 
         return [
+<<<<<<< HEAD
             'lat' => is_array($centerConfig) && is_numeric($centerConfig['lat'] ?? null)
                 ? (float) $centerConfig['lat']
                 : $defaultLat,
             'lng' => is_array($centerConfig) && is_numeric($centerConfig['lng'] ?? null)
                 ? (float) $centerConfig['lng']
+=======
+            'lat' => is_array($centerConfig) && is_numeric($centerConfig['lat'] ?? null) 
+                ? (float) $centerConfig['lat'] 
+                : $defaultLat,
+            'lng' => is_array($centerConfig) && is_numeric($centerConfig['lng'] ?? null) 
+                ? (float) $centerConfig['lng'] 
+>>>>>>> 63c6dd4 (.)
                 : $defaultLng,
         ];
     }
@@ -159,7 +174,11 @@ class LocationMapWidget extends MapWidget
         $config = Config::get('maps.markers', []);
 
         $placeType = $place->placeType;
+<<<<<<< HEAD
         if (! $placeType) {
+=======
+        if (!$placeType) {
+>>>>>>> 63c6dd4 (.)
             return null;
         }
 
@@ -167,14 +186,22 @@ class LocationMapWidget extends MapWidget
         /** @var string|null $slug */
         $slug = data_get($placeType, 'slug');
 
+<<<<<<< HEAD
         if (! is_string($slug) || ! isset($config['icons'][$slug])) {
+=======
+        if (!is_string($slug) || !isset($config['icons'][$slug])) {
+>>>>>>> 63c6dd4 (.)
             return null;
         }
 
         /** @var array{url: string, size: array{int, int}} $icon */
         $icon = $config['icons'][$slug];
 
+<<<<<<< HEAD
         if (! isset($icon['url']) || ! is_string($icon['url'])) {
+=======
+        if (!isset($icon['url']) || !is_string($icon['url'])) {
+>>>>>>> 63c6dd4 (.)
             return null;
         }
 
@@ -191,7 +218,11 @@ class LocationMapWidget extends MapWidget
     {
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.location-map-widget';
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 63c6dd4 (.)
         return ViewFacade::make($viewName, $this->getViewData());
     }
 }

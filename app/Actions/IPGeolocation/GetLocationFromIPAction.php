@@ -13,12 +13,22 @@ class GetLocationFromIPAction
 {
     public function __construct(
         private readonly FetchIPLocationAction $fetchIPLocationAction,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 63c6dd4 (.)
 
     /**
      * Ottiene i dati di geolocalizzazione per un indirizzo IP.
      *
+<<<<<<< HEAD
      * @param  string  $ip  Indirizzo IP
+=======
+     * @param string $ip Indirizzo IP
+     *
+>>>>>>> 63c6dd4 (.)
      * @return IPLocationData|null Dati di geolocalizzazione o null se non disponibili
      */
     public function execute(string $ip): ?IPLocationData

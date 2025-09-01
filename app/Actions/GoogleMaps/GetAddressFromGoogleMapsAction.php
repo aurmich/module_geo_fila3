@@ -38,7 +38,11 @@ final class GetAddressFromGoogleMapsAction
     {
         $apiKey = config('services.google.maps_api_key');
 
+<<<<<<< HEAD
         if (empty($apiKey) || ! is_string($apiKey)) {
+=======
+        if (empty($apiKey) || !is_string($apiKey)) {
+>>>>>>> 63c6dd4 (.)
             throw GoogleMapsApiException::missingApiKey();
         }
 
@@ -64,7 +68,11 @@ final class GetAddressFromGoogleMapsAction
         /** @var GoogleMapResponseData $responseData */
         $responseData = GoogleMapResponseData::from($response->json());
 
+<<<<<<< HEAD
         if ($responseData->results->count() === 0) {
+=======
+        if (0 === $responseData->results->count()) {
+>>>>>>> 63c6dd4 (.)
             throw GoogleMapsApiException::noResultsFound();
         }
 
@@ -78,7 +86,11 @@ final class GetAddressFromGoogleMapsAction
     {
         $firstResult = $responseData->results->first();
 
+<<<<<<< HEAD
         if (! $firstResult instanceof GoogleMapResultData) {
+=======
+        if (!$firstResult instanceof GoogleMapResultData) {
+>>>>>>> 63c6dd4 (.)
             throw GoogleMapsApiException::noResultsFound();
         }
 
@@ -104,13 +116,19 @@ final class GetAddressFromGoogleMapsAction
     }
 
     /**
+<<<<<<< HEAD
      * @param  DataCollection<GoogleMapAddressComponentData>  $components
      * @param  array<string>  $types
+=======
+     * @param DataCollection<GoogleMapAddressComponentData> $components
+     * @param array<string> $types
+>>>>>>> 63c6dd4 (.)
      */
     private function getComponent(DataCollection $components, array $types, bool $short = false): ?string
     {
         /** @var GoogleMapAddressComponentData|null $component */
         $component = $components->toCollection()->first(function ($component) use ($types) {
+<<<<<<< HEAD
             if (! $component instanceof GoogleMapAddressComponentData) {
                 return false;
             }
@@ -119,6 +137,16 @@ final class GetAddressFromGoogleMapsAction
         });
 
         if (! $component instanceof GoogleMapAddressComponentData) {
+=======
+            if (!$component instanceof GoogleMapAddressComponentData) {
+                return false;
+            }
+            
+            return !empty($component->types) && count(array_intersect($component->types, $types)) > 0;
+        });
+
+        if (!$component instanceof GoogleMapAddressComponentData) {
+>>>>>>> 63c6dd4 (.)
             return null;
         }
 

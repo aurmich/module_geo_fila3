@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Resources;
 
 use Filament\Forms;
+<<<<<<< HEAD
 use Filament\Forms\Components\Select;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
@@ -13,6 +14,21 @@ use Modules\Geo\Models\Locality;
 use Modules\Geo\Models\Province;
 use Modules\Geo\Models\Region;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+=======
+use Filament\Tables;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
+use Filament\Forms\Form;
+use Filament\Tables\Table;
+use Filament\Forms\Components\Select;
+use Modules\Geo\Models\Address;
+use Modules\Geo\Models\Region;
+use Modules\Geo\Models\Province;
+use Modules\Geo\Models\Locality;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Geo\Filament\Resources\AddressResource\Pages;
+use Modules\Geo\Filament\Resources\AddressResource\RelationManagers;
+>>>>>>> 63c6dd4 (.)
 
 /**
  * Resource per la gestione degli indirizzi geografici.
@@ -39,6 +55,7 @@ class AddressResource extends XotBaseResource
     public static function getFormSchema(): array
     {
 
+<<<<<<< HEAD
         return [
             'name' => Forms\Components\TextInput::make('name')->maxLength(255),
 
@@ -105,6 +122,87 @@ class AddressResource extends XotBaseResource
                 'is_primary'
             )->default(false),
 
+=======
+        
+
+
+        return [
+            "name" => Forms\Components\TextInput::make("name")->maxLength(255),
+            
+                "country" => Forms\Components\TextInput::make("country") //Nazione
+                    ->maxLength(255)
+                    ->default("Italia")
+                    ->visible(false)
+                    ->columnSpan(2),
+                
+                "administrative_area_level_1" => Select::make('administrative_area_level_1')
+                    
+                    ->options(fn(Get $get)=>Region::getOptions($get))
+                    ->searchable()
+                    ->required()
+                    ->live()
+                    ->afterStateUpdated(function (Set $set) {
+                        $set("administrative_area_level_2", null);
+                        $set("locality", null);
+                        $set("postal_code", null);
+                        $set("cap", null);
+                    }),
+                
+                
+                'administrative_area_level_2' => Select::make('administrative_area_level_2')
+                    ->options(fn(Get $get)=>Province::getOptions($get))
+                    ->searchable()
+                    ->required()
+                    ->live()
+                    ->afterStateUpdated(function (Set $set){
+                        $set('cap', null);
+                        $set('postal_code', null);
+                        $set('locality', null);
+                    })
+                    ->disabled(fn (Get $get) => !$get('administrative_area_level_1') )
+                    ->placeholder(__('filament-forms::components.select.placeholder'))
+                ,
+               
+
+                'locality' => Select::make('locality')
+                    ->options(fn(Get $get)=>Locality::getOptions($get))
+                    ->searchable()
+                    ->required()
+                    ->live()
+                    ->disabled(fn (Get $get) => !$get('administrative_area_level_1') || !$get('administrative_area_level_2'))
+                    ->extraAttributes(['class' => 'h-8 flex items-center'])
+                    ->afterStateUpdated(function (Set $set){
+                        $set('postal_code', null);
+                    })
+                    ->placeholder(__('filament-forms::components.select.placeholder')),
+
+                'postal_code' => Select::make('postal_code')
+                    ->options(fn(Get $get)=>Locality::getPostalCodeOptions($get))
+                    ->searchable()
+                    ->required()
+                    ->live()
+                    ->disabled(fn (Get $get) => !$get('administrative_area_level_1') || !$get('administrative_area_level_2'))
+                    ->placeholder(__('filament-forms::components.select.placeholder')),
+
+            
+
+            
+                "route" => Forms\Components\TextInput::make("route")
+                    ->required()
+                    ->maxLength(255)
+                    ,
+
+                "street_number" => Forms\Components\TextInput::make("street_number")
+                    ->maxLength(20)
+                    ,
+            
+            
+            
+            "is_primary" => Forms\Components\Toggle::make(
+                "is_primary"
+            )->default(false),
+            
+>>>>>>> 63c6dd4 (.)
         ];
     }
 
@@ -112,11 +210,16 @@ class AddressResource extends XotBaseResource
     {
         return [
             'region' => Select::make('region')
+<<<<<<< HEAD
                 ->options(fn (Get $get) => Region::getOptions($get))
+=======
+                ->options(fn(Get $get)=>Region::getOptions($get))
+>>>>>>> 63c6dd4 (.)
                 ->searchable()
                 ->required()
                 ->live()
                 ->afterStateUpdated(function (Set $set) {
+<<<<<<< HEAD
                     $set('province', null);
                     $set('locality', null);
                     $set('postal_code', null);
@@ -129,10 +232,25 @@ class AddressResource extends XotBaseResource
                 ->required()
                 ->live()
                 ->afterStateUpdated(function (Set $set) {
+=======
+                    $set("province", null);
+                    $set("locality", null);
+                    $set("postal_code", null);
+                    $set("cap", null);
+                }),
+            
+            'province' => Select::make('province')
+                ->options(fn(Get $get)=>Province::getOptions($get))
+                ->searchable()
+                ->required()
+                ->live()
+                ->afterStateUpdated(function (Set $set){
+>>>>>>> 63c6dd4 (.)
                     $set('cap', null);
                     $set('postal_code', null);
                     $set('locality', null);
                 })
+<<<<<<< HEAD
                 ->disabled(fn (Get $get) => ! $get('region'))
                 ->placeholder(__('filament-forms::components.select.placeholder'))
             // ->extraAttributes([
@@ -148,10 +266,29 @@ class AddressResource extends XotBaseResource
                 ->disabled(fn (Get $get) => ! $get('region') || ! $get('province'))
                 ->placeholder(__('filament-forms::components.select.placeholder'))
                 ->afterStateUpdated(function (Set $set) {
+=======
+                ->disabled(fn (Get $get) => !$get('region') )
+                ->placeholder(__('filament-forms::components.select.placeholder'))
+                //->extraAttributes([
+                    //'class' => 'h-9'
+                //])
+            ,
+           
+
+            'locality' => Select::make('locality')
+                ->options(fn(Get $get)=>Locality::getOptions($get))
+                ->searchable()
+                ->required()
+                ->live()
+                ->disabled(fn (Get $get) => !$get('region') || !$get('province'))
+                ->placeholder(__('filament-forms::components.select.placeholder'))
+                ->afterStateUpdated(function (Set $set){
+>>>>>>> 63c6dd4 (.)
                     $set('postal_code', null);
                 }),
 
             'postal_code' => Select::make('postal_code')
+<<<<<<< HEAD
                 ->options(fn (Get $get) => Locality::getPostalCodeOptions($get))
                 ->searchable()
                 ->required()
@@ -160,4 +297,16 @@ class AddressResource extends XotBaseResource
                 ->placeholder(__('filament-forms::components.select.placeholder')),
         ];
     }
+=======
+                ->options(fn(Get $get)=>Locality::getPostalCodeOptions($get))
+                ->searchable()
+                ->required()
+                ->live()
+                ->disabled(fn (Get $get) => !$get('region') || !$get('province'))
+                ->placeholder(__('filament-forms::components.select.placeholder')),
+        ];
+    }
+
+    
+>>>>>>> 63c6dd4 (.)
 }

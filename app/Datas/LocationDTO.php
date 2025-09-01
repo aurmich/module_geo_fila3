@@ -12,7 +12,12 @@ class LocationDTO
         public readonly ?string $address = null,
         public readonly ?string $city = null,
         public readonly ?string $country = null,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 63c6dd4 (.)
 
     public function toArray(): array
     {
