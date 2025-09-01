@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -115,6 +116,8 @@ return array (
 >>>>>>> 63c6dd4 (.)
 =======
 =======
+=======
+>>>>>>> 80b3279 (.)
 declare(strict_types=1);
 
 return [
@@ -159,5 +162,8 @@ return [
         'export' => 'Esporta',
     ],
 ];
+<<<<<<< HEAD
 >>>>>>> b151190 (.)
 >>>>>>> bab5012 (.)
+=======
+>>>>>>> 80b3279 (.)
