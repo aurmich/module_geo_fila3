@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -46,6 +47,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> bab5012 (.)
 return array (
   'navigation' => 
   array (
@@ -108,4 +111,53 @@ return array (
     'export' => 'Esporta',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 63c6dd4 (.)
+=======
+=======
+declare(strict_types=1);
+
+return [
+    'navigation' => [
+        'name' => 'Mappe',
+        'plural' => 'Mappe',
+        'group' => [
+            'name' => 'Geo',
+            'description' => 'Gestione e visualizzazione delle mappe',
+        ],
+        'label' => 'Mappe',
+        'sort' => 33,
+        'icon' => 'geo-map',
+    ],
+    'fields' => [
+        'title' => 'Titolo',
+        'type' => 'Tipo Mappa',
+        'zoom_level' => 'Livello Zoom',
+        'center_lat' => 'Latitudine Centro',
+        'center_lng' => 'Longitudine Centro',
+        'markers' => 'Marcatori',
+        'layers' => 'Livelli',
+        'style' => 'Stile',
+    ],
+    'map_types' => [
+        'roadmap' => 'Stradale',
+        'satellite' => 'Satellite',
+        'hybrid' => 'Ibrida',
+        'terrain' => 'Terreno',
+    ],
+    'controls' => [
+        'zoom' => 'Zoom',
+        'pan' => 'Panoramica',
+        'fullscreen' => 'Schermo Intero',
+        'streetview' => 'Street View',
+        'layers' => 'Livelli',
+    ],
+    'actions' => [
+        'add_marker' => 'Aggiungi Marcatore',
+        'draw_polygon' => 'Disegna Poligono',
+        'measure_distance' => 'Misura Distanza',
+        'export' => 'Esporta',
+    ],
+];
+>>>>>>> b151190 (.)
+>>>>>>> bab5012 (.)
