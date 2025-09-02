@@ -27,6 +27,15 @@ trait GeographicalScopes
 
     public function getDistanceExpression(float $latitude, float $longitude, ?string $alias = null): Expression
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c92b0c10e7 (.)
+=======
+>>>>>>> f1e7ef1046 (.)
         $sql = "
             (6371 * acos(
                 cos(radians($latitude)) *
@@ -34,7 +43,19 @@ trait GeographicalScopes
                 cos(radians(longitude) - radians($longitude)) +
                 sin(radians($latitude)) *
                 sin(radians(latitude))
+<<<<<<< HEAD
+<<<<<<< HEAD
             ))
+=======
+<<<<<<< HEAD
+            )) 
+=======
+            ))
+>>>>>>> 3c5e1ea (.)
+>>>>>>> c92b0c10e7 (.)
+=======
+            ))
+>>>>>>> f1e7ef1046 (.)
         ";
         if (null !== $alias) {
             $sql .= " AS $alias";
@@ -42,5 +63,20 @@ trait GeographicalScopes
 
         return \DB::raw($sql);
         // AS distance
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        return app(GetDistanceExpressionAction::class)->execute($latitude, $longitude, $alias);
+>>>>>>> 0119f2f (.)
+>>>>>>> c92b0c10e7 (.)
+=======
+        return app(GetDistanceExpressionAction::class)->execute($latitude, $longitude, $alias);
+>>>>>>> 59b81e3624 (.)
+=======
+        return app(GetDistanceExpressionAction::class)->execute($latitude, $longitude, $alias);
+>>>>>>> 48584a1c98 (.)
+=======
+>>>>>>> f1e7ef1046 (.)
     }
 }
