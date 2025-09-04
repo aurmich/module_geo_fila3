@@ -282,7 +282,7 @@ php artisan test --filter="Google Places"
 
 ## Collegamenti
 
-- [Architettura Testing Principale](../../../docs/testing-architecture-overview.md)
+- [Architettura Testing Principale](../../../project_docs/testing-architecture-overview.md)
 - [Modulo Geo README](README.md)
 - [Address Implementation](address-implementation.md)
 - [Geo Entities](geo-entities.md)

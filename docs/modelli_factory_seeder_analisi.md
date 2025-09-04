@@ -179,9 +179,9 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Cache Strategy](./cache_strategy.md)
 
 ### Moduli Collegati
-- [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md)
-- [User Module](../../User/docs/modelli_factory_seeder_analisi.md)
-- [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md)
+- [SaluteOra Module](../../SaluteOra/project_docs/modelli_factory_seeder_analisi.md)
+- [User Module](../../User/project_docs/modelli_factory_seeder_analisi.md)
+- [Cms Module](../../Cms/project_docs/modelli_factory_seeder_analisi.md)
 
 ### Risorse Esterne
 - [ISTAT Comuni](https://www.istat.it/it/archivio/6789)
