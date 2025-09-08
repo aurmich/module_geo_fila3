@@ -9,7 +9,7 @@
         <button
             type="submit"
             class="btn btn-outline-secondary"
-            wire:submit.prevent="createAddress">{{__('Add Address')}}</button>
+            wire:submit.prevent="createAddress">{{(string) __('Add Address')}}</button>
     </div>
     </form>
 </div>
