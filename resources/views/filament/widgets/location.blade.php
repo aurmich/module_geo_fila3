@@ -8,7 +8,7 @@
                     type="submit"
                     color="primary"
                 >
-                    {{ (string) __('geo::widgets.location.submit') }}
+                    {{ __('geo::widgets.location.submit') }}
                 </x-filament::button>
             </div>
         </form>

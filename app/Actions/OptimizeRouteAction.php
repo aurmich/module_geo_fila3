@@ -14,17 +14,19 @@ class OptimizeRouteAction
 {
     public function __construct(
         private readonly CalculateDistanceAction $calculateDistance,
-    ) {}
+    ) {
+    }
 
     /**
      * Ottimizza l'ordine dei punti minimizzando la distanza totale.
      *
-     * @param  Collection<int, LocationData>  $locations
+     * @param Collection<int, LocationData> $locations
+     *
      * @return Collection<int, LocationData>
      */
     public function execute(Collection $locations): Collection
     {
-        if ($locations->count()/** @phpstan-ignore method.nonObject */ <= 2) {
+        if ($locations->count() <= 2) {
             return $locations;
         }
 
@@ -38,7 +40,7 @@ class OptimizeRouteAction
             $currentLocation = $optimizedLocations->last();
             $nearestLocation = $this->findNearestLocation($currentLocation, $remainingLocations);
 
-            if ($nearestLocation === null) {
+            if (null === $nearestLocation) {
                 break;
             }
 
@@ -52,7 +54,7 @@ class OptimizeRouteAction
     /**
      * Trova il punto più vicino a quello corrente.
      *
-     * @param  Collection<int, LocationData>  $locations
+     * @param Collection<int, LocationData> $locations
      */
     private function findNearestLocation(LocationData $currentLocation, Collection $locations): ?LocationData
     {

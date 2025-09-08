@@ -83,13 +83,13 @@ php docs/helper-text-audit-script.php
 
 ### Regole e Memorie
 - ✅ Memoria critica creata per la regola helper_text
-- ✅ Documentazione centrale aggiornata in `/project_docs/translation-field-structure-complete.md`
+- ✅ Documentazione centrale aggiornata in `/docs/translation-field-structure-complete.md`
 - ✅ Script di audit automatico creato per controlli futuri
 
 ### Collegamenti Bidirezionali
-- [Documentazione Centrale Traduzioni](../../../project_docs/translation-field-structure-complete.md)
-- [Script Audit Helper Text](../../../project_docs/helper-text-audit-script.php)
-- [Memoria Regola Critica](../../../project_docs/translation-refactor-complete-summary.md)
+- [Documentazione Centrale Traduzioni](../../../docs/translation-field-structure-complete.md)
+- [Script Audit Helper Text](../../../docs/helper-text-audit-script.php)
+- [Memoria Regola Critica](../../../docs/translation-refactor-complete-summary.md)
 
 ## Validazione
 
@@ -121,7 +121,7 @@ php docs/helper-text-audit-script.php
 ## Prevenzione Futura
 
 ### Script di Controllo
-Lo script `/project_docs/helper-text-audit-script.php` può essere eseguito periodicamente per verificare la conformità:
+Lo script `/docs/helper-text-audit-script.php` può essere eseguito periodicamente per verificare la conformità:
 
 ```bash
 php docs/helper-text-audit-script.php
