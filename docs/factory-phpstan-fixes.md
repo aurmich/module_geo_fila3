@@ -64,7 +64,11 @@ return [
 ## Collegamenti
 
 - [Geo Module Documentation](../README.md)
+<<<<<<< HEAD
 - [Factory Pattern Guidelines](../../../docs/factory-pattern.md)
+=======
+- [Factory Pattern Guidelines](../../../project_docs/factory-pattern.md)
+>>>>>>> 19c8248 (.)
 - [PHPStan Compliance Guide](../phpstan-fixes.md)
 
 *Ultimo aggiornamento: 2025-01-06*

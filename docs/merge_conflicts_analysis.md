@@ -105,7 +105,11 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 ## Collegamenti
 
 - [Documentazione Modulo Geo](module_geo.md)
+<<<<<<< HEAD
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
+=======
+- [Convenzioni Laraxot](../../../project_docs/laraxot_conventions.md)
+>>>>>>> 19c8248 (.)
 - [Regole PHPStan](phpstan_fixes.md)
 
 ---

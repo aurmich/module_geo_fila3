@@ -129,5 +129,9 @@ $request->validate([
 ## Collegamenti Correlati
 
 - [Documentazione PHP sugli Enum](https://www.php.net/manual/en/language.enumerations.php)
+<<<<<<< HEAD
 - [Filament Enums Docs](https://filamentphp.com/docs/3.x/support/enums)
+=======
+- [Filament Enums Docs](https://filamentphp.com/project_docs/3.x/support/enums)
+>>>>>>> 19c8248 (.)
 - [Best Practices Enum](enums-best-practices.md) 

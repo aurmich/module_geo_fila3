@@ -14,8 +14,23 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|GeoNamesCap newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|GeoNamesCap newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|GeoNamesCap query()
+<<<<<<< HEAD
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+=======
+ *
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+ * @method static GeoNamesCap|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, GeoNamesCap> get()
+ * @method static GeoNamesCap create(array $attributes = [])
+ * @method static GeoNamesCap firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GeoNamesCap where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GeoNamesCap whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
+>>>>>>> 19c8248 (.)
  * @mixin \Eloquent
  */
 class GeoNamesCap extends Model

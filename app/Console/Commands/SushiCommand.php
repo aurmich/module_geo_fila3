@@ -5,9 +5,16 @@ declare(strict_types=1);
 namespace Modules\Geo\Console\Commands;
 
 use Illuminate\Console\Command;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Modules\Geo\Models\Comune;
+=======
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use Modules\Geo\Models\Comune;
+
+>>>>>>> 19c8248 (.)
 use function Safe\json_decode;
 use function Safe\json_encode;
 
@@ -48,6 +55,10 @@ class SushiCommand extends Command
     protected function handleUnknownAction(): int
     {
         $this->error('Azione non valida');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 19c8248 (.)
         return 1;
     }
 
@@ -60,6 +71,7 @@ class SushiCommand extends Command
 
         try {
             $path = base_path('database/content/comuni.json');
+<<<<<<< HEAD
             
             if (!File::exists($path)) {
                 $this->error('File comuni.json non trovato');
@@ -100,6 +112,52 @@ class SushiCommand extends Command
                 /** @var array<string, mixed> $validComune */
                 $validComune = $arrayComune;
                 
+=======
+
+            if (! File::exists($path)) {
+                $this->error('File comuni.json non trovato');
+
+                return 1;
+            }
+
+            // Uso Safe\json_decode per evitare false return
+            /** @var mixed $rawData */
+            $rawData = json_decode(File::get($path), true);
+
+            // Validazione tipo per evitare foreach su mixed
+            if (! is_array($rawData)) {
+                $this->error('Il file JSON non contiene un array valido');
+
+                return 1;
+            }
+
+            /** @var array<int, mixed> $data */
+            $data = $rawData;
+
+            DB::table('comuni')->truncate();
+
+            foreach ($data as $comune) {
+                // Type guard per ogni elemento del foreach
+                if (! is_array($comune)) {
+                    $this->warn('Elemento non valido saltato: '.gettype($comune));
+
+                    continue;
+                }
+
+                /** @var array<mixed, mixed> $arrayComune */
+                $arrayComune = $comune;
+
+                // Validazione sicura degli offset con type guards
+                if (! $this->isValidComuneData($arrayComune)) {
+                    $this->warn('Dati comune non validi saltati: '.json_encode($arrayComune));
+
+                    continue;
+                }
+
+                /** @var array<string, mixed> $validComune */
+                $validComune = $arrayComune;
+
+>>>>>>> 19c8248 (.)
                 DB::table('comuni')->insert([
                     'id' => is_string($validComune['id'] ?? null) ? $validComune['id'] : '',
                     'regione' => is_string($validComune['regione'] ?? null) ? $validComune['regione'] : '',
@@ -112,24 +170,40 @@ class SushiCommand extends Command
                     'updated_at' => $validComune['updated_at'] ?? now(),
                 ]);
             }
+<<<<<<< HEAD
             
             $this->info('Database SQLite di Sushi aggiornato con successo');
             return 0;
         } catch (\Exception $e) {
             $this->error('Errore durante l\'aggiornamento del database: ' . $e->getMessage());
+=======
+
+            $this->info('Database SQLite di Sushi aggiornato con successo');
+
+            return 0;
+        } catch (\Exception $e) {
+            $this->error('Errore durante l\'aggiornamento del database: '.$e->getMessage());
+
+>>>>>>> 19c8248 (.)
             return 1;
         }
     }
 
     /**
      * Valida i dati di un comune.
+<<<<<<< HEAD
      * 
      * @param array<mixed, mixed> $comune
      * @return bool
+=======
+     *
+     * @param  array<mixed, mixed>  $comune
+>>>>>>> 19c8248 (.)
      */
     protected function isValidComuneData(array $comune): bool
     {
         $requiredFields = ['id', 'regione', 'provincia', 'comune', 'cap', 'lat', 'lng'];
+<<<<<<< HEAD
         
         foreach ($requiredFields as $field) {
             if (!array_key_exists($field, $comune)) {
@@ -137,6 +211,15 @@ class SushiCommand extends Command
             }
         }
         
+=======
+
+        foreach ($requiredFields as $field) {
+            if (! array_key_exists($field, $comune)) {
+                return false;
+            }
+        }
+
+>>>>>>> 19c8248 (.)
         return true;
     }
 
@@ -150,9 +233,17 @@ class SushiCommand extends Command
         try {
             DB::table('comuni')->truncate();
             $this->info('Database SQLite di Sushi pulito con successo');
+<<<<<<< HEAD
             return 0;
         } catch (\Exception $e) {
             $this->error('Errore durante la pulizia del database: ' . $e->getMessage());
+=======
+
+            return 0;
+        } catch (\Exception $e) {
+            $this->error('Errore durante la pulizia del database: '.$e->getMessage());
+
+>>>>>>> 19c8248 (.)
             return 1;
         }
     }
@@ -167,24 +258,34 @@ class SushiCommand extends Command
         try {
             $count = DB::table('comuni')->count();
             $this->info("Numero di comuni: {$count}");
+<<<<<<< HEAD
             
+=======
+>>>>>>> 19c8248 (.)
             $regioni = DB::table('comuni')
                 ->select('regione')
                 ->distinct()
                 ->count();
             $this->info("Numero di regioni: {$regioni}");
+<<<<<<< HEAD
             
+=======
+>>>>>>> 19c8248 (.)
             $province = DB::table('comuni')
                 ->select('provincia')
                 ->distinct()
                 ->count();
             $this->info("Numero di province: {$province}");
+<<<<<<< HEAD
             
+=======
+>>>>>>> 19c8248 (.)
             $cap = DB::table('comuni')
                 ->select('cap')
                 ->distinct()
                 ->count();
             $this->info("Numero di CAP: {$cap}");
+<<<<<<< HEAD
             
             return 0;
         } catch (\Exception $e) {
@@ -193,3 +294,14 @@ class SushiCommand extends Command
         }
     }
 } 
+=======
+
+            return 0;
+        } catch (\Exception $e) {
+            $this->error('Errore durante la verifica dello stato del database: '.$e->getMessage());
+
+            return 1;
+        }
+    }
+}
+>>>>>>> 19c8248 (.)
