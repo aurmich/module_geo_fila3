@@ -248,6 +248,7 @@ Includere controlli PHPStan nella pipeline:
 ## Riferimenti
 
 - [PHPStan Class Discovery](https://phpstan.org/user-guide/discovering-symbols)
+<<<<<<< HEAD
 - [Laravel Autoloading](https://laravel.com/project_docs/structure#autoloading)
 - [Modules/Geo/project_docs/README.md](./README.md)
 
@@ -256,5 +257,15 @@ Includere controlli PHPStan nella pipeline:
 - [Root PHPStan Rules](../../../project_docs/phpstan_rules.md)
 - [Geo Module Structure](./structure.md)
 - [Employee PHPStan Covariance](../../Employee/project_docs/phpstan_covariance_issues.md)
+=======
+- [Laravel Autoloading](https://laravel.com/docs/structure#autoloading)
+- [Modules/Geo/docs/README.md](./README.md)
+
+## Backlink
+
+- [Root PHPStan Rules](../../../docs/phpstan_rules.md)
+- [Geo Module Structure](./structure.md)
+- [Employee PHPStan Covariance](../../Employee/docs/phpstan_covariance_issues.md)
+>>>>>>> 5650494 (.)
 
 *Ultimo aggiornamento: 2025-07-31*

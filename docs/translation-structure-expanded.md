@@ -149,12 +149,21 @@ I file di traduzione non italiani (en, de) contengono testo italiano invece dell
 ## Collegamenti Bidirezionali
 
 ### Documentazione Root
+<<<<<<< HEAD
 - [Struttura Traduzioni Espansa](/project_docs/translation-structure-expanded.md)
 - [Principi DRY/KISS](/project_docs/dry-kiss-principles.md)
 
 ### Documentazione Moduli Correlati
 - [User Module Translations](/Modules/User/project_docs/translation-guidelines.md)
 - [SaluteOra Module Translations](/Modules/SaluteOra/project_docs/multilingual-support.md)
+=======
+- [Struttura Traduzioni Espansa](/docs/translation-structure-expanded.md)
+- [Principi DRY/KISS](/docs/dry-kiss-principles.md)
+
+### Documentazione Moduli Correlati
+- [User Module Translations](/Modules/User/docs/translation-guidelines.md)
+- [SaluteOra Module Translations](/Modules/SaluteOra/docs/multilingual-support.md)
+>>>>>>> 5650494 (.)
 
 ### File di Implementazione
 - `lang/it/location.php` - Template italiano (riferimento)

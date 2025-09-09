@@ -266,6 +266,12 @@ class GeoDataValidator
    - API esterna
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Documentazione Squire](../../Geo/project_docs/squire-integration.md)
 - [Best Practices Filament](../../../project_docs/filament-best-practices.md)
 - [Clean Code](../../../project_docs/clean-code.md) 
+=======
+- [Documentazione Squire](../../Geo/docs/squire-integration.md)
+- [Best Practices Filament](../../../docs/filament-best-practices.md)
+- [Clean Code](../../../docs/clean-code.md) 
+>>>>>>> 5650494 (.)

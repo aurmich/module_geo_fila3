@@ -176,16 +176,28 @@ class SushiCommand extends Command
         try {
             $count = DB::table('comuni')->count();
             $this->info("Numero di comuni: {$count}");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5650494 (.)
             $regioni = DB::table('comuni')
                 ->select('regione')
                 ->distinct()
                 ->count();
             $this->info("Numero di regioni: {$regioni}");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5650494 (.)
             $province = DB::table('comuni')
                 ->select('provincia')
                 ->distinct()
                 ->count();
             $this->info("Numero di province: {$province}");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5650494 (.)
             $cap = DB::table('comuni')
                 ->select('cap')
                 ->distinct()

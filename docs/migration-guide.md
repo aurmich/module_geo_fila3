@@ -99,6 +99,9 @@ After migration, thoroughly test:
 ## Rollback Plan
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5650494 (.)
 In case of issues, have a rollback plan:
 
 1. Backup your database
@@ -538,6 +541,7 @@ git checkout -- app/Models/Comune.php
 - [Comune Model](comune-model.md)
 - [Sushi Configuration](sushi-configuration.md)
 - [Sushi Command](sushi-command.md)
+<<<<<<< HEAD
 =======
 If you need to rollback the migration:
 
@@ -588,3 +592,5 @@ If you encounter issues during migration:
 *Last updated: January 2025*
 *Version: 1.0.0*
 >>>>>>> 8946c2f (.)
+=======
+>>>>>>> 5650494 (.)

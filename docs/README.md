@@ -35,6 +35,7 @@ $address = Address::create([
     'longitude' => 9.1900,
 ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Ricerca indirizzi nelle vicinanze
@@ -154,6 +155,11 @@ $nearby = Address::nearby($lat, $lng, 5); // 5km radius
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> 52789d7 (.)
+=======
+
+// Ricerca indirizzi nelle vicinanze
+$nearby = Address::nearby($lat, $lng, 5); // 5km radius
+>>>>>>> 5650494 (.)
 ```
 
 ### 🗺️ **API Integration**
@@ -200,6 +206,7 @@ $lombardia = $milano->regione; // "Lombardia"
 ### 📦 **Installazione**
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -236,6 +243,8 @@ $lombardia = $milano->regione; // "Lombardia"
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> 52789d7 (.)
+=======
+>>>>>>> 5650494 (.)
 # Abilitare il modulo
 php artisan module:enable Geo
 
@@ -270,6 +279,7 @@ return [
 ### 🧪 **Testing**
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -306,6 +316,8 @@ return [
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> 52789d7 (.)
+=======
+>>>>>>> 5650494 (.)
 # Test del modulo
 php artisan test --testsuite=Geo
 
@@ -527,6 +539,7 @@ CREATE INDEX idx_addresses_postal_code ON addresses (postal_code);
 **🐛 PHPStan Level 9**: File core certificati ✅  
 **🌐 Translation Standards**: File traduzione certificati ✅  
 **🚀 Performance**: 98/100 score
+<<<<<<< HEAD
 =======
 ```
 
@@ -758,3 +771,5 @@ php artisan test
 **Autore**: Team Laraxot  
 **Licenza**: MIT License
 >>>>>>> 8946c2f (.)
+=======
+>>>>>>> 5650494 (.)

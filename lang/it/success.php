@@ -19,7 +19,11 @@ return [
         'cached' => 'Risorsa memorizzata in cache con successo',
         'cleared' => 'Cache svuotata con successo',
         'backed_up' => 'Backup eseguito con successo',
+<<<<<<< HEAD
         'restored' => 'Ripristino completato con successo',
+=======
+        'backup_restored' => 'Ripristino completato con successo',
+>>>>>>> 5650494 (.)
     ],
     'geo_specific' => [
         'coordinates_validated' => 'Coordinate geografiche validate con successo',
@@ -140,6 +144,7 @@ return [
         'difference_made' => 'Differenza creata con successo',
         'change_effected' => 'Cambio effettuato con successo',
         'transformation_realized' => 'Trasformazione realizzata con successo',
+<<<<<<< HEAD
         'evolution_completed' => 'Evoluzione completata con successo',
         'revolution_launched' => 'Rivoluzione lanciata con successo',
         'breakthrough_achieved' => 'Breakthrough raggiunto con successo',
@@ -151,5 +156,7 @@ return [
         'impact_made' => 'Impatto creato con successo',
         'difference_made' => 'Differenza creata con successo',
         'change_effected' => 'Cambio effettuato con successo',
+=======
+>>>>>>> 5650494 (.)
     ],
 ];

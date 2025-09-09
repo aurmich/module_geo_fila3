@@ -211,7 +211,12 @@ public function getFormSchema(): array
 
 ## Collegamenti
 - [Documentazione Squire](https://github.com/squirephp/squire)
+<<<<<<< HEAD
 - [Best Practices Filament](../../../project_docs/filament-best-practices.md)
 - [Clean Code](../../../project_docs/clean-code.md)
+=======
+- [Best Practices Filament](../../../docs/filament-best-practices.md)
+- [Clean Code](../../../docs/clean-code.md)
+>>>>>>> 5650494 (.)
 
 **Nota:** Il namespace corretto per LocationForm è `Modules\Geo\Filament\Forms\LocationForm`. Non usare mai `Modules\Geo\App\Filament\Forms\LocationForm`. 

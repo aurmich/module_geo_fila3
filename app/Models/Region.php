@@ -12,16 +12,27 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * @property int $id
  * @property string|null $name
+<<<<<<< HEAD
  * @property-read \Modules\SaluteOra\Models\Profile|null $creator
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Geo\Models\Province> $provinces
  * @property-read int|null $provinces_count
  * @property-read \Modules\SaluteOra\Models\Profile|null $updater
+=======
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Geo\Models\Province> $provinces
+ * @property-read int|null $provinces_count
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+>>>>>>> 5650494 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region query()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region whereName($value)
  * @mixin IdeHelperRegion
+<<<<<<< HEAD
+=======
+ * @method static \Modules\Geo\Database\Factories\RegionFactory factory($count = null, $state = [])
+>>>>>>> 5650494 (.)
  * @mixin \Eloquent
  */
 class Region extends BaseModel

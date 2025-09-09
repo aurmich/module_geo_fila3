@@ -16,11 +16,15 @@ use Modules\Geo\Tests\TestCase;
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 uses(TestCase::class)
     ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
 =======
 pest()->extend(TestCase::class)
 >>>>>>> 52789d7 (.)
+=======
+pest()->extend(TestCase::class)
+>>>>>>> 5650494 (.)
     ->in('Feature', 'Unit');
 
 /*

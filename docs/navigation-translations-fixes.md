@@ -74,10 +74,17 @@
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Audit Generale Traduzioni Navigation](../../project_docs/navigation-translations-audit.md)
 - [Documentazione Modulo Geo](README.md)
 - [Struttura Geo](structure.md)
 - [Regole Traduzioni Laraxot](../Xot/project_docs/translation-rules.md)
+=======
+- [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
+- [Documentazione Modulo Geo](README.md)
+- [Struttura Geo](structure.md)
+- [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
+>>>>>>> 5650494 (.)
 
 ## Note Tecniche
 

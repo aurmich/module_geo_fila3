@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5650494 (.)
 # Sushi Models - Dependency Cycle Fix
 
 ## 🚨 Problema Critico Risolto
@@ -73,6 +76,7 @@ class SafeSushiModel extends BaseModel
     public function getJsonFile(): string
     {
         return base_path(self::JSON_FILE_PATH);
+<<<<<<< HEAD
 =======
 # Sushi Models Dependency Cycle Fix
 
@@ -131,16 +135,22 @@ class Country extends Model
     {
         return Region::where('country_id', $this->id)->get();
 >>>>>>> 8946c2f (.)
+=======
+>>>>>>> 5650494 (.)
     }
 }
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5650494 (.)
 ## 🔧 Testing della Correzione
 
 ### Verifica File Path
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -180,11 +190,15 @@ class Country extends Model
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> 52789d7 (.)
+=======
+
+>>>>>>> 5650494 (.)
 # Verifica esistenza file
 ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.json
 
 # Output atteso:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -224,6 +238,9 @@ ls -la /var/www/html/base_saluteora/laravel/Modules/Geo/resources/json/comuni.js
 =======
 >>>>>>> f90a9bb (.)
 >>>>>>> 52789d7 (.)
+=======
+
+>>>>>>> 5650494 (.)
 # -rw-r--r-- 1 user group 1.8M date comuni.json
 ```
 
@@ -271,6 +288,7 @@ La trasparenza del path diretto è superiore all'astrazione del `module_path()` 
 **Risolto**: Dicembre 2024  
 **Priorità**: P0 (Critical) - Bloccava registrazioni  
 **Impatto**: Sistema completamente non funzionale  
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -660,3 +678,5 @@ class SushiModelRegistry
 *Sushi Models Dependency Cycle Fix - Resolving Circular Dependencies in Geo Module*
 >>>>>>> 8946c2f (.)
 >>>>>>> 52789d7 (.)
+=======
+>>>>>>> 5650494 (.)
