@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return array (
   'navigation' => 
   array (
@@ -64,6 +65,8 @@ return array (
   ),
 );
 =======
+=======
+>>>>>>> e4630da (.)
 declare(strict_types=1);
 
 return [
@@ -108,4 +111,7 @@ return [
         'export' => 'Esporta',
     ],
 ];
+<<<<<<< HEAD
 >>>>>>> b151190 (.)
+=======
+>>>>>>> e4630da (.)
