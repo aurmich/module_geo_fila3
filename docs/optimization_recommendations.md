@@ -54,7 +54,7 @@ Il modello `Address` è stato riveduto seguendo i principi di design ottimali e 
 1. `docs/models/address-revised.md`
 2. `docs/modelli_factory_seeder_analisi.md`
 3. `docs/sushi-to-jsons-analysis.md`
-4. Tutti i file con path `/var/www/html/saluteora/`
+4. Tutti i file con path `/var/www/html/_bases/base_techplanner_fila3_mono/`
 
 ### 2. Google Places API Optimization (IMPORTANTE - 3 ore)
 
