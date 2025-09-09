@@ -57,15 +57,7 @@
 - [geo-json-model.md](geo-json-model.md)
 - [geo-sushi-comparison.md](geo-sushi-comparison.md)
 - [module_geo.md](module_geo.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Xot/module-structure.md](../../Xot/project_docs/module-structure.md)
-=======
 - [Xot/module-structure.md](../../Xot/docs/module-structure.md)
->>>>>>> 5650494 (.)
-=======
-- [Xot/module-structure.md](../../Xot/project_docs/module-structure.md)
->>>>>>> 4219071 (.)
 
 ---
 
