@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Geo\Models\Comune;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Cache;
@@ -11,6 +12,11 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Modules\Geo\Models\Comune;
 >>>>>>> 19c8248 (.)
+=======
+use Modules\Geo\Models\Comune;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Cache;
+>>>>>>> 2b460f4 (.)
 
 uses(Tests\TestCase::class);
 
@@ -41,9 +47,13 @@ beforeEach(function (): void {
         ],
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     File::put(
         base_path('database/content/comuni.json'),
         json_encode($this->testData, JSON_PRETTY_PRINT)
@@ -54,9 +64,13 @@ afterEach(function (): void {
     // Pulisci la cache
     Cache::forget('sushi_Comune_data');
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     // Rimuovi il file di test
     File::delete(base_path('database/content/comuni.json'));
 });
@@ -64,9 +78,13 @@ afterEach(function (): void {
 test('it can load comuni from json', function (): void {
     $comuni = Comune::all();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(2);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[1]->comune)->toBe('Sesto San Giovanni');
@@ -75,9 +93,13 @@ test('it can load comuni from json', function (): void {
 test('it can filter comuni by region', function (): void {
     $comuni = Comune::byRegion('Lombardia')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(2);
     expect($comuni[0]->regione)->toBe('Lombardia');
     expect($comuni[1]->regione)->toBe('Lombardia');
@@ -86,9 +108,13 @@ test('it can filter comuni by region', function (): void {
 test('it can filter comuni by province', function (): void {
     $comuni = Comune::byProvince('Milano')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(2);
     expect($comuni[0]->provincia)->toBe('Milano');
     expect($comuni[1]->provincia)->toBe('Milano');
@@ -97,9 +123,13 @@ test('it can filter comuni by province', function (): void {
 test('it can filter comuni by cap', function (): void {
     $comuni = Comune::byCap('20100')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->cap)->toBe('20100');
 });
@@ -107,9 +137,13 @@ test('it can filter comuni by cap', function (): void {
 test('it can filter comuni by name', function (): void {
     $comuni = Comune::byName('Milano')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
 });
@@ -117,9 +151,13 @@ test('it can filter comuni by name', function (): void {
 test('it can filter comuni by exact name', function (): void {
     $comuni = Comune::byExactName('Milano')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
 });
@@ -127,9 +165,13 @@ test('it can filter comuni by exact name', function (): void {
 test('it can filter comuni by name and province', function (): void {
     $comuni = Comune::byNameAndProvince('Milano', 'Milano')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[0]->provincia)->toBe('Milano');
@@ -138,9 +180,13 @@ test('it can filter comuni by name and province', function (): void {
 test('it can filter comuni by name and region', function (): void {
     $comuni = Comune::byNameAndRegion('Milano', 'Lombardia')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[0]->regione)->toBe('Lombardia');
@@ -149,9 +195,13 @@ test('it can filter comuni by name and region', function (): void {
 test('it can filter comuni by name province and region', function (): void {
     $comuni = Comune::byNameProvinceAndRegion('Milano', 'Milano', 'Lombardia')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[0]->provincia)->toBe('Milano');
@@ -161,9 +211,13 @@ test('it can filter comuni by name province and region', function (): void {
 test('it can filter comuni by name and cap', function (): void {
     $comuni = Comune::byNameAndCap('Milano', '20100')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[0]->cap)->toBe('20100');
@@ -172,9 +226,13 @@ test('it can filter comuni by name and cap', function (): void {
 test('it can filter comuni by name province and cap', function (): void {
     $comuni = Comune::byNameProvinceAndCap('Milano', 'Milano', '20100')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[0]->provincia)->toBe('Milano');
@@ -184,9 +242,13 @@ test('it can filter comuni by name province and cap', function (): void {
 test('it can filter comuni by name region and cap', function (): void {
     $comuni = Comune::byNameRegionAndCap('Milano', 'Lombardia', '20100')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[0]->regione)->toBe('Lombardia');
@@ -196,9 +258,13 @@ test('it can filter comuni by name region and cap', function (): void {
 test('it can filter comuni by name province region and cap', function (): void {
     $comuni = Comune::byNameProvinceRegionAndCap('Milano', 'Milano', 'Lombardia', '20100')->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comuni)->toHaveCount(1);
     expect($comuni[0]->comune)->toBe('Milano');
     expect($comuni[0]->provincia)->toBe('Milano');
@@ -216,9 +282,13 @@ test('it can create a new comune', function (): void {
         'lng' => 9.1900,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comune->id)->not->toBeNull();
     expect($comune->comune)->toBe('Bresso');
     expect($comune->provincia)->toBe('Milano');
@@ -235,9 +305,13 @@ test('it can update an existing comune', function (): void {
         'cap' => '20121',
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 19c8248 (.)
+=======
+    
+>>>>>>> 2b460f4 (.)
     expect($comune->comune)->toBe('Milano Centro');
     expect($comune->cap)->toBe('20121');
 });
@@ -246,6 +320,7 @@ test('it can delete an existing comune', function (): void {
     $comune = Comune::first();
     $id = $comune->id;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     $comune->delete();
     
@@ -253,8 +328,15 @@ test('it can delete an existing comune', function (): void {
 }); 
 =======
 
+=======
+    
+>>>>>>> 2b460f4 (.)
     $comune->delete();
-
+    
     expect(Comune::find($id))->toBeNull();
+<<<<<<< HEAD
 });
 >>>>>>> 19c8248 (.)
+=======
+}); 
+>>>>>>> 2b460f4 (.)

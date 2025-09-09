@@ -93,9 +93,13 @@ $addressSchema['locality'] = Forms\Components\TextInput::make('locality')
 
 - [address-resource.md](address-resource.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [pattern-filament-pages.md](../docs/pattern-filament-pages.md)
 =======
 - [pattern-filament-pages.md](../project_docs/pattern-filament-pages.md)
 >>>>>>> 19c8248 (.)
+=======
+- [pattern-filament-pages.md](../docs/pattern-filament-pages.md)
+>>>>>>> 2b460f4 (.)
 - [AddressResource](../app/Filament/Resources/AddressResource.php)
 - [StudioResource](../../SaluteOra/app/Filament/Resources/StudioResource.php)

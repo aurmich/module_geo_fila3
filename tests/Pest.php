@@ -16,11 +16,15 @@ use Modules\Geo\Tests\TestCase;
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pest()->extend(TestCase::class)
 =======
 uses(TestCase::class)
     ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
 >>>>>>> 19c8248 (.)
+=======
+pest()->extend(TestCase::class)
+>>>>>>> 2b460f4 (.)
     ->in('Feature', 'Unit');
 
 /*
@@ -71,7 +75,11 @@ function createCity(array $attributes = []): \Modules\Geo\Models\City
 {
     return \Modules\Geo\Models\City::factory()->create($attributes);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 19c8248 (.)
+=======
+}
+>>>>>>> 2b460f4 (.)

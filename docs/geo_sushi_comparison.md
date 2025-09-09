@@ -73,6 +73,7 @@
 
 ## 5. Collegamenti e approfondimenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Geo/docs/geo-json-model.md](geo-json-model.md)
 - [Sushi - usesushi.dev](https://usesushi.dev/)
 - [Squire PHP](https://github.com/squirephp/squire)
@@ -85,6 +86,13 @@
 - [Xot/project_docs/module-structure.md](../../Xot/project_docs/module-structure.md)
 - [SaluteOra/project_docs/geo-integration.md](../../SaluteOra/project_docs/geo-integration.md)
 >>>>>>> 19c8248 (.)
+=======
+- [Geo/docs/geo-json-model.md](geo-json-model.md)
+- [Sushi - usesushi.dev](https://usesushi.dev/)
+- [Squire PHP](https://github.com/squirephp/squire)
+- [Xot/docs/module-structure.md](../../Xot/docs/module-structure.md)
+- [SaluteOra/docs/geo-integration.md](../../SaluteOra/docs/geo-integration.md)
+>>>>>>> 2b460f4 (.)
 
 ---
 

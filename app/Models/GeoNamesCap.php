@@ -15,6 +15,7 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|GeoNamesCap newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|GeoNamesCap query()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 =======
@@ -31,6 +32,10 @@ use Modules\Xot\Traits\Updater;
  * @method static int count(string $columns = '*')
  *
 >>>>>>> 19c8248 (.)
+=======
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+>>>>>>> 2b460f4 (.)
  * @mixin \Eloquent
  */
 class GeoNamesCap extends Model

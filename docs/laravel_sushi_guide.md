@@ -208,8 +208,12 @@ Rappresenta un equilibrio ottimale tra la semplicità degli array PHP e la poten
 
 - [Repository ufficiale di Laravel Sushi](https://github.com/calebporzio/sushi)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione di Laravel Eloquent](https://laravel.com/docs/eloquent)
 =======
 - [Documentazione di Laravel Eloquent](https://laravel.com/project_docs/eloquent)
 >>>>>>> 19c8248 (.)
+=======
+- [Documentazione di Laravel Eloquent](https://laravel.com/docs/eloquent)
+>>>>>>> 2b460f4 (.)
 - [Estensione PDO SQLite](https://www.php.net/manual/en/ref.pdo-sqlite.php)
