@@ -259,21 +259,9 @@ Schema::table('geo_caps', function (Blueprint $table) {
 ## Related Documentation
 
 - [Location Select Component](./location-select.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Filament Forms Documentation](https://filamentphp.com/docs/3.x/forms/fields/select)
 - [Laravel Eloquent Relationships](https://laravel.com/docs/10.x/eloquent-relationships)
 - [Laravel Caching](https://laravel.com/docs/10.x/cache)
-=======
-- [Filament Forms Documentation](https://filamentphp.com/project_docs/3.x/forms/fields/select)
-- [Laravel Eloquent Relationships](https://laravel.com/project_docs/10.x/eloquent-relationships)
-- [Laravel Caching](https://laravel.com/project_docs/10.x/cache)
->>>>>>> 19c8248 (.)
-=======
-- [Filament Forms Documentation](https://filamentphp.com/docs/3.x/forms/fields/select)
-- [Laravel Eloquent Relationships](https://laravel.com/docs/10.x/eloquent-relationships)
-- [Laravel Caching](https://laravel.com/docs/10.x/cache)
->>>>>>> 2b460f4 (.)
 
 ## License
 

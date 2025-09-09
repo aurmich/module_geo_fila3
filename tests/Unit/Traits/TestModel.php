@@ -2,14 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Geo\Models\Address;
-=======
->>>>>>> 19c8248 (.)
-=======
-use Modules\Geo\Models\Address;
->>>>>>> 2b460f4 (.)
 use Tests\TestCase;
 
 uses(TestCase::class);
@@ -22,48 +14,20 @@ class TestModel extends \Illuminate\Database\Eloquent\Model
     use \Modules\Geo\Models\Traits\HasAddress;
 
     protected $fillable = ['name'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public $timestamps = false;
-    
-    protected $table = 'test_models';
-    
-=======
 
-=======
-    
->>>>>>> 2b460f4 (.)
     public $timestamps = false;
-    
-    protected $table = 'test_models';
-<<<<<<< HEAD
 
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+    protected $table = 'test_models';
+
     /**
      * Bootstrap this model.
      */
     public static function boot()
     {
         parent::boot();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        static::creating(function () {
-            if (!app()->environment('testing')) {
-=======
 
         static::creating(function () {
             if (! app()->environment('testing')) {
->>>>>>> 19c8248 (.)
-=======
-        
-        static::creating(function () {
-            if (!app()->environment('testing')) {
->>>>>>> 2b460f4 (.)
                 throw new \Exception('TestModel should only be used in tests.');
             }
         });
@@ -86,14 +50,7 @@ it('can have multiple addresses', function () {
         'postal_code' => '20100',
         'is_primary' => true,
     ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+
     $this->model->addresses()->create([
         'route' => 'Via Garibaldi',
         'street_number' => '456',
@@ -115,14 +72,7 @@ it('can get primary address', function () {
         'postal_code' => '20100',
         'is_primary' => true,
     ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+
     // Aggiungi un indirizzo secondario
     $this->model->addresses()->create([
         'route' => 'Via Garibaldi',
@@ -134,14 +84,7 @@ it('can get primary address', function () {
 
     // Verifica che il metodo primaryAddress restituisca l'indirizzo principale
     $primaryAddress = $this->model->primaryAddress();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+
     expect($primaryAddress)->not->toBeNull();
     expect($primaryAddress->route)->toBe('Via Roma');
 });
@@ -155,14 +98,7 @@ it('can set primary address', function () {
         'postal_code' => '20100',
         'is_primary' => true,
     ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+
     $address2 = $this->model->addresses()->create([
         'route' => 'Via Garibaldi',
         'street_number' => '456',
@@ -180,14 +116,7 @@ it('can set primary address', function () {
 
     // Verifica che il primo indirizzo non sia più principale
     expect($address1->is_primary)->toBeFalse();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+
     // Verifica che il secondo indirizzo sia ora principale
     expect($address2->is_primary)->toBeTrue();
 });
@@ -204,14 +133,7 @@ it('can get formatted address', function () {
 
     // Verifica che il metodo getFullAddress restituisca l'indirizzo formattato
     $fullAddress = $this->model->getFullAddress();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+
     expect($fullAddress)->not->toBeNull();
     expect($fullAddress)->toContain('Via Roma');
     expect($fullAddress)->toContain('Milano');
@@ -226,14 +148,7 @@ it('can filter models by city', function () {
         'locality' => 'Milano',
         'postal_code' => '20100',
     ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 19c8248 (.)
-=======
-    
->>>>>>> 2b460f4 (.)
+
     $model2 = TestModel::create(['name' => 'Model 2']);
     $model2->addresses()->create([
         'route' => 'Via Garibaldi',
@@ -249,21 +164,7 @@ it('can filter models by city', function () {
     // Verifica che il filtro funzioni correttamente
     expect($modelsInMilano)->toHaveCount(1);
     expect($modelsInMilano->first()->name)->toBe('Model 1');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    expect($modelsInRoma)->toHaveCount(1);
-    expect($modelsInRoma->first()->name)->toBe('Model 2');
-}); 
-=======
 
     expect($modelsInRoma)->toHaveCount(1);
     expect($modelsInRoma->first()->name)->toBe('Model 2');
 });
->>>>>>> 19c8248 (.)
-=======
-    
-    expect($modelsInRoma)->toHaveCount(1);
-    expect($modelsInRoma->first()->name)->toBe('Model 2');
-}); 
->>>>>>> 2b460f4 (.)

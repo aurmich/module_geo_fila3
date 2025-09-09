@@ -2,40 +2,18 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 namespace Modules\Geo\Tests\Unit\Models;
 
-use Modules\Geo\Models\BaseModel;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Modules\Geo\Models\BaseModel;
 use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class);
 
 beforeEach(function () {
-    $this->baseModel = new class extends BaseModel {
-=======
-use Illuminate\Database\Eloquent\Model;
-=======
-namespace Modules\Geo\Tests\Unit\Models;
-
->>>>>>> 2b460f4 (.)
-use Modules\Geo\Models\BaseModel;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Database\Eloquent\Model;
-use Tests\TestCase;
-
-uses(TestCase::class, RefreshDatabase::class);
-
-beforeEach(function () {
-<<<<<<< HEAD
-    $this->baseModel = new class() extends BaseModel
+    $this->baseModel = new class extends BaseModel
     {
->>>>>>> 19c8248 (.)
-=======
-    $this->baseModel = new class extends BaseModel {
->>>>>>> 2b460f4 (.)
         protected $table = 'test_geo_table';
     };
 });

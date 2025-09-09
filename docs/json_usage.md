@@ -210,20 +210,8 @@ class GeoDataService
    - Utilizzare un database dedicato
 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Squire](../../Geo/docs/squire-integration.md)
 - [Best Practices Filament](../../../docs/filament-best-practices.md)
 - [Clean Code](../../../docs/clean-code.md)
-=======
-- [Documentazione Squire](../../Geo/project_docs/squire-integration.md)
-- [Best Practices Filament](../../../project_docs/filament-best-practices.md)
-- [Clean Code](../../../project_docs/clean-code.md)
->>>>>>> 19c8248 (.)
-=======
-- [Documentazione Squire](../../Geo/docs/squire-integration.md)
-- [Best Practices Filament](../../../docs/filament-best-practices.md)
-- [Clean Code](../../../docs/clean-code.md)
->>>>>>> 2b460f4 (.)
 
 **Nota:** Il namespace corretto per LocationForm è `Modules\Geo\Filament\Forms\LocationForm`. Non usare mai `Modules\Geo\App\Filament\Forms\LocationForm`. 

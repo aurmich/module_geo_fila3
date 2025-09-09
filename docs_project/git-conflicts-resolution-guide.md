@@ -16,15 +16,12 @@ Questo documento descrive la risoluzione sistematica dei conflitti Git identific
 #### Risoluzione Applicata
 ```php
 // PRIMA (conflitto)
-<<<<<<< HEAD
 use Modules\Geo\Enums\AddressTypeEnum;
 describe('Address Integration (pure unit)', function () {
-=======
 /**
  * In-memory Address tests (no factories / DB / container).
  * Keep business rules verifiable without touching app code.
  */
->>>>>>> origin/staging
 
 // DOPO (risolto)
 use Modules\Geo\Enums\AddressTypeEnum;
@@ -48,14 +45,11 @@ use Modules\Geo\Enums\AddressTypeEnum;
 #### Risoluzione Applicata
 ```php
 // PRIMA (conflitto)
-<<<<<<< HEAD
 // Pure unit: avoid Eloquent models and factories
 it('validates basic appointment creation', function (): void {
-=======
 namespace Modules\SaluteMo\Tests\Feature;
 use Modules\SaluteMo\Tests\TestCase;
 uses(TestCase::class);
->>>>>>> origin/staging
 
 // DOPO (risolto)
 namespace Modules\SaluteMo\Tests\Feature;
@@ -79,16 +73,13 @@ uses(TestCase::class);
 #### Risoluzione Applicata
 ```php
 // PRIMA (conflitto)
-<<<<<<< HEAD
 // Pure unit: avoid Eloquent models and factories
 describe('SaluteMo Dashboard Business Logic', function () {
     beforeEach(function () {
         $this->admin = (object) ['id' => 1, 'type' => 'admin'];
-=======
 namespace Modules\SaluteMo\Tests\Feature;
 use Modules\SaluteMo\Tests\TestCase;
 use Modules\SaluteOra\Enums\UserTypeEnum;
->>>>>>> origin/staging
 
 // DOPO (risolto)
 namespace Modules\SaluteMo\Tests\Feature;
@@ -112,11 +103,9 @@ uses(TestCase::class);
 #### Risoluzione Applicata
 ```php
 // PRIMA (conflitto)
-<<<<<<< HEAD
 if (! array_key_exists('email', $attributes)) {
     $attributes['email'] = 'user+' . uniqid('', true) . '@example.com';
 }
-=======
 // Ensure resolver/dispatcher are set even in isolated test runs
 try {
     \Illuminate\Database\Eloquent\Model::setConnectionResolver(app('db'));
@@ -124,7 +113,6 @@ try {
 } catch (\Throwable $e) {
     // ignore, bootstrap handles this
 }
->>>>>>> origin/staging
 
 // DOPO (risolto)
 // Ensure resolver/dispatcher are set even in isolated test runs

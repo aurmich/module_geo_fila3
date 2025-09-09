@@ -245,15 +245,7 @@ cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 
 ## Collegamenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Root PHPStan Error Analysis Guide](../../docs/phpstan-error-analysis-guide.md)
-=======
-- [Root PHPStan Error Analysis Guide](../../project_docs/phpstan-error-analysis-guide.md)
->>>>>>> 19c8248 (.)
-=======
-- [Root PHPStan Error Analysis Guide](../../docs/phpstan-error-analysis-guide.md)
->>>>>>> 2b460f4 (.)
 - [Geo Module Structure](./structure.md)
 - [Geo Module Architecture](./architecture.md)
 - [Google Maps Service Documentation](./services/)
