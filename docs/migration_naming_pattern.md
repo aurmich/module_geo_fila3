@@ -80,9 +80,14 @@ $this->tableUpdate(
 
 - [XotBaseMigration](../../../Xot/database/migrations/XotBaseMigration.php)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Laravel sulle Migrazioni](https://laravel.com/project_docs/migrations)
 - [Xot Module Documentation Standards](../../../Xot/project_docs/documentation-standards.md)
 =======
 - [Documentazione Laravel sulle Migrazioni](https://laravel.com/docs/migrations)
 - [Xot Module Documentation Standards](../../../Xot/docs/documentation-standards.md)
 >>>>>>> 5650494 (.)
+=======
+- [Documentazione Laravel sulle Migrazioni](https://laravel.com/project_docs/migrations)
+- [Xot Module Documentation Standards](../../../Xot/project_docs/documentation-standards.md)
+>>>>>>> 4219071 (.)

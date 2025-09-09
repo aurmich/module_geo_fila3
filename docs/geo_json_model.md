@@ -136,10 +136,14 @@ Select::make('cap')
 - Per performance, sfruttare cache Laravel.
 - Se serve compatibilità Eloquent, usare macro/traits per Collection.
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Collegare questa documentazione a Xot/project_docs/module-structure.md e a SaluteOra/project_docs/geo-integration.md.
 =======
 - Collegare questa documentazione a Xot/docs/module-structure.md e a SaluteOra/docs/geo-integration.md.
 >>>>>>> 5650494 (.)
+=======
+- Collegare questa documentazione a Xot/project_docs/module-structure.md e a SaluteOra/project_docs/geo-integration.md.
+>>>>>>> 4219071 (.)
 
 ### 5. Collegamenti utili
 
@@ -147,10 +151,14 @@ Select::make('cap')
 - Geo/module_geo.md
 - Xot/module-structure.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 - SaluteOra/project_docs/geo-integration.md
 =======
 - SaluteOra/docs/geo-integration.md
 >>>>>>> 5650494 (.)
+=======
+- SaluteOra/project_docs/geo-integration.md
+>>>>>>> 4219071 (.)
 
 ## Confronto: GeoJsonModel vs Laravel Sushi
 

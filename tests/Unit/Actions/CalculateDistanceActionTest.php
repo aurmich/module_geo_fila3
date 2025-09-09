@@ -61,12 +61,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -127,12 +130,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -163,12 +169,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -199,12 +208,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -235,12 +247,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -271,12 +286,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -312,12 +330,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -363,12 +384,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -514,12 +538,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,
@@ -572,12 +599,15 @@ class CalculateDistanceActionTest extends TestCase
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $destination = new LocationData(
             latitude: 41.9028,
             longitude: 12.4964,

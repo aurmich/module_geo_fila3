@@ -132,10 +132,14 @@ php artisan lang:check
 - [Locality Model](models/locality.md)
 - [Filament Integration](filament-integration.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Translation Guidelines](../../../project_docs/translation-standards.md)
 =======
 - [Translation Guidelines](../../../docs/translation-standards.md)
 >>>>>>> 5650494 (.)
+=======
+- [Translation Guidelines](../../../project_docs/translation-standards.md)
+>>>>>>> 4219071 (.)
 
 ### Note per Sviluppatori
 1. **Sempre** usare `declare(strict_types=1);` nei file di traduzione

@@ -54,12 +54,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLongitude = 9.1900;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -116,12 +119,15 @@ class GetCoordinatesActionTest extends TestCase
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         Config::set('services.google.maps.key', 'test-api-key');
         Http::fake([
             'maps.googleapis.com/*' => Http::response([], 500),
@@ -147,12 +153,15 @@ class GetCoordinatesActionTest extends TestCase
         $address = 'Invalid Address That Does Not Exist';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'ZERO_RESULTS',
             'results' => [],
@@ -177,12 +186,15 @@ class GetCoordinatesActionTest extends TestCase
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'OVER_QUERY_LIMIT',
             'results' => [],
@@ -207,12 +219,15 @@ class GetCoordinatesActionTest extends TestCase
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'REQUEST_DENIED',
             'results' => [],
@@ -237,12 +252,15 @@ class GetCoordinatesActionTest extends TestCase
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [],
@@ -269,12 +287,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLongitude = 9.1900;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -320,12 +341,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLongitude = 9.1900;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -362,12 +386,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLongitude = -74.0060;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -453,12 +480,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLongitude = 9.1900001;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -494,12 +524,15 @@ class GetCoordinatesActionTest extends TestCase
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         Config::set('services.google.maps.key', 'test-api-key');
         Http::fake([
             'maps.googleapis.com/*' => Http::response([], 408), // Request Timeout
@@ -525,12 +558,15 @@ class GetCoordinatesActionTest extends TestCase
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 52789d7 (.)
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
         Config::set('services.google.maps.key', 'test-api-key');
         Http::fake([
             'maps.googleapis.com/*' => Http::response('Invalid JSON', 200),

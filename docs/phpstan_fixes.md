@@ -67,8 +67,12 @@ All changes have been verified with PHPStan level 9. To run the analysis:
 
 - [PHPStan Documentation](https://phpstan.org/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Data Documentation](https://spatie.be/project_docs/laravel-data/v3/introduction)
 =======
 - [Laravel Data Documentation](https://spatie.be/docs/laravel-data/v3/introduction)
 >>>>>>> 5650494 (.)
+=======
+- [Laravel Data Documentation](https://spatie.be/project_docs/laravel-data/v3/introduction)
+>>>>>>> 4219071 (.)
 - [Geo Module Architecture](architecture.md)

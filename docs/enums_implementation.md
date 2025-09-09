@@ -130,8 +130,12 @@ $request->validate([
 
 - [Documentazione PHP sugli Enum](https://www.php.net/manual/en/language.enumerations.php)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Filament Enums Docs](https://filamentphp.com/project_docs/3.x/support/enums)
 =======
 - [Filament Enums Docs](https://filamentphp.com/docs/3.x/support/enums)
 >>>>>>> 5650494 (.)
+=======
+- [Filament Enums Docs](https://filamentphp.com/project_docs/3.x/support/enums)
+>>>>>>> 4219071 (.)
 - [Best Practices Enum](enums-best-practices.md) 

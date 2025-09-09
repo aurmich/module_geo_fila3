@@ -51,9 +51,12 @@ it('can have multiple addresses', function () {
         'is_primary' => true,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
     $this->model->addresses()->create([
         'route' => 'Via Garibaldi',
         'street_number' => '456',
@@ -76,9 +79,12 @@ it('can get primary address', function () {
         'is_primary' => true,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
     // Aggiungi un indirizzo secondario
     $this->model->addresses()->create([
         'route' => 'Via Garibaldi',
@@ -91,9 +97,12 @@ it('can get primary address', function () {
     // Verifica che il metodo primaryAddress restituisca l'indirizzo principale
     $primaryAddress = $this->model->primaryAddress();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
     expect($primaryAddress)->not->toBeNull();
     expect($primaryAddress->route)->toBe('Via Roma');
 });
@@ -108,9 +117,12 @@ it('can set primary address', function () {
         'is_primary' => true,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
     $address2 = $this->model->addresses()->create([
         'route' => 'Via Garibaldi',
         'street_number' => '456',
@@ -129,9 +141,12 @@ it('can set primary address', function () {
     // Verifica che il primo indirizzo non sia più principale
     expect($address1->is_primary)->toBeFalse();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
     // Verifica che il secondo indirizzo sia ora principale
     expect($address2->is_primary)->toBeTrue();
 });
@@ -149,9 +164,12 @@ it('can get formatted address', function () {
     // Verifica che il metodo getFullAddress restituisca l'indirizzo formattato
     $fullAddress = $this->model->getFullAddress();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
     expect($fullAddress)->not->toBeNull();
     expect($fullAddress)->toContain('Via Roma');
     expect($fullAddress)->toContain('Milano');
@@ -167,9 +185,12 @@ it('can filter models by city', function () {
         'postal_code' => '20100',
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5650494 (.)
+=======
+>>>>>>> 4219071 (.)
     $model2 = TestModel::create(['name' => 'Model 2']);
     $model2->addresses()->create([
         'route' => 'Via Garibaldi',

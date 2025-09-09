@@ -50,10 +50,14 @@ Per tutti i dati statici (regioni, province, comuni, cap) di dimensioni ridotte,
 - Performance ottimale tramite cache Laravel.
 - Per dettagli implementativi e best practice vedi: [geo-json-model.md](geo-json-model.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Regola architetturale documentata anche in: [Xot/project_docs/module-structure.md](../../Xot/project_docs/module-structure.md) e [SaluteOra/project_docs/geo-integration.md](../../SaluteOra/project_docs/geo-integration.md)
 =======
 - Regola architetturale documentata anche in: [Xot/docs/module-structure.md](../../Xot/docs/module-structure.md) e [SaluteOra/docs/geo-integration.md](../../SaluteOra/docs/geo-integration.md)
 >>>>>>> 5650494 (.)
+=======
+- Regola architetturale documentata anche in: [Xot/project_docs/module-structure.md](../../Xot/project_docs/module-structure.md) e [SaluteOra/project_docs/geo-integration.md](../../SaluteOra/project_docs/geo-integration.md)
+>>>>>>> 4219071 (.)
 
 ---
 
