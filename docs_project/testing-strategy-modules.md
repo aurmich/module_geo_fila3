@@ -21,7 +21,7 @@ Seguendo il pattern implementato nei test di autenticazione esistenti:
 
 #### Moduli Business (Dominio)
 - **SaluteOra**: Gestione pazienti, appuntamenti, stati
-- **SaluteMo**: Gestione pazienti specifici per Modena
+- **example**: Gestione pazienti specifici per Modena
 
 #### Moduli Utility (Supporto)
 - **Cms**: Gestione contenuti
@@ -120,7 +120,7 @@ tests/Feature/Modules/{ModuleName}/
   - Doctor availability management
   - Patient dashboard navigation
 
-#### Modulo SaluteMo
+#### Modulo example
 **Focus**: Estensioni specifiche per Modena
 - **Unit Tests**: Modelli specifici, business logic locale
 - **Feature Tests**: Funzionalità specifiche di Modena
@@ -333,7 +333,7 @@ class DatabaseHelper
 
 ### Fase 2: Moduli Business (Settimana 2)
 1. SaluteOra - Gestione completa pazienti/appuntamenti
-2. SaluteMo - Estensioni specifiche Modena
+2. example - Estensioni specifiche Modena
 
 ### Fase 3: Moduli Utility (Settimana 3)
 1. Cms, Media, Geo - Gestione contenuti e localizzazione

@@ -1,7 +1,7 @@
 # Regola Critica: Mai Hardcodare Nomi di Progetto nei Moduli Riutilizzabili
 
 ## Principio Fondamentale
-**MAI** utilizzare stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "salutemo") nei moduli che devono essere riutilizzabili in progetti diversi.
+**MAI** utilizzare stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "example") nei moduli che devono essere riutilizzabili in progetti diversi.
 
 ## Motivazione Filosofica
 - **Modularità**: Ogni modulo deve essere indipendente e riutilizzabile
@@ -69,7 +69,7 @@ __("{$namespace}::common.days.description.monday")
 
 ### Moduli Specifici del Progetto
 - **SaluteOra**: Solo per progetto SaluteOra
-- **SaluteMo**: Solo per progetto SaluteMo
+- **example**: Solo per progetto example
 - **Patient**: Solo per progetti sanitari specifici
 
 ## Pattern di Configurazione
@@ -146,10 +146,10 @@ Prima di ogni commit, verificare:
 Eseguire regolarmente:
 ```bash
 # Cerca stringhe hardcoded nei moduli generici
-grep -r "saluteora\|salutemo" laravel/Modules/Notify/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/User/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/UI/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Notify/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/User/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/UI/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Xot/ --include="*.php"
 
 # Cerca dipendenze hardcoded
 grep -r "Modules\\SaluteOra" laravel/Modules/UI/ --include="*.php"

@@ -9,7 +9,7 @@ Intervento di refactoring per rimuovere tutti i riferimenti specifici al progett
 La cartella `bashscripts/database/seeding` conteneva file specifici del progetto SaluteOra, violando il principio di riusabilità della cartella bashscripts che deve essere condivisa tra mille progetti diversi.
 
 ### File Specifici Identificati
-- `salutemo-database-seeding.php` - Script specifico SaluteMo
+- `example-database-seeding.php` - Script specifico example
 - `saluteora-1000-records.php` - Script seeding 1000 record SaluteOra
 - `saluteora-20-studios-66010.php` - Script 20 studi CAP 66010
 - `saluteora-mass-seeding.php` - Script seeding massivo SaluteOra
@@ -28,9 +28,9 @@ La cartella `bashscripts/database/seeding` conteneva file specifici del progetto
 **Da**: `bashscripts/database/seeding/saluteora-*.php`  
 **A**: `laravel/Modules/SaluteOra/scripts/seeding/`
 
-#### Script SaluteMo
-**Da**: `bashscripts/database/seeding/salutemo-*.php`  
-**A**: `laravel/Modules/SaluteMo/scripts/seeding/`
+#### Script example
+**Da**: `bashscripts/database/seeding/example-*.php`  
+**A**: `laravel/Modules/example/scripts/seeding/`
 
 #### Script Generatori
 **Da**: `bashscripts/saluteora/generate_saluteora_factories_and_seeders.sh`  
@@ -67,7 +67,7 @@ SEEDING_MODULE=User php generic-module-seeding.php
 
 #### README per Nuove Cartelle
 - `Modules/SaluteOra/scripts/seeding/README.md` - Documentazione script seeding
-- `Modules/SaluteMo/scripts/seeding/README.md` - Documentazione SaluteMo
+- `Modules/example/scripts/seeding/README.md` - Documentazione example
 - `Modules/SaluteOra/scripts/generators/README.md` - Documentazione generatori
 
 ### 4. Pulizia Strutturale
@@ -78,7 +78,7 @@ SEEDING_MODULE=User php generic-module-seeding.php
 #### Cartelle Create
 - `laravel/Modules/SaluteOra/scripts/seeding/`
 - `laravel/Modules/SaluteOra/scripts/generators/`
-- `laravel/Modules/SaluteMo/scripts/seeding/`
+- `laravel/Modules/example/scripts/seeding/`
 
 ## Regole Implementate
 
@@ -89,7 +89,7 @@ SEEDING_MODULE=User php generic-module-seeding.php
 4. **Funzioni helper** senza riferimenti specifici
 
 ### ❌ Cosa NON deve essere in bashscripts/database/seeding/
-1. **Nomi specifici progetto** (es. `saluteora-*`, `salutemo-*`)
+1. **Nomi specifici progetto** (es. `saluteora-*`, `example-*`)
 2. **Riferimenti hardcoded** a moduli specifici
 3. **Logica business specifica** del dominio sanitario
 4. **Dati specifici** del progetto (CAP, nomi studi, etc.)
@@ -172,7 +172,7 @@ function genericFunction($module, $count) {
 ### Verifica Pulizia bashscripts/
 ```bash
 # Non dovrebbe restituire risultati
-find bashscripts/ -name "*saluteora*" -o -name "*salutemo*"
+find bashscripts/ -name "*saluteora*" -o -name "*example*"
 ```
 
 ### Verifica Nuovi Percorsi
@@ -180,7 +180,7 @@ find bashscripts/ -name "*saluteora*" -o -name "*salutemo*"
 # Dovrebbe mostrare i file spostati
 ls -la laravel/Modules/SaluteOra/scripts/seeding/
 ls -la laravel/Modules/SaluteOra/scripts/generators/
-ls -la laravel/Modules/SaluteMo/scripts/seeding/
+ls -la laravel/Modules/example/scripts/seeding/
 ```
 
 ### Test Script Generico

@@ -2,7 +2,7 @@
 
 ## Problema Identificato
 
-Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "salutemo") in un modulo che deve essere riutilizzabile in progetti diversi.
+Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "example") in un modulo che deve essere riutilizzabile in progetti diversi.
 
 ## Impatto del Problema
 
@@ -76,7 +76,7 @@ $notificationData = [
 
 ### Moduli Specifici del Progetto
 - **SaluteOra**: Solo per progetto SaluteOra
-- **SaluteMo**: Solo per progetto SaluteMo
+- **example**: Solo per progetto example
 - **Patient**: Solo per progetti sanitari specifici
 
 ## Checklist Pre-Commit
@@ -95,10 +95,10 @@ Prima di ogni commit, verificare:
 Eseguire regolarmente:
 ```bash
 # Cerca stringhe hardcoded nei moduli generici
-grep -r "saluteora\|salutemo" laravel/Modules/Notify/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/User/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/UI/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Notify/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/User/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/UI/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Xot/ --include="*.php"
 ```
 
 ## Configurazione per Progetti

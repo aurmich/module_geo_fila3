@@ -24,7 +24,7 @@ Analisi sistematica di tutti i 14 moduli del progetto SaluteOra seguendo i princ
 
 ### Moduli Specifici (Livello 3)
 - **SaluteOra**: Modulo principale sanitario
-- **SaluteMo**: Funzionalità mobile
+- **example**: Funzionalità mobile
 
 ## 🎯 Pattern Comuni Identificati
 
@@ -239,7 +239,7 @@ class ModuleMetricsService
 
 ### Moduli Specifici
 - [SaluteOra - Main Healthcare](../laravel/Modules/SaluteOra/docs/ottimizzazioni-e-miglioramenti.md)
-- [SaluteMo - Mobile Features](../laravel/Modules/SaluteMo/docs/ottimizzazioni-e-miglioramenti.md)
+- [example - Mobile Features](../laravel/Modules/example/docs/ottimizzazioni-e-miglioramenti.md)
 
 ## 🎯 Conclusioni
 

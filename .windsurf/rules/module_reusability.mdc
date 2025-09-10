@@ -10,7 +10,7 @@
 
 ## Regola
 I moduli riutilizzabili (Notify, User, Xot, UI, Cms, Blog, Geo) NON devono MAI contenere:
-- Nomi di progetti hardcoded (saluteora, salutemo, dentalpro)
+- Nomi di progetti hardcoded (saluteora, example, dentalpro)
 - Import diretti da moduli project-specific
 - Configurazioni database hardcoded
 - Email/domini hardcoded specifici del progetto
@@ -33,7 +33,7 @@ $userClass = XotData::make()->getUserClass();
 - config('database.default') per configurazioni database
 
 ## Anti-pattern
-- Hardcoding di "saluteora", "salutemo", "dentalpro"
+- Hardcoding di "saluteora", "example", "dentalpro"
 - Import diretti tipo use Modules\SaluteOra\Models\User
 - Email hardcoded tipo admin@saluteora.com
 - Database hardcoded tipo saluteora_test

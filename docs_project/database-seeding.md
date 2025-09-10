@@ -1,8 +1,8 @@
-# Database Seeding - Moduli SaluteMo e SaluteOra
+# Database Seeding - Moduli example e SaluteOra
 
 ## Panoramica
 
-Questa documentazione descrive il processo di popolamento del database per i moduli SaluteMo e SaluteOra, utilizzando i seeder e factory esistenti tramite script organizzati nella cartella `bashscripts`.
+Questa documentazione descrive il processo di popolamento del database per i moduli example e SaluteOra, utilizzando i seeder e factory esistenti tramite script organizzati nella cartella `bashscripts`.
 
 ## Struttura Script
 
@@ -14,7 +14,7 @@ Gli script di seeding sono organizzati nella seguente struttura:
         ├── saluteora-1000-records.php        # Popolamento esatto 1000 record per modello
         ├── saluteora-20-studios-66010.php    # 🎯 NUOVO: 20 studi con postal_code 66010 + dottori
         ├── saluteora-mass-seeding.php         # Popolamento massivo SaluteOra
-        ├── salutemo-database-seeding.php      # Popolamento SaluteMo
+        ├── example-database-seeding.php      # Popolamento example
         ├── tinker-commands.php                # Comandi diretti per Tinker
         ├── tinker-1000-records.php            # Script Tinker per 1000 record
         └── tinker-20-studios-66010.php       # 🆕 Script Tinker per 20 studi + dottori
@@ -69,7 +69,7 @@ Script specifico per creare esattamente **20 studi medici** tutti con `postal_co
 - **StudioFactory**: Generazione studi medici
 - **AppointmentFactory**: Generazione appuntamenti
 
-### SaluteMo
+### example
 - **UserFactory**: Generazione utenti base
 - **StudioFactory**: Generazione studi base
 
@@ -202,10 +202,10 @@ php bashscripts/database/seeding/saluteora-1000-records.php
 - [README BashScripts](../bashscripts/README.md)
 - [Quick Start Seeding](../bashscripts/database/seeding/QUICK_START.md)
 - [Documentazione Modulo SaluteOra](../laravel/Modules/SaluteOra/docs/)
-- [Documentazione Modulo SaluteMo](../laravel/Modules/SaluteMo/docs/)
+- [Documentazione Modulo example](../laravel/Modules/example/docs/)
 
 ---
 
 **Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0
-**Compatibilità**: Laravel 10+, Moduli SaluteOra/SaluteMo
+**Compatibilità**: Laravel 10+, Moduli SaluteOra/example

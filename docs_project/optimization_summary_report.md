@@ -97,7 +97,7 @@ public static function getProjectBasePath(): string {
 - **Translation**: Normalizzare helper_text
 **Tempo**: 4 ore | **Impatto**: Migliora performance e manutenibilità
 
-#### Modulo SaluteMo (Mobile)
+#### Modulo example (Mobile)
 **Stato**: Buona specializzazione mobile
 - **Documentation**: Chiarire relazione con SaluteOra
 - **Mobile testing**: Aggiungere test performance mobile
@@ -138,7 +138,7 @@ public static function getProjectBasePath(): string {
 - **UI**: Mantenimento eccellenze
 
 #### Giorno 5: Mobile + Testing
-- **SaluteMo**: Mobile testing enhancement
+- **example**: Mobile testing enhancement
 - **Integration**: Test cross-modulo
 - **Performance**: Validazione metriche
 

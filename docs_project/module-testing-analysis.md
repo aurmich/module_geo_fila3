@@ -21,7 +21,7 @@ Questo documento fornisce un'analisi completa dello stato attuale di factory, se
 - **Test**: 100% (business logic completa)
 - **Stato**: Eccellente - Modulo di riferimento
 
-#### 2. **SaluteMo** - 100% Copertura ✅
+#### 2. **example** - 100% Copertura ✅
 - **Factory**: 100% (tutti i modelli)
 - **Seeder**: 100% (tutti i modelli)
 - **Test**: 100% (business logic completa)
@@ -117,7 +117,7 @@ Questo documento fornisce un'analisi completa dello stato attuale di factory, se
 
 ### Moduli Eccellenti (90%+)
 1. **SaluteOra** - 100% (modulo di riferimento)
-2. **SaluteMo** - 100% (modulo di riferimento)
+2. **example** - 100% (modulo di riferimento)
 3. **Media** - 85% (test core completati)
 4. **Lang** - 85% (test core completati)
 5. **Gdpr** - 85% (test core completati)
@@ -135,7 +135,7 @@ Questo documento fornisce un'analisi completa dello stato attuale di factory, se
 
 ## 🧪 Test Implementati per Modulo
 
-### SaluteOra & SaluteMo (Moduli di Riferimento)
+### SaluteOra & example (Moduli di Riferimento)
 - ✅ **Patient Tests**: Gestione pazienti completa
 - ✅ **Doctor Tests**: Gestione dottori completa
 - ✅ **Appointment Tests**: Gestione appuntamenti completa
@@ -343,7 +343,7 @@ Questo documento fornisce un'analisi completa dello stato attuale di factory, se
 
 ### File di Analisi Moduli
 - [SaluteOra](../laravel/Modules/SaluteOra/docs/module-analysis-complete.md)
-- [SaluteMo](../laravel/Modules/SaluteMo/docs/module-analysis-complete.md)
+- [example](../laravel/Modules/example/docs/module-analysis-complete.md)
 - [Media](../laravel/Modules/Media/docs/module-analysis-complete.md)
 - [Lang](../laravel/Modules/Lang/docs/module-analysis-complete.md)
 - [Gdpr](../laravel/Modules/Gdpr/docs/module-analysis-complete.md)

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide documents critical testing patterns and error resolution strategies identified during the SaluteMo module testing improvements. These patterns apply across all modules in the SaluteOra project.
+This guide documents critical testing patterns and error resolution strategies identified during the example module testing improvements. These patterns apply across all modules in the SaluteOra project.
 
 ## Critical Testing Errors and Solutions
 
@@ -94,7 +94,7 @@ expect($appointment->type->getDuration())->toBe(20);  // Non-translation method
 
 ## Module-Specific Implementations
 
-### SaluteMo Module Results
+### example Module Results
 - **Before**: 14 failing tests due to factory and database errors
 - **After**: 44 passing tests (100% success rate)
 - **Performance**: 3.24 seconds total execution time
@@ -192,9 +192,9 @@ These patterns provide benefits across all SaluteOra modules:
 
 ## Links to Module Documentation
 
-- [SaluteMo Testing Lessons Learned](../laravel/Modules/SaluteMo/docs/testing-lessons-learned.md)
-- [SaluteMo Test Error Resolution](../laravel/Modules/SaluteMo/docs/test-errors-resolution.md)
-- [SaluteMo Testing Guide](../laravel/Modules/SaluteMo/docs/testing.md)
+- [example Testing Lessons Learned](../laravel/Modules/example/docs/testing-lessons-learned.md)
+- [example Test Error Resolution](../laravel/Modules/example/docs/test-errors-resolution.md)
+- [example Testing Guide](../laravel/Modules/example/docs/testing.md)
 
 ## Windsurf Rules Integration
 
@@ -205,5 +205,5 @@ These patterns provide benefits across all SaluteOra modules:
 
 **Last Updated**: 2025-01-06  
 **Status**: Active Implementation  
-**Success Rate**: 100% (SaluteMo: 44/44 tests passing)  
+**Success Rate**: 100% (example: 44/44 tests passing)  
 **Philosophy**: Simple, Fast, Reliable Testing

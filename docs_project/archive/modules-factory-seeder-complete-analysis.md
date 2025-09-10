@@ -11,7 +11,7 @@
 6. ✅ **Lang** - Sistema multilingua
 7. ✅ **Media** - Gestione media files
 8. ✅ **Notify** - Sistema notifiche
-9. ✅ **SaluteMo** - Modulo specifico (analisi da completare)
+9. ✅ **example** - Modulo specifico (analisi da completare)
 10. ✅ **SaluteOra** - Modulo principale sanitario
 11. ✅ **Tenant** - Multi-tenancy
 12. ✅ **UI** - Componenti interfaccia

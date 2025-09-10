@@ -42,7 +42,7 @@ $mainModule = XotData::make()->main_module;
 ```bash
 # Verifica hardcoding nei moduli riutilizzabili
 for module in Notify User Xot UI Cms Blog Geo; do
-    grep -r -i "saluteora\|salutemo\|dentalpro" "Modules/$module/" --exclude-dir=vendor
+    grep -r -i "saluteora\|example\|dentalpro" "Modules/$module/" --exclude-dir=vendor
 done
 ```
 

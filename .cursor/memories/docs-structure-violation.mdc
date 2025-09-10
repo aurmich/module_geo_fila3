@@ -21,7 +21,7 @@ Durante l'audit del sistema SaluteOra, è stata identificata una **violazione cr
 **Stato**: ✅ CORRETTA - Cartella eliminata, documentazione spostata nei moduli
 
 **File migrati**:
-- `eloquent-unit-tests.md` → `laravel/Modules/SaluteMo/docs/testing/`
+- `eloquent-unit-tests.md` → `laravel/Modules/example/docs/testing/`
 - Altri documenti analizzati e spostati nei moduli appropriati
 
 ## Regola Critica Implementata
@@ -135,7 +135,7 @@ find laravel/Modules -name "docs" -type d
 - [Regola Critica](.cursor/rules/docs-structure-critical.mdc)
 - [Regole Modularità](.cursor/rules/modularity-hardcoded-names.mdc)
 - [Documentazione Modulo Notify](../laravel/Modules/Notify/docs/)
-- [Documentazione Modulo SaluteMo](../laravel/Modules/SaluteMo/docs/)
+- [Documentazione Modulo example](../laravel/Modules/example/docs/)
 
 ---
 

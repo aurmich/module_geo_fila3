@@ -31,11 +31,11 @@ Ogni modulo deve avere la seguente configurazione nel `composer.json`:
 }
 ```
 
-#### Modulo SaluteMo
+#### Modulo example
 ```json
 "autoload-dev": {
     "psr-4": {
-        "Modules\\SaluteMo\\Tests\\": "tests/"
+        "Modules\\example\\Tests\\": "tests/"
     }
 }
 ```
@@ -83,9 +83,9 @@ class TestClassName extends BaseClass
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Tests\Unit;
+namespace Modules\example\Tests\Unit;
 
-use Modules\SaluteMo\Models\BaseModel;
+use Modules\example\Models\BaseModel;
 
 /**
  * Concrete implementation of BaseModel for testing purposes.
@@ -172,7 +172,7 @@ class TestHelper extends Model
 <?php
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Tests\Unit;
+namespace Modules\example\Tests\Unit;
 
 /**
  * Helper class for testing.
@@ -192,7 +192,7 @@ namespace App\Tests\Unit; // Wrong namespace!
 
 ✅ **SOLUZIONE**:
 ```php
-namespace Modules\SaluteMo\Tests\Unit; // Correct module namespace
+namespace Modules\example\Tests\Unit; // Correct module namespace
 ```
 
 ## Verifica della Conformità
@@ -208,7 +208,7 @@ composer dump-autoload
 ./vendor/bin/phpstan analyze Modules/*/tests/ --level=9
 
 # Test specifico per modulo
-./vendor/bin/phpstan analyze Modules/SaluteMo/tests/ --level=9
+./vendor/bin/phpstan analyze Modules/example/tests/ --level=9
 ```
 
 ### Messaggi di Errore Tipici
@@ -259,7 +259,7 @@ Prima di committare file di test:
 ## Collegamenti ai Moduli
 
 - [Testing PSR-4 Compliance - Modulo Xot](../Modules/Xot/docs/testing-psr4-compliance.md)
-- [Testing Guide - Modulo SaluteMo](../Modules/SaluteMo/docs/testing.md)
+- [Testing Guide - Modulo example](../Modules/example/docs/testing.md)
 
 ---
 

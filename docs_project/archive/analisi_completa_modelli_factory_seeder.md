@@ -113,7 +113,7 @@ Analisi sistematica completa di tutti i 14 moduli del sistema SaluteOra per veri
 - **Criticità**: 🟢 Nessuna
 - **Azioni**: Nessuna
 
-#### 13. SaluteMo (Modena Specifico)
+#### 13. example (Modena Specifico)
 - **Modelli Attivi**: 2 (solo base)
 - **Modelli Obsoleti**: 1 file .old
 - **Factory Coverage**: N/A
@@ -140,7 +140,7 @@ Analisi sistematica completa di tutti i 14 moduli del sistema SaluteOra per veri
 - MedicalHistory.php.old - Storia medica gestita diversamente
 - PatientDocument.php.old - Documenti via Media module
 - PatientIsee.php.old - Relazione ISEE non utilizzata
-- Pregnancy.php.old - Spostato in SaluteMo
+- Pregnancy.php.old - Spostato in example
 - ReimbursementRequest.php.old - Rimborsi non implementati
 
 #### Altri Moduli
@@ -149,7 +149,7 @@ Analisi sistematica completa di tutti i 14 moduli del sistema SaluteOra per veri
 - Lang: 2 file .fixed (backup)
 - Activity: BaseActivity.php.no
 - Tenant: 2 file .no
-- SaluteMo: Patient.php.old
+- example: Patient.php.old
 - Job: 2 file .aaa (disabilitati)
 
 ### Categoria 2: Modelli Specializzati ReadOnly

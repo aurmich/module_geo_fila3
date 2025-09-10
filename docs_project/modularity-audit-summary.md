@@ -2,7 +2,7 @@
 
 ## Contesto e Motivazione
 
-Durante l'audit del sistema SaluteOra, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "salutemo") in moduli che devono essere riutilizzabili in progetti diversi.
+Durante l'audit del sistema SaluteOra, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "example") in moduli che devono essere riutilizzabili in progetti diversi.
 
 Questo errore viola i principi fondamentali dell'architettura modulare Laraxot e compromette la riutilizzabilità del sistema.
 
@@ -119,7 +119,7 @@ Questo errore viola i principi fondamentali dell'architettura modulare Laraxot e
 
 ### Moduli Specifici del Progetto
 - **SaluteOra**: Solo per progetto SaluteOra
-- **SaluteMo**: Solo per progetto SaluteMo
+- **example**: Solo per progetto example
 - **Patient**: Solo per progetti sanitari specifici
 
 ### Pattern di Configurazione
@@ -177,10 +177,10 @@ XOT_TRANSLATION_NAMESPACE=saluteora
 ### Comandi di Verifica
 ```bash
 # Verifica completa per tutti i moduli generici
-grep -r "saluteora\|salutemo" laravel/Modules/Notify/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/User/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/UI/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Notify/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/User/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/UI/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Xot/ --include="*.php"
 
 # Verifica dipendenze hardcoded
 grep -r "Modules\\SaluteOra" laravel/Modules/UI/ --include="*.php"

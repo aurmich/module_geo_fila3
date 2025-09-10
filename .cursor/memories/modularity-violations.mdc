@@ -68,7 +68,7 @@ Durante l'audit del sistema SaluteOra, sono state identificate **violazioni crit
 - Notify, User, UI, Xot, Geo, Media
 
 ### Moduli Specifici del Progetto
-- SaluteOra, SaluteMo, Patient
+- SaluteOra, example, Patient
 
 ### Pattern di Configurazione
 1. File di configurazione centralizzati
@@ -99,10 +99,10 @@ Durante l'audit del sistema SaluteOra, sono state identificate **violazioni crit
 ### Test di Conformità
 ```bash
 # Verifica completa per tutti i moduli generici
-grep -r "saluteora\|salutemo" laravel/Modules/Notify/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/User/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/UI/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Notify/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/User/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/UI/ --include="*.php"
+grep -r "saluteora\|example" laravel/Modules/Xot/ --include="*.php"
 
 # Verifica dipendenze hardcoded
 grep -r "Modules\\SaluteOra" laravel/Modules/UI/ --include="*.php"

@@ -31,10 +31,10 @@ Modules/Geo/tests/Feature/AddressIntegrationTest.php
 - **Approccio**: In-memory con oggetti plain PHP
 - **Focus**: Relazioni polimorfiche, geolocalizzazione, Google Places API
 
-### Modulo SaluteMo
+### Modulo example
 ```
-Modules/SaluteMo/tests/Feature/AppointmentValidationTest.php
-Modules/SaluteMo/tests/Feature/DashboardBusinessLogicTest.php
+Modules/example/tests/Feature/AppointmentValidationTest.php
+Modules/example/tests/Feature/DashboardBusinessLogicTest.php
 ```
 - **Scopo**: Validazione appuntamenti e logica dashboard
 - **Approccio**: Test di business logic con oggetti mock
@@ -136,7 +136,7 @@ php artisan test
 
 # Test specifici per modulo
 php artisan test --filter=Geo
-php artisan test --filter=SaluteMo
+php artisan test --filter=example
 
 # Test specifici per file
 php artisan test tests/Feature/AddressIntegrationTest.php
@@ -169,9 +169,9 @@ php artisan test --filter="validates user types"
 ## Collegamenti
 
 - [Modulo Geo Testing](../../laravel/Modules/Geo/docs/testing.md)
-- [Modulo SaluteMo Testing](../../laravel/Modules/SaluteMo/docs/testing.md)
-- [Best Practices Testing](../../laravel/Modules/SaluteMo/docs/testing-best-practices.md)
-- [Common Testing Errors](../../laravel/Modules/SaluteMo/docs/common-testing-errors.md)
+- [Modulo example Testing](../../laravel/Modules/example/docs/testing.md)
+- [Best Practices Testing](../../laravel/Modules/example/docs/testing-best-practices.md)
+- [Common Testing Errors](../../laravel/Modules/example/docs/common-testing-errors.md)
 
 ---
 

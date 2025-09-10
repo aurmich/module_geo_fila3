@@ -90,7 +90,7 @@ protected function createTestPatient(): mixed
 ### Moduli Project-Specific (Possono Contenere Hardcoding)
 - **SaluteOra**: Specifico per progetti sanitari
 - **DentalPro**: Specifico per studi dentistici
-- **SaluteMo**: Variante regionale
+- **example**: Variante regionale
 
 ## Checklist per Moduli Riutilizzabili
 
@@ -173,7 +173,7 @@ REUSABLE_MODULES=("Notify" "User" "Xot" "UI" "Cms" "Blog" "Geo")
 
 for module in "${REUSABLE_MODULES[@]}"; do
     echo "Controllo modulo $module..."
-    grep -r -i "saluteora\|salutemo\|dentalpro" "Modules/$module/" --exclude-dir=vendor || echo "✅ $module è pulito"
+    grep -r -i "saluteora\|example\|dentalpro" "Modules/$module/" --exclude-dir=vendor || echo "✅ $module è pulito"
 done
 ```
 

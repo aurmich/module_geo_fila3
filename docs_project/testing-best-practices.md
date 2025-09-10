@@ -591,7 +591,7 @@ describe('Edge Cases', function () {
 
 - [Architettura Testing Principale](testing-architecture-overview.md)
 - [Guida Risoluzione Conflitti](git-conflicts-resolution-guide.md)
-- [Best Practices Modulo SaluteMo](../../laravel/Modules/SaluteMo/docs/testing-best-practices.md)
+- [Best Practices Modulo example](../../laravel/Modules/example/docs/testing-best-practices.md)
 - [Testing Modulo Geo](../../laravel/Modules/Geo/docs/testing.md)
 
 ---

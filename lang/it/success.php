@@ -19,11 +19,8 @@ return [
         'cached' => 'Risorsa memorizzata in cache con successo',
         'cleared' => 'Cache svuotata con successo',
         'backed_up' => 'Backup eseguito con successo',
-<<<<<<< HEAD
         'backup_restored' => 'Ripristino completato con successo',
-=======
         'restore_completed' => 'Ripristino completato con successo',
->>>>>>> 4c2801a (.)
     ],
     'geo_specific' => [
         'coordinates_validated' => 'Coordinate geografiche validate con successo',

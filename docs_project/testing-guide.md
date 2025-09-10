@@ -20,7 +20,7 @@ laravel/
 │   │   ├── Pest.php
 │   │   └── TestCase.php
 │   ├── SaluteOra/tests/
-│   ├── SaluteMo/tests/
+│   ├── example/tests/
 │   ├── User/tests/
 │   └── Geo/tests/
 └── scripts/run-tests.sh            # Script per esecuzione test
@@ -38,7 +38,7 @@ laravel/
 - **Feature Tests**: AppointmentIntegrationTest.php
 - **Coverage**: Modelli core, Relazioni, Enums, State management
 
-#### ✅ SaluteMo Module
+#### ✅ example Module
 - **Unit Tests**: BaseModelTest.php
 - **Coverage**: BaseModel traits, Configurazioni, Media handling
 
@@ -208,7 +208,7 @@ vendor/bin/pest --filter="test_name" --verbose
 ### Moduli Completati
 - ✅ Chart: Unit + Feature tests
 - ✅ SaluteOra: Core models + Integration
-- ✅ SaluteMo: Base functionality
+- ✅ example: Base functionality
 - ✅ User: Authentication + Authorization
 - ✅ Geo: Address + Geolocation
 

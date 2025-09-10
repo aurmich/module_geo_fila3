@@ -24,7 +24,7 @@ Dopo l'analisi approfondita della struttura documentale e del codice, ho identif
 ### 🏥 Moduli Project-Specific
 **Possono contenere logica specifica del progetto sanitario**
 - **SaluteOra** - Logica sanitaria principale
-- **SaluteMo** - Variante regionale mobile
+- **example** - Variante regionale mobile
 
 ## Analisi Dettagliata per Modulo
 
@@ -174,7 +174,7 @@ public static function getProjectBasePath(): string
 - **Implementare** caching per dashboard
 - **Migliorare** performance seeder
 
-### 6. 📱 Modulo SaluteMo
+### 6. 📱 Modulo example
 
 #### 🎯 Stato Attuale
 - **Funzionalità**: ✅ Estensione mobile di SaluteOra

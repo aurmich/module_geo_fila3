@@ -154,7 +154,7 @@ Classe helper completa con utilities per:
 
 ### Opzioni Disponibili
 - `--core`: Test moduli core (User, Xot, UI)
-- `--business`: Test moduli business (SaluteOra, SaluteMo)
+- `--business`: Test moduli business (SaluteOra, example)
 - `--utility`: Test moduli utility (Cms, Media, Geo, etc.)
 - `--all`: Test tutti i moduli
 - `--performance`: Test di performance
@@ -291,7 +291,7 @@ jobs:
 - [x] Analisi struttura moduli esistenti
 - [x] Creazione strategia di testing completa
 - [x] Implementazione test per moduli core (User, Xot, UI)
-- [x] Implementazione test per moduli business (SaluteOra, SaluteMo)
+- [x] Implementazione test per moduli business (SaluteOra, example)
 - [x] Implementazione test per moduli utility (Cms, Media, Geo, etc.)
 - [x] Creazione helper e utilities per testing
 - [x] Script automatizzato per esecuzione test

@@ -9,7 +9,7 @@ This document provides a comprehensive analysis of all modules in the Laraxot pr
 ### Current State
 - **Total Modules**: 14 modules identified
 - **Reusable Modules**: Activity, Cms, Gdpr, Geo, Job, Lang, Media, Notify, Tenant, UI, User, Xot (12 modules)
-- **Project-Specific Modules**: SaluteMo, SaluteOra (2 modules)
+- **Project-Specific Modules**: example, SaluteOra (2 modules)
 
 ### Documentation Quality Assessment
 

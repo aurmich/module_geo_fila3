@@ -1,7 +1,7 @@
 # BaseModel Testing - Lessons Learned (Gennaio 2025)
 
 ## Context
-Durante la risoluzione del test fallito `BaseModelTest` nel modulo SaluteMo, sono stati identificati e risolti pattern problematici comuni nei test di modelli complessi che utilizzano molti trait.
+Durante la risoluzione del test fallito `BaseModelTest` nel modulo example, sono stati identificati e risolti pattern problematici comuni nei test di modelli complessi che utilizzano molti trait.
 
 ## Problema Identificato
 
@@ -82,14 +82,14 @@ $this->getMockBuilder(BaseModel::class)
 
 ### Before
 ```
-FAILED  Modules\SaluteMo\tests\Unit\BaseModelTest
+FAILED  Modules\example\tests\Unit\BaseModelTest
 ⨯ it supports media methods presence → BindingResolutionException
 ! it exposes casts as array → Undefined array key
 ```
 
 ### After
 ```
-PASS  Modules\SaluteMo\tests\Unit\BaseModelTest
+PASS  Modules\example\tests\Unit\BaseModelTest
 ✓ it has correct trait usage
 ✓ it supports media methods presence  
 ✓ it implements HasMedia interface
@@ -102,7 +102,7 @@ Tests: 54 passed (114 assertions)
 
 ### Moduli Potenzialmente Interessati
 Tutti i moduli che utilizzano `BaseModel` o pattern simili:
-- SaluteMo ✅ (Fixed)
+- example ✅ (Fixed)
 - SaluteOra (Potential)
 - Geo (Potential)
 - Altri moduli con trait complessi
@@ -131,4 +131,4 @@ Tutti i moduli che utilizzano `BaseModel` o pattern simili:
 **Data**: 25 Gennaio 2025
 **Responsabile**: Claude Code Testing Resolution
 **Status**: Completato e Documentato
-**Moduli Testati**: SaluteMo (54/54 tests passing)
+**Moduli Testati**: example (54/54 tests passing)

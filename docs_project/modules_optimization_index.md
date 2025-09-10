@@ -54,7 +54,7 @@
 **Azione**: Generalizzazione docs + Google API caching  
 **Tempo**: 3 ore | **Impatto**: Modulo geo riutilizzabile
 
-#### [Modulo SaluteMo](../laravel/Modules/SaluteMo/docs/optimization_recommendations.md)
+#### [Modulo example](../laravel/Modules/example/docs/optimization_recommendations.md)
 **Stato**: Buona specializzazione mobile  
 **Azione**: Documentation enhancement + mobile testing  
 **Tempo**: 6 ore | **Impatto**: Migliora esperienza mobile
@@ -80,7 +80,7 @@
 ### Fase 3: Performance (Settimana 3)
 - [ ] **SaluteOra**: Caching dashboard e calendar
 - [ ] **Geo**: Google API optimization
-- [ ] **SaluteMo**: Mobile performance testing
+- [ ] **example**: Mobile performance testing
 - [ ] **Metriche**: Validazione target performance
 
 ## 🎯 BENEFICI ATTESI

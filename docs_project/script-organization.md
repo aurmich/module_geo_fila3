@@ -11,7 +11,7 @@ bashscripts/
 ├── database/
 │   ├── seeding/          # Script per popolamento database
 │   │   ├── saluteora-seeding.php
-│   │   ├── salutemo-seeding.php
+│   │   ├── example-seeding.php
 │   │   └── mass-seeding.php
 │   ├── migration/        # Script per gestione migrazioni
 │   └── backup/          # Script per backup database
@@ -66,7 +66,7 @@ bashscripts/
 ### Script di Seeding
 ```
 saluteora-mass-seeding.php          # Popolamento massivo SaluteOra
-salutemo-database-seeding.php       # Popolamento SaluteMo
+example-database-seeding.php       # Popolamento example
 user-role-seeding.php               # Popolamento ruoli utente
 ```
 

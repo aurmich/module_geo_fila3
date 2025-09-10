@@ -22,7 +22,7 @@ Ho completato l'analisi sistematica di **tutti i moduli** del progetto SaluteOra
 | **UI** | Qualità eccellente | 115 path hardcoded | Path generalization | 🟢 NORMALE |
 | **SaluteOra** | Funzionale completo | Performance optimization | Caching e docs | 🟢 NORMALE |
 | **Geo** | Google API | 86 occorrenze hardcoded | API optimization | 🟢 NORMALE |
-| **SaluteMo** | Mobile-optimized | Documentation enhancement | Mobile testing | 🟢 NORMALE |
+| **example** | Mobile-optimized | Documentation enhancement | Mobile testing | 🟢 NORMALE |
 
 ### 🚨 Problema Critico Globale: **RIUSABILITÀ COMPROMESSA**
 
@@ -96,7 +96,7 @@ Creato file `optimization_recommendations.md` in ogni modulo con:
 5. **UI Path Generalization** (1 ora)
 6. **SaluteOra Performance** (4 ore)  
 7. **Geo API Optimization** (3 ore)
-8. **SaluteMo Mobile Enhancement** (6 ore)
+8. **example Mobile Enhancement** (6 ore)
 
 ## 📈 BENEFICI ATTESI
 
