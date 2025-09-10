@@ -22,7 +22,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region whereName($value)
  * @mixin IdeHelperRegion
- * @method static \Modules\Geo\Database\Factories\RegionFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
 class Region extends BaseModel

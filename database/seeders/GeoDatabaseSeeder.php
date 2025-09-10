@@ -20,12 +20,7 @@ class GeoDatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call([
-            //AddressSeeder::class,
-            //LocationSeeder::class,
-            //ComuneSeeder::class,
-            //ProvinceSeeder::class,
-            //RegionSeeder::class,
-            //PlaceSeeder::class,
+            
         ]);
     }
 }
