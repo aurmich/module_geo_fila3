@@ -62,7 +62,7 @@
 #### 1. Address
 - **Utilizzo**: Alto - Sistema di indirizzi completo
 - **Business Logic**: Gestione indirizzi per studi medici, pazienti, dottori
-- **Integrazione**: HasAddress trait, SaluteOra models, Filament resources
+- **Integrazione**: HasAddress trait,  models, Filament resources
 - **Necessità**: CRITICA per geolocalizzazione
 
 #### 2. ComuneJson
@@ -150,7 +150,7 @@
 
 ## Integrazione con Sistema Sanitario
 
-Il modulo Geo è **fondamentale** per SaluteOra:
+Il modulo Geo è **fondamentale** per :
 - **Studi medici**: Geolocalizzazione e indirizzi
 - **Ricerca dottori**: FindDoctorAndAppointmentWidget con selezione geografica
 - **Gestione pazienti**: Indirizzi e localizzazione

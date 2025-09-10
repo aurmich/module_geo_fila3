@@ -1,7 +1,7 @@
 # Struttura Traduzioni Espansa - Modulo Geo
 
 ## Scopo
-Implementazione della struttura espansa per le traduzioni del modulo Geo, seguendo i principi DRY/KISS e le regole del progetto SaluteOra.
+Implementazione della struttura espansa per le traduzioni del modulo Geo, seguendo i principi DRY/KISS e le regole del progetto .
 
 ## Problema Identificato
 I file di traduzione non italiani (en, de) contengono testo italiano invece delle traduzioni corrette, violando i principi di localizzazione.
@@ -154,7 +154,7 @@ I file di traduzione non italiani (en, de) contengono testo italiano invece dell
 
 ### Documentazione Moduli Correlati
 - [User Module Translations](/Modules/User/docs/translation-guidelines.md)
-- [SaluteOra Module Translations](/Modules/SaluteOra/docs/multilingual-support.md)
+- [ Module Translations](/Modules/<nome modulo>/docs/multilingual-support.md)
 
 ### File di Implementazione
 - `lang/it/location.php` - Template italiano (riferimento)

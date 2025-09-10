@@ -376,4 +376,4 @@ Questo approccio offre il miglior equilibrio tra performance, flessibilità e ma
 ---
 
 *Documento creato il: 28/05/2025*  
-*Autore: Team SaluteOra*
+*Autore: Team *

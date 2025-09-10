@@ -1,4 +1,4 @@
-# Testing del Modulo Geo - SaluteOra
+# Testing del Modulo Geo - 
 
 ## Panoramica
 

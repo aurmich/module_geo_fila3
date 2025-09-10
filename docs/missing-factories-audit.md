@@ -56,7 +56,7 @@
 ## Impatto Critico
 
 ### Moduli Dipendenti Compromessi
-- **SaluteOra**: Address per studi medici
+- ****: Address per studi medici
 - **User**: Address per profili utenti
 - **Cms**: Location per contenuti geografici
 - **Tutti i form**: Selezione geografica rotta

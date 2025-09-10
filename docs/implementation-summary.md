@@ -1,13 +1,13 @@
 # Riepilogo Implementazione AddressesField
 
-## Caso Studio: Applicazione Principio DRY nel Progetto SaluteOra
+## Caso Studio: Applicazione Principio DRY nel Progetto 
 
 ### Data Implementazione
 **Dicembre 2024**
 
 ## Panoramica
 
-Questo documento riassume l'implementazione completa del componente riutilizzabile `AddressesField` che ha eliminato la duplicazione di codice nel progetto SaluteOra, dimostrando l'applicazione pratica del principio DRY (Don't Repeat Yourself).
+Questo documento riassume l'implementazione completa del componente riutilizzabile `AddressesField` che ha eliminato la duplicazione di codice nel progetto , dimostrando l'applicazione pratica del principio DRY (Don't Repeat Yourself).
 
 ## Problema Identificato
 
@@ -286,14 +286,14 @@ Il componente non solo elimina duplicazione, ma stabilisce un **pattern replicab
 ### Documentazione Correlata
 - [AddressesField Component Documentation](components/addresses-field.md)
 - [Form Schema Reuse Guidelines](form-schema-reuse.md)
-- [StudioResource Implementation](../../SaluteOra/docs/studio-resource-addresses-improvement.md)
-- [Critical Errors Resolved](../../SaluteOra/docs/critical-errors-resolved.md)
+- [StudioResource Implementation](../../<nome modulo>/docs/studio-resource-addresses-improvement.md)
+- [Critical Errors Resolved](../../<nome modulo>/docs/critical-errors-resolved.md)
 
 ### File Sorgente
 - [AddressesField.php](../app/Filament/Forms/Components/AddressesField.php)
 - [addresses-field.blade.php](../resources/views/filament/forms/components/addresses-field.blade.php)
 - [addresses.php](../lang/it/addresses.php)
-- [StudioResource.php](../../SaluteOra/app/Filament/Resources/StudioResource.php)
+- [StudioResource.php](../../<nome modulo>/app/Filament/Resources/StudioResource.php)
 
 ---
 

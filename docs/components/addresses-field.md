@@ -64,7 +64,7 @@ AddressesField::make('addresses')
 ```php
 <?php
 
-namespace Modules\SaluteOra\Filament\Resources;
+namespace Modules\<nome modulo>\Filament\Resources;
 
 use Modules\Geo\Filament\Forms\Components\AddressesField;
 
@@ -207,7 +207,7 @@ Il modello che utilizza `AddressesField` deve avere una relazione `addresses` (o
 ```php
 <?php
 
-namespace Modules\SaluteOra\Models;
+namespace Modules\<nome modulo>\Models;
 
 use Modules\Geo\Models\Address;
 
@@ -265,7 +265,7 @@ return [
 Per personalizzare le traduzioni in un modulo specifico:
 
 ```php
-// Nel modulo specifico, es. Modules/SaluteOra/lang/it/studio.php
+// Nel modulo specifico, es. Modules//lang/it/studio.php
 return [
     'addresses' => [
         'add_action' => 'Aggiungi Sede Studio',
@@ -463,13 +463,13 @@ public function address(): BelongsTo
 - [AddressResource Documentation](../address-resource.md)
 - [Form Schema Reuse](../form-schema-reuse.md)
 - [Address Model Documentation](../address-model-italian.md)
-- [Studio Resource Implementation](../../SaluteOra/docs/studio-resource.md)
+- [Studio Resource Implementation](../../<nome modulo>/docs/studio-resource.md)
 
 ### File Correlati
 - [AddressesField.php](../../app/Filament/Forms/Components/AddressesField.php)
 - [addresses-field.blade.php](../../resources/views/filament/forms/components/addresses-field.blade.php)
 - [addresses.php](../../lang/it/addresses.php)
-- [StudioResource.php](../../SaluteOra/app/Filament/Resources/StudioResource.php)
+- [StudioResource.php](../../<nome modulo>/app/Filament/Resources/StudioResource.php)
 
 ---
 

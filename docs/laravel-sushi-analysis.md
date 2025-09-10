@@ -501,4 +501,4 @@ Per procedere, si consiglia di:
 ---
 
 *Documento creato il: 28/05/2025*  
-*Autore: Team SaluteOra*
+*Autore: Team *

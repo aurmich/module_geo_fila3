@@ -21,7 +21,7 @@
 #### 1. Riusabilità Compromessa (CRITICO)
 - **86+ occorrenze hardcoded** di "saluteora" in documentazione
 - **Path assoluti** in esempi e guide
-- **Riferimenti specifici** a SaluteOra in business logic
+- **Riferimenti specifici** a  in business logic
 
 #### 2. Documentazione Frammentata
 - **File multipli** per stesso argomento
@@ -40,9 +40,9 @@
 #### Pattern di Correzione Documentazione
 ```markdown
 <!-- ❌ PROBLEMI ATTUALI -->
-Il modello `Address` è stato riveduto seguendo i principi di design ottimali e le convenzioni del progetto SaluteOra.
+Il modello `Address` è stato riveduto seguendo i principi di design ottimali e le convenzioni del progetto .
 
-**SaluteOra**: Indirizzi studi medici e pazienti
+****: Indirizzi studi medici e pazienti
 
 <!-- ✅ SOLUZIONI -->
 Il modello `Address` è stato riveduto seguendo i principi di design ottimali e le convenzioni dei progetti Laraxot.

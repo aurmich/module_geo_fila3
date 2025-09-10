@@ -9,7 +9,7 @@ The file had multiple Git conflict markers due to merge conflicts between differ
 
 ### Conflicting Elements:
 1. **PHPDoc comments**: Two versions with different Profile model references
-   - Version A: `\Modules\SaluteOra\Models\Profile`
+   - Version A: `\Modules\<nome modulo>\Models\Profile`
    - Version B: `\Modules\User\Models\Profile`
 2. **Class declaration**: Multiple conflicting class declarations
 3. **Git merge markers**: Multiple nested conflict markers
@@ -35,7 +35,7 @@ The file had multiple Git conflict markers due to merge conflicts between differ
 ## Impact:
 - **Low Risk**: Only documentation and reference cleanup
 - **No Breaking Changes**: Core functionality unchanged
-- **Dependencies**: Correctly references User module instead of non-existent SaluteOra module
+- **Dependencies**: Correctly references User module instead of non-existent  module
 
 ## Next Steps:
 - Continue with County.php

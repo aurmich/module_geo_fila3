@@ -1,7 +1,7 @@
 # Modello Address Riveduto
 
 ## Panoramica
-Il modello `Address` è stato riveduto seguendo i principi di design ottimali e le convenzioni del progetto SaluteOra. Questo documento descrive l'implementazione aggiornata che:
+Il modello `Address` è stato riveduto seguendo i principi di design ottimali e le convenzioni del progetto . Questo documento descrive l'implementazione aggiornata che:
 
 1. Evita prefissi ridondanti nei nomi dei campi
 2. Separa correttamente il numero civico dalla strada

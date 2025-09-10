@@ -2,7 +2,7 @@
 
 ## Panoramica
 
-La risorsa `AddressResource` fornisce un'interfaccia amministrativa per la gestione degli indirizzi nel sistema SaluteOra. Questa risorsa rispetta le convenzioni architetturali del progetto e implementa le funzionalità CRUD complete per il modello `Address`.
+La risorsa `AddressResource` fornisce un'interfaccia amministrativa per la gestione degli indirizzi nel sistema . Questa risorsa rispetta le convenzioni architetturali del progetto e implementa le funzionalità CRUD complete per il modello `Address`.
 
 ## Struttura
 

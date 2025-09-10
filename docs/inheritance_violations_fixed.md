@@ -114,7 +114,7 @@ grep -r "use HasFactory" Modules/*/app/Models/ | grep -v BaseModel
 ### Altri Moduli da Verificare
 Questo pattern di violazione potrebbe esistere in altri moduli:
 - **User**: BaseUser vs User, Doctor, Patient
-- **SaluteOra**: BaseModel vs modelli specifici  
+- ****: BaseModel vs modelli specifici  
 - **Notify**: BaseModel vs modelli notifica
 - **Cms**: BaseModel vs modelli content
 

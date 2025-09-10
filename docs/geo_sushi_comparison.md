@@ -76,7 +76,7 @@
 - [Sushi - usesushi.dev](https://usesushi.dev/)
 - [Squire PHP](https://github.com/squirephp/squire)
 - [Xot/docs/module-structure.md](../../Xot/docs/module-structure.md)
-- [SaluteOra/docs/geo-integration.md](../../SaluteOra/docs/geo-integration.md)
+- [<nome modulo>/docs/geo-integration.md](../../<nome modulo>/docs/geo-integration.md)
 
 ---
 
