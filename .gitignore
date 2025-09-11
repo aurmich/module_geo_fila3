@@ -39,6 +39,7 @@ error_log
 *.old
 *.old1
 *.backup
+*.backup.*
 *.bak
 
 # PHPStan documentation
