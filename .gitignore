@@ -45,5 +45,15 @@ error_log
 # PHPStan documentation
 docs/phpstan/
 
+<<<<<<< HEAD
+=======
+# Old directories
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+
+>>>>>>> 18a44c7 (.)
 # Other
 -e
