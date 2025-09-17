@@ -41,7 +41,11 @@ class FetchCoordinatesAction
                 'limit' => 1,
             ],
             'headers' => [
+<<<<<<< HEAD
                 'User-Agent' => 'Xot/1.0',
+=======
+                'User-Agent' => 'TechPlanner/1.0',
+>>>>>>> 085153b (.)
             ],
         ]);
 
