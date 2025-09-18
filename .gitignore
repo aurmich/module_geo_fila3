@@ -113,7 +113,6 @@ Thumbs.db
 docs/phpstan/
 docs/cache/
 
-<<<<<<< HEAD
 # ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
@@ -146,7 +145,6 @@ test_geo_data.sql
 # ==============================================
 # END OF GEO .GITIGNORE
 # ==============================================
-=======
 # Old directories
 resources/views/Components_old
 database/Migrations_old
@@ -156,4 +154,3 @@ database_old
 
 # Other
 
->>>>>>> ad9f6e902 (.)
