@@ -34,82 +34,10 @@ $address = Address::create([
     'latitude' => 45.4642,
     'longitude' => 9.1900,
 ]);
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-// Ricerca indirizzi nelle vicinanze
-$nearby = Address::nearby($lat, $lng, 5); // 5km radius
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f90a9bb (.)
-### Sushi Models
-- [Sushi Implementation](sushi-implementation.md) - Modelli Sushi per dati statici
-- [Sushi Configuration](sushi-configuration.md) - Configurazione modelli Sushi
-- [Laravel Sushi Guide](laravel-sushi-guide.md) - Guida completa Laravel Sushi
-
-### Data Management
-- [GeoJSON Model](geo-json-model.md) - Gestione dati GeoJSON
-- [Consolidamento Modelli](consolidamento-modelli-geografici.md) - Unificazione modelli geografici
-- [Naming Conventions](naming-conventions.md) - Convenzioni naming
-
-### Architecture
-- [Architecture Overview](architecture.md) - Panoramica architettura modulo
-- [Model Inheritance](model-inheritance-pattern.md) - Pattern ereditarietà modelli
-- [Service Pattern](services/README.md) - Pattern services per API integration
-
-### Development
-- [Enums Implementation](enums-implementation.md) - Enumerazioni modulo Geo
-- [Factory Usage](address-factory.md) - Utilizzo factory per test data
-- [Seeders](database-seeders.md) - Seeders per popolamento database
-
-## ✅ PHPStan Quality Assurance
-
-### Gennaio 2025 - PHPStan Level 9 Compliance
-
-Il modulo Geo ha raggiunto la **compliance PHPStan livello 9** sui file core:
-
-#### 🎯 File Certificati PHPStan Level 9
-- ✅ `app/Services/BaseGeoService.php` - API response type safety
-- ✅ `app/Services/GeoDataService.php` - Collection template types resolution
-- ✅ `database/factories/AddressFactory.php` - Union type compatibility
-- ✅ `database/seeders/SushiSeeder.php` - Mixed array access safety
-
-#### 📊 Metriche di Qualità
-- **Type Safety**: 100% sui file core
-- **Runtime Safety**: 100% con error handling robusto
-- **Template Types**: Risolti tutti i problemi di Collection generics
-- **API Integration**: Validazione completa response types
-
-#### 📚 Documentazione PHPStan
-- [PHPStan Fixes Gennaio 2025](phpstan/phpstan-fixes-gennaio-2025.md) - **⭐ NUOVO** - Log completo correzioni
-- [PHPStan Best Practices](phpstan/best-practices.md) - Best practices per type safety
-- [Collection Types Guide](phpstan/collection-types.md) - Gestione template types Collection
-
-#### 🧪 Test di Verifica
-```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8633bc (.)
-
-=======
->>>>>>> 7b895b0 (.)
-=======
-
->>>>>>> bda2447 (.)
-<<<<<<< HEAD
 =======
 
 >>>>>>> 70c8c33 (.)
-=======
-
->>>>>>> e0d1f5b (.)
 =======
 >>>>>>> f8633bc (.)
 # Test file core PHPStan level 9
@@ -119,26 +47,9 @@ cd laravel
                              Modules/Geo/database/factories/AddressFactory.php \
                              Modules/Geo/database/seeders/SushiSeeder.php \
                              --level=9 --no-progress
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8633bc (.)
-
-=======
->>>>>>> 7b895b0 (.)
-=======
-
->>>>>>> bda2447 (.)
-<<<<<<< HEAD
 =======
 
 >>>>>>> 70c8c33 (.)
-=======
-
->>>>>>> e0d1f5b (.)
 =======
 >>>>>>> f8633bc (.)
 # Risultato: [OK] No errors ✅
@@ -146,14 +57,10 @@ cd laravel
 // Ricerca indirizzi nelle vicinanze
 $nearby = Address::nearby($lat, $lng, 5); // 5km radius
 >>>>>>> 0c268a4 (.)
-<<<<<<< HEAD
 =======
 // Ricerca indirizzi nelle vicinanze
 $nearby = Address::nearby($lat, $lng, 5); // 5km radius
 >>>>>>> a93f634 (.)
-=======
->>>>>>> f90a9bb (.)
->>>>>>> 52789d7 (.)
 ```
 
 ### 🗺️ **API Integration**
@@ -199,43 +106,19 @@ $lombardia = $milano->regione; // "Lombardia"
 
 ### 📦 **Installazione**
 ```bash
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f90a9bb (.)
-=======
->>>>>>> f8633bc (.)
-
-=======
->>>>>>> 7b895b0 (.)
 =======
 
 >>>>>>> bda2447 (.)
-<<<<<<< HEAD
 =======
 
 >>>>>>> 70c8c33 (.)
 =======
-
->>>>>>> e0d1f5b (.)
-=======
 >>>>>>> f8633bc (.)
 =======
 >>>>>>> 0c268a4 (.)
-<<<<<<< HEAD
 =======
 >>>>>>> a93f634 (.)
-=======
->>>>>>> f90a9bb (.)
->>>>>>> 52789d7 (.)
 # Abilitare il modulo
 php artisan module:enable Geo
 
@@ -269,43 +152,19 @@ return [
 
 ### 🧪 **Testing**
 ```bash
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f90a9bb (.)
-=======
->>>>>>> f8633bc (.)
-
-=======
->>>>>>> 7b895b0 (.)
 =======
 
 >>>>>>> bda2447 (.)
-<<<<<<< HEAD
 =======
 
 >>>>>>> 70c8c33 (.)
 =======
-
->>>>>>> e0d1f5b (.)
-=======
 >>>>>>> f8633bc (.)
 =======
 >>>>>>> 0c268a4 (.)
-<<<<<<< HEAD
 =======
 >>>>>>> a93f634 (.)
-=======
->>>>>>> f90a9bb (.)
->>>>>>> 52789d7 (.)
 # Test del modulo
 php artisan test --testsuite=Geo
 

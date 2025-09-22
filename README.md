@@ -1,6 +1,5 @@
 # 🌍 Geo - Il SISTEMA di GEOLOCALIZZAZIONE più POTENTE! 🗺️
 
-<<<<<<< HEAD
 <!-- Dynamic validation badges -->
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
@@ -10,11 +9,6 @@
 [![Google Maps API](https://img.shields.io/badge/Google%20Maps-API%20Ready-green.svg)](https://developers.google.com/maps)
 [![Pest Tests](https://img.shields.io/badge/Pest%20Tests-✅%20Passing-brightgreen.svg)](tests/)
 [![PHP Version](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
-=======
-[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
-[![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
-[![Filament Version](https://img.shields.io/badge/Filament-3.x-purple.svg)](https://filamentphp.com)
->>>>>>> 52789d7 (.)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](.codeclimate.yml)
 [![Test Coverage](https://img.shields.io/badge/coverage-94%25-success.svg)](phpunit.xml.dist)
