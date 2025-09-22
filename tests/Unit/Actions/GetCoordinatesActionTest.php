@@ -3,16 +3,29 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Geo\Tests\Unit\Actions;
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+>>>>>>> f8216d1 (.)
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Mockery;
 use Modules\Geo\Actions\GetCoordinatesAction;
 use Modules\Geo\Datas\LocationData;
 use Tests\TestCase;
+=======
+namespace Modules\Geo\Tests\Unit\Actions;
+
+use Modules\Geo\Actions\GetCoordinatesAction;
+use Modules\Geo\Datas\LocationData;
+use Tests\TestCase;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Config;
+use Mockery;
+>>>>>>> 52789d7 (.)
 
 class GetCoordinatesActionTest extends TestCase
 {
@@ -32,9 +45,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLatitude = 45.4642;
         $expectedLongitude = 9.1900;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -84,10 +103,17 @@ class GetCoordinatesActionTest extends TestCase
 
         // Act & Assert
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(fn() => $this->action->execute($address))
 =======
         expect(fn () => $this->action->execute($address))
 >>>>>>> 19c8248 (.)
+=======
+        expect(fn () => $this->action->execute($address))
+=======
+        expect(fn() => $this->action->execute($address))
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
             ->toThrow(\RuntimeException::class, 'Google Maps API key not found');
     }
 
@@ -97,9 +123,15 @@ class GetCoordinatesActionTest extends TestCase
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         Config::set('services.google.maps.key', 'test-api-key');
         Http::fake([
             'maps.googleapis.com/*' => Http::response([], 500),
@@ -107,10 +139,17 @@ class GetCoordinatesActionTest extends TestCase
 
         // Act & Assert
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(fn() => $this->action->execute($address))
 =======
         expect(fn () => $this->action->execute($address))
 >>>>>>> 19c8248 (.)
+=======
+        expect(fn () => $this->action->execute($address))
+=======
+        expect(fn() => $this->action->execute($address))
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
             ->toThrow(\RuntimeException::class, 'Failed to get coordinates from Google Maps API');
     }
 
@@ -120,9 +159,15 @@ class GetCoordinatesActionTest extends TestCase
         // Arrange
         $address = 'Invalid Address That Does Not Exist';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'ZERO_RESULTS',
             'results' => [],
@@ -146,9 +191,15 @@ class GetCoordinatesActionTest extends TestCase
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'OVER_QUERY_LIMIT',
             'results' => [],
@@ -172,9 +223,15 @@ class GetCoordinatesActionTest extends TestCase
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'REQUEST_DENIED',
             'results' => [],
@@ -198,9 +255,15 @@ class GetCoordinatesActionTest extends TestCase
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [],
@@ -226,9 +289,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLatitude = 45.4642;
         $expectedLongitude = 9.1900;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -282,9 +351,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLatitude = 45.4642;
         $expectedLongitude = 9.1900;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -324,9 +399,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLatitude = 40.7128;
         $expectedLongitude = -74.0060;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -369,13 +450,22 @@ class GetCoordinatesActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $address = str_repeat('Via Roma 123, Milano, Italia - ', 50) . 'Ufficio 4° piano';
 =======
+=======
+>>>>>>> f8216d1 (.)
         $address = str_repeat('Via Roma 123, Milano, Italia - ', 50).'Ufficio 4° piano';
 >>>>>>> 19c8248 (.)
         $expectedLatitude = 45.4642;
         $expectedLongitude = 9.1900;
 
+=======
+        $address = str_repeat('Via Roma 123, Milano, Italia - ', 50) . 'Ufficio 4° piano';
+        $expectedLatitude = 45.4642;
+        $expectedLongitude = 9.1900;
+        
+>>>>>>> 52789d7 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -415,9 +505,15 @@ class GetCoordinatesActionTest extends TestCase
         $expectedLatitude = 45.4642034;
         $expectedLongitude = 9.1900001;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         $mockResponse = [
             'status' => 'OK',
             'results' => [
@@ -461,9 +557,15 @@ class GetCoordinatesActionTest extends TestCase
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         Config::set('services.google.maps.key', 'test-api-key');
         Http::fake([
             'maps.googleapis.com/*' => Http::response([], 408), // Request Timeout
@@ -471,10 +573,17 @@ class GetCoordinatesActionTest extends TestCase
 
         // Act & Assert
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(fn() => $this->action->execute($address))
 =======
         expect(fn () => $this->action->execute($address))
 >>>>>>> 19c8248 (.)
+=======
+        expect(fn () => $this->action->execute($address))
+=======
+        expect(fn() => $this->action->execute($address))
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
             ->toThrow(\RuntimeException::class, 'Failed to get coordinates from Google Maps API');
     }
 
@@ -484,9 +593,15 @@ class GetCoordinatesActionTest extends TestCase
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 19c8248 (.)
+=======
+=======
+        
+>>>>>>> 52789d7 (.)
+>>>>>>> f8216d1 (.)
         Config::set('services.google.maps.key', 'test-api-key');
         Http::fake([
             'maps.googleapis.com/*' => Http::response('Invalid JSON', 200),
@@ -494,9 +609,15 @@ class GetCoordinatesActionTest extends TestCase
 
         // Act & Assert
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(fn() => $this->action->execute($address))->toThrow(\RuntimeException::class);
 =======
+=======
+>>>>>>> f8216d1 (.)
         expect(fn () => $this->action->execute($address))
+=======
+        expect(fn() => $this->action->execute($address))
+>>>>>>> 52789d7 (.)
             ->toThrow(\RuntimeException::class);
 >>>>>>> 19c8248 (.)
     }

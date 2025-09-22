@@ -56,8 +56,12 @@ expect()->extend('toBeCity', fn () => $this->toBeInstanceOf(\Modules\Geo\Models\
 |
 */
 
+<<<<<<< HEAD
 uses(TestCase::class)
     ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
+=======
+pest()->extend(TestCase::class)
+>>>>>>> 52789d7 (.)
     ->in('Feature', 'Unit');
 
 /*
