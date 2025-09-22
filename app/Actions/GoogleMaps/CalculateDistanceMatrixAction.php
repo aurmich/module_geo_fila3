@@ -35,6 +35,7 @@ class CalculateDistanceMatrixAction
         $apiKey = $this->getApiKey();
 
         $response = Http::get(self::BASE_URL, [
+<<<<<<< HEAD
             'origins' => $origins
                 ->map(fn(LocationData $location): string => sprintf('%f,%f', $location->latitude, $location->longitude))
                 ->join('|'),
@@ -45,6 +46,14 @@ class CalculateDistanceMatrixAction
         ]);
 
         if (!$response->successful()) {
+=======
+            'origins' => $origins->map(fn (LocationData $location): string => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
+            'destinations' => $destinations->map(fn (LocationData $location): string => sprintf('%f,%f', $location->latitude, $location->longitude))->join('|'),
+            'key' => $apiKey,
+        ]);
+
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             throw GoogleMapsApiException::requestFailed((string) $response->status());
         }
 
@@ -52,20 +61,38 @@ class CalculateDistanceMatrixAction
         $data = $response->json();
 
         if (!is_array($data) || 'OK' !== ($data['status'] ?? null)) {
+<<<<<<< HEAD
             throw GoogleMapsApiException::requestFailed(
                 'Stato della risposta non valido: ' . ($data['status'] ?? 'sconosciuto'),
             );
+=======
+            throw GoogleMapsApiException::requestFailed('Stato della risposta non valido: '.($data['status'] ?? 'sconosciuto'));
+>>>>>>> 19c8248 (.)
         }
 
         if (empty($data['rows'])) {
             throw GoogleMapsApiException::noResultsFound();
         }
 
+<<<<<<< HEAD
         return array_map(fn(array $row): array => array_map(fn(array $element): array => [
             'distance' => $element['distance'] ?? ['text' => '0 km', 'value' => 0],
             'duration' => $element['duration'] ?? ['text' => '0 min', 'value' => 0],
             'status' => $element['status'] ?? 'ZERO_RESULTS',
         ], $row['elements'] ?? []), $data['rows'] ?? []);
+=======
+        return array_map(
+            fn (array $row): array => array_map(
+                fn (array $element): array => [
+                    'distance' => $element['distance'] ?? ['text' => '0 km', 'value' => 0],
+                    'duration' => $element['duration'] ?? ['text' => '0 min', 'value' => 0],
+                    'status' => $element['status'] ?? 'ZERO_RESULTS',
+                ],
+                $row['elements'] ?? []
+            ),
+            $data['rows'] ?? []
+        );
+>>>>>>> 19c8248 (.)
     }
 
     private function getApiKey(): string

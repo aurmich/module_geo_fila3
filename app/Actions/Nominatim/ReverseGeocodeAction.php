@@ -42,7 +42,11 @@ class ReverseGeocodeAction
                 'format' => 'json',
             ],
             'headers' => [
+<<<<<<< HEAD
                 'User-Agent' => 'Xot/1.0',
+=======
+                'User-Agent' => 'TechPlanner/1.0',
+>>>>>>> 19c8248 (.)
             ],
         ]);
 
@@ -52,7 +56,11 @@ class ReverseGeocodeAction
         return new LocationData(
             latitude: $latitude,
             longitude: $longitude,
+<<<<<<< HEAD
             address: $data['display_name'],
+=======
+            address: $data['display_name']
+>>>>>>> 19c8248 (.)
         );
     }
 }

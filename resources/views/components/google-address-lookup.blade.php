@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 19c8248 (.)
 <div class="input-group"
     wire:ignore
     x-data={lookup:{}}
@@ -24,4 +27,8 @@ declare(strict_types=1);
         required
         type="search"
     >
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 19c8248 (.)

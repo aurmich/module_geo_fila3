@@ -14,6 +14,7 @@ class AddressData extends Data
     public function __construct(
         public readonly float $latitude,
         public readonly float $longitude,
+<<<<<<< HEAD
         public readonly null|string $country = null,
         public readonly null|string $city = null,
         public readonly null|string $country_code = null,
@@ -25,6 +26,20 @@ class AddressData extends Data
         public readonly null|string $district = null,
         public readonly null|string $state = null,
     ) {}
+=======
+        public readonly ?string $country = null,
+        public readonly ?string $city = null,
+        public readonly ?string $country_code = null,
+        public readonly ?int $postal_code = null,
+        public readonly ?string $locality = null,
+        public readonly ?string $county = null,
+        public readonly ?string $street = null,
+        public readonly ?string $street_number = null,
+        public readonly ?string $district = null,
+        public readonly ?string $state = null,
+    ) {
+    }
+>>>>>>> 19c8248 (.)
 
     /**
      * Restituisce l'indirizzo formattato.
@@ -36,7 +51,11 @@ class AddressData extends Data
         if ($this->street) {
             $parts[] = $this->street;
             if ($this->street_number) {
+<<<<<<< HEAD
                 $parts[count($parts) - 1] .= ', ' . $this->street_number;
+=======
+                $parts[count($parts) - 1] .= ', '.$this->street_number;
+>>>>>>> 19c8248 (.)
             }
         }
 
@@ -60,6 +79,7 @@ class AddressData extends Data
     }
 
     /*
+<<<<<<< HEAD
      * public static function fromOpenStreetMap(array $data): self
      * {
      * $address = $data['address'] ?? [];
@@ -81,4 +101,27 @@ class AddressData extends Data
      * }
      *
      */
+=======
+    public static function fromOpenStreetMap(array $data): self
+    {
+        $address = $data['address'] ?? [];
+
+        return new self(
+            latitude: (float) $data['lat'],
+            longitude: (float) $data['lon'],
+            city: $address['city'] ?? $address['town'] ?? '',
+            state: $address['state'] ?? '',
+            county: $address['county'] ?? '',
+            district: $address['suburb'] ?? $address['district'] ?? '',
+            locality: $address['locality'] ?? '',
+            street: $address['road'] ?? '',
+            street_number: $address['house_number'] ?? '',
+            postal_code: (int) ($address['postcode'] ?? 0),
+            country: $address['country'] ?? 'Italia',
+            country_code: strtoupper($address['country_code'] ?? 'IT'),
+        );
+    }
+
+        */
+>>>>>>> 19c8248 (.)
 }

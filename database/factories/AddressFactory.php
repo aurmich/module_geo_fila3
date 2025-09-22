@@ -10,7 +10,11 @@ use Modules\Geo\Models\Comune;
 
 /**
  * Address Factory
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 19c8248 (.)
  * @extends Factory<Address>
  */
 class AddressFactory extends Factory
@@ -26,6 +30,7 @@ class AddressFactory extends Factory
             'locality' => $this->faker->city(),
             // Use explicit Italian regions to avoid calling unavailable faker->state()
             'administrative_area_level_1' => $this->faker->randomElement([
+<<<<<<< HEAD
                 'Lombardia',
                 'Lazio',
                 'Campania',
@@ -36,6 +41,10 @@ class AddressFactory extends Factory
                 'Emilia-Romagna',
                 'Puglia',
                 'Calabria',
+=======
+                'Lombardia', 'Lazio', 'Campania', 'Sicilia', 'Veneto',
+                'Piemonte', 'Toscana', 'Emilia-Romagna', 'Puglia', 'Calabria',
+>>>>>>> 19c8248 (.)
             ]),
             'country' => 'IT',
             'latitude' => $this->faker->latitude(35.0, 47.0), // Italy bounds
@@ -46,6 +55,7 @@ class AddressFactory extends Factory
 
     public function italian(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
             'country' => 'IT',
             'administrative_area_level_1' => $this->faker->randomElement([
@@ -58,3 +68,11 @@ class AddressFactory extends Factory
         ]);
     }
 }
+=======
+        return $this->state(fn (array $attributes): array => [
+            'country' => 'IT',
+            'administrative_area_level_1' => $this->faker->randomElement(['Lombardia', 'Lazio', 'Campania', 'Sicilia', 'Veneto']),
+        ]);
+    }
+}
+>>>>>>> 19c8248 (.)

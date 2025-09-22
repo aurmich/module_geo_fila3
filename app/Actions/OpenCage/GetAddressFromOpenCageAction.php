@@ -23,7 +23,11 @@ class GetAddressFromOpenCageAction
      *
      * @return AddressData|null I dati dell'indirizzo trovato o null se non trovato
      */
+<<<<<<< HEAD
     public function execute(string $address): null|AddressData
+=======
+    public function execute(string $address): ?AddressData
+>>>>>>> 19c8248 (.)
     {
         $apiKey = config('services.opencage.key');
 
@@ -31,14 +35,22 @@ class GetAddressFromOpenCageAction
             throw new \Exception('OpenCage API key not configured');
         }
 
+<<<<<<< HEAD
         $response = Http::get(self::BASE_URL . '/json', [
+=======
+        $response = Http::get(self::BASE_URL.'/json', [
+>>>>>>> 19c8248 (.)
             'q' => $address,
             'key' => $apiKey,
             'limit' => 1,
             'no_annotations' => 1,
         ]);
 
+<<<<<<< HEAD
         if (!$response->successful()) {
+=======
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             return null;
         }
 

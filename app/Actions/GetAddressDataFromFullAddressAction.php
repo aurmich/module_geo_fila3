@@ -31,7 +31,11 @@ class GetAddressDataFromFullAddressAction
      *
      * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
      */
+<<<<<<< HEAD
     public function execute(string $fullAddress): null|AddressData
+=======
+    public function execute(string $fullAddress): ?AddressData
+>>>>>>> 19c8248 (.)
     {
         $this->errors = collect();
         $services = [

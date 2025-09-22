@@ -10,32 +10,56 @@ use Modules\Geo\Datas\CoordinatesData;
 
 class GetCoordinatesByAddressAction
 {
+<<<<<<< HEAD
     public function execute(string $address): null|CoordinatesData
+=======
+    public function execute(string $address): ?CoordinatesData
+>>>>>>> 19c8248 (.)
     {
         // Prova con Google Maps
         $coordinates = $this->getFromGoogle($address);
 
+<<<<<<< HEAD
         if (!$coordinates) {
+=======
+        if (! $coordinates) {
+>>>>>>> 19c8248 (.)
             // Prova con Bing Maps
             $coordinates = $this->getFromBing($address);
         }
 
+<<<<<<< HEAD
         if (!$coordinates) {
+=======
+        if (! $coordinates) {
+>>>>>>> 19c8248 (.)
             // Prova con OpenCage
             $coordinates = $this->getFromOpenCage($address);
         }
 
+<<<<<<< HEAD
         if (!$coordinates) {
+=======
+        if (! $coordinates) {
+>>>>>>> 19c8248 (.)
             // Prova con OpenStreetMap Nominatim
             $coordinates = $this->getFromNominatim($address);
         }
 
+<<<<<<< HEAD
         if (!$coordinates) {
+=======
+        if (! $coordinates) {
+>>>>>>> 19c8248 (.)
             // Prova con OpenAPI Geocoding
             $coordinates = $this->getFromOpenApi($address);
         }
 
+<<<<<<< HEAD
         if (!$coordinates) {
+=======
+        if (! $coordinates) {
+>>>>>>> 19c8248 (.)
             Notification::make()
                 ->title('Error')
                 ->body('Failed to fetch coordinates from all providers.')
@@ -59,12 +83,17 @@ class GetCoordinatesByAddressAction
             'key' => config('services.google.maps_api_key'),
         ]);
 
+<<<<<<< HEAD
         if (!$response->successful()) {
+=======
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             return ['results' => []];
         }
 
         /** @var array{results?: array<int, array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
         $data = $response->json() ?? [];
+<<<<<<< HEAD
 
         if (!isset($data['results'])) {
             return ['results' => []];
@@ -74,6 +103,17 @@ class GetCoordinatesByAddressAction
     }
 
     private function getFromGoogle(string $address): null|CoordinatesData
+=======
+        
+        if (!isset($data['results'])) {
+            return ['results' => []];
+        }
+        
+        return ['results' => $data['results']];
+    }
+
+    private function getFromGoogle(string $address): ?CoordinatesData
+>>>>>>> 19c8248 (.)
     {
         $data = $this->getGoogleResponse($address);
 
@@ -90,7 +130,11 @@ class GetCoordinatesByAddressAction
 
         return CoordinatesData::from([
             'latitude' => (float) $location['lat'],
+<<<<<<< HEAD
             'longitude' => (float) $location['lng'],
+=======
+            'longitude' => (float) $location['lng']
+>>>>>>> 19c8248 (.)
         ]);
     }
 
@@ -106,11 +150,16 @@ class GetCoordinatesByAddressAction
             'key' => $apiKey,
         ]);
 
+<<<<<<< HEAD
         if (!$response->successful()) {
+=======
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             return [];
         }
 
         $data = $response->json();
+<<<<<<< HEAD
 
         if (!is_array($data) || !isset($data['resourceSets'])) {
             return ['resourceSets' => []];
@@ -120,6 +169,17 @@ class GetCoordinatesByAddressAction
     }
 
     private function getFromBing(string $address): null|CoordinatesData
+=======
+        
+        if (!is_array($data) || !isset($data['resourceSets'])) {
+            return ['resourceSets' => []];
+        }
+        
+        return ['resourceSets' => $data['resourceSets']];
+    }
+
+    private function getFromBing(string $address): ?CoordinatesData
+>>>>>>> 19c8248 (.)
     {
         $apiKey = config('services.bing.maps_api_key');
         if (!is_string($apiKey) || $apiKey === '') {
@@ -165,7 +225,11 @@ class GetCoordinatesByAddressAction
 
         return new CoordinatesData(
             latitude: (float) ($coordinates[0] ?? 0),
+<<<<<<< HEAD
             longitude: (float) ($coordinates[1] ?? 0),
+=======
+            longitude: (float) ($coordinates[1] ?? 0)
+>>>>>>> 19c8248 (.)
         );
     }
 
@@ -181,12 +245,17 @@ class GetCoordinatesByAddressAction
             'key' => $apiKey,
         ]);
 
+<<<<<<< HEAD
         if (!$response->successful()) {
+=======
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             return ['results' => []];
         }
 
         /** @var array{results?: array<int, array{geometry: array{lat: float, lng: float}}>} $data */
         $data = $response->json();
+<<<<<<< HEAD
 
         if (!is_array($data) || !isset($data['results'])) {
             return ['results' => []];
@@ -196,6 +265,17 @@ class GetCoordinatesByAddressAction
     }
 
     private function getFromOpenCage(string $address): null|CoordinatesData
+=======
+        
+        if (!is_array($data) || !isset($data['results'])) {
+            return ['results' => []];
+        }
+        
+        return ['results' => $data['results']];
+    }
+
+    private function getFromOpenCage(string $address): ?CoordinatesData
+>>>>>>> 19c8248 (.)
     {
         $apiKey = config('services.opencage.api_key');
         if (!is_string($apiKey) || $apiKey === '') {
@@ -216,7 +296,11 @@ class GetCoordinatesByAddressAction
 
         return CoordinatesData::from([
             'latitude' => (float) $location['lat'],
+<<<<<<< HEAD
             'longitude' => (float) $location['lng'],
+=======
+            'longitude' => (float) $location['lng']
+>>>>>>> 19c8248 (.)
         ]);
     }
 
@@ -231,7 +315,11 @@ class GetCoordinatesByAddressAction
             'limit' => 1,
         ]);
 
+<<<<<<< HEAD
         if (!$response->successful()) {
+=======
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             return [];
         }
 
@@ -240,7 +328,11 @@ class GetCoordinatesByAddressAction
         return is_array($data) ? array_values(array_filter($data, 'is_array')) : [];
     }
 
+<<<<<<< HEAD
     private function getFromNominatim(string $address): null|CoordinatesData
+=======
+    private function getFromNominatim(string $address): ?CoordinatesData
+>>>>>>> 19c8248 (.)
     {
         $data = $this->getNominatimResponse($address);
 
@@ -256,7 +348,11 @@ class GetCoordinatesByAddressAction
 
         return CoordinatesData::from([
             'latitude' => (float) $location['lat'],
+<<<<<<< HEAD
             'longitude' => (float) $location['lon'],
+=======
+            'longitude' => (float) $location['lon']
+>>>>>>> 19c8248 (.)
         ]);
     }
 
@@ -270,12 +366,17 @@ class GetCoordinatesByAddressAction
             'count' => 1,
         ]);
 
+<<<<<<< HEAD
         if (!$response->successful()) {
+=======
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             return ['results' => []];
         }
 
         /** @var array{results?: array<int, array{latitude: float, longitude: float}>} $data */
         $data = $response->json() ?? [];
+<<<<<<< HEAD
 
         if (!isset($data['results'])) {
             return ['results' => []];
@@ -285,6 +386,17 @@ class GetCoordinatesByAddressAction
     }
 
     private function getFromOpenApi(string $address): null|CoordinatesData
+=======
+        
+        if (!isset($data['results'])) {
+            return ['results' => []];
+        }
+        
+        return ['results' => $data['results']];
+    }
+
+    private function getFromOpenApi(string $address): ?CoordinatesData
+>>>>>>> 19c8248 (.)
     {
         $data = $this->getOpenApiResponse($address);
 
@@ -300,7 +412,11 @@ class GetCoordinatesByAddressAction
 
         return CoordinatesData::from([
             'latitude' => (float) $firstResult['latitude'],
+<<<<<<< HEAD
             'longitude' => (float) $firstResult['longitude'],
+=======
+            'longitude' => (float) $firstResult['longitude']
+>>>>>>> 19c8248 (.)
         ]);
     }
 }

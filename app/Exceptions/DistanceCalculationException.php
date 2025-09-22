@@ -12,7 +12,12 @@ class DistanceCalculationException extends \RuntimeException
     /**
      * Crea una nuova istanza per risposta non valida.
      */
+<<<<<<< HEAD
     public static function invalidResponse(string $message = 'Risposta non valida dal servizio di calcolo distanze'): self {
+=======
+    public static function invalidResponse(string $message = 'Risposta non valida dal servizio di calcolo distanze'): self
+    {
+>>>>>>> 19c8248 (.)
         return new self($message);
     }
 
@@ -27,7 +32,11 @@ class DistanceCalculationException extends \RuntimeException
     /**
      * Crea una nuova istanza per errore di calcolo.
      */
+<<<<<<< HEAD
     public static function calculationError(string $message, null|\Throwable $previous = null): self
+=======
+    public static function calculationError(string $message, ?\Throwable $previous = null): self
+>>>>>>> 19c8248 (.)
     {
         return new self($message, 0, $previous);
     }

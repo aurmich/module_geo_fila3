@@ -19,13 +19,21 @@ use Modules\Geo\Exceptions\DistanceCalculationException;
  *
  * @see https://developers.google.com/maps/documentation/distance-matrix
  */
+<<<<<<< HEAD
 readonly class CalculateDistanceAction
+=======
+class CalculateDistanceAction
+>>>>>>> 19c8248 (.)
 {
     /**
      * @param  CalculateDistanceMatrixAction  $distanceMatrixAction  Servizio per il calcolo delle distanze
      */
     public function __construct(
+<<<<<<< HEAD
         private  CalculateDistanceMatrixAction $distanceMatrixAction,
+=======
+        private readonly CalculateDistanceMatrixAction $distanceMatrixAction,
+>>>>>>> 19c8248 (.)
     ) {}
 
     /**
@@ -48,7 +56,14 @@ readonly class CalculateDistanceAction
         $this->validateCoordinates($destination);
 
         try {
+<<<<<<< HEAD
             $response = $this->distanceMatrixAction->execute(new Collection([$origin]), new Collection([$destination]));
+=======
+            $response = $this->distanceMatrixAction->execute(
+                new Collection([$origin]),
+                new Collection([$destination])
+            );
+>>>>>>> 19c8248 (.)
 
             if (empty($response) || empty($response[0]) || empty($response[0][0])) {
                 throw DistanceCalculationException::invalidResponse();
@@ -56,10 +71,14 @@ readonly class CalculateDistanceAction
 
             return $response[0][0];
         } catch (\Throwable $e) {
+<<<<<<< HEAD
             throw DistanceCalculationException::calculationError(
                 'Errore nel calcolo della distanza: ' . $e->getMessage(),
                 $e,
             );
+=======
+            throw DistanceCalculationException::calculationError('Errore nel calcolo della distanza: '.$e->getMessage(), $e);
+>>>>>>> 19c8248 (.)
         }
     }
 

@@ -10,7 +10,11 @@ use Modules\Geo\Models\Region;
 
 /**
  * Factory for Province model.
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 19c8248 (.)
  * @extends Factory<Province>
  */
 class ProvinceFactory extends Factory
@@ -330,9 +334,17 @@ class ProvinceFactory extends Factory
      */
     public function named(string $name): static
     {
+<<<<<<< HEAD
         return $this->state(fn (array $attributes) => array_merge($attributes, [
                 'name' => $name,
             ]));
+=======
+        return $this->state(function (array $attributes) use ($name): array {
+            return array_merge($attributes, [
+                'name' => $name,
+            ]);
+        });
+>>>>>>> 19c8248 (.)
     }
 
     /**
@@ -343,8 +355,16 @@ class ProvinceFactory extends Factory
      */
     public function forRegion(Region $region): static
     {
+<<<<<<< HEAD
         return $this->state(fn (array $attributes) => array_merge($attributes, [
                 'region_id' => $region->id,
             ]));
+=======
+        return $this->state(function (array $attributes) use ($region): array {
+            return array_merge($attributes, [
+                'region_id' => $region->id,
+            ]);
+        });
+>>>>>>> 19c8248 (.)
     }
 }

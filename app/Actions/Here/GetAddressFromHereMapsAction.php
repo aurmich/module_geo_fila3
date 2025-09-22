@@ -12,7 +12,11 @@ class GetAddressFromHereMapsAction
 {
     private const BASE_URL = 'https://geocode.search.hereapi.com/v1/geocode';
 
+<<<<<<< HEAD
     public function execute(string $address): null|AddressData
+=======
+    public function execute(string $address): ?AddressData
+>>>>>>> 19c8248 (.)
     {
         $apiKey = config('services.here.key');
 
@@ -26,7 +30,11 @@ class GetAddressFromHereMapsAction
             'limit' => 1,
         ]);
 
+<<<<<<< HEAD
         if (!$response->successful()) {
+=======
+        if (! $response->successful()) {
+>>>>>>> 19c8248 (.)
             return null;
         }
 

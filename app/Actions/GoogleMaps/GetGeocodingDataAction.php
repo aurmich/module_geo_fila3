@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\GeocodingData;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
@@ -16,12 +17,29 @@ use function Safe\json_decode;
  * Action per ottenere i dati di geocodifica da Google Maps.
  */
 readonly class GetGeocodingDataAction
+=======
+
+use function Safe\json_decode;
+
+use Webmozart\Assert\Assert;
+
+/**
+ * Action per ottenere i dati di geocodifica da Google Maps.
+ */
+class GetGeocodingDataAction
+>>>>>>> 19c8248 (.)
 {
     private const API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
 
     public function __construct(
+<<<<<<< HEAD
         private  Client $client,
     ) {}
+=======
+        private readonly Client $client,
+    ) {
+    }
+>>>>>>> 19c8248 (.)
 
     /**
      * Ottiene i dati di geocodifica per un indirizzo.

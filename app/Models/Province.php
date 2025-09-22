@@ -7,18 +7,31 @@ namespace Modules\Geo\Models;
 use Filament\Forms\Get;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+=======
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+>>>>>>> 19c8248 (.)
 
 /**
  * @property int|null $region_id
  * @property int $id
  * @property string|null $name
+<<<<<<< HEAD
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Geo\Models\Locality> $localities
  * @property-read int|null $localities_count
  * @property-read \Modules\Geo\Models\Region|null $region
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+=======
+ * @property-read \Modules\SaluteOra\Models\Profile|null $creator
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Geo\Models\Locality> $localities
+ * @property-read int|null $localities_count
+ * @property-read \Modules\Geo\Models\Region|null $region
+ * @property-read \Modules\SaluteOra\Models\Profile|null $updater
+>>>>>>> 19c8248 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Province newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Province newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Province query()
@@ -39,6 +52,7 @@ class Province extends BaseModel
         'name' => 'string',
     ];
 
+<<<<<<< HEAD
     public function getRows(): array
     {
         $rows = Comune::select('regione->codice as region_id', 'provincia->codice as id', 'provincia->nome as name')
@@ -46,6 +60,15 @@ class Province extends BaseModel
             ->orderBy('provincia->nome')
             ->get();
 
+=======
+
+    public function getRows(): array{
+        $rows=Comune::select("regione->codice as region_id","provincia->codice as id","provincia->nome as name")
+            ->distinct()
+            ->orderBy("provincia->nome")
+            ->get();
+       
+>>>>>>> 19c8248 (.)
         return $rows->toArray();
     }
 
@@ -61,6 +84,7 @@ class Province extends BaseModel
 
     public static function getOptions(Get $get): array
     {
+<<<<<<< HEAD
         $region = $get('administrative_area_level_1') ?? $get('region');
         return self::where('region_id', $region)
             ->orderBy('name')
@@ -69,3 +93,15 @@ class Province extends BaseModel
             ->toArray();
     }
 }
+=======
+        $region=$get('administrative_area_level_1') ?? $get('region');
+        return self::where('region_id',$region)
+            ->orderBy('name')
+            ->get()
+            ->pluck("name", "id")
+            ->toArray();
+
+            
+    }
+}
+>>>>>>> 19c8248 (.)

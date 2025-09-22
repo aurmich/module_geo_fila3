@@ -9,16 +9,26 @@ use Modules\Geo\Models\PlaceType;
 
 /**
  * PlaceType Factory
+<<<<<<< HEAD
  *
  * Factory for creating PlaceType model instances for testing and seeding.
  *
+=======
+ * 
+ * Factory for creating PlaceType model instances for testing and seeding.
+ * 
+>>>>>>> 19c8248 (.)
  * @extends Factory<PlaceType>
  */
 class PlaceTypeFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 19c8248 (.)
      * @var class-string<PlaceType>
      */
     protected $model = PlaceType::class;
@@ -45,7 +55,11 @@ class PlaceTypeFactory extends Factory
 
         return [
             'name' => $name,
+<<<<<<< HEAD
             'description' => is_string($name) && isset($placeTypes[$name]) ? $placeTypes[$name] : 'Default description',
+=======
+            'description' => $placeTypes[$name],
+>>>>>>> 19c8248 (.)
         ];
     }
 
@@ -56,7 +70,11 @@ class PlaceTypeFactory extends Factory
      */
     public function hospital(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 19c8248 (.)
             'name' => 'Ospedale',
             'description' => 'Struttura ospedaliera per cure mediche acute e croniche',
         ]);
@@ -69,7 +87,11 @@ class PlaceTypeFactory extends Factory
      */
     public function clinic(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 19c8248 (.)
             'name' => 'Clinica',
             'description' => 'Clinica privata per visite specialistiche e trattamenti',
         ]);
@@ -82,7 +104,11 @@ class PlaceTypeFactory extends Factory
      */
     public function medicalOffice(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 19c8248 (.)
             'name' => 'Studio Medico',
             'description' => 'Studio privato di medici specialisti',
         ]);
@@ -95,7 +121,11 @@ class PlaceTypeFactory extends Factory
      */
     public function pharmacy(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 19c8248 (.)
             'name' => 'Farmacia',
             'description' => 'Farmacia per la vendita di medicinali e prodotti sanitari',
         ]);
@@ -108,9 +138,17 @@ class PlaceTypeFactory extends Factory
      */
     public function laboratory(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 19c8248 (.)
             'name' => 'Laboratorio',
             'description' => 'Laboratorio di analisi mediche e diagnostiche',
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 19c8248 (.)

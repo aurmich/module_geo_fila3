@@ -9,23 +9,41 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\TravelTimeData;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
 
+=======
+
+use function Safe\json_decode;
+
+use Webmozart\Assert\Assert;
+
+>>>>>>> 19c8248 (.)
 /**
  * Action per calcolare il tempo di percorrenza tra due punti tramite Google Maps.
  *
  * Questa classe utilizza l'API Google Maps Distance Matrix per calcolare
  * il tempo di percorrenza tra due località, considerando il traffico attuale.
  */
+<<<<<<< HEAD
 readonly class CalculateTravelTimeAction
+=======
+class CalculateTravelTimeAction
+>>>>>>> 19c8248 (.)
 {
     private const API_URL = 'https://maps.googleapis.com/maps/api/distancematrix/json';
 
     public function __construct(
+<<<<<<< HEAD
         private  Client $client,
     ) {}
+=======
+        private readonly Client $client,
+    ) {
+    }
+>>>>>>> 19c8248 (.)
 
     /**
      * Calcola il tempo di percorrenza tra due punti.
@@ -63,7 +81,11 @@ readonly class CalculateTravelTimeAction
         Assert::notSame(
             [$origin->latitude, $origin->longitude],
             [$destination->latitude, $destination->longitude],
+<<<<<<< HEAD
             'Origin and destination cannot be the same location',
+=======
+            'Origin and destination cannot be the same location'
+>>>>>>> 19c8248 (.)
         );
     }
 
@@ -117,7 +139,11 @@ readonly class CalculateTravelTimeAction
         }
 
         $element = $data['rows'][0]['elements'][0] ?? null;
+<<<<<<< HEAD
         if (!$element || 'OK' !== ($element['status'] ?? null)) {
+=======
+        if (! $element || 'OK' !== ($element['status'] ?? null)) {
+>>>>>>> 19c8248 (.)
             return TravelTimeData::error($element['status'] ?? 'NO_ROUTE');
         }
 
@@ -127,7 +153,11 @@ readonly class CalculateTravelTimeAction
             distance_meters: $element['distance']['value'],
             formatted_duration: $element['duration']['text'],
             formatted_distance: $element['distance']['text'],
+<<<<<<< HEAD
             status: $data['status'],
+=======
+            status: $data['status']
+>>>>>>> 19c8248 (.)
         );
     }
 }

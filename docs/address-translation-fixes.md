@@ -211,7 +211,11 @@ Le stesse correzioni sono state applicate a:
 ## Collegamenti
 
 - [README Modulo Geo](README.md) - Documentazione principale
+<<<<<<< HEAD
 - [Translation Standards](../../Lang/docs/translation-helper-text-standards.md) - Standard traduzioni
+=======
+- [Translation Standards](../../Lang/project_docs/translation-helper-text-standards.md) - Standard traduzioni
+>>>>>>> 19c8248 (.)
 - [Address Implementation](address-implementation.md) - Implementazione indirizzi
 
 ---

@@ -9,7 +9,11 @@ The file had multiple Git conflict markers due to merge conflicts between differ
 
 ### Conflicting Elements:
 1. **PHPDoc comments**: Two versions with different Profile model references
+<<<<<<< HEAD
    - Version A: `\Modules\Xot\Contracts\ProfileContract`
+=======
+   - Version A: `\Modules\SaluteOra\Models\Profile`
+>>>>>>> 19c8248 (.)
    - Version B: `\Modules\User\Models\Profile`
 2. **Class declaration**: Multiple conflicting class declarations
 3. **Git merge markers**: Multiple nested conflict markers

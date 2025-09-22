@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Transformers;
 
 /* TO FIX
+<<<<<<< HEAD
  * 34     Call to an undefined method Modules\Cms\Contracts\PanelContract::imgSrc().
  * 34     Parameter #1 $model of static method Modules\Cms\Services\PanelService::make()->get() expects Illuminate\Database\Eloquent\Model, $this(Modules\Geo\Transformers\GeoJsonResource) given.
  */
@@ -12,6 +13,15 @@ namespace Modules\Geo\Transformers;
  *  GEOJSON e' uno standard
  * https://it.wikipedia.org/wiki/GeoJSON
  */
+=======
+ 34     Call to an undefined method Modules\Cms\Contracts\PanelContract::imgSrc().
+ 34     Parameter #1 $model of static method Modules\Cms\Services\PanelService::make()->get() expects Illuminate\Database\Eloquent\Model, $this(Modules\Geo\Transformers\GeoJsonResource) given.
+*/
+/*
+*  GEOJSON e' uno standard
+* https://it.wikipedia.org/wiki/GeoJSON
+*/
+>>>>>>> 19c8248 (.)
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource as ResCollection;
 
@@ -40,7 +50,11 @@ class GeoJsonResource extends ResCollection
         return [
             'type' => 'Feature',
             'properties' => [
+<<<<<<< HEAD
                 'id' => $this->post_type . '-' . $this->post_id,
+=======
+                'id' => $this->post_type.'-'.$this->post_id,
+>>>>>>> 19c8248 (.)
                 // "index"=> 0,
                 'isActive' => true,
                 // "logo"=> "http://placehold.it/32x32",
@@ -56,7 +70,11 @@ class GeoJsonResource extends ResCollection
                 'stars' => $this->ratings_avg,
                 'phone' => $this->phone,
                 'address' => $this->full_address,
+<<<<<<< HEAD
                 'about' => $this->subtitle . "\r\n",
+=======
+                'about' => $this->subtitle."\r\n",
+>>>>>>> 19c8248 (.)
                 'tags' => [
                     $this->post_type,
                     // "Restaurant",
@@ -72,5 +90,10 @@ class GeoJsonResource extends ResCollection
 }
 
 /*
+<<<<<<< HEAD
  * {"type":"Feature","properties":{"p":"vending_machine","id":"node/31605830"},"geometry":{"type":"Point","coordinates":[9.0796524,48.5308688]
  */
+=======
+{"type":"Feature","properties":{"p":"vending_machine","id":"node/31605830"},"geometry":{"type":"Point","coordinates":[9.0796524,48.5308688]
+*/
+>>>>>>> 19c8248 (.)

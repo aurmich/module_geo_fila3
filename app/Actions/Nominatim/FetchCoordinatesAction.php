@@ -41,7 +41,11 @@ class FetchCoordinatesAction
                 'limit' => 1,
             ],
             'headers' => [
+<<<<<<< HEAD
                 'User-Agent' => 'Xot/1.0',
+=======
+                'User-Agent' => 'TechPlanner/1.0',
+>>>>>>> 19c8248 (.)
             ],
         ]);
 
@@ -49,7 +53,11 @@ class FetchCoordinatesAction
         $data = json_decode($response->getBody()->getContents(), true);
 
         if (empty($data)) {
+<<<<<<< HEAD
             throw new \RuntimeException('No results found for address: ' . $address);
+=======
+            throw new \RuntimeException('No results found for address: '.$address);
+>>>>>>> 19c8248 (.)
         }
 
         $result = $data[0];
@@ -57,7 +65,11 @@ class FetchCoordinatesAction
         return new LocationData(
             latitude: (float) $result['lat'],
             longitude: (float) $result['lon'],
+<<<<<<< HEAD
             address: $result['display_name'],
+=======
+            address: $result['display_name']
+>>>>>>> 19c8248 (.)
         );
     }
 }

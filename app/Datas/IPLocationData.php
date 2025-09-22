@@ -23,6 +23,7 @@ class IPLocationData extends Data
 {
     public function __construct(
         public readonly string $ip,
+<<<<<<< HEAD
         public readonly null|string $city = null,
         public readonly null|string $region = null,
         public readonly null|string $country = null,
@@ -32,4 +33,16 @@ class IPLocationData extends Data
         public readonly null|string $timezone = null,
         public readonly null|string $isp = null,
     ) {}
+=======
+        public readonly ?string $city = null,
+        public readonly ?string $region = null,
+        public readonly ?string $country = null,
+        public readonly ?string $countryName = null,
+        public readonly ?float $latitude = null,
+        public readonly ?float $longitude = null,
+        public readonly ?string $timezone = null,
+        public readonly ?string $isp = null,
+    ) {
+    }
+>>>>>>> 19c8248 (.)
 }

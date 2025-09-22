@@ -15,8 +15,13 @@ class FilterCoordinatesInRadius
 
         foreach ($coordinateArray as $coordinate) {
             Assert::isArray($coordinate);
+<<<<<<< HEAD
             Assert::string($lat = $coordinate['latitude'], __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
             Assert::string($lon = $coordinate['longitude'], __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+=======
+            Assert::string($lat = $coordinate['latitude']);
+            Assert::string($lon = $coordinate['longitude']);
+>>>>>>> 19c8248 (.)
 
             $distanza = $this->calcolaDistanzaGeografica($latPartenza, $lonPartenza, $lat, $lon);
 
@@ -44,7 +49,11 @@ class FilterCoordinatesInRadius
         $dLon = $lon2 - $lon1;
 
         // Applicazione della formula dell'Haversine
+<<<<<<< HEAD
         $a = (sin($dLat / 2) * sin($dLat / 2)) + (cos($lat1) * cos($lat2) * sin($dLon / 2) * sin($dLon / 2));
+=======
+        $a = sin($dLat / 2) * sin($dLat / 2) + cos($lat1) * cos($lat2) * sin($dLon / 2) * sin($dLon / 2);
+>>>>>>> 19c8248 (.)
         $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
 
         // Calcolo della distanza

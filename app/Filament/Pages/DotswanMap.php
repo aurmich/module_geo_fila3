@@ -23,9 +23,17 @@ class DotswanMap extends XotBasePage
     public function getMapMarkers(): Collection
     {
         /** @var Collection<int, Place> $places */
+<<<<<<< HEAD
         $places = Place::query()->whereNotNull(['latitude', 'longitude'])->get();
 
         return $places->map(fn(Place $place): array => [
+=======
+        $places = Place::query()
+            ->whereNotNull(['latitude', 'longitude'])
+            ->get();
+
+        return $places->map(fn (Place $place): array => [
+>>>>>>> 19c8248 (.)
             'lat' => (float) $place->latitude,
             'lng' => (float) $place->longitude,
             'title' => (string) ($place->getAttribute('name') ?? 'Unnamed Place'),
@@ -48,13 +56,21 @@ class DotswanMap extends XotBasePage
             Map::make('location')
                 ->label('Location')
                 ->columnSpanFull()
+<<<<<<< HEAD
                 ->afterStateUpdated(function (Set $set, null|array $state): void {
+=======
+                ->afterStateUpdated(function (Set $set, ?array $state): void {
+>>>>>>> 19c8248 (.)
                     if (is_array($state)) {
                         $set('latitude', $state['lat']);
                         $set('longitude', $state['lng']);
                     }
                 })
+<<<<<<< HEAD
                 ->afterStateHydrated(function ($_state, $record, Set $set): void {
+=======
+                ->afterStateHydrated(function ($state, $record, Set $set): void {
+>>>>>>> 19c8248 (.)
                     $set('location', ['lat' => $record->latitude, 'lng' => $record->longitude]);
                 })
                 ->extraStyles([

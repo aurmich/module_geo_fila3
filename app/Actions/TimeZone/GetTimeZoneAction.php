@@ -19,9 +19,15 @@ class GetTimeZoneAction
 
     private Client $client;
 
+<<<<<<< HEAD
     private null|string $apiKey;
 
     public function __construct(null|string $apiKey = null)
+=======
+    private ?string $apiKey;
+
+    public function __construct(?string $apiKey = null)
+>>>>>>> 19c8248 (.)
     {
         $this->client = new Client();
         $this->apiKey = $apiKey;
@@ -34,7 +40,11 @@ class GetTimeZoneAction
     {
         $response = $this->client->get(self::API_URL, [
             'query' => [
+<<<<<<< HEAD
                 'location' => $latitude . ',' . $longitude,
+=======
+                'location' => $latitude.','.$longitude,
+>>>>>>> 19c8248 (.)
                 'timestamp' => time(),
                 'key' => $this->apiKey,
             ],
@@ -44,7 +54,11 @@ class GetTimeZoneAction
         $data = json_decode($response->getBody()->getContents(), true);
 
         if ('OK' !== $data['status']) {
+<<<<<<< HEAD
             throw new \RuntimeException('Failed to get timezone: ' . ($data['errorMessage'] ?? $data['status']));
+=======
+            throw new \RuntimeException('Failed to get timezone: '.($data['errorMessage'] ?? $data['status']));
+>>>>>>> 19c8248 (.)
         }
 
         return new TimeZoneData(

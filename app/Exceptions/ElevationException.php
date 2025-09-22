@@ -20,7 +20,11 @@ class ElevationException extends \RuntimeException
     /**
      * Crea una nuova istanza per errore del servizio.
      */
+<<<<<<< HEAD
     public static function serviceError(string $message, null|\Throwable $previous = null): self
+=======
+    public static function serviceError(string $message, ?\Throwable $previous = null): self
+>>>>>>> 19c8248 (.)
     {
         return new self($message, 0, $previous);
     }

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 19c8248 (.)
 {{--
 <script src="js/leaflet.js"></script>
     <script src="js/leaflet.permalink.min.js"></script>
@@ -47,4 +50,8 @@ declare(strict_types=1);
     Theme::add('geo::js/popupcontent.js'); //Uncaught ReferenceError: popupcontent is not defined
 @endphp
 {!! Theme::showScripts(false) !!}
+<<<<<<< HEAD
 @stack('scripts')
+=======
+@stack('scripts')
+>>>>>>> 19c8248 (.)

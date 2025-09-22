@@ -16,5 +16,10 @@ class GoogleMapGeometryData extends Data
      */
     public function __construct(
         public readonly GoogleMapLocationData $location,
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 19c8248 (.)
 }

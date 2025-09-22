@@ -43,10 +43,17 @@ class LocationMapWidget extends MapWidget
     /**
      * Restituisce l'altezza massima del widget.
      */
+<<<<<<< HEAD
     protected function getMaxHeight(): null|string
     {
         $height = $this->maxHeight ?? '50vh';
         return is_string($height) ? $height : ((string) $height);
+=======
+    protected function getMaxHeight(): ?string
+    {
+        $height = $this->maxHeight ?? '50vh';
+        return is_string($height) ? $height : (string) $height;
+>>>>>>> 19c8248 (.)
     }
 
     /**
@@ -60,7 +67,11 @@ class LocationMapWidget extends MapWidget
         $config = Config::get('maps', []);
 
         return [
+<<<<<<< HEAD
             'zoom' => is_numeric($config['zoom'] ?? null) ? ((int) $config['zoom']) : 12,
+=======
+            'zoom' => is_numeric($config['zoom'] ?? null) ? (int) $config['zoom'] : 12,
+>>>>>>> 19c8248 (.)
             'center' => $this->getMapCenter(),
             'mapTypeId' => is_string($config['type'] ?? null) ? $config['type'] : 'roadmap',
             'mapTypeControl' => true,
@@ -114,8 +125,12 @@ class LocationMapWidget extends MapWidget
                 }
 
                 return $marker;
+<<<<<<< HEAD
             })
             ->all();
+=======
+            })->all();
+>>>>>>> 19c8248 (.)
     }
 
     /**
@@ -134,11 +149,19 @@ class LocationMapWidget extends MapWidget
         $centerConfig = $config['center'] ?? null;
 
         return [
+<<<<<<< HEAD
             'lat' => is_array($centerConfig) && is_numeric($centerConfig['lat'] ?? null)
                 ? ((float) $centerConfig['lat'])
                 : $defaultLat,
             'lng' => is_array($centerConfig) && is_numeric($centerConfig['lng'] ?? null)
                 ? ((float) $centerConfig['lng'])
+=======
+            'lat' => is_array($centerConfig) && is_numeric($centerConfig['lat'] ?? null) 
+                ? (float) $centerConfig['lat'] 
+                : $defaultLat,
+            'lng' => is_array($centerConfig) && is_numeric($centerConfig['lng'] ?? null) 
+                ? (float) $centerConfig['lng'] 
+>>>>>>> 19c8248 (.)
                 : $defaultLng,
         ];
     }
@@ -148,7 +171,11 @@ class LocationMapWidget extends MapWidget
      *
      * @return array{url: string, scaledSize: array{width: int, height: int}}|null
      */
+<<<<<<< HEAD
     protected function getMarkerIcon(Place $place): null|array
+=======
+    protected function getMarkerIcon(Place $place): ?array
+>>>>>>> 19c8248 (.)
     {
         /** @var array{
          *     icons?: array<string, array{
@@ -191,7 +218,11 @@ class LocationMapWidget extends MapWidget
     {
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.location-map-widget';
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 19c8248 (.)
         return ViewFacade::make($viewName, $this->getViewData());
     }
 }

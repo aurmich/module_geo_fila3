@@ -6,8 +6,16 @@ namespace Modules\Geo\Actions;
 
 class FormatCoordinatesAction
 {
+<<<<<<< HEAD
     public function execute(float $latitude, float $longitude, string $format = 'decimal'): string
     {
+=======
+    public function execute(
+        float $latitude,
+        float $longitude,
+        string $format = 'decimal',
+    ): string {
+>>>>>>> 19c8248 (.)
         return match ($format) {
             'dms' => $this->toDMS($latitude, $longitude),
             'decimal' => $this->toDecimal($latitude, $longitude),
@@ -31,7 +39,11 @@ class FormatCoordinatesAction
     {
         $degrees = floor($decimal);
         $minutes = floor(($decimal - $degrees) * 60);
+<<<<<<< HEAD
         $seconds = round(((($decimal - $degrees) * 60) - $minutes) * 60);
+=======
+        $seconds = round((($decimal - $degrees) * 60 - $minutes) * 60);
+>>>>>>> 19c8248 (.)
 
         return sprintf("%d°%d'%d\"", $degrees, $minutes, $seconds);
     }

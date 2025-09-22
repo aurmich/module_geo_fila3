@@ -207,5 +207,9 @@ Rappresenta un equilibrio ottimale tra la semplicità degli array PHP e la poten
 ## Risorse Utili
 
 - [Repository ufficiale di Laravel Sushi](https://github.com/calebporzio/sushi)
+<<<<<<< HEAD
 - [Documentazione di Laravel Eloquent](https://laravel.com/docs/eloquent)
+=======
+- [Documentazione di Laravel Eloquent](https://laravel.com/project_docs/eloquent)
+>>>>>>> 19c8248 (.)
 - [Estensione PDO SQLite](https://www.php.net/manual/en/ref.pdo-sqlite.php)

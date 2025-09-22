@@ -12,6 +12,12 @@ class PhotonResponseData extends Data
 {
     public function __construct(
         #[DataCollectionOf(PhotonFeatureData::class)]
+<<<<<<< HEAD
         public null|DataCollection $features,
     ) {}
+=======
+        public ?DataCollection $features,
+    ) {
+    }
+>>>>>>> 19c8248 (.)
 }

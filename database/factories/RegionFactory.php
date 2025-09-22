@@ -9,7 +9,11 @@ use Modules\Geo\Models\Region;
 
 /**
  * Factory for Region model.
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 19c8248 (.)
  * @extends Factory<Region>
  */
 class RegionFactory extends Factory
@@ -148,8 +152,18 @@ class RegionFactory extends Factory
      */
     public function named(string $name): static
     {
+<<<<<<< HEAD
         return $this->state(fn (array $attributes) => array_merge($attributes, [
                 'name' => $name,
             ]));
     }
 }
+=======
+        return $this->state(function (array $attributes) use ($name): array {
+            return array_merge($attributes, [
+                'name' => $name,
+            ]);
+        });
+    }
+}
+>>>>>>> 19c8248 (.)
