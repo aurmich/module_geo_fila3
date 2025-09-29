@@ -199,6 +199,17 @@ error_log
 # PHPStan documentation
 docs/phpstan/
 
+# Old directories
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+
 # Other
+<<<<<<< HEAD
 -e
 >>>>>>> 19c8248 (.)
+=======
+
+>>>>>>> 6d2e09f05 (.)
