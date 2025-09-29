@@ -55,31 +55,19 @@ class GetAddressFromMapboxLatLngAction
 
     private function makeApiRequest(float $latitude, float $longitude, string $apiKey): array
     {
-<<<<<<< HEAD
-        $response = Http::get(self::BASE_URL . "/{$longitude},{$latitude}.json", [
-=======
         $response = Http::get(self::BASE_URL."/{$longitude},{$latitude}.json", [
->>>>>>> 19c8248 (.)
             'access_token' => $apiKey,
             'types' => 'address',
             'limit' => 1,
             'language' => 'it',
         ]);
 
-<<<<<<< HEAD
-        if (!$response->successful()) {
-=======
         if (! $response->successful()) {
->>>>>>> 19c8248 (.)
             throw InvalidLocationException::invalidData('Richiesta a Mapbox fallita');
         }
 
         $data = $response->json();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         if (!is_array($data)) {
             throw InvalidLocationException::invalidData('Risposta di Mapbox non valida');
         }
@@ -100,11 +88,7 @@ class GetAddressFromMapboxLatLngAction
         // Estrai il contesto dal risultato
         /** @var array<int, array{id?: string, text?: string, short_code?: string}> $contextItems */
         $contextItems = $location['context'] ?? [];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         $context = [];
         foreach ($contextItems as $item) {
             $id = $item['id'] ?? '';
@@ -124,35 +108,20 @@ class GetAddressFromMapboxLatLngAction
 
         // Costruisce la struttura dati richiesta da MapboxMapData
         $center = $location['center'] ?? [0.0, 0.0];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         // Validazione del tipo e dell'array center
         if (!is_array($center) || count($center) < 2) {
             $center = [0.0, 0.0];
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         /** @var array{center: array{float, float}, text: string, address: string|null, context: array{country: string|null, country_code: string|null, place: string|null, postcode: string|null, locality: string|null, region: string|null, neighborhood: string|null}} $mappedData */
         $mappedData = [
             'center' => [
                 (float) ($center[0] ?? 0.0),
-<<<<<<< HEAD
-                (float) ($center[1] ?? 0.0),
-            ],
-            'text' => (string) ($location['text'] ?? ''),
-            'address' => isset($location['address']) ? ((string) $location['address']) : null,
-=======
                 (float) ($center[1] ?? 0.0)
             ],
             'text' => (string) ($location['text'] ?? ''),
             'address' => isset($location['address']) ? (string) $location['address'] : null,
->>>>>>> 19c8248 (.)
             'context' => [
                 'country' => $context['country']['text'] ?? null,
                 'country_code' => $context['country']['short_code'] ?? 'it',

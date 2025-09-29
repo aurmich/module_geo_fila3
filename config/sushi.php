@@ -1,28 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-return [
-    /*
-     * |--------------------------------------------------------------------------
-     * | Sushi Configuration
-     * |--------------------------------------------------------------------------
-     * |
-     * | Qui puoi configurare le impostazioni per il pacchetto Sushi.
-     * |
-     */
-
-    /*
-     * |--------------------------------------------------------------------------
-     * | Cache Configuration
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione della cache per i modelli Sushi.
-     * |
-     */
-=======
 return [
     /*
     |--------------------------------------------------------------------------
@@ -41,21 +18,10 @@ return [
     | Configurazione della cache per i modelli Sushi.
     |
     */
->>>>>>> 19c8248 (.)
     'cache' => [
         'enabled' => env('SUSHI_CACHE_ENABLED', true),
         'duration' => env('SUSHI_CACHE_DURATION', 60 * 24 * 7), // 7 giorni
     ],
-<<<<<<< HEAD
-    /*
-     * |--------------------------------------------------------------------------
-     * | Database Configuration
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione del database SQLite per i modelli Sushi.
-     * |
-     */
-=======
 
     /*
     |--------------------------------------------------------------------------
@@ -65,21 +31,10 @@ return [
     | Configurazione del database SQLite per i modelli Sushi.
     |
     */
->>>>>>> 19c8248 (.)
     'database' => [
         'connection' => env('SUSHI_DB_CONNECTION', 'sqlite'),
         'database' => env('SUSHI_DB_DATABASE', ':memory:'),
     ],
-<<<<<<< HEAD
-    /*
-     * |--------------------------------------------------------------------------
-     * | Models Configuration
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione specifica per i modelli Sushi.
-     * |
-     */
-=======
 
     /*
     |--------------------------------------------------------------------------
@@ -89,7 +44,6 @@ return [
     | Configurazione specifica per i modelli Sushi.
     |
     */
->>>>>>> 19c8248 (.)
     'models' => [
         'comune' => [
             'file' => 'database/content/comuni.json',
@@ -120,8 +74,4 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-];
-=======
 ]; 
->>>>>>> 19c8248 (.)

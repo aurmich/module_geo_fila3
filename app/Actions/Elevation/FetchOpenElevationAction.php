@@ -13,23 +13,14 @@ use function Safe\json_decode;
 /**
  * Action per ottenere l'elevazione di un punto usando OpenElevation API.
  */
-<<<<<<< HEAD
-readonly class FetchOpenElevationAction
-=======
 class FetchOpenElevationAction
->>>>>>> 19c8248 (.)
 {
     private const API_URL = 'https://api.open-elevation.com/api/v1/lookup';
 
     public function __construct(
-<<<<<<< HEAD
-        private  Client $client,
-    ) {}
-=======
         private readonly Client $client,
     ) {
     }
->>>>>>> 19c8248 (.)
 
     /**
      * Ottiene l'elevazione per un punto.
@@ -43,11 +34,7 @@ class FetchOpenElevationAction
 
             return $this->parseResponse($response);
         } catch (GuzzleException $e) {
-<<<<<<< HEAD
-            throw new \RuntimeException('Failed to get elevation data: ' . $e->getMessage());
-=======
             throw new \RuntimeException('Failed to get elevation data: '.$e->getMessage());
->>>>>>> 19c8248 (.)
         }
     }
 
@@ -93,11 +80,7 @@ class FetchOpenElevationAction
         return new ElevationData(
             latitude: $result['latitude'],
             longitude: $result['longitude'],
-<<<<<<< HEAD
-            elevation: $result['elevation'],
-=======
             elevation: $result['elevation']
->>>>>>> 19c8248 (.)
         );
     }
 }

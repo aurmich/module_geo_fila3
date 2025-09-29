@@ -29,18 +29,6 @@ return new class extends XotBaseMigration {
             $blueprint->decimal('latitude', 15, 10)->nullable();
             $blueprint->decimal('longitude', 15, 10)->nullable();
             /*
-<<<<<<< HEAD
-             * $address_components = MyModel::$address_components;
-             * foreach ($address_components as $address_component) {
-             * if (! $this->hasColumn($address_component)) {
-             * $blueprint->text($address_component)->nullable();
-             * }
-             * if (! $this->hasColumn($address_component.'_short')) {
-             * $blueprint->text($address_component.'_short')->nullable();
-             * }
-             * }
-             */
-=======
             $address_components = MyModel::$address_components;
             foreach ($address_components as $address_component) {
                 if (! $this->hasColumn($address_component)) {
@@ -51,7 +39,6 @@ return new class extends XotBaseMigration {
                 }
             }
             */
->>>>>>> 19c8248 (.)
             $blueprint->text('nearest_street')->nullable();
             $blueprint->string('created_by')->nullable();
             $blueprint->string('updated_by')->nullable();
@@ -60,17 +47,6 @@ return new class extends XotBaseMigration {
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $blueprint): void {
-<<<<<<< HEAD
-            if (!$this->hasColumn('post_type')) {
-                $blueprint->string('post_type', 50)->index()->nullable();
-            }
-            /*
-             * if (! $this->hasColumn('address')) {
-             * $table->text('address')->nullable();
-             * }
-             */
-            if (!$this->hasColumn('latitude')) {
-=======
             if (! $this->hasColumn('post_type')) {
                 $blueprint->string('post_type', 50)->index()->nullable();
             }
@@ -80,16 +56,11 @@ return new class extends XotBaseMigration {
             }
             */
             if (! $this->hasColumn('latitude')) {
->>>>>>> 19c8248 (.)
                 $blueprint->decimal('latitude', 15, 10)->nullable();
                 $blueprint->decimal('longitude', 15, 10)->nullable();
             }
 
-<<<<<<< HEAD
-            if (!$this->hasColumn('model_id')) {
-=======
             if (! $this->hasColumn('model_id')) {
->>>>>>> 19c8248 (.)
                 $blueprint->nullableMorphs('model');
             }
         });

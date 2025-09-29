@@ -7,17 +7,10 @@ namespace Modules\Geo\Actions;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\InvalidLocationException;
 
-<<<<<<< HEAD
-readonly class ClusterLocationsAction
-{
-    public function __construct(
-        private  CalculateDistanceAction $distanceCalculator,
-=======
 class ClusterLocationsAction
 {
     public function __construct(
         private readonly CalculateDistanceAction $distanceCalculator,
->>>>>>> 19c8248 (.)
     ) {}
 
     /**
@@ -34,11 +27,7 @@ class ClusterLocationsAction
         $clusters = [];
 
         foreach ($locations as $location) {
-<<<<<<< HEAD
-            if (!($location instanceof LocationData)) {
-=======
             if (! $location instanceof LocationData) {
->>>>>>> 19c8248 (.)
                 throw InvalidLocationException::invalidData();
             }
 
@@ -46,11 +35,7 @@ class ClusterLocationsAction
 
             foreach ($clusters as &$cluster) {
                 $distance = $this->distanceCalculator->execute($cluster['center'], $location);
-<<<<<<< HEAD
-                $distanceKm = ((float) $distance['distance']['value']) / 1000;
-=======
                 $distanceKm = (float) $distance['distance']['value'] / 1000;
->>>>>>> 19c8248 (.)
 
                 if ($distanceKm <= $maxDistance) {
                     $cluster['points'][] = $location;
@@ -60,11 +45,7 @@ class ClusterLocationsAction
                 }
             }
 
-<<<<<<< HEAD
-            if (!$assigned) {
-=======
             if (! $assigned) {
->>>>>>> 19c8248 (.)
                 $clusters[] = [
                     'center' => $location,
                     'points' => [$location],
@@ -82,11 +63,6 @@ class ClusterLocationsAction
      */
     private function updateClusterCenter(array &$cluster): void
     {
-<<<<<<< HEAD
-        $latSum = array_sum(array_map(fn(LocationData $point) => $point->latitude, $cluster['points']));
-
-        $lonSum = array_sum(array_map(fn(LocationData $point) => $point->longitude, $cluster['points']));
-=======
         $latSum = array_sum(array_map(
             fn (LocationData $point) => $point->latitude,
             $cluster['points']
@@ -96,17 +72,12 @@ class ClusterLocationsAction
             fn (LocationData $point) => $point->longitude,
             $cluster['points']
         ));
->>>>>>> 19c8248 (.)
 
         $count = count($cluster['points']);
 
         $cluster['center'] = new LocationData(
             latitude: $latSum / $count,
-<<<<<<< HEAD
-            longitude: $lonSum / $count,
-=======
             longitude: $lonSum / $count
->>>>>>> 19c8248 (.)
         );
     }
 }

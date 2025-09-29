@@ -26,10 +26,6 @@ class EventServiceProvider extends XotBaseEventServiceProvider
     /**
      * Configure the proper event listeners for email verification.
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 19c8248 (.)
     protected function configureEmailVerification(): void
     {
     }

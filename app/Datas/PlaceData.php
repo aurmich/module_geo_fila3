@@ -26,18 +26,11 @@ class PlaceData extends Data
         public readonly float $latitude,
         public readonly float $longitude,
         public readonly string $type,
-<<<<<<< HEAD
-        public readonly null|string $address = null,
-        public readonly array $addressComponents = [],
-        public readonly array $extraData = [],
-    ) {}
-=======
         public readonly ?string $address = null,
         public readonly array $addressComponents = [],
         public readonly array $extraData = [],
     ) {
     }
->>>>>>> 19c8248 (.)
 
     /**
      * Crea un'istanza da un array di dati Nominatim.

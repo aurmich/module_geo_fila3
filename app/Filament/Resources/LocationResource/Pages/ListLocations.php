@@ -11,11 +11,7 @@ class ListLocations extends ListRecords
 {
     protected static string $resource = LocationResource::class;
 
-<<<<<<< HEAD
-    protected static null|string $title = 'All Locations';
-=======
     protected static ?string $title = 'All Locations';
->>>>>>> 19c8248 (.)
 
     protected function getHeaderWidgets(): array
     {

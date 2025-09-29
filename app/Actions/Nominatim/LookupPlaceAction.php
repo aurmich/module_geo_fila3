@@ -40,11 +40,7 @@ class LookupPlaceAction
                 'format' => 'json',
             ],
             'headers' => [
-<<<<<<< HEAD
                 'User-Agent' => 'Xot/1.0',
-=======
-                'User-Agent' => 'TechPlanner/1.0',
->>>>>>> 19c8248 (.)
             ],
         ]);
 
@@ -52,11 +48,7 @@ class LookupPlaceAction
         $data = json_decode($response->getBody()->getContents(), true);
 
         if (empty($data)) {
-<<<<<<< HEAD
-            throw new \RuntimeException('No results found for OSM ID: ' . $osmId);
-=======
             throw new \RuntimeException('No results found for OSM ID: '.$osmId);
->>>>>>> 19c8248 (.)
         }
 
         $result = $data[0];
@@ -64,11 +56,7 @@ class LookupPlaceAction
         return new LocationData(
             latitude: (float) $result['lat'],
             longitude: (float) $result['lon'],
-<<<<<<< HEAD
-            address: $result['display_name'],
-=======
             address: $result['display_name']
->>>>>>> 19c8248 (.)
         );
     }
 }

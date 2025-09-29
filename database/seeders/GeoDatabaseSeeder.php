@@ -19,17 +19,8 @@ class GeoDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-<<<<<<< HEAD
-        $this->call([]);
-=======
         $this->call([
-            \Database\Seeders\AddressSeeder::class,
-            \Database\Seeders\LocationSeeder::class,
-            \Database\Seeders\ComuneSeeder::class,
-            \Database\Seeders\ProvinceSeeder::class,
-            \Database\Seeders\RegionSeeder::class,
-            \Database\Seeders\PlaceSeeder::class,
+            
         ]);
->>>>>>> 19c8248 (.)
     }
 }

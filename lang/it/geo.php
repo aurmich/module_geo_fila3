@@ -13,21 +13,14 @@ return [
             'label' => 'Online',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 19c8248 (.)
     'sections' => [
         'map' => [
             'navigation' => [
                 'name' => 'Mappa',
                 'group' => 'Geo',
                 'sort' => 10,
-<<<<<<< HEAD
-                'icon' => 'geo-map', // Questo è già corretto
-=======
                 'icon' => 'geo-map',  // Questo è già corretto
->>>>>>> 19c8248 (.)
                 'badge' => [
                     'color' => 'info',
                     'label' => 'Interattiva',
@@ -47,20 +40,13 @@ return [
                 'terrain' => 'Terreno',
             ],
         ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 19c8248 (.)
         'location' => [
             'navigation' => [
                 'name' => 'Posizioni',
                 'group' => 'Geo',
                 'sort' => 20,
-<<<<<<< HEAD
-                'icon' => 'geo-location', // Questo è già corretto
-=======
                 'icon' => 'geo-location',  // Questo è già corretto
->>>>>>> 19c8248 (.)
                 'badge' => [
                     'color' => 'warning',
                     'label' => 'Da Verificare',
@@ -82,10 +68,7 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 19c8248 (.)
     'common' => [
         'status' => [
             'active' => 'Attivo',

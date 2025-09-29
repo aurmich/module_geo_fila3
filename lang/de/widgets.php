@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 19c8248 (.)
 return [
     'location' => [
         'title' => 'Selezione Località',

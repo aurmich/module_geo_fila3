@@ -20,12 +20,7 @@ class ElevationData extends Data
         public readonly float $elevation,
         public readonly float $latitude,
         public readonly float $longitude,
-<<<<<<< HEAD
-        public readonly null|float $resolution = null,
-    ) {}
-=======
         public readonly ?float $resolution = null,
     ) {
     }
->>>>>>> 19c8248 (.)
 }

@@ -12,36 +12,12 @@ class GeoDataMigrator extends Seeder
 {
     /**
      * Run the migration of geographical data from SaluteOra to Geo module.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * This should only be run once during the migration process.
      */
     public function run(): void
     {
         $this->command->info('Starting migration of geographical data from SaluteOra to Geo module...');
-<<<<<<< HEAD
-
-        try {
-            DB::beginTransaction();
-
-            // 1. Migrate regions
-            $this->migrateRegions();
-
-            // 2. Migrate provinces
-            $this->migrateProvinces();
-
-            // 3. Migrate cities
-            $this->migrateCities();
-
-            // 4. Migrate CAPs
-            $this->migrateCaps();
-
-            DB::commit();
-            $this->command->info('Successfully migrated all geographical data to Geo module.');
-=======
         
         try {
             DB::beginTransaction();
@@ -61,18 +37,13 @@ class GeoDataMigrator extends Seeder
             DB::commit();
             $this->command->info('Successfully migrated all geographical data to Geo module.');
             
->>>>>>> 19c8248 (.)
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Failed to migrate geographical data: ' . $e->getMessage());
             $this->command->error('Failed to migrate geographical data: ' . $e->getMessage());
         }
     }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 19c8248 (.)
     /**
      * Migrate regions from SaluteOra to Geo module
      */
@@ -82,21 +53,12 @@ class GeoDataMigrator extends Seeder
             $this->command->warn('Regions table does not exist in SaluteOra module. Skipping...');
             return;
         }
-<<<<<<< HEAD
-
-        $count = DB::table('regions')->count();
-        $this->command->info("Found {$count} regions to migrate...");
-
-        $regions = DB::table('regions')->get();
-
-=======
         
         $count = DB::table('regions')->count();
         $this->command->info("Found $count regions to migrate...");
         
         $regions = DB::table('regions')->get();
         
->>>>>>> 19c8248 (.)
         foreach ($regions as $region) {
             DB::table('geo_regions')->updateOrInsert(
                 ['id' => $region->id],
@@ -105,15 +67,6 @@ class GeoDataMigrator extends Seeder
                     'code' => $region->code ?? null,
                     'created_at' => $region->created_at ?? now(),
                     'updated_at' => $region->updated_at ?? now(),
-<<<<<<< HEAD
-                ],
-            );
-        }
-
-        $this->command->info("Migrated {$count} regions.");
-    }
-
-=======
                 ]
             );
         }
@@ -121,7 +74,6 @@ class GeoDataMigrator extends Seeder
         $this->command->info("Migrated $count regions.");
     }
     
->>>>>>> 19c8248 (.)
     /**
      * Migrate provinces from SaluteOra to Geo module
      */
@@ -131,21 +83,12 @@ class GeoDataMigrator extends Seeder
             $this->command->warn('Provinces table does not exist in SaluteOra module. Skipping...');
             return;
         }
-<<<<<<< HEAD
-
-        $count = DB::table('provinces')->count();
-        $this->command->info("Found {$count} provinces to migrate...");
-
-        $provinces = DB::table('provinces')->get();
-
-=======
         
         $count = DB::table('provinces')->count();
         $this->command->info("Found $count provinces to migrate...");
         
         $provinces = DB::table('provinces')->get();
         
->>>>>>> 19c8248 (.)
         foreach ($provinces as $province) {
             DB::table('geo_provinces')->updateOrInsert(
                 ['id' => $province->id],
@@ -155,15 +98,6 @@ class GeoDataMigrator extends Seeder
                     'code' => $province->code ?? null,
                     'created_at' => $province->created_at ?? now(),
                     'updated_at' => $province->updated_at ?? now(),
-<<<<<<< HEAD
-                ],
-            );
-        }
-
-        $this->command->info("Migrated {$count} provinces.");
-    }
-
-=======
                 ]
             );
         }
@@ -171,7 +105,6 @@ class GeoDataMigrator extends Seeder
         $this->command->info("Migrated $count provinces.");
     }
     
->>>>>>> 19c8248 (.)
     /**
      * Migrate cities from SaluteOra to Geo module
      */
@@ -181,21 +114,12 @@ class GeoDataMigrator extends Seeder
             $this->command->warn('Cities table does not exist in SaluteOra module. Skipping...');
             return;
         }
-<<<<<<< HEAD
-
-        $count = DB::table('cities')->count();
-        $this->command->info("Found {$count} cities to migrate...");
-
-        $cities = DB::table('cities')->get();
-
-=======
         
         $count = DB::table('cities')->count();
         $this->command->info("Found $count cities to migrate...");
         
         $cities = DB::table('cities')->get();
         
->>>>>>> 19c8248 (.)
         foreach ($cities as $city) {
             DB::table('geo_cities')->updateOrInsert(
                 ['id' => $city->id],
@@ -205,15 +129,6 @@ class GeoDataMigrator extends Seeder
                     'code' => $city->code ?? null,
                     'created_at' => $city->created_at ?? now(),
                     'updated_at' => $city->updated_at ?? now(),
-<<<<<<< HEAD
-                ],
-            );
-        }
-
-        $this->command->info("Migrated {$count} cities.");
-    }
-
-=======
                 ]
             );
         }
@@ -221,7 +136,6 @@ class GeoDataMigrator extends Seeder
         $this->command->info("Migrated $count cities.");
     }
     
->>>>>>> 19c8248 (.)
     /**
      * Migrate CAPs from SaluteOra to Geo module
      */
@@ -231,21 +145,12 @@ class GeoDataMigrator extends Seeder
             $this->command->warn('CAPs table does not exist in SaluteOra module. Skipping...');
             return;
         }
-<<<<<<< HEAD
-
-        $count = DB::table('caps')->count();
-        $this->command->info("Found {$count} CAPs to migrate...");
-
-        $caps = DB::table('caps')->get();
-
-=======
         
         $count = DB::table('caps')->count();
         $this->command->info("Found $count CAPs to migrate...");
         
         $caps = DB::table('caps')->get();
         
->>>>>>> 19c8248 (.)
         foreach ($caps as $cap) {
             DB::table('geo_caps')->updateOrInsert(
                 ['id' => $cap->id],
@@ -254,18 +159,10 @@ class GeoDataMigrator extends Seeder
                     'code' => $cap->code,
                     'created_at' => $cap->created_at ?? now(),
                     'updated_at' => $cap->updated_at ?? now(),
-<<<<<<< HEAD
-                ],
-            );
-        }
-
-        $this->command->info("Migrated {$count} CAPs.");
-=======
                 ]
             );
         }
         
         $this->command->info("Migrated $count CAPs.");
->>>>>>> 19c8248 (.)
     }
 }

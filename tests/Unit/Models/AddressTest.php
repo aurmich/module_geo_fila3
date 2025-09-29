@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Geo\Tests\Unit\Models;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -12,11 +11,6 @@ use Modules\Geo\Models\Province;
 use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class);
-=======
-use Modules\Geo\Models\Address;
-use Modules\Geo\Models\Comune;
-use Modules\Geo\Models\Province;
->>>>>>> 19c8248 (.)
 
 beforeEach(function () {
     $this->address = Address::factory()->create();
@@ -28,10 +22,7 @@ test('address can be created', function () {
 
 test('address has fillable attributes', function () {
     $fillable = $this->address->getFillable();
-<<<<<<< HEAD
 
-=======
->>>>>>> 19c8248 (.)
     expect($fillable)->toContain('street');
     expect($fillable)->toContain('number');
     expect($fillable)->toContain('postal_code');
@@ -40,10 +31,7 @@ test('address has fillable attributes', function () {
 
 test('address has casts defined', function () {
     $casts = $this->address->getCasts();
-<<<<<<< HEAD
 
-=======
->>>>>>> 19c8248 (.)
     expect($casts)->toHaveKey('created_at');
     expect($casts)->toHaveKey('updated_at');
     expect($casts)->toHaveKey('coordinates');
@@ -56,10 +44,7 @@ test('address has proper table name', function () {
 test('address belongs to comune', function () {
     $comune = Comune::factory()->create();
     $this->address->update(['comune_id' => $comune->id]);
-<<<<<<< HEAD
 
-=======
->>>>>>> 19c8248 (.)
     expect($this->address->fresh()->comune)->toBeInstanceOf(Comune::class);
     expect($this->address->fresh()->comune->id)->toBe($comune->id);
 });
@@ -67,10 +52,7 @@ test('address belongs to comune', function () {
 test('address belongs to province', function () {
     $province = Province::factory()->create();
     $this->address->update(['province_id' => $province->id]);
-<<<<<<< HEAD
 
-=======
->>>>>>> 19c8248 (.)
     expect($this->address->fresh()->province)->toBeInstanceOf(Province::class);
     expect($this->address->fresh()->province->id)->toBe($province->id);
 });
@@ -90,30 +72,21 @@ test('address can get full address', function () {
 
 test('address can be searched by street', function () {
     $searchResult = Address::search('test')->get();
-<<<<<<< HEAD
 
-=======
->>>>>>> 19c8248 (.)
     expect($searchResult)->toHaveCount(1);
     expect($searchResult->first()->id)->toBe($this->address->id);
 });
 
 test('address can be filtered by city', function () {
     $cityAddresses = Address::byCity('test')->get();
-<<<<<<< HEAD
 
-=======
->>>>>>> 19c8248 (.)
     expect($cityAddresses)->toHaveCount(1);
     expect($cityAddresses->first()->id)->toBe($this->address->id);
 });
 
 test('address can be filtered by postal code', function () {
     $postalCodeAddresses = Address::byPostalCode('test')->get();
-<<<<<<< HEAD
 
-=======
->>>>>>> 19c8248 (.)
     expect($postalCodeAddresses)->toHaveCount(1);
     expect($postalCodeAddresses->first()->id)->toBe($this->address->id);
 });

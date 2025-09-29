@@ -8,41 +8,25 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-
-use function Safe\json_decode;
-
-=======
 
 use function Safe\json_decode;
 
 use Webmozart\Assert\Assert;
 
->>>>>>> 19c8248 (.)
 /**
  * Action per ottenere le coordinate da un indirizzo tramite Google Maps.
  *
  * Questa classe utilizza l'API Google Maps Geocoding per convertire
  * un indirizzo testuale in coordinate geografiche.
  */
-<<<<<<< HEAD
-readonly class GetCoordinatesFromGoogleMapsAction
-=======
 class GetCoordinatesFromGoogleMapsAction
->>>>>>> 19c8248 (.)
 {
     private const API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
 
     public function __construct(
-<<<<<<< HEAD
-        private  Client $client,
-    ) {}
-=======
         private readonly Client $client,
     ) {
     }
->>>>>>> 19c8248 (.)
 
     /**
      * Ottiene le coordinate da un indirizzo.
@@ -126,11 +110,7 @@ class GetCoordinatesFromGoogleMapsAction
         return new LocationData(
             address: $address,
             latitude: $location['lat'],
-<<<<<<< HEAD
-            longitude: $location['lng'],
-=======
             longitude: $location['lng']
->>>>>>> 19c8248 (.)
         );
     }
 }

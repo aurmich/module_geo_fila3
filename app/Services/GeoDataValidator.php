@@ -8,17 +8,10 @@ use Illuminate\Support\Facades\Validator;
 
 /**
  * Validatore per i dati geografici.
-<<<<<<< HEAD
- *
- * Questo servizio fornisce metodi per validare la struttura e l'integrità
- * dei dati geografici nel file JSON.
- *
-=======
  * 
  * Questo servizio fornisce metodi per validare la struttura e l'integrità
  * dei dati geografici nel file JSON.
  * 
->>>>>>> 19c8248 (.)
  * @see \Modules\Geo\docs\json-database.md
  */
 class GeoDataValidator
@@ -70,61 +63,41 @@ class GeoDataValidator
 
     /**
      * Valida i dati geografici.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @param array $data Dati da validare
      * @return bool
      */
     public function validate(array $data): bool
     {
-<<<<<<< HEAD
-        $validator = Validator::make($data, self::VALIDATION_RULES, self::CUSTOM_MESSAGES);
-=======
         $validator = Validator::make(
             $data,
             self::VALIDATION_RULES,
             self::CUSTOM_MESSAGES
         );
->>>>>>> 19c8248 (.)
 
         return !$validator->fails();
     }
 
     /**
      * Ottiene gli errori di validazione.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @param array $data Dati da validare
      * @return array<string, string>
      */
     public function getErrors(array $data): array
     {
-<<<<<<< HEAD
-        $validator = Validator::make($data, self::VALIDATION_RULES, self::CUSTOM_MESSAGES);
-=======
         $validator = Validator::make(
             $data,
             self::VALIDATION_RULES,
             self::CUSTOM_MESSAGES
         );
->>>>>>> 19c8248 (.)
 
         return $validator->errors()->toArray();
     }
 
     /**
      * Verifica l'integrità dei dati.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @param array $data Dati da verificare
      * @return bool
      */
@@ -140,31 +113,19 @@ class GeoDataValidator
         $cityCodes = [];
 
         foreach ($data['regions'] as $region) {
-<<<<<<< HEAD
-            if (in_array($region['code'], $regionCodes, strict: true)) {
-=======
             if (in_array($region['code'], $regionCodes)) {
->>>>>>> 19c8248 (.)
                 return false;
             }
             $regionCodes[] = $region['code'];
 
             foreach ($region['provinces'] as $province) {
-<<<<<<< HEAD
-                if (in_array($province['code'], $provinceCodes, strict: true)) {
-=======
                 if (in_array($province['code'], $provinceCodes)) {
->>>>>>> 19c8248 (.)
                     return false;
                 }
                 $provinceCodes[] = $province['code'];
 
                 foreach ($province['cities'] as $city) {
-<<<<<<< HEAD
-                    if (in_array($city['code'], $cityCodes, strict: true)) {
-=======
                     if (in_array($city['code'], $cityCodes)) {
->>>>>>> 19c8248 (.)
                         return false;
                     }
                     $cityCodes[] = $city['code'];
@@ -174,8 +135,4 @@ class GeoDataValidator
 
         return true;
     }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> 19c8248 (.)

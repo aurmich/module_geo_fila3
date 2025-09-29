@@ -12,17 +12,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * @property int $id
  * @property string|null $name
-<<<<<<< HEAD
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Geo\Models\Province> $provinces
  * @property-read int|null $provinces_count
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
-=======
- * @property-read \Modules\SaluteOra\Models\Profile|null $creator
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Geo\Models\Province> $provinces
- * @property-read int|null $provinces_count
- * @property-read \Modules\SaluteOra\Models\Profile|null $updater
->>>>>>> 19c8248 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Region query()
@@ -50,31 +43,18 @@ class Region extends BaseModel
      */
     protected $keyType = 'integer';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 19c8248 (.)
     protected array $schema = [
         'id' => 'integer',
         'name' => 'string',
     ];
 
-<<<<<<< HEAD
-    public function getRows(): array
-    {
-        $rows = Comune::select('regione->codice as id', 'regione->nome as name')
-            ->distinct()
-            ->orderBy('regione->nome')
-            ->get();
-
-=======
     public function getRows(): array{
         $rows=Comune::select("regione->codice as id","regione->nome as name")
             ->distinct()
             ->orderBy("regione->nome")
             ->get();
        
->>>>>>> 19c8248 (.)
         return $rows->toArray();
     }
 
@@ -87,14 +67,7 @@ class Region extends BaseModel
     {
         return self::orderBy('name')
             ->get()
-<<<<<<< HEAD
-            ->pluck('name', 'id')
-            ->toArray();
-    }
-}
-=======
             ->pluck("name", "id")
             ->toArray();
     }
 }
->>>>>>> 19c8248 (.)

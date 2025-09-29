@@ -23,10 +23,6 @@ class GoogleMapResultData extends Data
         public readonly GoogleMapGeometryData $geometry,
         public readonly string $formatted_address,
         public readonly array $types,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> 19c8248 (.)
 }

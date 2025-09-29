@@ -4,20 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Resources;
 
-<<<<<<< HEAD
-use Cheesegrits\FilamentGoogleMaps\Fields\Map;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Tables;
-use Filament\Tables\Filters\FiltersLayout;
-use Filament\Tables\Table;
-use Modules\Geo\Filament\Resources\LocationResource\Actions\RadiusAction;
-use Modules\Geo\Filament\Resources\LocationResource\Filters\RadiusFilter;
-use Modules\Geo\Filament\Resources\LocationResource\Pages;
-use Modules\Geo\Filament\Resources\LocationResource\RelationManagers;
-use Modules\Geo\Models\Location;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-=======
 use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
@@ -30,7 +16,6 @@ use Modules\Geo\Filament\Resources\LocationResource\Filters\RadiusFilter;
 use Modules\Geo\Filament\Resources\LocationResource\Actions\RadiusAction;
 use Cheesegrits\FilamentGoogleMaps\Fields\Map;
 use Filament\Tables\Filters\FiltersLayout;
->>>>>>> 19c8248 (.)
 
 /**
  * Resource per la gestione dei luoghi geografici.
@@ -44,15 +29,6 @@ use Filament\Tables\Filters\FiltersLayout;
  */
 class LocationResource extends XotBaseResource
 {
-<<<<<<< HEAD
-    protected static null|string $model = Location::class;
-
-    protected static null|string $navigationIcon = 'heroicon-o-map-pin';
-
-    // ✅ CORRETTO - NIENTE navigationGroup - La gestione è centralizzata in XotBaseResource
-
-    protected static null|int $navigationSort = 2;
-=======
     protected static ?string $model = Location::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-map-pin';
@@ -60,7 +36,6 @@ class LocationResource extends XotBaseResource
     // ✅ CORRETTO - NIENTE navigationGroup - La gestione è centralizzata in XotBaseResource
 
     protected static ?int $navigationSort = 2;
->>>>>>> 19c8248 (.)
 
     /**
      * Converte le coordinate in formato float.
@@ -77,23 +52,6 @@ class LocationResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-    #[\Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            Forms\Components\TextInput::make('name')->required()->maxLength(255),
-            Forms\Components\TextInput::make('latitude')->required()->numeric(),
-            Forms\Components\TextInput::make('longitude')->required()->numeric(),
-            Forms\Components\TextInput::make('street')->maxLength(255),
-            Forms\Components\TextInput::make('city')->maxLength(255),
-            Forms\Components\TextInput::make('state')->maxLength(255),
-            Forms\Components\TextInput::make('zip')->maxLength(255),
-            Forms\Components\TextInput::make('formatted_address')->maxLength(1024),
-            Map::make('location')
-                ->reactive()
-                ->afterStateUpdated(function (array $state, callable $set, callable $_get) {
-=======
     public static function getFormSchema(): array
     {
         return [
@@ -120,7 +78,6 @@ class LocationResource extends XotBaseResource
             Map::make('location')
                 ->reactive()
                 ->afterStateUpdated(function (array $state, callable $set, callable $get) {
->>>>>>> 19c8248 (.)
                     $set('lat', $state['lat']);
                     $set('lng', $state['lng']);
                 })
@@ -151,17 +108,10 @@ class LocationResource extends XotBaseResource
      *
      * @return array Le relazioni configurate
      */
-<<<<<<< HEAD
-    #[\Override]
-    public static function getRelations(): array
-    {
-        return [];
-=======
     public static function getRelations(): array
     {
         return [
         ];
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -174,10 +124,6 @@ class LocationResource extends XotBaseResource
      *
      * @return array Le pagine configurate
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 19c8248 (.)
     public static function getPages(): array
     {
         return [

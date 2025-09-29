@@ -10,11 +10,7 @@ use Modules\Geo\Models\PlaceType;
 
 /**
  * Place Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 19c8248 (.)
  * @extends Factory<Place>
  */
 class PlaceFactory extends Factory
@@ -46,8 +42,4 @@ class PlaceFactory extends Factory
             'name' => 'Clinica ' . $this->faker->lastName(),
         ]);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 19c8248 (.)

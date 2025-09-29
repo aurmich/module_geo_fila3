@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Models\Traits;
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\File;
-=======
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Cache;
->>>>>>> 19c8248 (.)
 use Sushi\Sushi;
 
 trait SushiToJsons
@@ -22,15 +17,11 @@ trait SushiToJsons
      */
     public function getSushiRows(): array
     {
-<<<<<<< HEAD
-        return Cache::remember($this->getCacheKey(), $this->getCacheDuration(), $this->loadFromJson(...));
-=======
         return Cache::remember(
             $this->getCacheKey(),
             $this->getCacheDuration(),
             fn () => $this->loadFromJson()
         );
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -39,11 +30,7 @@ trait SushiToJsons
     protected function loadFromJson(): array
     {
         $path = $this->getJsonFile();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         if (!File::exists($path)) {
             return [];
         }
@@ -87,11 +74,7 @@ trait SushiToJsons
     public function saveToJson(array $data): bool
     {
         $path = $this->getJsonFile();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         try {
             File::put($path, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
             Cache::forget($this->getCacheKey());
@@ -111,15 +94,6 @@ trait SushiToJsons
         $attributes['id'] = $this->generateId();
         $attributes['created_at'] = now();
         $attributes['updated_at'] = now();
-<<<<<<< HEAD
-
-        $data[] = $attributes;
-
-        if ($this->saveToJson($data)) {
-            return $this->newInstance($attributes);
-        }
-
-=======
         
         $data[] = $attributes;
         
@@ -127,7 +101,6 @@ trait SushiToJsons
             return $this->newInstance($attributes);
         }
         
->>>>>>> 19c8248 (.)
         throw new \RuntimeException('Impossibile salvare il record');
     }
 
@@ -138,16 +111,6 @@ trait SushiToJsons
     {
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
-<<<<<<< HEAD
-
-        if ($index === null) {
-            return false;
-        }
-
-        $attributes['updated_at'] = now();
-        $data[$index] = array_merge($data[$index], $attributes);
-
-=======
         
         if ($index === null) {
             return false;
@@ -156,7 +119,6 @@ trait SushiToJsons
         $attributes['updated_at'] = now();
         $data[$index] = array_merge($data[$index], $attributes);
         
->>>>>>> 19c8248 (.)
         return $this->saveToJson($data);
     }
 
@@ -167,15 +129,6 @@ trait SushiToJsons
     {
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
-<<<<<<< HEAD
-
-        if ($index === null) {
-            return false;
-        }
-
-        array_splice($data, $index, 1);
-
-=======
         
         if ($index === null) {
             return false;
@@ -183,34 +136,22 @@ trait SushiToJsons
         
         array_splice($data, $index, 1);
         
->>>>>>> 19c8248 (.)
         return $this->saveToJson($data);
     }
 
     /**
      * Trova l'indice di un record
      */
-<<<<<<< HEAD
-    protected function findIndex($id): null|int
-    {
-        $data = $this->loadFromJson();
-
-=======
     protected function findIndex($id): ?int
     {
         $data = $this->loadFromJson();
         
->>>>>>> 19c8248 (.)
         foreach ($data as $index => $item) {
             if ($item['id'] === $id) {
                 return $index;
             }
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         return null;
     }
 
@@ -221,8 +162,4 @@ trait SushiToJsons
     {
         return uniqid('comune_', true);
     }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> 19c8248 (.)

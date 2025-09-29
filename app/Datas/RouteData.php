@@ -27,12 +27,8 @@ class RouteData extends Data
         public readonly int $totalDistance,
         public readonly int $totalDuration,
         public readonly array $steps,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> 19c8248 (.)
 
     /**
      * Formatta la distanza totale in un formato leggibile.
@@ -63,18 +59,6 @@ class RouteData extends Data
 
     /*
      * Verifica se il percorso è stato ottimizzato.
-<<<<<<< HEAD
-     *
-     * public function isOptimized(): bool
-     * {
-     * return ! $this->waypoints->isEmpty() && ! $this->originalWaypoints->isEmpty()
-     * && $this->waypoints->count() === $this->originalWaypoints->count()
-     * && ! $this->waypoints->zip($this->originalWaypoints)->every(
-     * fn (array $pair): bool => $pair[0]->equals($pair[1])
-     * );
-     * }
-     */
-=======
      
     public function isOptimized(): bool
     {
@@ -85,7 +69,6 @@ class RouteData extends Data
             );
     }
     */
->>>>>>> 19c8248 (.)
     /**
      * Ottiene un riepilogo del percorso.
      *
@@ -109,10 +92,6 @@ class RouteData extends Data
 
     public function validateRouteData(Collection $routeData): bool
     {
-<<<<<<< HEAD
-        return $routeData->every(fn(array $data): bool => isset($data['key']));
-=======
         return $routeData->every(fn (array $data): bool => isset($data['key']));
->>>>>>> 19c8248 (.)
     }
 }

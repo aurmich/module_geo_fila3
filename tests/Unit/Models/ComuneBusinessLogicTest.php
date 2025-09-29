@@ -11,21 +11,13 @@ describe('Comune Business Logic', function () {
 
     test('comune has factory trait for testing', function () {
         $traits = class_uses(Comune::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         expect($traits)->toHaveKey(\Illuminate\Database\Eloquent\Factories\HasFactory::class);
     });
 
     test('comune has sushi to json trait', function () {
         $traits = class_uses(Comune::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         expect($traits)->toHaveKey(\Modules\Tenant\Models\Traits\SushiToJson::class);
     });
 
@@ -47,21 +39,13 @@ describe('Comune Business Logic', function () {
             'lat',
             'lng',
         ];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         expect($comune->getFillable())->toEqual($expectedFillable);
     });
 
     test('comune has schema definition for structured geographic data', function () {
         $comune = new Comune();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         expect($comune)->toHaveProperty('schema');
         expect($comune->schema['zona'])->toBe('json');
         expect($comune->schema['provincia'])->toBe('json');
@@ -71,37 +55,21 @@ describe('Comune Business Logic', function () {
 
     test('comune has json directory property for data source', function () {
         $comune = new Comune();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         expect($comune)->toHaveProperty('jsonDirectory');
         expect($comune->jsonDirectory)->toBeString();
     });
 
     test('comune has translatable array configured', function () {
         $comune = new Comune();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         expect($comune->translatable)->toBeArray();
     });
 
     test('comune model can be instantiated without errors', function () {
         $comune = new Comune();
-<<<<<<< HEAD
-
-        expect($comune)->toBeInstanceOf(Comune::class);
-        expect($comune)->toBeInstanceOf(\Modules\Geo\Models\BaseModel::class);
-    });
-});
-=======
         
         expect($comune)->toBeInstanceOf(Comune::class);
         expect($comune)->toBeInstanceOf(\Modules\Geo\Models\BaseModel::class);
     });
 });
->>>>>>> 19c8248 (.)

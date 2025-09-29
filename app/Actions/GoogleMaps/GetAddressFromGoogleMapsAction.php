@@ -52,11 +52,7 @@ final class GetAddressFromGoogleMapsAction
             'key' => $apiKey,
         ]);
 
-<<<<<<< HEAD
-        if (!$response->successful()) {
-=======
         if (! $response->successful()) {
->>>>>>> 19c8248 (.)
             throw GoogleMapsApiException::requestFailed((string) $response->status());
         }
 
@@ -82,11 +78,7 @@ final class GetAddressFromGoogleMapsAction
     {
         $firstResult = $responseData->results->first();
 
-<<<<<<< HEAD
-        if (!($firstResult instanceof GoogleMapResultData)) {
-=======
         if (!$firstResult instanceof GoogleMapResultData) {
->>>>>>> 19c8248 (.)
             throw GoogleMapsApiException::noResultsFound();
         }
 
@@ -115,22 +107,6 @@ final class GetAddressFromGoogleMapsAction
      * @param DataCollection<GoogleMapAddressComponentData> $components
      * @param array<string> $types
      */
-<<<<<<< HEAD
-    private function getComponent(DataCollection $components, array $types, bool $short = false): null|string
-    {
-        /** @var GoogleMapAddressComponentData|null $component */
-        $component = $components
-            ->toCollection()
-            ->first(function ($component) use ($types) {
-                if (!($component instanceof GoogleMapAddressComponentData)) {
-                    return false;
-                }
-
-                return !empty($component->types) && count(array_intersect($component->types, $types)) > 0;
-            });
-
-        if (!($component instanceof GoogleMapAddressComponentData)) {
-=======
     private function getComponent(DataCollection $components, array $types, bool $short = false): ?string
     {
         /** @var GoogleMapAddressComponentData|null $component */
@@ -143,7 +119,6 @@ final class GetAddressFromGoogleMapsAction
         });
 
         if (!$component instanceof GoogleMapAddressComponentData) {
->>>>>>> 19c8248 (.)
             return null;
         }
 

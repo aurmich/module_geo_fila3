@@ -9,20 +9,12 @@ use Illuminate\Support\Facades\Cache;
 
 /**
  * Modello unico readonly per i comuni italiani (Facade pattern).
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 19c8248 (.)
  * Implementa il pattern Facade per fornire un'interfaccia unificata a tutti i dati geografici:
  * regioni, province, città, CAP, codici ISTAT, ecc.
  * Tutti i dati sono estratti da un'unica fonte (comuni.json) e gestiti tramite metodi statici.
  * Include un sistema di caching multilivello per ottimizzare le performance.
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 19c8248 (.)
  * @see GeoJsonModel Classe base per l'accesso ai dati JSON
  * @see docs/consolidamento-modelli-geografici.md Analisi comparativa della struttura
  * @see docs/comune-unificazione-analisi.md Analisi dell'unificazione dei modelli
@@ -37,11 +29,7 @@ class ComuneJson extends GeoJsonModel
 
     /**
      * Get all comuni with their complete data
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<array-key, array{
      *     nome: string,
      *     codice: string,
@@ -52,10 +40,6 @@ class ComuneJson extends GeoJsonModel
      *     popolazione: int
      * }>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 19c8248 (.)
     public static function all(): Collection
     {
         return static::loadData();
@@ -63,11 +47,7 @@ class ComuneJson extends GeoJsonModel
 
     /**
      * Get comuni by region code
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<int, array{
      *     nome: string,
      *     codice: string,
@@ -81,11 +61,7 @@ class ComuneJson extends GeoJsonModel
     public static function byRegion(string $regionCode): Collection
     {
         $cacheKey = "geo_region_{$regionCode}";
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
@@ -95,13 +71,6 @@ class ComuneJson extends GeoJsonModel
          *     codiceCatastale: string,
          *     popolazione: int
          * }> $result */
-<<<<<<< HEAD
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static::all()
-                ->where('regione.codice', $regionCode)
-                ->sortBy('nome')
-                ->values(...));
-
-=======
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($regionCode) {
             return static::all()
                 ->where('regione.codice', $regionCode)
@@ -109,7 +78,6 @@ class ComuneJson extends GeoJsonModel
                 ->values();
         });
         
->>>>>>> 19c8248 (.)
         /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
@@ -124,11 +92,7 @@ class ComuneJson extends GeoJsonModel
 
     /**
      * Get comuni by province code
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<int, array{
      *     nome: string,
      *     codice: string,
@@ -142,11 +106,7 @@ class ComuneJson extends GeoJsonModel
     public static function byProvince(string $provinceCode): Collection
     {
         $cacheKey = "geo_province_{$provinceCode}";
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
@@ -156,13 +116,6 @@ class ComuneJson extends GeoJsonModel
          *     codiceCatastale: string,
          *     popolazione: int
          * }> $result */
-<<<<<<< HEAD
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static::all()
-                ->where('provincia.codice', $provinceCode)
-                ->sortBy('nome')
-                ->values(...));
-
-=======
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode) {
             return static::all()
                 ->where('provincia.codice', $provinceCode)
@@ -170,7 +123,6 @@ class ComuneJson extends GeoJsonModel
                 ->values();
         });
         
->>>>>>> 19c8248 (.)
         /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
@@ -185,11 +137,7 @@ class ComuneJson extends GeoJsonModel
 
     /**
      * Get all comuni by name (case insensitive partial match)
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @param string $name Nome parziale del comune da cercare
      * @param int $limit Numero massimo di risultati (0 = nessun limite)
      * @return Collection<int, array{
@@ -205,13 +153,8 @@ class ComuneJson extends GeoJsonModel
     public static function searchByName(string $name, int $limit = 0): Collection
     {
         $name = mb_strtolower($name);
-<<<<<<< HEAD
-        $cacheKey = 'geo_search_' . md5($name) . '_' . $limit;
-
-=======
         $cacheKey = "geo_search_" . md5($name) . "_" . $limit;
         
->>>>>>> 19c8248 (.)
         /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
@@ -226,17 +169,10 @@ class ComuneJson extends GeoJsonModel
                 /** @phpstan-ignore nullCoalesce.offset */
                 ->filter(fn($item) => str_contains(mb_strtolower($item['nome'] ?? ''), $name))
                 ->sortBy('nome');
-<<<<<<< HEAD
-
-            return $limit > 0 ? $results->take($limit)->values() : $results->values();
-        });
-
-=======
                 
             return $limit > 0 ? $results->take($limit)->values() : $results->values();
         });
         
->>>>>>> 19c8248 (.)
         /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
@@ -251,11 +187,7 @@ class ComuneJson extends GeoJsonModel
 
     /**
      * Get comuni by CAP
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<int, array{
      *     nome: string,
      *     codice: string,
@@ -282,33 +214,18 @@ class ComuneJson extends GeoJsonModel
             ->filter(fn($item) => in_array($cap, $item['cap'] ?? [], true))
             ->sortBy('nome')
             ->values();
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 19c8248 (.)
         return $filtered;
     }
 
     /**
      * Get all regions with their codes and names
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<string, string> [code => name]
      */
     public static function allRegions(): Collection
     {
         /** @var Collection<string, string> $result */
-<<<<<<< HEAD
-        $result = Cache::remember('geo_all_regions', self::CACHE_TTL, static::all()
-                ->pluck('regione.nome', 'regione.codice')
-                ->unique()
-                ->sort(...));
-
-=======
         $result = Cache::remember('geo_all_regions', self::CACHE_TTL, function () {
             return static::all()
                 ->pluck('regione.nome', 'regione.codice')
@@ -316,29 +233,17 @@ class ComuneJson extends GeoJsonModel
                 ->sort();
         });
         
->>>>>>> 19c8248 (.)
         return $result;
     }
 
     /**
      * Get all provinces with their codes and names
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<string, string> [code => name]
      */
     public static function allProvinces(): Collection
     {
         /** @var Collection<string, string> $result */
-<<<<<<< HEAD
-        $result = Cache::remember('geo_all_provinces', self::CACHE_TTL, static::all()
-                ->pluck('provincia.nome', 'provincia.codice')
-                ->unique()
-                ->sort(...));
-
-=======
         $result = Cache::remember('geo_all_provinces', self::CACHE_TTL, function () {
             return static::all()
                 ->pluck('provincia.nome', 'provincia.codice')
@@ -346,32 +251,17 @@ class ComuneJson extends GeoJsonModel
                 ->sort();
         });
         
->>>>>>> 19c8248 (.)
         return $result;
     }
 
     /**
      * Get all provinces for a specific region
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<string, string> [code => name]
      */
     public static function getProvincesByRegion(string $regionCode): Collection
     {
         $cacheKey = "geo_region_{$regionCode}_provinces";
-<<<<<<< HEAD
-
-        /** @var Collection<string, string> $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static::all()
-                ->where('regione.codice', $regionCode)
-                ->pluck('provincia.nome', 'provincia.codice')
-                ->unique()
-                ->sort(...));
-
-=======
         
         /** @var Collection<string, string> $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($regionCode) {
@@ -382,17 +272,12 @@ class ComuneJson extends GeoJsonModel
                 ->sort();
         });
         
->>>>>>> 19c8248 (.)
         return $result;
     }
 
     /**
      * Get all CAPs for a specific city
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 19c8248 (.)
      * @return Collection<int, string> List of CAP codes for the city
      */
     public static function getCapsByCity(string $cityName): Collection
@@ -405,26 +290,12 @@ class ComuneJson extends GeoJsonModel
             ->unique()
             ->sort()
             ->values();
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 19c8248 (.)
         return $result;
     }
 
     /**
      * Clear all cached data
-<<<<<<< HEAD
-     *
-     * @param bool $verbose Se true, restituisce la lista delle chiavi di cache eliminate
-     * @return array<int, string>|null Lista delle chiavi di cache eliminate se $verbose è true
-     */
-    public static function clearCache(bool $verbose = false): null|array
-    {
-        $clearedKeys = [];
-
-=======
      * 
      * @param bool $verbose Se true, restituisce la lista delle chiavi di cache eliminate
      * @return array<int, string>|null Lista delle chiavi di cache eliminate se $verbose è true
@@ -433,34 +304,12 @@ class ComuneJson extends GeoJsonModel
     {
         $clearedKeys = [];
         
->>>>>>> 19c8248 (.)
         // Chiavi base
         $baseKeys = ['geo_all_regions', 'geo_all_provinces'];
         foreach ($baseKeys as $key) {
             Cache::forget($key);
             $clearedKeys[] = $key;
         }
-<<<<<<< HEAD
-
-        // Chiavi specifiche per regione
-        static::allRegions()
-            ->each(function ($_nome, $code) use (&$clearedKeys) {
-                $keys = ["geo_region_{$code}", "geo_region_{$code}_provinces"];
-                foreach ($keys as $key) {
-                    Cache::forget($key);
-                    $clearedKeys[] = $key;
-                }
-            });
-
-        // Chiavi specifiche per provincia
-        static::allProvinces()
-            ->each(function ($_nome, $code) use (&$clearedKeys) {
-                $key = "geo_province_{$code}";
-                Cache::forget($key);
-                $clearedKeys[] = $key;
-            });
-
-=======
         
         // Chiavi specifiche per regione
         static::allRegions()->each(function ($nome, $code) use (&$clearedKeys) {
@@ -478,7 +327,6 @@ class ComuneJson extends GeoJsonModel
             $clearedKeys[] = $key;
         });
         
->>>>>>> 19c8248 (.)
         // Nota: La pulizia delle chiavi di pattern matching è limitata
         // poiché non tutti i driver di cache supportano la ricerca per pattern
         // Le chiavi di ricerca più comuni vengono gestite esplicitamente
@@ -487,23 +335,6 @@ class ComuneJson extends GeoJsonModel
             'geo_valid_cap_', // Validazione CAP
             'geo_gerarchia_', // Gerarchie geografiche
         ];
-<<<<<<< HEAD
-
-        // Puliamo alcune chiavi di ricerca comuni per essere sicuri
-        foreach ($searchPatterns as $pattern) {
-            for ($i = 0; $i < 10; $i++) {
-                $testKey = $pattern . md5((string) $i);
-                Cache::forget($testKey);
-            }
-        }
-
-        return $verbose ? $clearedKeys : null;
-    }
-
-    /**
-     * Verifica se il CAP esiste nel database
-     *
-=======
         
         // Puliamo alcune chiavi di ricerca comuni per essere sicuri
         foreach ($searchPatterns as $pattern) {
@@ -519,25 +350,12 @@ class ComuneJson extends GeoJsonModel
     /**
      * Verifica se il CAP esiste nel database
      * 
->>>>>>> 19c8248 (.)
      * @param string $cap CAP da verificare
      * @return bool True se il CAP esiste, false altrimenti
      */
     public static function isValidCap(string $cap): bool
     {
         $cacheKey = "geo_valid_cap_{$cap}";
-<<<<<<< HEAD
-
-        /** @var bool $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static::byCap($cap)->isNotEmpty(...));
-
-        return $result;
-    }
-
-    /**
-     * Ottiene la gerarchia completa per un comune (regione, provincia, comune, cap)
-     *
-=======
         
         /** @var bool $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($cap) {
@@ -550,7 +368,6 @@ class ComuneJson extends GeoJsonModel
     /**
      * Ottiene la gerarchia completa per un comune (regione, provincia, comune, cap)
      * 
->>>>>>> 19c8248 (.)
      * @param string $comuneNome Nome esatto del comune
      * @return array{
      *     regione: array{codice: string, nome: string}|null,
@@ -564,17 +381,10 @@ class ComuneJson extends GeoJsonModel
      *     cap: array<int, string>
      * }|null Gerarchia completa o null se il comune non esiste
      */
-<<<<<<< HEAD
-    public static function getGerarchia(string $comuneNome): null|array
-    {
-        $cacheKey = 'geo_gerarchia_' . md5($comuneNome);
-
-=======
     public static function getGerarchia(string $comuneNome): ?array
     {
         $cacheKey = "geo_gerarchia_" . md5($comuneNome);
         
->>>>>>> 19c8248 (.)
         /** @var array{
          *     regione: array{codice: string, nome: string}|null,
          *     provincia: array{codice: string, nome: string}|null,
@@ -597,19 +407,11 @@ class ComuneJson extends GeoJsonModel
              *     popolazione: int
              * }|null $comune */
             $comune = static::searchByName($comuneNome, 1)->first();
-<<<<<<< HEAD
-
-            if (!$comune) {
-                return null;
-            }
-
-=======
             
             if (!$comune) {
                 return null;
             }
             
->>>>>>> 19c8248 (.)
             return [
                 'regione' => $comune['regione'] ?? null,
                 'provincia' => $comune['provincia'] ?? null,
@@ -622,15 +424,6 @@ class ComuneJson extends GeoJsonModel
                 'cap' => $comune['cap'] ?? [],
             ];
         });
-<<<<<<< HEAD
-
-        return $result;
-    }
-
-    /**
-     * Restituisce regole di validazione Laravel per form geografici
-     *
-=======
         
         return $result;
     }
@@ -638,53 +431,12 @@ class ComuneJson extends GeoJsonModel
     /**
      * Restituisce regole di validazione Laravel per form geografici
      * 
->>>>>>> 19c8248 (.)
      * @param bool $required Se true, tutti i campi sono obbligatori
      * @return array<string, array<int, mixed>> Regole di validazione
      */
     public static function getValidationRules(bool $required = true): array
     {
         $requiredRule = $required ? 'required' : 'nullable';
-<<<<<<< HEAD
-
-        return [
-            'regione_codice' => [
-                $requiredRule,
-                'string',
-                function ($_attribute, $value, $fail) {
-                    if (!static::allRegions()->has($value)) {
-                        $fail('La regione selezionata non è valida.');
-                    }
-                },
-            ],
-            'provincia_codice' => [
-                $requiredRule,
-                'string',
-                function ($_attribute, $value, $fail) {
-                    if (!static::allProvinces()->has($value)) {
-                        $fail('La provincia selezionata non è valida.');
-                    }
-                },
-            ],
-            'comune_nome' => [
-                $requiredRule,
-                'string',
-                function ($_attribute, $value, $fail) {
-                    if (!empty($value) && static::searchByName($value, 1)->isEmpty()) {
-                        $fail('Il comune selezionato non è valido.');
-                    }
-                },
-            ],
-            'cap' => [
-                $requiredRule,
-                'string',
-                function ($_attribute, $value, $fail) {
-                    if (!empty($value) && !static::isValidCap($value)) {
-                        $fail('Il CAP inserito non è valido.');
-                    }
-                },
-            ],
-=======
         
         return [
             'regione_codice' => [$requiredRule, 'string', function ($attribute, $value, $fail) {
@@ -707,7 +459,6 @@ class ComuneJson extends GeoJsonModel
                     $fail('Il CAP inserito non è valido.');
                 }
             }],
->>>>>>> 19c8248 (.)
         ];
     }
 }

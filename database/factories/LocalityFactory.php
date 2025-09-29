@@ -9,11 +9,7 @@ use Modules\Geo\Models\Locality;
 
 /**
  * Locality Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 19c8248 (.)
  * @extends Factory<Locality>
  */
 class LocalityFactory extends Factory
@@ -33,11 +29,7 @@ class LocalityFactory extends Factory
 
     public function italian(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 19c8248 (.)
             'name' => $this->faker->randomElement(['Centro', 'Periferia', 'Quartiere Nord', 'Zona Industriale']),
         ]);
     }

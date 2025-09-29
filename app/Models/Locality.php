@@ -5,16 +5,9 @@ declare(strict_types=1);
 namespace Modules\Geo\Models;
 
 use Filament\Forms\Get;
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
-
-use function Safe\json_decode;
-=======
 use Illuminate\Support\Arr;
 use function Safe\json_decode;
 use Illuminate\Database\Eloquent\Model;
->>>>>>> 19c8248 (.)
 
 /**
  * @property int|null $region_id
@@ -22,13 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $name
  * @property int $id
  * @property string|null $postal_code
-<<<<<<< HEAD
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
-=======
- * @property-read \Modules\SaluteOra\Models\Profile|null $creator
- * @property-read \Modules\SaluteOra\Models\Profile|null $updater
->>>>>>> 19c8248 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Locality newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Locality newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Locality query()
@@ -44,10 +32,7 @@ class Locality extends BaseModel
 {
     use \Sushi\Sushi;
 
-<<<<<<< HEAD
-=======
     
->>>>>>> 19c8248 (.)
     protected array $schema = [
         'region_id' => 'integer',
         'province_id' => 'integer',
@@ -61,10 +46,6 @@ class Locality extends BaseModel
      *
      * @return array<string, string>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 19c8248 (.)
     protected function casts(): array
     {
         return [
@@ -75,23 +56,6 @@ class Locality extends BaseModel
             'postal_code' => 'array',
         ];
     }
-<<<<<<< HEAD
-
-    public function getRows(): array
-    {
-        $rows = Comune::select(
-            'regione->codice as region_id',
-            'provincia->codice as province_id',
-            'nome as name',
-            'codice as id',
-            'cap as postal_code',
-        )
-            ->distinct()
-            ->orderBy('nome')
-            ->get()
-            ->map(fn ($row) => $row);
-
-=======
     
 
 
@@ -109,16 +73,12 @@ class Locality extends BaseModel
             });
             
        
->>>>>>> 19c8248 (.)
         return $rows->toArray();
     }
 
     public static function getOptions(Get $get): array
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> 19c8248 (.)
         $region = $get('administrative_area_level_1') ?? $get('region');
         if (!$region) {
             return [];
@@ -129,27 +89,6 @@ class Locality extends BaseModel
         }
 
         $city = $get('locality');
-<<<<<<< HEAD
-        $res = self::where('region_id', $region)
-            ->where('province_id', $province)
-            ->pluck('name', 'id')
-            ->toArray();
-
-        /*
-         * ->when($city !== null, fn($query) => $query->where('id', $city))
-         * ->select('postal_code')
-         * ->distinct()
-         * ->orderBy('postal_code')
-         * ->get()
-         * ->pluck('postal_code', 'postal_code')
-         * ->toArray();
-         *
-         *
-         *
-         * return $res ?? [];
-         */
-        return $res;
-=======
         $res=self::where('region_id', $region)
         ->where('province_id', $province)
         ->pluck("name", "id")
@@ -170,7 +109,6 @@ class Locality extends BaseModel
         */
         return $res;
         
->>>>>>> 19c8248 (.)
     }
 
     public static function getPostalCodeOptions(Get $get): array
@@ -185,20 +123,6 @@ class Locality extends BaseModel
         }
 
         $city = $get('locality');
-<<<<<<< HEAD
-        $res = self::where('region_id', $region)
-            ->where('province_id', $province)
-            ->when($city !== null, fn($query) => $query->where('id', $city))
-            ->select('postal_code')
-            ->distinct()
-            ->orderBy('postal_code')
-            ->get()//->pluck('postal_code', 'postal_code')
-        //->toArray()
-        ;
-        /** @var array<int, array<string, mixed>> $arr */
-        $arr = $res->toArray();
-        $arr = Arr::mapWithKeys($arr, function (array $item) {
-=======
         $res=self::where('region_id', $region)
         ->where('province_id', $province)
         ->when($city !== null, fn($query) => $query->where('id', $city))
@@ -212,7 +136,6 @@ class Locality extends BaseModel
         /** @var array<int, array<string, mixed>> $arr */
         $arr=$res->toArray();
         $arr=Arr::mapWithKeys($arr, function(array $item){
->>>>>>> 19c8248 (.)
             if (!isset($item['postal_code']) || !is_array($item['postal_code'])) {
                 return [];
             }
@@ -222,14 +145,7 @@ class Locality extends BaseModel
             $result = array_combine($postalCodes, $postalCodes);
             return $result;
         });
-<<<<<<< HEAD
-
-        return $arr ?? [];
-    }
-}
-=======
                       
         return $arr ?? [];
     }
 }
->>>>>>> 19c8248 (.)

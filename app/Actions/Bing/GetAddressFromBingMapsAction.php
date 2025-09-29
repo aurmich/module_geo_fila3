@@ -68,11 +68,7 @@ class GetAddressFromBingMapsAction
             'maxResults' => 1,
         ]);
 
-<<<<<<< HEAD
-        if (!$response->successful()) {
-=======
         if (! $response->successful()) {
->>>>>>> 19c8248 (.)
             throw InvalidLocationException::invalidData('Richiesta a Bing Maps fallita');
         }
 

@@ -11,11 +11,7 @@ use Modules\Geo\Models\Address;
 
 /**
  * Trait HasAddresses
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 19c8248 (.)
  * Questo trait fornisce funzionalità per gestire indirizzi multipli su qualsiasi modello.
  */
 trait HasAddresses
@@ -37,12 +33,8 @@ trait HasAddresses
      */
     public function primaryAddress(): MorphOne
     {
-<<<<<<< HEAD
-        return $this->morphOne(Address::class, 'model')->where('is_primary', true);
-=======
         return $this->morphOne(Address::class, 'model')
             ->where('is_primary', true);
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -52,12 +44,8 @@ trait HasAddresses
      */
     public function homeAddress(): MorphOne
     {
-<<<<<<< HEAD
-        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::HOME->value);
-=======
         return $this->morphOne(Address::class, 'model')
             ->where('type', AddressTypeEnum::HOME->value);
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -67,12 +55,8 @@ trait HasAddresses
      */
     public function workAddress(): MorphOne
     {
-<<<<<<< HEAD
-        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::WORK->value);
-=======
         return $this->morphOne(Address::class, 'model')
             ->where('type', AddressTypeEnum::WORK->value);
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -82,12 +66,8 @@ trait HasAddresses
      */
     public function billingAddress(): MorphOne
     {
-<<<<<<< HEAD
-        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::BILLING->value);
-=======
         return $this->morphOne(Address::class, 'model')
             ->where('type', AddressTypeEnum::BILLING->value);
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -97,12 +77,8 @@ trait HasAddresses
      */
     public function shippingAddress(): MorphOne
     {
-<<<<<<< HEAD
-        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::SHIPPING->value);
-=======
         return $this->morphOne(Address::class, 'model')
             ->where('type', AddressTypeEnum::SHIPPING->value);
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -153,14 +129,7 @@ trait HasAddresses
      */
     public function getAddressesByType($type)
     {
-<<<<<<< HEAD
-        $typeValue = ($type instanceof AddressTypeEnum) ? $type->value : $type;
-        return $this->addresses()->where('type', $typeValue)->get();
-    }
-}
-=======
         $typeValue = $type instanceof AddressTypeEnum ? $type->value : $type;
         return $this->addresses()->where('type', $typeValue)->get();
     }
 }
->>>>>>> 19c8248 (.)

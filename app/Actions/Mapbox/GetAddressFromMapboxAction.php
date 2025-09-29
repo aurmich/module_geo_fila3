@@ -8,53 +8,33 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\AddressData;
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-=======
->>>>>>> 19c8248 (.)
 
 use function Safe\json_decode;
 use function Safe\preg_match;
 
-<<<<<<< HEAD
-=======
 use Webmozart\Assert\Assert;
 
->>>>>>> 19c8248 (.)
 /**
  * Action per ottenere l'indirizzo e le coordinate tramite Mapbox.
  *
  * Questa classe utilizza l'API Mapbox Geocoding per convertire
  * un indirizzo in coordinate geografiche e dettagli dell'indirizzo.
  */
-<<<<<<< HEAD
-readonly class GetAddressFromMapboxAction
-=======
 class GetAddressFromMapboxAction
->>>>>>> 19c8248 (.)
 {
     private const API_URL = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
 
     public function __construct(
-<<<<<<< HEAD
-        private  Client $client,
-    ) {}
-=======
         private readonly Client $client,
     ) {
     }
->>>>>>> 19c8248 (.)
 
     /**
      * Ottiene i dettagli dell'indirizzo utilizzando Mapbox.
      *
      * @throws \RuntimeException Se la chiave API non è configurata o la richiesta fallisce
      */
-<<<<<<< HEAD
-    public function execute(string $address): null|AddressData
-=======
     public function execute(string $address): ?AddressData
->>>>>>> 19c8248 (.)
     {
         $this->validateInput($address);
 
@@ -113,11 +93,7 @@ class GetAddressFromMapboxAction
      *
      * @throws \RuntimeException Se la risposta non è valida
      */
-<<<<<<< HEAD
-    private function parseResponse(string $response): null|AddressData
-=======
     private function parseResponse(string $response): ?AddressData
->>>>>>> 19c8248 (.)
     {
         /** @var array{
          *     features: array<array{

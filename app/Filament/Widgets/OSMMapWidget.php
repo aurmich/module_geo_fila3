@@ -60,12 +60,7 @@ class OSMMapWidget extends MapWidget
                 }
 
                 return $marker;
-<<<<<<< HEAD
-            })
-            ->all();
-=======
             })->all();
->>>>>>> 19c8248 (.)
     }
 
     /**
@@ -78,13 +73,8 @@ class OSMMapWidget extends MapWidget
             return ['lat' => 41.9028, 'lng' => 12.4964]; // Rome, Italy
         }
 
-<<<<<<< HEAD
-        $latitudes = $places->pluck('latitude')->filter(is_float(...));
-        $longitudes = $places->pluck('longitude')->filter(is_float(...));
-=======
         $latitudes = $places->pluck('latitude')->filter(fn ($lat) => is_float($lat));
         $longitudes = $places->pluck('longitude')->filter(fn ($lng) => is_float($lng));
->>>>>>> 19c8248 (.)
 
         return [
             'lat' => $latitudes->average() ?? 0.0,
@@ -108,11 +98,7 @@ class OSMMapWidget extends MapWidget
     {
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.osm-map-info-window';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         return view($viewName, [
             'place' => $place,
         ])->render();
@@ -121,21 +107,13 @@ class OSMMapWidget extends MapWidget
     /**
      * @return array{url: string, scaledSize: array{width: int, height: int}}|null
      */
-<<<<<<< HEAD
-    protected function getMarkerIcon(Place $place): null|array
-=======
     protected function getMarkerIcon(Place $place): ?array
->>>>>>> 19c8248 (.)
     {
         // Uso placeType invece di type per evitare relazioni mancanti
         $type = $place->placeType->slug ?? 'default';
 
         $iconPath = resource_path("images/markers/{$type}.png");
-<<<<<<< HEAD
-        if (!file_exists($iconPath)) {
-=======
         if (! file_exists($iconPath)) {
->>>>>>> 19c8248 (.)
             return null;
         }
 
@@ -152,11 +130,7 @@ class OSMMapWidget extends MapWidget
     {
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.osm-map-widget';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         return view($viewName, [
             'data' => $this->getData(),
         ]);

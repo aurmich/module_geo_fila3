@@ -479,11 +479,6 @@ tests/Unit
 
 ## Collegamenti alla documentazione generale
 
-<<<<<<< HEAD
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
-=======
-- [Analisi strutturale complessiva](/project_docs/phpstan/modules_structure_analysis.md)
-- [Report PHPStan](/project_docs/phpstan/)
->>>>>>> 19c8248 (.)
 

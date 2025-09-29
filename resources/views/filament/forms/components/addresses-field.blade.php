@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 19c8248 (.)
 {{--
     Vista per il componente AddressesField.
     
@@ -45,8 +37,4 @@ declare(strict_types=1);
         {{-- Container dei componenti figlio (Repeater) --}}
         {{ $getChildComponentContainer() }}
     </div>
-<<<<<<< HEAD
-</x-dynamic-component>
-=======
 </x-dynamic-component> 
->>>>>>> 19c8248 (.)

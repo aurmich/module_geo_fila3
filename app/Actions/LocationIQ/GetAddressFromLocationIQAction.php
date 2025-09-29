@@ -23,11 +23,7 @@ class GetAddressFromLocationIQAction
      *
      * @return AddressData|null I dati dell'indirizzo trovato o null se non trovato
      */
-<<<<<<< HEAD
-    public function execute(string $address): null|AddressData
-=======
     public function execute(string $address): ?AddressData
->>>>>>> 19c8248 (.)
     {
         $apiKey = config('services.locationiq.key');
 
@@ -35,11 +31,7 @@ class GetAddressFromLocationIQAction
             throw new \Exception('LocationIQ API key not configured');
         }
 
-<<<<<<< HEAD
-        $response = Http::get(self::BASE_URL . '/search', [
-=======
         $response = Http::get(self::BASE_URL.'/search', [
->>>>>>> 19c8248 (.)
             'key' => $apiKey,
             'q' => $address,
             'format' => 'json',
@@ -47,11 +39,7 @@ class GetAddressFromLocationIQAction
             'addressdetails' => 1,
         ]);
 
-<<<<<<< HEAD
-        if (!$response->successful()) {
-=======
         if (! $response->successful()) {
->>>>>>> 19c8248 (.)
             return null;
         }
 

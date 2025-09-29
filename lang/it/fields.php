@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 19c8248 (.)
 return [
     'region' => [
         'label' => 'Regione',
@@ -27,8 +21,4 @@ return [
         'placeholder' => 'Seleziona un CAP',
         'tooltip' => 'CAP della città selezionata',
     ],
-<<<<<<< HEAD
-];
-=======
 ]; 
->>>>>>> 19c8248 (.)

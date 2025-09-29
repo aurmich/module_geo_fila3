@@ -23,27 +23,6 @@ use Modules\Geo\Models\Place;
 
 class LocationMapTableWidget extends MapTableWidget
 {
-<<<<<<< HEAD
-    protected static null|string $heading = 'Location Map';
-
-    protected static null|int $sort = 1;
-
-    protected static null|string $pollingInterval = null;
-
-    protected static null|bool $clustering = true;
-
-    protected static null|bool $fitToBounds = true;
-
-    protected static null|string $mapId = 'incidents';
-
-    protected static null|bool $filtered = true;
-
-    protected static bool $collapsible = true;
-
-    public null|bool $mapIsFilter = false;
-
-    protected static null|string $markerAction = 'markerAction';
-=======
     protected static ?string $heading = 'Location Map';
 
     protected static ?int $sort = 1;
@@ -63,7 +42,6 @@ class LocationMapTableWidget extends MapTableWidget
     public ?bool $mapIsFilter = false;
 
     protected static ?string $markerAction = 'markerAction';
->>>>>>> 19c8248 (.)
 
     public function getConfig(): array
     {
@@ -93,16 +71,6 @@ class LocationMapTableWidget extends MapTableWidget
     {
         return [
             Forms\Components\Section::make()->schema([
-<<<<<<< HEAD
-                TextInput::make('name')->maxLength(256),
-                TextInput::make('lat')->maxLength(32),
-                TextInput::make('lng')->maxLength(32),
-                TextInput::make('street')->maxLength(255),
-                TextInput::make('city')->maxLength(255),
-                TextInput::make('state')->maxLength(255),
-                TextInput::make('zip')->maxLength(255),
-                TextInput::make('formatted_address')->maxLength(1024),
-=======
                 TextInput::make('name')
                     ->maxLength(256),
                 TextInput::make('lat')
@@ -119,7 +87,6 @@ class LocationMapTableWidget extends MapTableWidget
                     ->maxLength(255),
                 TextInput::make('formatted_address')
                     ->maxLength(1024),
->>>>>>> 19c8248 (.)
             ]),
         ];
     }
@@ -132,12 +99,6 @@ class LocationMapTableWidget extends MapTableWidget
     protected function getTableColumns(): array
     {
         return [
-<<<<<<< HEAD
-            TextColumn::make('name')->searchable(),
-            TextColumn::make('street')->searchable(),
-            TextColumn::make('city')->searchable()->sortable(),
-            TextColumn::make('state')->searchable()->sortable(),
-=======
             TextColumn::make('name')
                 ->searchable(),
             TextColumn::make('street')
@@ -148,7 +109,6 @@ class LocationMapTableWidget extends MapTableWidget
             TextColumn::make('state')
                 ->searchable()
                 ->sortable(),
->>>>>>> 19c8248 (.)
             TextColumn::make('zip'),
         ];
     }
@@ -156,22 +116,14 @@ class LocationMapTableWidget extends MapTableWidget
     protected function getTableFilters(): array
     {
         return [
-<<<<<<< HEAD
-            RadiusFilter::make('location')->section('Radius Filter')->selectUnit(),
-=======
             RadiusFilter::make('location')
                 ->section('Radius Filter')
                 ->selectUnit(),
->>>>>>> 19c8248 (.)
             MapIsFilter::make('map'),
         ];
     }
 
-<<<<<<< HEAD
-    protected function getTableRecordAction(): null|string
-=======
     protected function getTableRecordAction(): ?string
->>>>>>> 19c8248 (.)
     {
         return 'edit';
     }
@@ -179,30 +131,20 @@ class LocationMapTableWidget extends MapTableWidget
     protected function getTableHeaderActions(): array
     {
         return [
-<<<<<<< HEAD
-            CreateAction::make()->form($this->getFormSchema()),
-=======
             CreateAction::make()
                 ->form($this->getFormSchema()),
->>>>>>> 19c8248 (.)
         ];
     }
 
     public function getTableActions(): array
     {
         return [
-<<<<<<< HEAD
-            Tables\Actions\ViewAction::make()->form($this->getFormSchema()),
-            Tables\Actions\EditAction::make()->form($this->getFormSchema()),
-            GoToAction::make()->zoom(fn() => 14),
-=======
             Tables\Actions\ViewAction::make()
                 ->form($this->getFormSchema()),
             Tables\Actions\EditAction::make()
                 ->form($this->getFormSchema()),
             GoToAction::make()
                 ->zoom(fn () => 14),
->>>>>>> 19c8248 (.)
             RadiusAction::make('location'),
         ];
     }
@@ -223,11 +165,7 @@ class LocationMapTableWidget extends MapTableWidget
         foreach ($locations as $location) {
             if ($location->latitude && $location->longitude) {
                 $iconUrl = $this->getMarkerIcon($location);
-<<<<<<< HEAD
-
-=======
                 
->>>>>>> 19c8248 (.)
                 $data[] = [
                     'location' => [
                         'lat' => (float) $location->latitude,
@@ -259,29 +197,19 @@ class LocationMapTableWidget extends MapTableWidget
                     TextEntry::make('state'),
                     TextEntry::make('zip'),
                     TextEntry::make('formatted_address'),
-<<<<<<< HEAD
-                ])->columns(3),
-            ])
-            ->record(fn (array $arguments) => array_key_exists('model_id', $arguments) ? Location::find($arguments['model_id']) : null)
-=======
                 ])
                     ->columns(3),
             ])
             ->record(function (array $arguments) {
                 return array_key_exists('model_id', $arguments) ? Location::find($arguments['model_id']) : null;
             })
->>>>>>> 19c8248 (.)
             ->modalSubmitAction(false);
     }
 
     /**
      * @return string|null
      */
-<<<<<<< HEAD
-    public function getMarkerIcon(Place $place): null|string
-=======
     public function getMarkerIcon(Place $place): ?string
->>>>>>> 19c8248 (.)
     {
         $type = $place->placeType->slug ?? 'default';
         /** @var array<string, mixed>|null $markerConfig */
@@ -300,22 +228,14 @@ class LocationMapTableWidget extends MapTableWidget
         // Validazione sicura per accesso nested all'icona
         /** @var mixed $iconConfig */
         $iconConfig = $markerConfig['icon'] ?? null;
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         if (!is_array($iconConfig)) {
             return null;
         }
 
         /** @var string|null $iconUrl */
         $iconUrl = $iconConfig['url'] ?? null;
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 19c8248 (.)
         return is_string($iconUrl) ? $iconUrl : null;
     }
 }

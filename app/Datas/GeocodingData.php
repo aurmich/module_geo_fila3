@@ -12,19 +12,6 @@ use Spatie\LaravelData\Data;
 class GeocodingData extends Data
 {
     public function __construct(
-<<<<<<< HEAD
-        public readonly null|float $latitude,
-        public readonly null|float $longitude,
-        public readonly null|string $formatted_address,
-        public readonly null|string $street_number,
-        public readonly null|string $route,
-        public readonly null|string $locality,
-        public readonly null|string $administrative_area,
-        public readonly null|string $country,
-        public readonly null|string $postal_code,
-        public readonly null|string $error = null,
-    ) {}
-=======
         public readonly ?float $latitude,
         public readonly ?float $longitude,
         public readonly ?string $formatted_address,
@@ -37,7 +24,6 @@ class GeocodingData extends Data
         public readonly ?string $error = null,
     ) {
     }
->>>>>>> 19c8248 (.)
 
     /**
      * Crea un'istanza di errore.
@@ -54,11 +40,7 @@ class GeocodingData extends Data
             administrative_area: null,
             country: null,
             postal_code: null,
-<<<<<<< HEAD
-            error: $error,
-=======
             error: $error
->>>>>>> 19c8248 (.)
         );
     }
 
@@ -98,11 +80,7 @@ class GeocodingData extends Data
             locality: $components['locality'] ?? null,
             administrative_area: $components['administrative_area_level_1'] ?? null,
             country: $components['country'] ?? null,
-<<<<<<< HEAD
-            postal_code: $components['postal_code'] ?? null,
-=======
             postal_code: $components['postal_code'] ?? null
->>>>>>> 19c8248 (.)
         );
     }
 

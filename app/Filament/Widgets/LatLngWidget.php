@@ -14,13 +14,7 @@ class LatLngWidget extends Widget
 
     public float $lng = 0;
 
-<<<<<<< HEAD
-    public null|int $err_code = null;
-
-    public null|string $err_message = null;
-=======
     public ?int $err_code = null;
 
     public ?string $err_message = null;
->>>>>>> 19c8248 (.)
 }

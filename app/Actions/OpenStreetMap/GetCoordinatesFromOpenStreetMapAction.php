@@ -10,20 +10,12 @@ use Modules\Geo\Datas\LocationData;
 /**
  * Classe per ottenere le coordinate da OpenStreetMap.
  */
-<<<<<<< HEAD
-readonly class GetCoordinatesFromOpenStreetMapAction
-{
-    public function __construct(
-        private  FetchCoordinatesAction $fetchCoordinatesAction,
-    ) {}
-=======
 class GetCoordinatesFromOpenStreetMapAction
 {
     public function __construct(
         private readonly FetchCoordinatesAction $fetchCoordinatesAction,
     ) {
     }
->>>>>>> 19c8248 (.)
 
     /**
      * Ottiene le coordinate geografiche da un indirizzo usando OpenStreetMap.
@@ -32,11 +24,7 @@ class GetCoordinatesFromOpenStreetMapAction
      *
      * @return LocationData|null Dati della posizione o null se non trovata
      */
-<<<<<<< HEAD
-    public function execute(string $address): null|LocationData
-=======
     public function execute(string $address): ?LocationData
->>>>>>> 19c8248 (.)
     {
         if (empty($address)) {
             return null;
